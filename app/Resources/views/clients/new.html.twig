@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1>New Genus</h1>
+                {{ form_start(clientForm) }}
+                {{ form_widget(clientForm) }}
+                <button type="submit" class="btn btn-primary">Save</button>
+                {{ form_end(clientForm) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}
