@@ -1,0 +1,181 @@
+{% extends 'base.html.twig' %}
+{% block javascript %}
+
+{% endblock %}
+{% block container%}
+    <script type="application/javascript">
+        function myFunction() {
+            var id = document.getElementById('client_id').value;
+
+
+            var url = Routing.generate('deleteclient',{'id':id});
+
+            swal({
+                    title: "Vous etes sure?",
+                    text: "Ce client sera supprimé définitevement",
+                    type: "warning",
+                    showCancelButton: true,
+                    confirmButtonClass: "btn-danger",
+                    confirmButtonText: "Oui, supprimer le!",
+                    cancelButtonText: "Non, anuuler!",
+                    closeOnConfirm: false,
+                    closeOnCancel: false,
+                    showOkButton:false
+
+                },
+                function (isConfirm) {
+                    if (isConfirm) {
+                        swal("Deleted!", "Le client a été supprimé.", "success");
+                        location.href=url;
+                    } else {
+                        swal("Cancelled", "Le client n'a pas été supprimé :)", "error");
+                    }
+                });
+
+        }
+    </script>
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <!-- BEGIN EXAMPLE TABLE PORTLET-->
+            <div class="portlet light bordered">
+                <div class="portlet-title">
+                    <div class="caption font-dark">
+                        <i class="icon-settings font-dark"></i>
+                        <span class="caption-subject bold uppercase"> Managed Table</span>
+
+                    </div>
+                    <div class="actions">
+                        <div class="btn-group btn-group-devided" data-toggle="buttons">
+                            <label class="btn btn-transparent dark btn-outline btn-circle btn-sm active">
+                                <input type="radio" name="options" class="toggle" id="option1">Actions</label>
+                            <label class="btn btn-transparent dark btn-outline btn-circle btn-sm">
+                                <input type="radio" name="options" class="toggle" id="option2">Settings</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="portlet-body">
+                    <div class="table-toolbar">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="btn-group">
+                                    <a href="{{ path('addclient') }}">
+                                    <button id="sample_editable_1_new" class="btn sbold green" id="newbutton" type="button"> Nouveau client
+
+                                        <i class="fa fa-plus"></i>
+                                    </button>
+                                    </a>
+
+                                    {% for flashMessage in app.session.flashbag.get('notice') %}
+
+                                        <div class="alert alert-success">
+                                            {{ flashMessage }}
+
+                                        </div>
+
+                                    {% endfor %}
+
+
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="btn-group pull-right">
+                                    <button class="btn green  btn-outline dropdown-toggle" data-toggle="dropdown">Tools
+                                        <i class="fa fa-angle-down"></i>
+                                    </button>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li>
+                                            <a href="javascript:;">
+                                                <i class="fa fa-print"></i> Print </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">
+                                                <i class="fa fa-file-pdf-o"></i> Save as PDF </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">
+                                                <i class="fa fa-file-excel-o"></i> Export to Excel </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <table class="table table-striped table-bordered table-hover table-checkable order-column" id="sample_1">
+                        <thead>
+                        <tr>
+                            <th>
+                                <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+                                    <input type="checkbox" class="group-checkable" data-set="#sample_1 .checkboxes" />
+                                    <span></span>
+                                </label>
+                            </th>
+                            <th>Id</th>
+                            <th> Username </th>
+                            <th> Email </th>
+                            <th> Status </th>
+                            <th> Joined </th>
+                            <th> Actions </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+    {% for client in clients %}
+                        <tr class="odd gradeX">
+                            <td>
+                                <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+                                    <input type="checkbox" class="checkboxes" value="1" />
+                                    <span></span>
+                                </label>
+                            </td>
+                            <td>{{ client.id }}</td>
+                            <td> {{ client.nom }} </td>
+                            <td>
+                                <a href="mailto:shuxer@gmail.com"> shuxer@gmail.com </a>
+                            </td>
+                            <td>
+                                <span class="label label-sm label-success"> Approved </span>
+                            </td>
+                            <td class="center"> 12 Jan 2012 </td>
+                            <td>
+                                <div class="btn-group">
+                                    <button class="btn btn-xs green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false"> Actions
+                                        <i class="fa fa-angle-down"></i>
+                                    </button>
+                                    <ul class="dropdown-menu pull-left" role="menu">
+                                        <li>
+                                            <a href="javascript:;">
+                                                <i class="icon-docs"></i> Consulter </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ path('editclient',{id: client.id}) }}">
+                                                <i class="icon-tag"></i> Modifier </a>
+                                        </li>
+                                        <li>
+                                            <button class="btn btn-default mt-sweetalert" onclick="myFunction()">Supprimer</button>
+                                        </li>
+                                        <li class="divider"> </li>
+                                        <li>
+                                            <a href="javascript:;">
+                                                <i class="icon-flag"></i> Comments
+                                                <span class="badge badge-success">4</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+        <input type="hidden" value="{{ client.id }}" id="client_id" />
+    {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- END EXAMPLE TABLE PORTLET-->
+        </div>
+    </div>
+
+
+{% endblock %}
+
+

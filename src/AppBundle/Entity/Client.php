@@ -18,6 +18,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  */
 class Client
 {
+
     /**
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
@@ -25,30 +26,43 @@ class Client
      */private $id ;
 
     /**
+     * @ORM\Column(type="float",nullable=true)
+     */
+    private $capital;
+    /**
+     * @ORM\Column(type="string",nullable=true)
+     */
+    private $ref;
+    /**
+     * @ORM\Column(type="string")
+     */
+    private $matriculefiscale;
+
+    /**
      * @ORM\Column(type="string")
      */private $nom;
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="string",nullable=true)
      */
        private $prenom;
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="string",nullable=true)
      */
-    private $email;
+       private $email;
     /**
      * @ORM\Column(type="string")
      */private $adresse;
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="string",nullable=true)
      */private $region;
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="string",nullable=true)
      */private $ville;
     /**
      * @ORM\Column(type="string")
      */private $pays;
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="string",nullable=true)
      */private $codepostal;
     /**
      * @ORM\Column(type="string", nullable=true)
@@ -62,6 +76,64 @@ class Client
     /**
      * @ORM\Column(type="datetime")
      */private $created;
+
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCapital()
+    {
+        return $this->capital;
+    }
+
+    /**
+     * @param mixed $capital
+     */
+    public function setCapital($capital)
+    {
+        $this->capital = $capital;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getRef()
+    {
+        return $this->ref;
+    }
+
+    /**
+     * @param mixed $ref
+     */
+    public function setRef($ref)
+    {
+        $this->ref = $ref;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getMatriculefiscale()
+    {
+        return $this->matriculefiscale;
+    }
+
+    /**
+     * @param mixed $matriculefiscale
+     */
+    public function setMatriculefiscale($matriculefiscale)
+    {
+        $this->matriculefiscale = $matriculefiscale;
+    }
+
+
 
     /**
      * @return mixed

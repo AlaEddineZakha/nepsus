@@ -10,6 +10,8 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
+use Symfony\Component\Form\FormEvent;
+use Symfony\Component\Form\FormEvents;
 
 
 class ClientFormType extends AbstractType
@@ -19,15 +21,21 @@ class ClientFormType extends AbstractType
         $builder
             ->add('nom',TextType::class)
             ->add('prenom')
+            ->add('ref')
             ->add('email',EmailType::class)
             ->add('adresse')
             ->add('region')
             ->add('ville')
-            ->add('pays',CountryType::class)
+            ->add('pays',CountryType::class,array(
+                'placeholder' => 'Sélectionnez le pays'
+
+            ))
             ->add('codepostal')
             ->add('telephone')
             ->add('mobile')
             ->add('siteweb')
+            ->add('capital')
+            ->add('matriculefiscale')
             ->add('created', DateTimeType::class, array(
         'format' => \IntlDateFormatter::SHORT,
         'input' => 'datetime',
@@ -36,6 +44,8 @@ class ClientFormType extends AbstractType
             )
 
         ;
+
+
 
     }
 

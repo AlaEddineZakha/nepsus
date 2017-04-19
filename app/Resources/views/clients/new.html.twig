@@ -1,5 +1,289 @@
 {% extends 'base.html.twig' %}
-{% block body %}
+{% block container%}
+    <div class="page-bar">
+        <ul class="page-breadcrumb">
+            <li>
+                <a href="index.html">Home</a>
+                <i class="fa fa-circle"></i>
+            </li>
+            <li>
+                <span>Form Stuff</span>
+            </li>
+        </ul>
+        <div class="page-toolbar">
+            <div class="btn-group pull-right">
+                <button type="button" class="btn green btn-sm btn-outline dropdown-toggle" data-toggle="dropdown"> Actions
+                    <i class="fa fa-angle-down"></i>
+                </button>
+                <ul class="dropdown-menu pull-right" role="menu">
+                    <li>
+                        <a href="#">
+                            <i class="icon-bell"></i> Action</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="icon-shield"></i> Another action</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="icon-user"></i> Something else here</a>
+                    </li>
+                    <li class="divider"> </li>
+                    <li>
+                        <a href="#">
+                            <i class="icon-bag"></i> Separated link</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- END PAGE BAR -->
+    <!-- BEGIN PAGE TITLE-->
+    <h1 class="page-title"> Material Design Form Validation
+        <small>material design form validation</small>
+    </h1>
+    <!-- END PAGE TITLE-->
+    <!-- END PAGE HEADER-->
+    <div class="m-heading-1 border-green m-bordered">
+        <h3>jQuery Validation Plugin</h3>
+        <p> This jQuery plugin makes simple clientside form validation easy, whilst still offering plenty of customization options. For more info please check out
+            <a class="btn red btn-outline" href="http://jqueryvalidation.org" target="_blank">the official documentation</a>
+        </p>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <!-- BEGIN VALIDATION STATES-->
+            <div class="portlet light portlet-fit portlet-form bordered">
+                <div class="portlet-title">
+                    <div class="caption">
+                        <i class=" icon-layers font-green"></i>
+                        <span class="caption-subject font-green sbold uppercase">Basic Validation</span>
+                    </div>
+                    <div class="actions">
+                        <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                            <i class="icon-cloud-upload"></i>
+                        </a>
+                        <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                            <i class="icon-wrench"></i>
+                        </a>
+                        <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                            <i class="icon-trash"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="portlet-body">
+                    <!-- BEGIN FORM-->
+
+                        {{ form_start(clientForm) }}
+                        <div class="form-body">
+                            <div class="alert alert-danger display-hide">
+                                <button class="close" data-close="alert"></button> You have some form errors. Please check below. </div>
+                            <div class="alert alert-success display-hide">
+                                <button class="close" data-close="alert"></button> Your form validation is successful! </div>
+                            <div class="form-group form-md-line-input">
+                                <label class="col-md-3 control-label" for="form_control_1">Nom
+                                    <span class="required">*</span>
+                                </label>
+                                <div class="col-md-9">
+                                    {{ form_widget(clientForm.nom, { 'attr' : { 'class' : 'form-control' } }) }}
+                                    <div class="form-control-focus"> </div>
+                                    <span class="help-block">enter your full name</span>
+                                </div>
+                            </div>
+                            <div class="form-group form-md-line-input">
+                                <label class="col-md-3 control-label" for="form_control_1">Prénom
+                                    <span class="required">*</span>
+                                </label>
+                                <div class="col-md-9">
+                                    {{ form_widget(clientForm.prenom, { 'attr' : { 'class' : 'form-control' } }) }}
+                                    <div class="form-control-focus"> </div>
+                                    <span class="help-block">enter your full name</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group form-md-line-input">
+                                <label class="col-md-3 control-label" for="form_control_1">Région
+                                    <span class="required"></span>
+                                </label>
+                                <div class="col-md-9">
+                                    {{ form_widget(clientForm.region, { 'attr' : { 'class' : 'form-control' } }) }}
+                                    <div class="form-control-focus"> </div>
+                                    <span class="help-block">enter your full name</span>
+                                </div>
+                            </div>
+                            <div class="form-group form-md-line-input">
+                                <label class="col-md-3 control-label" for="form_control_1">Ville
+                                    <span class="required"></span>
+                                </label>
+                                <div class="col-md-9">
+                                    {{ form_widget(clientForm.ville, { 'attr' : { 'class' : 'form-control' } }) }}
+                                    <div class="form-control-focus"> </div>
+                                    <span class="help-block">enter your full name</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group form-md-line-input">
+                                <label class="col-md-3 control-label" for="form_control_1">Adresse
+                                    <span class="required">*</span>
+                                </label>
+                                <div class="col-md-9">
+                                    {{ form_widget(clientForm.adresse, { 'attr' : { 'class' : 'form-control' } }) }}
+                                    <div class="form-control-focus"> </div>
+                                    <span class="help-block">enter your full name</span>
+                                </div>
+                            </div>
+
+
+
+
+
+                            <div class="form-group form-md-line-input">
+                                <label class="col-md-3 control-label" for="form_control_1">Code postal
+                                    <span class="required"></span>
+                                </label>
+                                <div class="col-md-9">
+                                    {{ form_widget(clientForm.codepostal, { 'attr' : { 'class' : 'form-control' } }) }}
+                                    <div class="form-control-focus"> </div>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group form-md-line-input">
+                                <label class="col-md-3 control-label" for="form_control_1">Email</label>
+                                <div class="col-md-9">
+                                    <div class="input-group">
+                                                            <span class="input-group-addon">
+                                                                <i class="fa fa-envelope"></i>
+                                                            </span>
+                                        {{ form_widget(clientForm.email, { 'attr' : { 'class' : 'form-control' , 'placeholder':'Enter your email' } }) }}
+                                        <div class="form-control-focus"> </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group form-md-line-input">
+                                <label class="col-md-3 control-label" for="form_control_1">Site Web</label>
+                                <div class="col-md-9">
+                                    <div class="input-group">
+                                        {{ form_widget(clientForm.siteweb, { 'attr' : { 'class' : 'form-control' } }) }}
+                                        <span class="input-group-addon">
+                                                                <i class="fa fa-i-cursor"></i>
+                                                            </span>
+                                        <div class="form-control-focus"> </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group form-md-line-input">
+                                <label class="col-md-3 control-label" for="form_control_1">Mobile
+                                    <span class="required"></span>
+                                </label>
+                                <div class="col-md-9">
+                                    {{ form_widget(clientForm.mobile, { 'attr' : { 'class' : 'form-control' } }) }}
+                                    <div class="form-control-focus"> </div>
+                                    <span class="help-block">enter your full name</span>
+                                </div>
+                            </div>
+                            <div class="form-group form-md-line-input">
+                                <label class="col-md-3 control-label" for="form_control_1">Téléphone
+                                    <span class="required">*</span>
+                                </label>
+                                <div class="col-md-9">
+                                    {{ form_widget(clientForm.telephone, { 'attr' : { 'class' : 'form-control' } }) }}
+                                    <div class="form-control-focus"> </div>
+                                    <span class="help-block">enter your full name</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group form-md-line-input">
+                                <label class="col-md-3 control-label" for="form_control_1">Pays</label>
+                                <div class="col-md-9">
+                                    {{ form_widget(clientForm.pays, { 'attr' : { 'class' : 'form-control' } }) }}
+                                    <div class="form-control-focus"> </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group form-md-line-input">
+                                <label class="col-md-3 control-label" for="form_control_1">Référence
+                                    <span class="required"></span>
+                                </label>
+                                <div class="col-md-9">
+                                    {{ form_widget(clientForm.ref, { 'attr' : { 'class' : 'form-control' } }) }}
+                                    <div class="form-control-focus"> </div>
+                                    <span class="help-block">enter your full name</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group form-md-line-input">
+                                <label class="col-md-3 control-label" for="form_control_1">Capitale
+                                    <span class="required"></span>
+                                </label>
+                                <div class="col-md-9">
+                                    {{ form_widget(clientForm.capital, { 'attr' : { 'class' : 'form-control' } }) }}
+                                    <div class="form-control-focus"> </div>
+                                    <span class="help-block">enter your full name</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group form-md-line-input">
+                                <label class="col-md-3 control-label" for="form_control_1">Matricule fiscal
+                                    <span class="required">*</span>
+                                </label>
+                                <div class="col-md-9">
+                                    {{ form_widget(clientForm.matriculefiscale, { 'attr' : { 'class' : 'form-control' } }) }}
+                                    <div class="form-control-focus"> </div>
+                                    <span class="help-block">enter your full name</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group form-md-line-input">
+                                <label class="col-md-3 control-label" for="form_control_1">Creé le
+                                    <span class="required">*</span>
+                                </label>
+                                <div class="col-md-9">
+                                    {{ form_widget(clientForm.created, { 'attr' : { 'class' : 'form-control' } }) }}
+                                    <div class="form-control-focus"> </div>
+                                    <span class="help-block">enter your full name</span>
+                                </div>
+                            </div>
+
+
+
+
+
+
+
+
+
+                        </div>
+                        <div class="form-actions">
+                            <div class="row">
+                                <div class="col-md-offset-3 col-md-9">
+                                    <button type="submit" class="btn green">Validate</button>
+                                    <button type="reset" class="btn default">Reset</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    {% for flash_message in app.session.flashBag.get('notice') %}
+                        <div class="flash-notice">
+                            {{ flash_message }}
+                        </div>
+                    {% endfor %}
+                        {{ form_end(clientForm) }}
+
+
+
+
+                    <!-- END FORM-->
+                </div>
+            </div>
+            <!-- END VALIDATION STATES-->
+        </div>
+
+    </div>
+
+
+{% endblock %}
+{#% block body %}
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
@@ -11,4 +295,4 @@
             </div>
         </div>
     </div>
-{% endblock %}
+{% endblock %} #}

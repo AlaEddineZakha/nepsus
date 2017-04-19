@@ -77,3 +77,8 @@ fos_user:
     from_email:
         address:        achref.tlija@gmail.com
         sender_name:    admin
+assetic:
+    debug:          '%kernel.debug%'
+    use_controller: '%kernel.debug%'
+    filters:
+        cssrewrite: ~
