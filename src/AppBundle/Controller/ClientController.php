@@ -15,8 +15,7 @@ use AppBundle\Form\ClientFormType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Stopwatch\Stopwatch;
+
 class ClientController extends  Controller
 {
     /**
@@ -27,6 +26,7 @@ class ClientController extends  Controller
         $form = $this->createForm(ClientFormType::class);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
+
 
             $client = $form->getData();
             $em = $this->getDoctrine()->getManager();
@@ -53,15 +53,23 @@ class ClientController extends  Controller
     /**
      * @Route("/clients")
      */
-    public function showAllAction()
+    public function showAllAction(Request $request)
     {
-        $repository = $this->getDoctrine()->getRepository('AppBundle:Client');
-        $clients = $repository->findAll();
+        $em = $this->getDoctrine()->getManager();
+        $query = $em->createQuery('SELECT p FROM AppBundle:Client p');
+
+
+        /** @var  $paginator \Knp\Component\Pager\Paginator */
+        $paginator  = $this->get('knp_paginator');
+        $result= $paginator->paginate(
+            $query,
+            $request->query->getInt('page', 1),
+            $request->query->getInt('limit', 5)
+        );
         return $this->render('clients/show.html.twig', [
-            'clients' => $clients
+            'clients' => $result,
+
         ]);
-
-
 
 
     }

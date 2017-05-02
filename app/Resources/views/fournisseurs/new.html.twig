@@ -2,7 +2,7 @@
 {% block javascripts %}
 
 
-    {% if clientForm.nom.vars.errors|length %}
+    {% if fournisseurForm.nom.vars.errors|length %}
 
         <script type="application/javascript">
 
@@ -11,15 +11,6 @@
         </script>
     {% endif %}
 
-
-    {% if clientForm.mobile.vars.errors|length %}
-
-        <script type="application/javascript">
-
-            document.getElementById("icone_mobile").className = "fa fa-warning tooltips";
-            document.getElementById("form_mobile").className = "form-group has-error";
-        </script>
-    {% endif %}
 
 
     {{ parent() }}
@@ -89,7 +80,7 @@
                 </div>
                 <div class="portlet-body">
                     <!-- BEGIN FORM-->
-                    {{ form_start(clientForm , {'attr': {'class': 'form-horizontal'}}) }}
+                    {{ form_start(fournisseurForm , {'attr': {'class': 'form-horizontal'}}) }}
 
                         <div class="form-body">
 
@@ -101,7 +92,7 @@
                                 <div class="col-md-9">
                                     <div class="input-icon right">
                                         <i class="" data-original-title="" id="icone_region"></i>
-                                        {{ form_widget(clientForm.region, { 'attr' : { 'class' : 'form-control' } }) }}
+                                        {{ form_widget(fournisseurForm.region, { 'attr' : { 'class' : 'form-control' } }) }}
                                     </div>
                                 </div>
                             </div>
@@ -111,7 +102,7 @@
                                 <div class="col-md-9">
                                     <div class="input-icon right">
                                         <i class="" data-original-title="" id="icone_ville"></i>
-                                        {{ form_widget(clientForm.ville, { 'attr' : { 'class' : 'form-control' } }) }}
+                                        {{ form_widget(fournisseurForm.ville, { 'attr' : { 'class' : 'form-control' } }) }}
                                     </div>
                                 </div>
                             </div>
@@ -121,7 +112,7 @@
                                 <div class="col-md-9">
                                     <div class="input-icon right">
                                         <i class="" data-original-title="" id="icone_siteweb"></i>
-                                        {{ form_widget(clientForm.siteweb, { 'attr' : { 'class' : 'form-control' } }) }}
+                                        {{ form_widget(fournisseurForm.siteweb, { 'attr' : { 'class' : 'form-control' } }) }}
                                     </div>
                                 </div>
                             </div>
@@ -131,25 +122,17 @@
                                 <div class="col-md-9">
                                     <div class="input-icon right">
                                         <i class="" data-original-title="" id="icone_pays"></i>
-                                        {{ form_widget(clientForm.pays, { 'attr' : { 'class' : 'form-control' } }) }}
+                                        {{ form_widget(fournisseurForm.pays, { 'attr' : { 'class' : 'form-control' } }) }}
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group" id="form_ref">
-                                <label class="control-label col-md-3">Référence</label>
-                                <div class="col-md-9">
-                                    <div class="input-icon right">
-                                        <i class="" data-original-title="" id="icone_ref"></i>
-                                        {{ form_widget(clientForm.ref, { 'attr' : { 'class' : 'form-control' } }) }}
-                                    </div>
-                                </div>
-                            </div>
+
                             <div class="form-group" id="form_capitale">
                                 <label class="control-label col-md-3">Capitale</label>
                                 <div class="col-md-9">
                                     <div class="input-icon right">
                                         <i class="" data-original-title="" id="icone_capitale"></i>
-                                        {{ form_widget(clientForm.capital, { 'attr' : { 'class' : 'form-control' } }) }}
+                                        {{ form_widget(fournisseurForm.capital, { 'attr' : { 'class' : 'form-control' } }) }}
                                     </div>
                                 </div>
                             </div>
@@ -158,7 +141,7 @@
                                 <div class="col-md-9">
                                     <div class="input-icon right">
                                         <i class="" data-original-title="" id="icone_mf"></i>
-                                        {{ form_widget(clientForm.matriculefiscale, { 'attr' : { 'class' : 'form-control' } }) }}
+                                        {{ form_widget(fournisseurForm.matriculefiscal, { 'attr' : { 'class' : 'form-control' } }) }}
                                     </div>
                                 </div>
                             </div>
@@ -168,7 +151,46 @@
                                 <div class="col-md-9">
                                     <div class="input-icon right">
                                         <i class="" data-original-title="" id="icone_registre"></i>
-                                        {{ form_widget(clientForm.registre, { 'attr' : { 'class' : 'form-control' } }) }}
+                                        {{ form_widget(fournisseurForm.registre, { 'attr' : { 'class' : 'form-control' } }) }}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group" id="form_mf">
+                                <label class="control-label col-md-3">Appliqué aux TVA</label>
+                                <div class="col-md-9">
+                                    <div class="input-icon right">
+                                        <i class="" data-original-title="" id="icone_mf"></i>
+                                        {{ form_widget(fournisseurForm.tva, { 'attr' : { 'class' : 'form-control' } }) }}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group" id="form_mf">
+                                <label class="control-label col-md-3">Code douane</label>
+                                <div class="col-md-9">
+                                    <div class="input-icon right">
+                                        <i class="" data-original-title="" id="icone_mf"></i>
+                                        {{ form_widget(fournisseurForm.codedouane, { 'attr' : { 'class' : 'form-control' } }) }}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group" id="form_mf">
+                                <label class="control-label col-md-3">Effectif</label>
+                                <div class="col-md-9">
+                                    <div class="input-icon right">
+                                        <i class="" data-original-title="" id="icone_mf"></i>
+                                        {{ form_widget(fournisseurForm.nbemp, { 'attr' : { 'class' : 'form-control' } }) }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group" id="form_adresse">
+                                <label class="control-label col-md-3">Forme juridique</label>
+                                <div class="col-md-9">
+                                    <div class="input-icon right">
+                                        <i class="" data-original-title="" id="icone_adresse"></i>
+                                        {{ form_widget(fournisseurForm.formejuridique, { 'attr' : { 'class' : 'form-control' } }) }}
                                     </div>
                                 </div>
                             </div>
@@ -179,27 +201,19 @@
                                 <div class="col-md-9">
                                     <div class="input-icon right">
                                         <i class="" data-original-title="" id="icone_cp"></i>
-                                        {{ form_widget(clientForm.codepostal, { 'attr' : { 'class' : 'form-control' } }) }}
+                                        {{ form_widget(fournisseurForm.codepostal, { 'attr' : { 'class' : 'form-control' } }) }}
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="form-group" id="form_email">
-                                <label class="control-label col-md-3">Email</label>
-                                <div class="col-md-9">
-                                    <div class="input-icon right">
-                                        <i class="" data-original-title="" id="icone_email"></i>
-                                        {{ form_widget(clientForm.email, { 'attr' : { 'class' : 'form-control' } }) }}
-                                    </div>
-                                </div>
-                            </div>
+
                         </div>
                         <div class="form-group" id="form_created">
                             <label class="control-label col-md-3"></label>
                             <div class="col-md-9" hidden="true">
                                 <div class="input-icon right">
                                     <i class="" data-original-title="" id="icone_created"></i>
-                                    {{ form_widget(clientForm.created, { 'attr' : { 'class' : 'form-control' } }) }}
+                                    {{ form_widget(fournisseurForm.created, { 'attr' : { 'class' : 'form-control' } }) }}
                                 </div>
                             </div>
                         </div>
@@ -228,22 +242,13 @@
                                 <div class="col-md-9">
                                     <div class="input-icon right">
                                         <i class="" data-original-title="" id="icone_name"></i>
-                                        {{ form_widget(clientForm.nom, { 'attr' : { 'class' : 'form-control' } }) }}
-                                        <span class="help-block"> {{ form_errors(clientForm.nom) }} </span>
+                                        {{ form_widget(fournisseurForm.nom, { 'attr' : { 'class' : 'form-control' } }) }}
+                                        <span class="help-block"> {{ form_errors(fournisseurForm.nom) }} </span>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="form-group" id="form_prenom">
-                                <label class="control-label col-md-3">Prénom</label>
-                                <div class="col-md-9">
-                                    <div class="input-icon right">
-                                        <i class="" data-original-title="" id="icone_prenom"></i>
-                                        {{ form_widget(clientForm.prenom, { 'attr' : { 'class' : 'form-control' } }) }}
 
-                                    </div>
-                                </div>
-                            </div>
 
 
                             <div class="form-group" id="form_adresse">
@@ -251,7 +256,7 @@
                                 <div class="col-md-9">
                                     <div class="input-icon right">
                                         <i class="" data-original-title="" id="icone_adresse"></i>
-                                        {{ form_widget(clientForm.adresse, { 'attr' : { 'class' : 'form-control' } }) }}
+                                        {{ form_widget(fournisseurForm.adresse, { 'attr' : { 'class' : 'form-control' } }) }}
                                     </div>
                                 </div>
                             </div>
@@ -260,25 +265,38 @@
                                 <div class="col-md-9">
                                     <div class="input-icon right">
                                         <i class="" data-original-title="" id="icone_tel"></i>
-                                        {{ form_widget(clientForm.telephone, { 'attr' : { 'class' : 'form-control' } }) }}
+                                        {{ form_widget(fournisseurForm.telephone, { 'attr' : { 'class' : 'form-control' } }) }}
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group" id="form_mobile">
-                                <label class="control-label col-md-3">Mobile</label>
+
+                            <div class="form-group" id="form_adresse">
+                                <label class="control-label col-md-3">Fax</label>
                                 <div class="col-md-9">
                                     <div class="input-icon right">
-                                        <i class="" data-original-title="" id="icone_mobile"></i>
-                                        {{ form_widget(clientForm.mobile, { 'attr' : { 'class' : 'form-control' } }) }}
-                                        <span class="help-block"> {{ form_errors(clientForm.mobile) }} </span>
+                                        <i class="" data-original-title="" id="icone_adresse"></i>
+                                        {{ form_widget(fournisseurForm.fax, { 'attr' : { 'class' : 'form-control' } }) }}
                                     </div>
                                 </div>
                             </div>
+
+
+
+                            <div class="form-group" id="form_email">
+                                <label class="control-label col-md-3">Email</label>
+                                <div class="col-md-9">
+                                    <div class="input-icon right">
+                                        <i class="" data-original-title="" id="icone_email"></i>
+                                        {{ form_widget(fournisseurForm.email, { 'attr' : { 'class' : 'form-control' } }) }}
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                         <div class="form-actions">
                             <div class="row">
                                 <div class="col-md-offset-3 col-md-9">
-                                    {{ form_widget(clientForm.save,{'attr' : { 'class' : 'btn green' ,'role':'button' ,'Value':'Enregistrer' } } ) }}
+                                    {{ form_widget(fournisseurForm.save,{'attr' : { 'class' : 'btn green' ,'role':'button' ,'Value':'Enregistrer' } } ) }}
                                     <button type="button" class="btn default">Cancel</button>
                                 </div>
                             </div>
@@ -291,7 +309,7 @@
 
 
 
-                    {{ form_end(clientForm) }}
+                    {{ form_end(fournisseurForm) }}
 
                     <!-- END FORM-->
                 </div>

@@ -8,12 +8,13 @@
 
 namespace AppBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM ;
 use Symfony\Component\Validator\Constraints as Assert;
 
 
 /**
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\ClientRepository")
  * @ORM\Table(name="client")
  */
 class Client
@@ -27,28 +28,24 @@ class Client
 
     /**
      * @ORM\Column(type="float",nullable=true)
-     */
-    private $capital;
+     */private $capital;
     /**
      * @ORM\Column(type="string",nullable=true)
-     */
-    private $ref;
+     */private $ref;
     /**
      * @ORM\Column(type="string")
-     */
-    private $matriculefiscale;
+     */private $matriculefiscale;
 
     /**
      * @ORM\Column(type="string")
+     * @Assert\Length(min="3",minMessage="This value is to shoort")
      */private $nom;
     /**
      * @ORM\Column(type="string",nullable=true)
-     */
-       private $prenom;
+     */private $prenom;
     /**
      * @ORM\Column(type="string",nullable=true)
-     */
-       private $email;
+     */private $email;
     /**
      * @ORM\Column(type="string")
      */private $adresse;
@@ -65,17 +62,25 @@ class Client
      * @ORM\Column(type="string",nullable=true)
      */private $codepostal;
     /**
-     * @ORM\Column(type="string", nullable=true)
+     * @ORM\Column(type="integer",nullable=true)
      */private $telephone;
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="integer")
+     * @Assert\Length(min="8",minMessage="This value is to shoort")
+     * @Assert\Length(max="8",maxMessage="This value is to long")
      */private $mobile;
     /**
      * @ORM\Column(type="string", nullable=true)
      */private $siteweb;
+
+    /**
+     * @ORM\Column(type="string")
+     */
+    private $registre;
     /**
      * @ORM\Column(type="datetime")
      */private $created;
+
 
     /**
      * @return mixed
@@ -328,6 +333,42 @@ class Client
     {
         $this->created = $created;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getContacts()
+    {
+        return $this->contacts;
+    }
+
+    /**
+     * @param mixed $contacts
+     */
+    public function setContacts($contacts)
+    {
+        $this->contacts = $contacts;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getRegistre()
+    {
+        return $this->registre;
+    }
+
+    /**
+     * @param mixed $registre
+     */
+    public function setRegistre($registre)
+    {
+        $this->registre = $registre;
+    }
+
+
+
+
 
 
 

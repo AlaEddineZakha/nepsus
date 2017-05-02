@@ -3,15 +3,14 @@
 namespace AppBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\Extension\Core\Type\HiddenType;
+use Symfony\Component\Form\Extension\Core\Type\IntegerType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\CountryType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
-use Symfony\Component\Form\FormEvent;
-use Symfony\Component\Form\FormEvents;
 
 
 class ClientFormType extends AbstractType
@@ -27,25 +26,22 @@ class ClientFormType extends AbstractType
             ->add('region')
             ->add('ville')
             ->add('pays',CountryType::class,array(
-                'placeholder' => 'Sélectionnez le pays'
-
-            ))
+                'placeholder' => 'Sélectionnez le pays'))
             ->add('codepostal')
             ->add('telephone')
-            ->add('mobile')
+            ->add('mobile',IntegerType::class)
             ->add('siteweb')
             ->add('capital')
             ->add('matriculefiscale')
+            ->add('registre')
             ->add('created', DateTimeType::class, array(
         'format' => \IntlDateFormatter::SHORT,
         'input' => 'datetime',
         'widget' => 'single_text',
         'data' => new \DateTime("now"))
             )
-
-        ;
-
-
+            ->add('save',SubmitType::class)
+            ;
 
     }
 

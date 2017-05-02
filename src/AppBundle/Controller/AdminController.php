@@ -12,6 +12,7 @@ namespace AppBundle\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
+
 class AdminController extends  Controller
 {
     /**
@@ -19,8 +20,16 @@ class AdminController extends  Controller
      */
     public function indexAction()
     {
+        $em = $this->getDoctrine()->getManager();
+        $result = $em->getRepository('AppBundle:Client')
+            ->count();
 
-        return $this->render('base.html.twig');
+        dump($result);
+
+
+        return $this->render('dashboard/dashboard1.html.twig', [
+            'nbclient' => $result
+       ]);
 
     }
 

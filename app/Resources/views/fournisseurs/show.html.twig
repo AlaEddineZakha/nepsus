@@ -8,14 +8,14 @@
 {% block container%}
     <script type="application/javascript">
         function myFunction() {
-            var id = document.getElementById('client_id').value;
+            var id = document.getElementById('fournisseur_id').value;
 
 
-            var url = Routing.generate('deleteclient',{'id':id});
+            var url = Routing.generate('deletefournisseur',{'id':id});
 
             swal({
                     title: "Vous etes sure?",
-                    text: "Ce client sera supprimé définitevement",
+                    text: "Ce fournisseur sera supprimé définitevement",
                     type: "warning",
                     showCancelButton: true,
                     confirmButtonClass: "btn-danger",
@@ -28,10 +28,10 @@
                 },
                 function (isConfirm) {
                     if (isConfirm) {
-                        swal("Deleted!", "Le client a été supprimé.", "success");
+                        swal("Deleted!", "Le fournisseur a été supprimé.", "success");
                         location.href=url;
                     } else {
-                        swal("Cancelled", "Le client n'a pas été supprimé :)", "error");
+                        swal("Cancelled", "Le fournisseur n'a pas été supprimé :)", "error");
                     }
                 });
 
@@ -63,8 +63,8 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="btn-group">
-                                    <a href="{{ path('addclient') }}">
-                                    <button id="sample_editable_1_new" class="btn sbold green" id="newbutton" type="button"> Nouveau client
+                                    <a href="{{ path('addfournisseur') }}">
+                                    <button id="sample_editable_1_new" class="btn sbold green" id="newbutton" type="button"> Nouveau Fournisseur
 
                                         <i class="fa fa-plus"></i>
                                     </button>
@@ -106,36 +106,36 @@
                         </div>
                     </div>
                     <div class="count">
-                        {{ clients.getTotalItemCount }}
+                        {{ fournisseurs.getTotalItemCount }}
                     </div>
                     <table class="table table-striped table-bordered table-hover table-checkable order-column" id="sample_1">
                         <thead>
                         <tr>
-                            <th>{{ knp_pagination_sortable(clients, 'Id', 'p.id') }}</th>
-                            <th> {{ knp_pagination_sortable(clients, 'Nom', 'p.nom') }} </th>
-                            <th> {{ knp_pagination_sortable(clients, 'Email', 'p.email') }}</th>
+                            <th>{{ knp_pagination_sortable(fournisseurs, 'Id', 'p.id') }}</th>
+                            <th> {{ knp_pagination_sortable(fournisseurs, 'Nom', 'p.nom') }} </th>
+                            <th> {{ knp_pagination_sortable(fournisseurs, 'Email', 'p.email') }}</th>
                             <th> Matricule fiscal </th>
                             <th> N° Registre </th>
-                            <th> {{ knp_pagination_sortable(clients, 'Creé le ', 'p.created') }}</th>
+                            <th> {{ knp_pagination_sortable(fournisseurs, 'Creé le ', 'p.created') }}</th>
                             <th> Actions </th>
                         </tr>
                         </thead>
                         <tbody>
-    {% for client in clients %}
+    {% for fournisseur in fournisseurs %}
                         <tr class="odd gradeX">
-                            <td>{{ client.id }}</td>
-                            <td> {{ client.nom }} </td>
+                            <td>{{ fournisseur.id }}</td>
+                            <td> {{ fournisseur.nom }} </td>
                             <td>
-                                <a href="mailto:{{ client.email }}"> {{ client.email }} </a>
+                                <a href="mailto:{{ fournisseur.email }}"> {{ fournisseur.email }} </a>
                             </td>
                             <td>
-                                 {{ client.matriculefiscale }}
+                                 {{ fournisseur.matriculefiscal }}
                             </td>
                             <td>
-                                {{ client.registre }}
+                                {{ fournisseur.registre }}
                             </td>
 
-                            <td class="center"> {{ client.created|date("m/d/Y")  }} </td>
+                            <td class="center"> {{ fournisseur.created|date("m/d/Y")  }} </td>
                             <td>
                                 <div class="btn-group">
                                     <button class="btn btn-xs green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false"> Actions
@@ -147,7 +147,7 @@
                                                 <i class="icon-docs"></i> Consulter </a>
                                         </li>
                                         <li>
-                                            <a href="{{ path('editclient',{id: client.id}) }}">
+                                            <a href="{{ path('editfournisseur',{id: fournisseur.id}) }}">
                                                 <i class="icon-tag"></i> Modifier </a>
                                         </li>
 
@@ -160,14 +160,14 @@
                                 </div>
                             </td>
                         </tr>
-        <input type="hidden" value="{{ client.id }}" id="client_id" />
+        <input type="hidden" value="{{ fournisseur.id }}" id="fournisseur_id" />
     {% endfor %}
                         </tbody>
                     </table>
 
                     {# display navigation #}
                     <div class="navigation">
-                        {{ knp_pagination_render(clients) }}
+                        {{ knp_pagination_render(fournisseurs) }}
                     </div>
                 </div>
             </div>

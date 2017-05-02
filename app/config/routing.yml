@@ -33,6 +33,29 @@ listclient:
     defaults:  { _controller: AppBundle:Client:showAll }
 
 
+addfournisseur:
+    path:      /fournisseurs/new
+    defaults:  { _controller: AppBundle:Fournisseur:new }
+
+editfournisseur:
+    path:      /fournisseurs/{id}/edit
+    defaults:  { _controller: AppBundle:Fournisseur:edit }
+    requirements:
+            id: \d+
+deletefournisseur:
+    path:      /fournisseurs/{id}/delete
+    defaults:  { _controller: AppBundle:Fournisseur:delete }
+    requirements:
+            id: \d+
+    options:
+            expose: true
+
+listfournisseur:
+    path:      /fournisseurs
+    defaults:  { _controller: AppBundle:Fournisseur:showAll }
+
+
+
 
 
 
