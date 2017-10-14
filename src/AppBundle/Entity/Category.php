@@ -32,7 +32,7 @@ class Category
 
     /**
      * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Category" , inversedBy="children")
-     * @ORM\JoinColumn(name="parent_id", referencedColumnName="id")
+     * @ORM\JoinColumn(name="parent_id", referencedColumnName="id", nullable=true)
      */
     private $parent;
 

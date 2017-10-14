@@ -2,6 +2,7 @@
 
 namespace AppBundle\Controller;
 
+use AppBundle\Entity\Category;
 use AppBundle\Form\CategoryFormType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -12,11 +13,10 @@ class CategoryController extends Controller
     /**
      * @Route("/categories")
      */
-    public function showAllAction(Request $request )
+    public function showAllAction(Request $request)
     {
         $repository = $this->getDoctrine()->getRepository('AppBundle:Category');
         $categories = $repository->findAll();
-
 
 
         return $this->render('produits/categories/show.html.twig', [
@@ -27,34 +27,40 @@ class CategoryController extends Controller
     }
 
 
-
     /**
      * @Route("/categories/new",name="addcategory")
      *
      */
     public function newAction(Request $request)
     {
+        $em = $this->getDoctrine()->getManager();
+        $repository=$em->getRepository('AppBundle:Category');
+        $parents=$repository->findAll();
+        if ($request->isMethod('POST')) {
 
+            $categorie = new Category();
+            $categorie->setNom($request->request->get('nom'));
 
-        $form = $this->createForm(CategoryFormType::class);
-        // only handles data on POST
-        $form->handleRequest($request);
-        if ($form->isSubmitted() && $form->isValid()) {
-            $categorie = $form->getData();
-            $em = $this->getDoctrine()->getManager();
+            if ( empty($request->request->get('parent')))
+            {
+                $categorie->setParent(null);
+
+            }
+            else
+            {
+            $categorie->setParent($request->request->get('parent'));
+            }
+
             $em->persist($categorie);
             $em->flush();
 
             return $this->redirectToRoute('listclient');
+
+
         }
-        return $this->render('produits/categories/new.html.twig', [
-            'categoryForm' => $form->createView()
+        return $this->render('produits/categories/add.html.twig', [
+            'parents' => $parents,
+
         ]);
-
-
-
-
-
-
     }
 }
