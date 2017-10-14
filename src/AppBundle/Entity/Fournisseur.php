@@ -9,8 +9,10 @@
 namespace AppBundle\Entity;
 
 
-use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\ORM\Mapping as ORM ;
 use Symfony\Component\Validator\Constraints as Assert;
+use Doctrine\Common\Collections\Collection;
 
 /**
  * @ORM\Entity
@@ -19,121 +21,172 @@ use Symfony\Component\Validator\Constraints as Assert;
 class Fournisseur
 {
 
+
+
     /**
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      * @ORM\Column(type="integer")
-     */
-    private $id ;
+     */private $id ;
+
+    /**
+     * @ORM\Column(type="float")
+     */private $capital;
+
     /**
      * @ORM\Column(type="string")
-     */
-    private $nom;
-    /**
-     * @ORM\Column(type="string",nullable=true)
-     */
-    private $codepostal;
-    /**
-     * @ORM\Column(type="string",nullable=true)
-     */
-    private $adresse;
+     */private $matriculefiscale;
+
     /**
      * @ORM\Column(type="string")
-     */
-    private $pays;
+     * @Assert\Length(min="3",minMessage="This value is to shoort")
+     */private $raison;
+
     /**
-     * @ORM\Column(type="string",nullable=true)
-     */
-    private $ville;
-    /**
-     * @ORM\Column(type="string",nullable=true)
-     */
-    private $region;
-    /**
-     * @ORM\Column(type="string",nullable=true)
-     */
-    private $email;
+     * @ORM\Column(type="string",nullable=true , unique=true)
+     */private $email;
     /**
      * @ORM\Column(type="string")
+     */private $adresse;
+    /**
+     * @ORM\Column(type="string",nullable=true)
+     */private $region;
+    /**
+     * @ORM\Column(type="string",nullable=true)
+     */private $ville;
+    /**
+     * @ORM\Column(type="string")
+     */private $pays;
+
+    /**
+     * @ORM\Column(type="integer",nullable=true)
+     */private $telephone;
+    /**
+     * @ORM\Column(type="integer")
      * @Assert\Length(min="8",minMessage="This value is to shoort")
      * @Assert\Length(max="8",maxMessage="This value is to long")
-     */
-    private $telephone;
+     */private $mobile;
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="integer",nullable=true)
      * @Assert\Length(min="8",minMessage="This value is to shoort")
      * @Assert\Length(max="8",maxMessage="This value is to long")
-     */
-    private $fax;
+     */private $fax;
     /**
-     * @ORM\Column(type="boolean")
-     */
-    private $tva;
-    /**
-     * @ORM\Column(type="string")
-     */
-    private $capital;
+     * @ORM\Column(type="string", nullable=true)
+     */private $siteweb;
+
     /**
      * @ORM\Column(type="string")
      */
     private $registre;
-    /**
-     * @ORM\Column(type="string")
-     */
-    private $matriculefiscal;
+
     /**
      * @ORM\Column(type="string")
      */
     private $formejuridique;
-    /**
-     * @ORM\Column(type="string")
-     */
-    private $nbemp;
-    /**
-     * @ORM\Column(type="string")
-     */
-    private $codedouane;
 
-    /**
-     * @ORM\Column(type="string",nullable=true)
-     */
-    private $siteweb;
+
+
+
 
     /**
      * @ORM\Column(type="datetime")
+     */private $created;
+
+
+
+    /**
+     * One Product has Many Features.
+     * @var Collection
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\BonCommandeClient", mappedBy="client" , cascade={"persist", "remove"},fetch="EAGER")
      */
-    private $created;
+    private $listecommandes;
+
+    /**
+     * One Product has Many Features.
+     * @var Collection
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\HistoriqueClient", mappedBy="client" , cascade={"persist", "remove"},orphanRemoval=true)
+     */
+    private $historiques;
+
+
+    /**
+     * One Client has Many Contacts.
+     * @ORM\OneToMany(
+     *     targetEntity="AppBundle\Entity\ContactClient",
+     *     mappedBy="client" ,
+     *     cascade={"persist"},
+     *     fetch="EXTRA_LAZY",
+     *     orphanRemoval=true
+     * )
+     */
+    private $contacts;
+
+
+    public function __construct() {
+        $this->listecommandes = new ArrayCollection();
+        $this->historiques = new ArrayCollection();
+        $this->contacts = new ArrayCollection();
+    }
+
 
     /**
      * @return mixed
      */
-    public function getNom()
+    public function getId()
     {
-        return $this->nom;
-    }
-
-    /**
-     * @param mixed $nom
-     */
-    public function setNom($nom)
-    {
-        $this->nom = $nom;
+        return $this->id;
     }
 
     /**
      * @return mixed
      */
-    public function getCodepostal()
+    public function getCapital()
     {
-        return $this->codepostal;
+        return $this->capital;
     }
 
     /**
-     * @param mixed $codepostal
+     * @param mixed $capital
      */
-    public function setCodepostal($codepostal)
+    public function setCapital($capital)
     {
-        $this->codepostal = $codepostal;
+        $this->capital = $capital;
+    }
+
+
+
+    /**
+     * @return mixed
+     */
+    public function getMatriculefiscale()
+    {
+        return $this->matriculefiscale;
+    }
+
+    /**
+     * @param mixed $matriculefiscale
+     */
+    public function setMatriculefiscale($matriculefiscale)
+    {
+        $this->matriculefiscale = $matriculefiscale;
+    }
+
+
+    /**
+     * @return mixed
+     */
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    /**
+     * @param mixed $email
+     */
+    public function setEmail($email)
+    {
+        $this->email = $email;
     }
 
     /**
@@ -155,17 +208,17 @@ class Fournisseur
     /**
      * @return mixed
      */
-    public function getPays()
+    public function getRegion()
     {
-        return $this->pays;
+        return $this->region;
     }
 
     /**
-     * @param mixed $pays
+     * @param mixed $region
      */
-    public function setPays($pays)
+    public function setRegion($region)
     {
-        $this->pays = $pays;
+        $this->region = $region;
     }
 
     /**
@@ -187,34 +240,19 @@ class Fournisseur
     /**
      * @return mixed
      */
-    public function getRegion()
+    public function getPays()
     {
-        return $this->region;
+        return $this->pays;
     }
 
     /**
-     * @param mixed $region
+     * @param mixed $pays
      */
-    public function setRegion($region)
+    public function setPays($pays)
     {
-        $this->region = $region;
+        $this->pays = $pays;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getEmail()
-    {
-        return $this->email;
-    }
-
-    /**
-     * @param mixed $email
-     */
-    public function setEmail($email)
-    {
-        $this->email = $email;
-    }
 
     /**
      * @return mixed
@@ -235,115 +273,17 @@ class Fournisseur
     /**
      * @return mixed
      */
-    public function getFax()
+    public function getMobile()
     {
-        return $this->fax;
+        return $this->mobile;
     }
 
     /**
-     * @param mixed $fax
+     * @param mixed $mobile
      */
-    public function setFax($fax)
+    public function setMobile($mobile)
     {
-        $this->fax = $fax;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getTva()
-    {
-        return $this->tva;
-    }
-
-    /**
-     * @param mixed $tva
-     */
-    public function setTva($tva)
-    {
-        $this->tva = $tva;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getCapital()
-    {
-        return $this->capital;
-    }
-
-    /**
-     * @param mixed $capital
-     */
-    public function setCapital($capital)
-    {
-        $this->capital = $capital;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getRegistre()
-    {
-        return $this->registre;
-    }
-
-    /**
-     * @param mixed $registre
-     */
-    public function setRegistre($registre)
-    {
-        $this->registre = $registre;
-    }
-
-
-
-    /**
-     * @return mixed
-     */
-    public function getFormejuridique()
-    {
-        return $this->formejuridique;
-    }
-
-    /**
-     * @param mixed $formejuridique
-     */
-    public function setFormejuridique($formejuridique)
-    {
-        $this->formejuridique = $formejuridique;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getNbemp()
-    {
-        return $this->nbemp;
-    }
-
-    /**
-     * @param mixed $nbemp
-     */
-    public function setNbemp($nbemp)
-    {
-        $this->nbemp = $nbemp;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getCodedouane()
-    {
-        return $this->codedouane;
-    }
-
-    /**
-     * @param mixed $codedouane
-     */
-    public function setCodedouane($codedouane)
-    {
-        $this->codedouane = $codedouane;
+        $this->mobile = $mobile;
     }
 
     /**
@@ -378,38 +318,154 @@ class Fournisseur
         $this->created = $created;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
-
-    /**
-     * @param mixed $id
-     */
-    public function setId($id)
-    {
-        $this->id = $id;
-    }
 
     /**
      * @return mixed
      */
-    public function getMatriculefiscal()
+    public function getRegistre()
     {
-        return $this->matriculefiscal;
+        return $this->registre;
     }
 
     /**
-     * @param mixed $matriculefiscal
+     * @param mixed $registre
      */
-    public function setMatriculefiscal($matriculefiscal)
+    public function setRegistre($registre)
     {
-        $this->matriculefiscal = $matriculefiscal;
+        $this->registre = $registre;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getListecommandes()
+    {
+        return $this->listecommandes;
+    }
+
+    /**
+     * @param mixed $listecommandes
+     */
+    public function setListecommandes($listecommandes)
+    {
+        $this->listecommandes = $listecommandes;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getRaison()
+    {
+        return $this->raison;
+    }
+
+    /**
+     * @param mixed $raison
+     */
+    public function setRaison($raison)
+    {
+        $this->raison = $raison;
+    }
+
+
+
+
+
+    public function addContact(ContactClient $contact)
+    {
+
+
+        if ($this->contacts->contains($contact)) {
+            return;
+        }
+        $this->contacts[] = $contact;
+        // needed to update the owning side of the relationship!
+        $contact->setClient($this);
+    }
+
+    public function removeContact(ContactClient $contact)
+    {
+        if (!$this->contacts->contains($contact)) {
+            return;
+        }
+        $this->contacts->removeElement($contact);
+        // needed to update the owning side of the relationship!
+        $contact->setClient(null);
+    }
+
+
+    /**
+     * @return ArrayCollection|ContactClient[]
+     */
+    public function getContacts()
+    {
+        return $this->contacts;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getFax()
+    {
+        return $this->fax;
+    }
+
+    /**
+     * @param mixed $fax
+     */
+    public function setFax($fax)
+    {
+        $this->fax = $fax;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getFormejuridique()
+    {
+        return $this->formejuridique;
+    }
+
+    /**
+     * @param mixed $formejuridique
+     */
+    public function setFormejuridique($formejuridique)
+    {
+        $this->formejuridique = $formejuridique;
+    }
+
+    /**
+     * @return ArrayCollection|HistoriqueClient[]
+     */
+    public function getHistoriques()
+    {
+        return $this->historiques;
+    }
+
+
+
+
+    public function addHistorique(HistoriqueClient $his)
+    {
+
+
+        if ($this->historiques->contains($his)) {
+            return;
+        }
+        $this->historiques[] = $his;
+        // needed to update the owning side of the relationship!
+        $his->setClient($this);
+    }
+
+    public function removeHistorique(HistoriqueClient $his)
+    {
+        if (!$this->historiques->contains($his)) {
+            return;
+        }
+        $this->historiques->removeElement($his);
+        // needed to update the owning side of the relationship!
+        $his->setClient(null);
+    }
 
 
 

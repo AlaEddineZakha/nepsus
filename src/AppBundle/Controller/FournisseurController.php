@@ -3,48 +3,116 @@
 namespace AppBundle\Controller;
 
 use AppBundle\Entity\Fournisseur;
-use AppBundle\Form\FournisseurFormType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use AppBundle\Form\ClientFormType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
 
 class FournisseurController extends Controller
 {
+
     /**
-     * @Route("/fournisseurs/new",name="addfournisseur")
+     * @Route("/fournisseurs/add",name="addfournisseur")
+     *
      */
     public function newAction(Request $request)
     {
-        $form = $this->createForm(FournisseurFormType::class);
-        $form->handleRequest($request);
-        if ($form->isSubmitted() && $form->isValid()) {
 
 
-            $fournisseur = $form->getData();
+        if ($request->isMethod('POST')) {
+            $fournisseur= new Fournisseur();
+            $fournisseur->setCapital($request->request->get('cap'));
+            $fournisseur->setMatriculefiscale($request->request->get('mf'));
+            $fournisseur->setRaison($request->request->get('raison'));
+            $fournisseur->setEmail($request->request->get('email'));
+            $fournisseur->setAdresse($request->request->get('adresse'));
+            $fournisseur->setRegion($request->request->get('region'));
+            $fournisseur->setVille($request->request->get('ville'));
+            $fournisseur->setPays($request->request->get('pays'));
+            $fournisseur->setTelephone($request->request->get('tel1'));
+            $fournisseur->setMobile($request->request->get('tel2'));
+            $fournisseur->setSiteweb($request->request->get('site'));
+            $fournisseur->setRegistre($request->request->get('registre'));
+            $fournisseur->setCreated(new \DateTime());
+            $fournisseur->setFax($request->request->get('fax'));
+            $fournisseur->setFormejuridique($request->request->get('formejuridique'));
+
+
             $em = $this->getDoctrine()->getManager();
             $em->persist($fournisseur);
             $em->flush();
-            $this->addFlash(
-                'notice',
-                'Fournisseur ajouté'
-            );
-
-
 
             return $this->redirectToRoute('listfournisseur');
-
-
         }
-        return $this->render('fournisseurs/new.html.twig', [
-            'fournisseurForm' => $form->createView()
-        ]);
+
+
+        return $this->render('fournisseurs/add.html.twig');
 
 
 
     }
+
     /**
-     * @Route("/fournisseurs")
+     * @Route("fournisseurs/{id}/edit", name="editfournisseur")
+     */
+    public function editAction($id,Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $fournisseur = $em->getRepository('AppBundle:Fournisseur')->find($id);
+        if ($request->isMethod('POST')) {
+
+            $fournisseur->setCapital($request->request->get('cap'));
+            $fournisseur->setMatriculefiscale($request->request->get('mf'));
+            $fournisseur->setRaison($request->request->get('raison'));
+            $fournisseur->setEmail($request->request->get('email'));
+            $fournisseur->setAdresse($request->request->get('adresse'));
+            $fournisseur->setRegion($request->request->get('region'));
+            $fournisseur->setVille($request->request->get('ville'));
+            $fournisseur->setPays($request->request->get('pays'));
+            $fournisseur->setTelephone($request->request->get('tel1'));
+            $fournisseur->setMobile($request->request->get('tel2'));
+            $fournisseur->setSiteweb($request->request->get('site'));
+            $fournisseur->setRegistre($request->request->get('registre'));
+            $fournisseur->setCreated(new \DateTime());
+            $fournisseur->setFax($request->request->get('fax'));
+            $fournisseur->setFormejuridique($request->request->get('formejuridique'));
+
+
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($fournisseur);
+            $em->flush();
+
+            return $this->redirectToRoute('listfournisseur');
+        }
+
+        return $this->render('fournisseurs/edit.html.twig', [
+            'fournisseur'=>$fournisseur
+
+        ]);
+
+
+        // ... do something, like pass the $product object into a template
+    }
+
+
+    /**
+     *@Route("fournisseurs/{id}/delete", name="deletefournisseur")
+     */
+    public function deleteAction($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $fournisseur = $em->getRepository('AppBundle:Fournisseur')->find($id);
+
+        $em->remove($fournisseur);
+
+
+        $em->flush();
+        return $this->redirectToRoute('listfournisseur');
+
+    }
+
+
+    /**
+     * @Route("fournisseur" , name="listfournisseur")
      */
     public function showAllAction(Request $request)
     {
@@ -59,7 +127,7 @@ class FournisseurController extends Controller
             $request->query->getInt('page', 1),
             $request->query->getInt('limit', 5)
         );
-        return $this->render('fournisseurs/show.html.twig', [
+        return $this->render(':fournisseurs:list.html.twig', [
             'fournisseurs' => $result,
 
         ]);
@@ -67,50 +135,4 @@ class FournisseurController extends Controller
 
     }
 
-    /**
-     * @Route("fournisseurs/{id}/edit", name="editfournisseur")
-     */
-    public function editAction(Fournisseur $fournisseur,Request $request)
-    {
-        $form = $this->createForm(FournisseurFormType::class,$fournisseur);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-
-            $fournisseur = $form->getData();
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($fournisseur);
-            $em->flush();
-            $this->addFlash(
-                'notice',
-                'Fournisseur modifié'
-            );
-
-
-
-            return $this->redirectToRoute('listfournisseur');
-
-
-        }
-        return $this->render('fournisseurs/edit.html.twig', [
-            'id'=>$fournisseur->getId(),
-            'fournisseurForm' => $form->createView()
-        ]);
-
-
-        // ... do something, like pass the $product object into a template
-    }
-
-    /**
-     *@Route("fournisseurs/{id}/delete", name="deletefournisseur")
-     */
-    public function deleteAction($id)
-    {
-        $em = $this->getDoctrine()->getManager();
-        $fournisseur = $em->getRepository('AppBundle:Fournisseur')->find($id);
-        $em->remove($fournisseur);
-        $em->flush();
-        return $this->redirectToRoute('listfournisseur');
-
-    }
 }

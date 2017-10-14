@@ -1,0 +1,122 @@
+<html>
+<body>
+
+
+<!-- END PAGE BAR -->
+<!-- BEGIN PAGE TITLE-->
+
+<!-- END PAGE TITLE-->
+<!-- END PAGE HEADER-->
+
+<div class="invoice-content-2 bordered" >
+    <div class="mt-element-ribbon bg-grey-steel">
+        <div class="ribbon ribbon-right ribbon-border-hor ribbon-color-danger ribbon-round ribbon-shadow uppercase">{{ facture.statut }}</div>
+        <p class="ribbon-content"><span class="bold" style="font-size: x-large">Facture #{{ facture.id }}</span></p>
+    </div>
+    <div class="row invoice-head">
+
+        <div class="col-md-5 col-xs-6">
+            <div class="company-address">
+                <span class="bold uppercase">Coordonnées Societé</span>
+                <br/> 25, Lorem Lis Street, Orange C
+                <br/> California, US
+                <br/>
+                <span class="bold">T</span> 1800 123 456
+                <br/>
+                <span class="bold">E</span> support@keenthemes.com
+                <br/>
+                <span class="bold">W</span> www.keenthemes.com </div>
+        </div>
+    </div>
+    <div class="row invoice-cust-add">
+        <div class="col-md-5 col-xs-6">
+            <div class="company-address">
+                <span class="bold uppercase">Coordonnées Client</span>
+                <br/> Raison sociale : {{ facture.bc.client.raison }}
+                <br/> Adresse : {{ facture.bc.client.region }},{{ facture.bc.client.ville }}
+                <br/> <span class="bold">M/F</span> : {{ facture.bc.client.matriculefiscale }}
+                <br/><span class="bold">R/C</span> {{ facture.bc.client.registre }} </div>
+            <br/><span class="bold">T</span> {{ facture.bc.client.telephone }}
+
+            <br/><span class="bold">E</span> {{ facture.bc.client.email }}
+
+
+        </div>
+    </div>
+    <div class="row invoice-body">
+        <div class="col-xs-12 table-responsive">
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th class="invoice-title uppercase">Description</th>
+                    <th class="invoice-title uppercase text-center">Qt</th>
+                    <th class="invoice-title uppercase text-center">Taxe</th>
+                    <th class="invoice-title uppercase text-center">Total HT</th>
+                    <th class="invoice-title uppercase text-center">Total TTC</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for ligne in facture.lignefc %}
+
+                    <tr style="text-align: center">
+
+                        <td>
+                            {{ ligne.produit.libele }}
+                        </td>
+
+                        <td>
+                            {{ ligne.quatity }}
+                        </td>
+
+                        <td>
+                            {{ ligne.tva }}
+                        </td>
+
+                        <td>
+                            {{ ligne.totalht }}
+                        </td>
+
+                        <td>
+                            {{ ligne.totalttc }}
+                        </td>
+
+                    </tr>
+
+                {% endfor %}
+
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row invoice-subtotal">
+        <div class="col-xs-3">
+            <h2 class="invoice-title uppercase">Total HT</h2>
+            <p class="invoice-desc">{{ facture.totalht }} TND</p>
+        </div>
+
+        {% for l in facture.lignefc %}
+            {% set val =  l.totalttc - l.totalht  %}
+            <div class="col-xs-3">
+                <h2 class="invoice-title uppercase">Tva {{ l.tva }} (%)</h2>
+                <p class="invoice-desc">{{ val }} TND</p>
+            </div>
+        {% endfor %}
+
+        <div class="col-xs-6">
+            <h2 class="invoice-title uppercase">Total TTC TND</h2>
+            <p class="invoice-desc grand-total">{{ facture.totalttc }}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <a class="btn btn-lg green-haze hidden-print uppercase print-btn" onclick="javascript:window.print();">Imprimer</a>
+
+
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

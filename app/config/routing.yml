@@ -11,6 +11,7 @@ dashboard:
     path:      /
     defaults:  { _controller: AppBundle:Admin:index }
 
+#--------------------- Clients -------------------#
 addclient:
     path:      /clients/new
     defaults:  { _controller: AppBundle:Client:new }
@@ -31,10 +32,9 @@ deleteclient:
 listclient:
     path:      /clients
     defaults:  { _controller: AppBundle:Client:showAll }
-
-
+#--------------------- Fournisseurs -------------------#
 addfournisseur:
-    path:      /fournisseurs/new
+    path:      /fournisseurs/add
     defaults:  { _controller: AppBundle:Fournisseur:new }
 
 editfournisseur:
@@ -53,6 +53,76 @@ deletefournisseur:
 listfournisseur:
     path:      /fournisseurs
     defaults:  { _controller: AppBundle:Fournisseur:showAll }
+
+
+
+listcategories:
+    path:      /categories
+    defaults:  { _controller: AppBundle:Category:showAll }
+
+listbcc:
+    path:      /clients/commandes
+    defaults:  { _controller: AppBundle:CommandeClient:showAll }
+
+addcommandec:
+    path:      /commandes/add
+    defaults:  { _controller: AppBundle:Client:addCommande }
+
+editcommandec:
+    path:      /clients/commandes/{id}/edit
+    defaults:  { _controller: AppBundle:CommandeClient:editCommande }
+    requirements:
+                id: \d+
+
+listproduits:
+    path:      /produits
+    defaults:  { _controller: AppBundle:Produit:showAll }
+
+checkemail:
+    path:      /checkemail/{email}
+    defaults:  { _controller: AppBundle:Client:CheckEmail }
+    requirements:
+            email: "([\\w-+]+(?:\\.[\\w-+]+)*@(?:[\\w-]+\\.)+[a-zA-Z]{2,7})"
+listfacturesclients:
+    path:      /facturesclients
+    defaults:  { _controller: AppBundle:FactureClient:showAll }
+
+viewfactureclient:
+    path:      /factures/{id}/view
+    defaults:  { _controller: AppBundle:FactureClient:view }
+    requirements:
+            id: \d+
+payerfacture:
+    path:      /factures/{id}/payer
+    defaults:  { _controller: AppBundle:FactureClient:payer }
+    requirements:
+            id: \d+
+impayerfacture:
+    path:      /factures/{id}/impayer
+    defaults:  { _controller: AppBundle:FactureClient:impayer }
+    requirements:
+            id: \d+
+annulerfacture:
+    path:      /factures/{id}/annuler
+    defaults:  { _controller: AppBundle:FactureClient:annuler }
+    requirements:
+            id: \d+
+resetapplication:
+    path:      /reset
+    defaults:  { _controller: AppBundle:Reset:sendSpool }
+
+initconfig:
+    path:      /config
+    defaults:  { _controller: AppBundle:Configuration:index }
+
+
+pageNotFound:
+    path:  /{path}
+    defaults: { _controller: AppBundle:Test:notfound, path: '' }
+    requirements:
+        path: .*
+
+
 
 
 

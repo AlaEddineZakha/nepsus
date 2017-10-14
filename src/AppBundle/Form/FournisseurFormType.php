@@ -6,6 +6,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\MoneyType;
+use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\CountryType;
@@ -14,6 +15,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
+use Symfony\Component\Validator\Constraints\Regex;
 
 
 class FournisseurFormType extends AbstractType
@@ -38,11 +40,13 @@ class FournisseurFormType extends AbstractType
             ))
         ->add('fax')
             ->add('codedouane',IntegerType::class)
-            ->add('nbemp',IntegerType::class)
-        ->add('siteweb' ,UrlType::class)
-        ->add('capital',MoneyType::class, array(
-            'divisor' => 100,
-            'currency'=>'TND'
+
+        ->add('siteweb' ,UrlType::class,array(
+            'required' => false ))
+        ->add('capital',NumberType::class ,array(
+
+            'invalid_message' => 'You entered an invalid value, it should include %num% digits',
+            'invalid_message_parameters' => array('%num%' => 7),
         ))
         ->add('matriculefiscal')
         ->add('registre')

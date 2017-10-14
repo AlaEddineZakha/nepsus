@@ -4,19 +4,33 @@
     <meta charset="UTF-8" />
     <title>{% block title %}Nepsus{% endblock %}</title>
     {% block stylesheets %}
+        <style>
+            /* Paste this css to your style sheet file or under head tag */
+            /* This only works with JavaScript,
+            if it's not present, don't show loader */
+            .no-js #loader { display: none;  }
+            .js #loader { display: block; position: absolute; left: 100px; top: 0; }
+            .se-pre-con {
+                position: fixed;
+                left: 0px;
+                top: 0px;
+                width: 100%;
+                height: 100%;
+                z-index: 9999;
+                background: url({{ asset('QKIeRaf.gif')}}) center no-repeat #201E1E;
+                background-size: 120px 120px;
+                opacity: 0.9;
+            }
+        </style>
         <!-- BEGIN GLOBAL MANDATORY STYLES -->
-        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
         <link href="{{ asset('Template/assets/global/plugins/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css" />
         <link href="{{ asset('Template/assets/global/plugins/simple-line-icons/simple-line-icons.min.css')}}" rel="stylesheet" type="text/css" />
         <link href="{{ asset('Template/assets/global/plugins/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
         <link href="{{ asset('Template/assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css')}}" rel="stylesheet" type="text/css" />
         <!-- END GLOBAL MANDATORY STYLES -->
         <!-- BEGIN PAGE LEVEL PLUGINS -->
-        <link href="{{ asset('Template/assets/global/plugins/bootstrap-sweetalert/sweetalert.css')}}" rel="stylesheet" type="text/css" />
-        <link href="{{ asset('Template/assets/global/plugins/bootstrap-daterangepicker/daterangepicker.min.css')}}" rel="stylesheet" type="text/css" />
-        <link href="{{ asset('Template/assets/global/plugins/morris/morris.css')}}" rel="stylesheet" type="text/css" />
-        <link href="{{ asset('Template/assets/global/plugins/fullcalendar/fullcalendar.min.css')}}" rel="stylesheet" type="text/css" />
-        <link href="{{ asset('Template/assets/global/plugins/jqvmap/jqvmap/jqvmap.css')}}" rel="stylesheet" type="text/css" />
+
         <!-- END PAGE LEVEL PLUGINS -->
         <!-- BEGIN THEME GLOBAL STYLES -->
         <link href="{{ asset('Template/assets/global/css/components-md.min.css')}}" rel="stylesheet"  type="text/css" />
@@ -31,6 +45,7 @@
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
 </head>
 <body class="page-header-fixed page-sidebar-closed-hide-logo page-content-white page-md">
+<div class="se-pre-con"></div>
 <div class="page-wrapper">
     <!-- BEGIN HEADER -->
     <div class="page-header navbar navbar-fixed-top">
@@ -347,7 +362,7 @@
                     <li class="dropdown dropdown-user">
                         <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
                             <img alt="" class="img-circle" src="{{ asset('Template/assets/layouts/layout/img/avatar3_small.jpg') }}" />
-                            <span class="username username-hide-on-mobile"> Nick </span>
+                            <span class="username username-hide-on-mobile"> {{ app.user.username }} </span>
                             <i class="fa fa-angle-down"></i>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-default">
@@ -377,7 +392,7 @@
                                     <i class="icon-lock"></i> Lock Screen </a>
                             </li>
                             <li>
-                                <a href="page_user_login_1.html">
+                                <a href="{{ path('fos_user_security_logout') }}">
                                     <i class="icon-key"></i> Log Out </a>
                             </li>
                         </ul>
@@ -404,10 +419,13 @@
     <!-- BEGIN CONTAINER -->
     <div class="page-container">
         <!-- BEGIN SIDEBAR -->
+
         <div class="page-sidebar-wrapper">
             <!-- BEGIN SIDEBAR -->
             <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+
             <!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+
             <div class="page-sidebar navbar-collapse collapse">
                 <!-- BEGIN SIDEBAR MENU -->
                 <!-- DOC: Apply "page-sidebar-menu-light" class right after "page-sidebar-menu" to enable light sidebar menu style(without borders) -->
@@ -445,747 +463,500 @@
                         </form>
                         <!-- END RESPONSIVE QUICK SEARCH FORM -->
                     </li>
-                    <li class="nav-item start active open">
-                        <a href="javascript:;" class="nav-link nav-toggle">
-                            <i class="icon-home"></i>
-                            <span class="title">Tableau de bord</span>
-                            <span class="selected"></span>
-                            <span class="arrow open"></span>
-                        </a>
-                        <ul class="sub-menu">
-                            <li class="nav-item start active open">
-                                <a href="{{ path('dashboard')}}" class="nav-link ">
-                                    <i class="icon-bar-chart"></i>
-                                    <span class="title">Basique</span>
-                                    <span class="selected"></span>
-                                </a>
-                            </li>
-                            <li class="nav-item start ">
-                                <a href="dashboard_2.html" class="nav-link ">
-                                    <i class="icon-bulb"></i>
-                                    <span class="title">Avancé</span>
-                                    <span class="badge badge-success">1</span>
-                                </a>
-                            </li>
-                            <li class="nav-item start ">
-                                <a href="dashboard_3.html" class="nav-link ">
-                                    <i class="icon-graph"></i>
-                                    <span class="title">Expert</span>
-                                    <span class="badge badge-danger">5</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="heading">
-                        <h3 class="uppercase">Gestion</h3>
-                    </li>
-                    <li class="nav-item  ">
-                        <a href="javascript:;" class="nav-link nav-toggle">
-                            <i class="icon-diamond"></i>
-                            <span class="title">Clients</span>
-                            <span class="arrow"></span>
-                        </a>
-                        <ul class="sub-menu">
-                            <li class="nav-item  ">
-                                <a href="{{ path('listclient')}}" class="nav-link">
-                                    <span class="title">Liste des clients</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a href="{{ path('addclient')}}" class="nav-link ">
-                                    <span class="title">Nouveau client</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a href="ui_general.html" class="nav-link ">
-                                    <span class="title">Contacts</span>
-                                </a>
-                            </li>
+                    {% block menu %}
+                    {% if app.request.attributes.get('_route') =='dashboard' %}
+                        <li class="nav-item active open">
+                            <a href="{{ path('dashboard') }}" class="nav-link nav-toggle">
+                                <i class="icon-home"></i>
+                                <span class="title">Tableau de bord</span>
 
-                        </ul>
-                    </li>
-                    <li class="nav-item  ">
-                        <a href="javascript:;" class="nav-link nav-toggle">
-                            <i class="icon-puzzle"></i>
-                            <span class="title">Fournisseurs</span>
-                            <span class="arrow"></span>
-                        </a>
-                        <ul class="sub-menu">
-                            <li class="nav-item  ">
-                                <a href="components_date_time_pickers.html" class="nav-link ">
-                                    <span class="title">Date & Time Pickers</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item  ">
-                        <a href="javascript:;" class="nav-link nav-toggle">
-                            <i class="icon-settings"></i>
-                            <span class="title">Produits</span>
-                            <span class="arrow"></span>
-                        </a>
-                        <ul class="sub-menu">
-                            <li class="nav-item  ">
-                                <a href="form_controls.html" class="nav-link ">
-                                            <span class="title">Bootstrap Form
-                                                <br>Controls</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item  ">
-                        <a href="javascript:;" class="nav-link nav-toggle">
-                            <i class="icon-bulb"></i>
-                            <span class="title">Commandes</span>
-                            <span class="arrow"></span>
-                        </a>
-                        <ul class="sub-menu">
-                            <li class="nav-item  ">
-                                <a href="elements_steps.html" class="nav-link ">
-                                    <span class="title">Steps</span>
-                                </a>
-                            </li>
 
-                        </ul>
-                    </li>
-                    <li class="nav-item  ">
-                        <a href="javascript:;" class="nav-link nav-toggle">
-                            <i class="icon-briefcase"></i>
-                            <span class="title">Facturation</span>
-                            <span class="arrow"></span>
-                        </a>
-                        <ul class="sub-menu">
+                            </a>
 
-                            <li class="nav-item  ">
-                                <a href="table_bootstrap.html" class="nav-link ">
-                                    <span class="title">Bootstrap Tables</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
+                        </li>
+
+                    {% else  %}
+                        <li class="nav-item">
+                            <a href="{{ path('dashboard') }}" class="nav-link nav-toggle">
+                                <i class="icon-home"></i>
+                                <span class="title">Tableau de bord</span>
+
+
+                            </a>
+
+                        </li>
+                    {% endif %}
+
+                        <li class="heading">
+                            <h3 class="uppercase" style="font-weight: 600 ; color: white"> <i class="icon-wrench"></i> Gestion</h3>
+                        </li>
+                    {% if app.request.attributes.get('_route') =='addclient' %}
+                        <li class="nav-item active open">
+                            <a href="javascript:;" class="nav-link nav-toggle">
+                                <i class="icon-users"></i>
+                                <span class="title">Clients</span>
+                                <span class="arrow open"></span>
+
+                            </a>
+                            <ul class="sub-menu ">
+                                <li class="nav-item active ">
+                                    <a href="{{ path('addclient') }}" class="nav-link">
+                                        <span class="title">Nouveau client</span>
+                                        <span class="selected"></span>
+
+                                    </a>
+                                </li>
+                                <li class="nav-item  ">
+                                    <a href="{{ path('listclient') }}" class="nav-link ">
+                                        <span class="title">Liste des clients</span>
+                                    </a>
+                                </li>
+
+
+                            </ul>
+                        </li>
+                    {% elseif app.request.attributes.get('_route') =='listclient' %}
+                        <li class="nav-item active open">
+                            <a href="javascript:;" class="nav-link nav-toggle">
+                                <i class="icon-users"></i>
+                                <span class="title">Clients</span>
+                                <span class="arrow open"></span>
+
+                            </a>
+                            <ul class="sub-menu ">
+                                <li class="nav-item  ">
+                                    <a href="{{ path('addclient') }}" class="nav-link">
+                                        <span class="title">Nouveau client</span>
+
+                                    </a>
+                                </li>
+                                <li class="nav-item active ">
+                                    <a href="{{ path('listclient') }}" class="nav-link ">
+                                        <span class="title">Liste des clients</span>
+                                        <span class="selected"></span>
+                                    </a>
+                                </li>
+
+
+                            </ul>
+                        </li>
+                    {% else  %}
+                        <li class="nav-item">
+                            <a href="javascript:;" class="nav-link nav-toggle">
+                                <i class="icon-users"></i>
+                                <span class="title">Clients</span>
+                                <span class="arrow"></span>
+
+                            </a>
+                            <ul class="sub-menu ">
+                                <li class="nav-item  ">
+                                    <a href="{{ path('addclient') }}" class="nav-link">
+                                        <span class="title">Nouveau client</span>
+
+                                    </a>
+                                </li>
+                                <li class="nav-item  ">
+                                    <a href="{{ path('listclient') }}" class="nav-link ">
+                                        <span class="title">Liste des clients</span>
+                                    </a>
+                                </li>
+
+
+                            </ul>
+                        </li>
+                    {% endif %}
+
+                        <li class="nav-item">
+                            <a href="javascript:;" class="nav-link nav-toggle">
+                                <i class="icon-user-following"></i>
+                                <span class="title">Fournisseurs</span>
+                                <span class="arrow"></span>
+
+                            </a>
+                            <ul class="sub-menu ">
+                                <li class="nav-item  ">
+                                    <a href="{{ path('addclient') }}" class="nav-link">
+                                        <span class="title">Nouveau Fournisseur</span>
+
+                                    </a>
+                                </li>
+                                <li class="nav-item  ">
+                                    <a href="{{ path('listclient') }}" class="nav-link ">
+                                        <span class="title">Liste des fournisseurs</span>
+                                    </a>
+                                </li>
+
+
+                            </ul>
+                        </li>
+                        {% if app.request.attributes.get('_route') =='addcommandec' %}
+                        <li class="nav-item active open">
+                            <a href="javascript:;" class="nav-link nav-toggle">
+                                <i class="icon-basket"></i>
+                                <span class="title">Commandes</span>
+                                <span class="arrow open"></span>
+
+                            </a>
+                            <ul class="sub-menu ">
+                                <li class="nav-item active open">
+                                    <a href="javascript:;" class="nav-link nav-toggle">
+
+                                        <span class="title">Clients</span>
+                                        <span class="arrow open"></span>
+
+                                    </a>
+                                    <ul class="sub-menu ">
+                                        <li class="nav-item active">
+                                            <a href="{{ path('addcommandec') }}" class="nav-link">
+                                                <span class="title">Nouvelle commande</span>
+                                                <span class="selected"></span>
+
+                                            </a>
+                                        </li>
+                                        <li class="nav-item  ">
+                                            <a href="{{ path('listbcc') }}" class="nav-link ">
+                                                <span class="title">Liste des commandes</span>
+                                            </a>
+                                        </li>
+
+
+                                    </ul>
+                                </li>
+                                <li class="nav-item  ">
+                                    <a href="javascript:;" class="nav-link nav-toggle">
+
+                                        <span class="title">Fournisseurs</span>
+                                        <span class="arrow"></span>
+
+                                    </a>
+                                    <ul class="sub-menu ">
+                                        <li class="nav-item  ">
+                                            <a href="{{ path('addclient') }}" class="nav-link">
+                                                <span class="title">Nouvau commande</span>
+
+                                            </a>
+                                        </li>
+                                        <li class="nav-item  ">
+                                            <a href="{{ path('listclient') }}" class="nav-link ">
+                                                <span class="title">Liste des commandes</span>
+                                            </a>
+                                        </li>
+
+
+                                    </ul>
+                                </li>
+
+
+                            </ul>
+
+                        </li>
+
+                        {% elseif app.request.attributes.get('_route') =='listbcc' %}
+                            <li class="nav-item active open">
                                 <a href="javascript:;" class="nav-link nav-toggle">
-                                    <span class="title">Datatables</span>
-                                    <span class="arrow"></span>
-                                </a>
-                                <ul class="sub-menu">
-                                    <li class="nav-item ">
-                                        <a href="table_datatables_managed.html" class="nav-link "> Managed Datatables </a>
-                                    </li>
-
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item  ">
-                        <a href="?p=" class="nav-link nav-toggle">
-                            <i class="icon-wallet"></i>
-                            <span class="title">Utilisateurs</span>
-                            <span class="arrow"></span>
-                        </a>
-                        <ul class="sub-menu">
-                            <li class="nav-item  ">
-                                <a href="portlet_boxed.html" class="nav-link ">
-                                    <span class="title">Boxed Portlets</span>
-                                </a>
-                            </li>
-
-                        </ul>
-                    </li>
-                    <li class="nav-item  ">
-                        <a href="javascript:;" class="nav-link nav-toggle">
-                            <i class="icon-bar-chart"></i>
-                            <span class="title">Rapports</span>
-                            <span class="arrow"></span>
-                        </a>
-                        <ul class="sub-menu">
-                            <li class="nav-item  ">
-                                <a href="charts_amcharts.html" class="nav-link ">
-                                    <span class="title">amChart</span>
-                                </a>
-                            </li>
-
-                            <li class="nav-item  ">
-                                <a href="javascript:;" class="nav-link nav-toggle">
-                                    <span class="title">HighCharts</span>
-                                    <span class="arrow"></span>
-                                </a>
-                                <ul class="sub-menu">
-                                    <li class="nav-item ">
-                                        <a href="charts_highcharts.html" class="nav-link "> HighCharts </a>
-                                    </li>
-
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item  ">
-                        <a href="javascript:;" class="nav-link nav-toggle">
-                            <i class="icon-pointer"></i>
-                            <span class="title">Maps</span>
-                            <span class="arrow"></span>
-                        </a>
-                        <ul class="sub-menu">
-                            <li class="nav-item  ">
-                                <a href="maps_google.html" class="nav-link ">
-                                    <span class="title">Google Maps</span>
-                                </a>
-                            </li>
-
-                        </ul>
-                    </li>
-                    <li class="heading">
-                        <h3 class="uppercase">Layouts</h3>
-                    </li>
-                    <li class="nav-item  ">
-                        <a href="javascript:;" class="nav-link nav-toggle">
-                            <i class="icon-layers"></i>
-                            <span class="title">Page Layouts</span>
-                            <span class="arrow"></span>
-                        </a>
-                        <ul class="sub-menu">
-                            <li class="nav-item  ">
-                                <a href="layout_blank_page.html" class="nav-link ">
-                                    <span class="title">Blank Page</span>
-                                </a>
-                            </li>
-
-                        </ul>
-                    </li>
-                    <li class="nav-item  ">
-                        <a href="javascript:;" class="nav-link nav-toggle">
-                            <i class="icon-feed"></i>
-                            <span class="title">Sidebar Layouts</span>
-                            <span class="arrow"></span>
-                        </a>
-                        <ul class="sub-menu">
-                            <li class="nav-item  ">
-                                <a href="layout_sidebar_menu_light.html" class="nav-link ">
-                                    <span class="title">Light Sidebar Menu</span>
-                                </a>
-                            </li>
-
-                        </ul>
-                    </li>
-                    <li class="nav-item  ">
-                        <a href="javascript:;" class="nav-link nav-toggle">
-                            <i class="icon-paper-plane"></i>
-                            <span class="title">Horizontal Menu</span>
-                            <span class="arrow"></span>
-                        </a>
-                        <ul class="sub-menu">
-                            <li class="nav-item  ">
-                                <a href="layout_mega_menu_light.html" class="nav-link ">
-                                    <span class="title">Light Mega Menu</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a href="layout_mega_menu_dark.html" class="nav-link ">
-                                    <span class="title">Dark Mega Menu</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a href="layout_full_width.html" class="nav-link ">
-                                    <span class="title">Full Width Layout</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item  ">
-                        <a href="javascript:;" class="nav-link nav-toggle">
-                            <i class=" icon-wrench"></i>
-                            <span class="title">Custom Layouts</span>
-                            <span class="arrow"></span>
-                        </a>
-                        <ul class="sub-menu">
-                            <li class="nav-item  ">
-                                <a href="layout_disabled_menu.html" class="nav-link ">
-                                    <span class="title">Disabled Menu Links</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a href="layout_full_height_portlet.html" class="nav-link ">
-                                    <span class="title">Full Height Portlet</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a href="layout_full_height_content.html" class="nav-link ">
-                                    <span class="title">Full Height Content</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="heading">
-                        <h3 class="uppercase">Utilisateurs</h3>
-                    </li>
-                    <li class="nav-item  ">
-                        <a href="javascript:;" class="nav-link nav-toggle">
-                            <i class="icon-basket"></i>
-                            <span class="title">eCommerce</span>
-                            <span class="arrow"></span>
-                        </a>
-                        <ul class="sub-menu">
-                            <li class="nav-item  ">
-                                <a href="ecommerce_index.html" class="nav-link ">
-                                    <i class="icon-home"></i>
-                                    <span class="title">Dashboard</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a href="ecommerce_orders.html" class="nav-link ">
                                     <i class="icon-basket"></i>
-                                    <span class="title">Orders</span>
+                                    <span class="title">Commandes</span>
+                                    <span class="arrow open"></span>
+
                                 </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a href="ecommerce_orders_view.html" class="nav-link ">
-                                    <i class="icon-tag"></i>
-                                    <span class="title">Order View</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a href="ecommerce_products.html" class="nav-link ">
-                                    <i class="icon-graph"></i>
-                                    <span class="title">Products</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a href="ecommerce_products_edit.html" class="nav-link ">
-                                    <i class="icon-graph"></i>
-                                    <span class="title">Product Edit</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item  ">
-                        <a href="javascript:;" class="nav-link nav-toggle">
-                            <i class="icon-docs"></i>
-                            <span class="title">Apps</span>
-                            <span class="arrow"></span>
-                        </a>
-                        <ul class="sub-menu">
-                            <li class="nav-item  ">
-                                <a href="app_todo.html" class="nav-link ">
-                                    <i class="icon-clock"></i>
-                                    <span class="title">Todo 1</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a href="app_todo_2.html" class="nav-link ">
-                                    <i class="icon-check"></i>
-                                    <span class="title">Todo 2</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a href="app_inbox.html" class="nav-link ">
-                                    <i class="icon-envelope"></i>
-                                    <span class="title">Inbox</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a href="app_calendar.html" class="nav-link ">
-                                    <i class="icon-calendar"></i>
-                                    <span class="title">Calendar</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a href="app_ticket.html" class="nav-link ">
-                                    <i class="icon-notebook"></i>
-                                    <span class="title">Support</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item  ">
-                        <a href="javascript:;" class="nav-link nav-toggle">
-                            <i class="icon-user"></i>
-                            <span class="title">User</span>
-                            <span class="arrow"></span>
-                        </a>
-                        <ul class="sub-menu">
-                            <li class="nav-item  ">
-                                <a href="page_user_profile_1.html" class="nav-link ">
-                                    <i class="icon-user"></i>
-                                    <span class="title">Profile 1</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a href="page_user_profile_1_account.html" class="nav-link ">
-                                    <i class="icon-user-female"></i>
-                                    <span class="title">Profile 1 Account</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a href="page_user_profile_1_help.html" class="nav-link ">
-                                    <i class="icon-user-following"></i>
-                                    <span class="title">Profile 1 Help</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a href="page_user_profile_2.html" class="nav-link ">
-                                    <i class="icon-users"></i>
-                                    <span class="title">Profile 2</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a href="javascript:;" class="nav-link nav-toggle">
-                                    <i class="icon-notebook"></i>
-                                    <span class="title">Login</span>
-                                    <span class="arrow"></span>
-                                </a>
-                                <ul class="sub-menu">
-                                    <li class="nav-item ">
-                                        <a href="page_user_login_1.html" class="nav-link " target="_blank"> Login Page 1 </a>
-                                    </li>
-                                    <li class="nav-item ">
-                                        <a href="page_user_login_2.html" class="nav-link " target="_blank"> Login Page 2 </a>
-                                    </li>
-                                    <li class="nav-item ">
-                                        <a href="page_user_login_3.html" class="nav-link " target="_blank"> Login Page 3 </a>
-                                    </li>
-                                    <li class="nav-item ">
-                                        <a href="page_user_login_4.html" class="nav-link " target="_blank"> Login Page 4 </a>
-                                    </li>
-                                    <li class="nav-item ">
-                                        <a href="page_user_login_5.html" class="nav-link " target="_blank"> Login Page 5 </a>
-                                    </li>
-                                    <li class="nav-item ">
-                                        <a href="page_user_login_6.html" class="nav-link " target="_blank"> Login Page 6 </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item  ">
-                                <a href="page_user_lock_1.html" class="nav-link " target="_blank">
-                                    <i class="icon-lock"></i>
-                                    <span class="title">Lock Screen 1</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a href="page_user_lock_2.html" class="nav-link " target="_blank">
-                                    <i class="icon-lock-open"></i>
-                                    <span class="title">Lock Screen 2</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item  ">
-                        <a href="javascript:;" class="nav-link nav-toggle">
-                            <i class="icon-social-dribbble"></i>
-                            <span class="title">General</span>
-                            <span class="arrow"></span>
-                        </a>
-                        <ul class="sub-menu">
-                            <li class="nav-item  ">
-                                <a href="page_general_about.html" class="nav-link ">
-                                    <i class="icon-info"></i>
-                                    <span class="title">About</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a href="page_general_contact.html" class="nav-link ">
-                                    <i class="icon-call-end"></i>
-                                    <span class="title">Contact</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a href="javascript:;" class="nav-link nav-toggle">
-                                    <i class="icon-notebook"></i>
-                                    <span class="title">Portfolio</span>
-                                    <span class="arrow"></span>
-                                </a>
-                                <ul class="sub-menu">
-                                    <li class="nav-item ">
-                                        <a href="page_general_portfolio_1.html" class="nav-link "> Portfolio 1 </a>
-                                    </li>
-                                    <li class="nav-item ">
-                                        <a href="page_general_portfolio_2.html" class="nav-link "> Portfolio 2 </a>
-                                    </li>
-                                    <li class="nav-item ">
-                                        <a href="page_general_portfolio_3.html" class="nav-link "> Portfolio 3 </a>
-                                    </li>
-                                    <li class="nav-item ">
-                                        <a href="page_general_portfolio_4.html" class="nav-link "> Portfolio 4 </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item  ">
-                                <a href="javascript:;" class="nav-link nav-toggle">
-                                    <i class="icon-magnifier"></i>
-                                    <span class="title">Search</span>
-                                    <span class="arrow"></span>
-                                </a>
-                                <ul class="sub-menu">
-                                    <li class="nav-item ">
-                                        <a href="page_general_search.html" class="nav-link "> Search 1 </a>
-                                    </li>
-                                    <li class="nav-item ">
-                                        <a href="page_general_search_2.html" class="nav-link "> Search 2 </a>
-                                    </li>
-                                    <li class="nav-item ">
-                                        <a href="page_general_search_3.html" class="nav-link "> Search 3 </a>
-                                    </li>
-                                    <li class="nav-item ">
-                                        <a href="page_general_search_4.html" class="nav-link "> Search 4 </a>
-                                    </li>
-                                    <li class="nav-item ">
-                                        <a href="page_general_search_5.html" class="nav-link "> Search 5 </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item  ">
-                                <a href="page_general_pricing.html" class="nav-link ">
-                                    <i class="icon-tag"></i>
-                                    <span class="title">Pricing</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a href="page_general_faq.html" class="nav-link ">
-                                    <i class="icon-wrench"></i>
-                                    <span class="title">FAQ</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a href="page_general_blog.html" class="nav-link ">
-                                    <i class="icon-pencil"></i>
-                                    <span class="title">Blog</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a href="page_general_blog_post.html" class="nav-link ">
-                                    <i class="icon-note"></i>
-                                    <span class="title">Blog Post</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a href="page_general_invoice.html" class="nav-link ">
-                                    <i class="icon-envelope"></i>
-                                    <span class="title">Invoice</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a href="page_general_invoice_2.html" class="nav-link ">
-                                    <i class="icon-envelope"></i>
-                                    <span class="title">Invoice 2</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item  ">
-                        <a href="javascript:;" class="nav-link nav-toggle">
-                            <i class="icon-settings"></i>
-                            <span class="title">Paramètres</span>
-                            <span class="arrow"></span>
-                        </a>
-                        <ul class="sub-menu">
-                            <li class="nav-item  ">
-                                <a href="page_cookie_consent_1.html" class="nav-link ">
-                                    <span class="title">Cookie Consent 1</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a href="page_cookie_consent_2.html" class="nav-link ">
-                                    <span class="title">Cookie Consent 2</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a href="page_system_coming_soon.html" class="nav-link " target="_blank">
-                                    <span class="title">Coming Soon</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a href="page_system_404_1.html" class="nav-link ">
-                                    <span class="title">404 Page 1</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a href="page_system_404_2.html" class="nav-link " target="_blank">
-                                    <span class="title">404 Page 2</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a href="page_system_404_3.html" class="nav-link " target="_blank">
-                                    <span class="title">404 Page 3</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a href="page_system_500_1.html" class="nav-link ">
-                                    <span class="title">500 Page 1</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a href="page_system_500_2.html" class="nav-link " target="_blank">
-                                    <span class="title">500 Page 2</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a href="javascript:;" class="nav-link nav-toggle">
-                            <i class="icon-folder"></i>
-                            <span class="title">Multi Level Menu</span>
-                            <span class="arrow "></span>
-                        </a>
-                        <ul class="sub-menu">
-                            <li class="nav-item">
-                                <a href="javascript:;" class="nav-link nav-toggle">
-                                    <i class="icon-settings"></i> Item 1
-                                    <span class="arrow"></span>
-                                </a>
-                                <ul class="sub-menu">
-                                    <li class="nav-item">
-                                        <a href="javascript:;" target="_blank" class="nav-link">
-                                            <i class="icon-user"></i> Arrow Toggle
-                                            <span class="arrow nav-toggle"></span>
+                                <ul class="sub-menu ">
+                                    <li class="nav-item active open">
+                                        <a href="javascript:;" class="nav-link nav-toggle">
+
+                                            <span class="title">Clients</span>
+                                            <span class="arrow open"></span>
+
                                         </a>
-                                        <ul class="sub-menu">
-                                            <li class="nav-item">
-                                                <a href="#" class="nav-link">
-                                                    <i class="icon-power"></i> Sample Link 1</a>
+                                        <ul class="sub-menu ">
+                                            <li class="nav-item ">
+                                                <a href="{{ path('addcommandec') }}" class="nav-link">
+                                                    <span class="title">Nouvelle commande</span>
+
+
+                                                </a>
                                             </li>
-                                            <li class="nav-item">
-                                                <a href="#" class="nav-link">
-                                                    <i class="icon-paper-plane"></i> Sample Link 1</a>
+                                            <li class="nav-item active ">
+                                                <a href="{{ path('listbcc') }}" class="nav-link ">
+                                                    <span class="title">Liste des commandes</span>
+                                                    <span class="selected"></span>
+                                                </a>
                                             </li>
-                                            <li class="nav-item">
-                                                <a href="#" class="nav-link">
-                                                    <i class="icon-star"></i> Sample Link 1</a>
-                                            </li>
+
+
                                         </ul>
                                     </li>
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">
-                                            <i class="icon-camera"></i> Sample Link 1</a>
+                                    <li class="nav-item  ">
+                                        <a href="javascript:;" class="nav-link nav-toggle">
+
+                                            <span class="title">Fournisseurs</span>
+                                            <span class="arrow"></span>
+
+                                        </a>
+                                        <ul class="sub-menu ">
+                                            <li class="nav-item  ">
+                                                <a href="{{ path('addclient') }}" class="nav-link">
+                                                    <span class="title">Nouvau commande</span>
+
+                                                </a>
+                                            </li>
+                                            <li class="nav-item  ">
+                                                <a href="{{ path('listclient') }}" class="nav-link ">
+                                                    <span class="title">Liste des commandes</span>
+                                                </a>
+                                            </li>
+
+
+                                        </ul>
                                     </li>
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">
-                                            <i class="icon-link"></i> Sample Link 2</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">
-                                            <i class="icon-pointer"></i> Sample Link 3</a>
-                                    </li>
+
+
                                 </ul>
+
                             </li>
+                        {% else  %}
                             <li class="nav-item">
-                                <a href="javascript:;" target="_blank" class="nav-link">
-                                    <i class="icon-globe"></i> Arrow Toggle
-                                    <span class="arrow nav-toggle"></span>
+                                <a href="javascript:;" class="nav-link nav-toggle">
+                                    <i class="icon-basket"></i>
+                                    <span class="title">Commandes</span>
+                                    <span class="arrow "></span>
+
                                 </a>
-                                <ul class="sub-menu">
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">
-                                            <i class="icon-tag"></i> Sample Link 1</a>
+                                <ul class="sub-menu ">
+                                    <li class="nav-item  ">
+                                        <a href="javascript:;" class="nav-link nav-toggle">
+
+                                            <span class="title">Clients</span>
+                                            <span class="arrow "></span>
+
+                                        </a>
+                                        <ul class="sub-menu ">
+                                            <li class="nav-item ">
+                                                <a href="{{ path('addcommandec') }}" class="nav-link">
+                                                    <span class="title">Nouvelle commande</span>
+
+
+                                                </a>
+                                            </li>
+                                            <li class="nav-item  ">
+                                                <a href="{{ path('listbcc') }}" class="nav-link ">
+                                                    <span class="title">Liste des commandes</span>
+                                                </a>
+                                            </li>
+
+
+                                        </ul>
                                     </li>
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">
-                                            <i class="icon-pencil"></i> Sample Link 1</a>
+                                    <li class="nav-item  ">
+                                        <a href="javascript:;" class="nav-link nav-toggle">
+
+                                            <span class="title">Fournisseurs</span>
+                                            <span class="arrow"></span>
+
+                                        </a>
+                                        <ul class="sub-menu ">
+                                            <li class="nav-item  ">
+                                                <a href="{{ path('addclient') }}" class="nav-link">
+                                                    <span class="title">Nouvau commande</span>
+
+                                                </a>
+                                            </li>
+                                            <li class="nav-item  ">
+                                                <a href="{{ path('listclient') }}" class="nav-link ">
+                                                    <span class="title">Liste des commandes</span>
+                                                </a>
+                                            </li>
+
+
+                                        </ul>
                                     </li>
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">
-                                            <i class="icon-graph"></i> Sample Link 1</a>
-                                    </li>
+
+
                                 </ul>
+
                             </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    <i class="icon-bar-chart"></i> Item 3 </a>
-                            </li>
-                        </ul>
-                    </li>
+                        {% endif %}
+
+                        <li class="heading">
+                            <h3 class="uppercase" style="font-weight: 600 ; color: white"> <i class="icon-layers"></i> Facturation</h3>
+                        </li>
+                        <li class="nav-item">
+                            <a href="javascript:;" class="nav-link nav-toggle">
+                                <i class="icon-docs"></i>
+                                <span class="title">Factures</span>
+                                <span class="arrow"></span>
+
+                            </a>
+                            <ul class="sub-menu ">
+                                <li class="nav-item  ">
+                                    <a href="javascript:;" class="nav-link nav-toggle">
+
+                                        <span class="title">Clients</span>
+                                        <span class="arrow"></span>
+
+                                    </a>
+                                    <ul class="sub-menu ">
+                                        <li class="nav-item  ">
+                                            <a href="{{ path('addclient') }}" class="nav-link">
+                                                <span class="title">Nouvelle Facture</span>
+
+                                            </a>
+                                        </li>
+                                        <li class="nav-item  ">
+                                            <a href="{{ path('listclient') }}" class="nav-link ">
+                                                <span class="title">Liste des factures</span>
+                                            </a>
+                                        </li>
+
+
+                                    </ul>
+                                </li>
+                                <li class="nav-item  ">
+                                    <a href="javascript:;" class="nav-link nav-toggle">
+
+                                        <span class="title">Fournisseurs</span>
+                                        <span class="arrow"></span>
+
+                                    </a>
+                                    <ul class="sub-menu ">
+                                        <li class="nav-item  ">
+                                            <a href="{{ path('addclient') }}" class="nav-link">
+                                                <span class="title">Nouvelle facture</span>
+
+                                            </a>
+                                        </li>
+                                        <li class="nav-item  ">
+                                            <a href="{{ path('listclient') }}" class="nav-link ">
+                                                <span class="title">Liste des factures</span>
+                                            </a>
+                                        </li>
+
+
+                                    </ul>
+                                </li>
+
+
+
+                            </ul>
+
+
+                        </li>
+
+                        <li class="nav-item  ">
+                            <a href="javascript:;" class="nav-link nav-toggle">
+                                <i class="icon-note"></i>
+                                <span class="title">Devis</span>
+                                <span class="arrow"></span>
+
+                            </a>
+                            <ul class="sub-menu ">
+                                <li class="nav-item  ">
+                                    <a href="{{ path('addclient') }}" class="nav-link">
+                                        <span class="title">Nouvau devis</span>
+
+                                    </a>
+                                </li>
+                                <li class="nav-item  ">
+                                    <a href="{{ path('listclient') }}" class="nav-link ">
+                                        <span class="title">Liste des devis</span>
+                                    </a>
+                                </li>
+
+
+                            </ul>
+                        </li>
+                        <li class="nav-item  ">
+                            <a href="javascript:;" class="nav-link nav-toggle">
+                                <i class="icon-credit-card"></i>
+                                <span class="title">Transactions</span>
+                                <span class="arrow"></span>
+
+                            </a>
+                            <ul class="sub-menu ">
+                                <li class="nav-item  ">
+                                    <a href="{{ path('addclient') }}" class="nav-link">
+                                        <span class="title">Nouvelle transaction</span>
+
+                                    </a>
+                                </li>
+                                <li class="nav-item  ">
+                                    <a href="{{ path('listclient') }}" class="nav-link ">
+                                        <span class="title">Liste des transactions</span>
+                                    </a>
+                                </li>
+
+
+                            </ul>
+                        </li>
+                        <li class="heading" >
+                            <h3 class="uppercase" style="font-weight: 600 ; color: white;"><i class="icon-grid"></i>  Stock</h3>
+                        </li>
+                        <li class="nav-item">
+                            <a href="javascript:;" class="nav-link nav-toggle">
+                                <i class="icon-social-dropbox"></i>
+                                <span class="title">Produits</span>
+                                <span class="arrow"></span>
+
+                            </a>
+                            <ul class="sub-menu ">
+                                <li class="nav-item  ">
+                                    <a href="{{ path('addclient') }}" class="nav-link">
+                                        <span class="title">Nouveau produit</span>
+
+                                    </a>
+                                </li>
+                                <li class="nav-item  ">
+                                    <a href="{{ path('listclient') }}" class="nav-link ">
+                                        <span class="title">Liste des produits</span>
+                                    </a>
+                                </li>
+
+
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="javascript:;" class="nav-link nav-toggle">
+                                <i class="icon-tag"></i>
+                                <span class="title">Categories</span>
+                                <span class="arrow"></span>
+
+                            </a>
+                            <ul class="sub-menu ">
+                                <li class="nav-item  ">
+                                    <a href="{{ path('addclient') }}" class="nav-link">
+                                        <span class="title">Nouvelle catégorie</span>
+
+                                    </a>
+                                </li>
+                                <li class="nav-item  ">
+                                    <a href="{{ path('listclient') }}" class="nav-link ">
+                                        <span class="title">Liste des catégories</span>
+                                    </a>
+                                </li>
+
+
+                            </ul>
+                        </li>
+
+                        <li class="heading">
+
+                            <h3 class="uppercase" style="font-weight: 600 ; color: white;"> <i class="icon-settings"></i>  Configuration</h3>
+                        </li>
+
+                    {% endblock %}
                 </ul>
                 <!-- END SIDEBAR MENU -->
                 <!-- END SIDEBAR MENU -->
             </div>
+
             <!-- END SIDEBAR -->
         </div>
-        <!-- END SIDEBAR -->
-        <!-- BEGIN CONTENT -->
         <div class="page-content-wrapper">
-            <!-- BEGIN CONTENT BODY -->
             <div class="page-content">
-                <!-- BEGIN PAGE HEADER-->
-                <!-- BEGIN THEME PANEL -->
-                <div class="theme-panel hidden-xs hidden-sm">
-                    <div class="toggler"> </div>
-                    <div class="toggler-close"> </div>
-                    <div class="theme-options">
-                        <div class="theme-option theme-colors clearfix">
-                            <span> THEME COLOR </span>
-                            <ul>
-                                <li class="color-default current tooltips" data-style="default" data-container="body" data-original-title="Default"> </li>
-                                <li class="color-darkblue tooltips" data-style="darkblue" data-container="body" data-original-title="Dark Blue"> </li>
-                                <li class="color-blue tooltips" data-style="blue" data-container="body" data-original-title="Blue"> </li>
-                                <li class="color-grey tooltips" data-style="grey" data-container="body" data-original-title="Grey"> </li>
-                                <li class="color-light tooltips" data-style="light" data-container="body" data-original-title="Light"> </li>
-                                <li class="color-light2 tooltips" data-style="light2" data-container="body" data-html="true" data-original-title="Light 2"> </li>
-                            </ul>
-                        </div>
-                        <div class="theme-option">
-                            <span> Layout </span>
-                            <select class="layout-option form-control input-sm">
-                                <option value="fluid" selected="selected">Fluid</option>
-                                <option value="boxed">Boxed</option>
-                            </select>
-                        </div>
-                        <div class="theme-option">
-                            <span> Header </span>
-                            <select class="page-header-option form-control input-sm">
-                                <option value="fixed" selected="selected">Fixed</option>
-                                <option value="default">Default</option>
-                            </select>
-                        </div>
-                        <div class="theme-option">
-                            <span> Top Menu Dropdown</span>
-                            <select class="page-header-top-dropdown-style-option form-control input-sm">
-                                <option value="light" selected="selected">Light</option>
-                                <option value="dark">Dark</option>
-                            </select>
-                        </div>
-                        <div class="theme-option">
-                            <span> Sidebar Mode</span>
-                            <select class="sidebar-option form-control input-sm">
-                                <option value="fixed">Fixed</option>
-                                <option value="default" selected="selected">Default</option>
-                            </select>
-                        </div>
-                        <div class="theme-option">
-                            <span> Sidebar Menu </span>
-                            <select class="sidebar-menu-option form-control input-sm">
-                                <option value="accordion" selected="selected">Accordion</option>
-                                <option value="hover">Hover</option>
-                            </select>
-                        </div>
-                        <div class="theme-option">
-                            <span> Sidebar Style </span>
-                            <select class="sidebar-style-option form-control input-sm">
-                                <option value="default" selected="selected">Default</option>
-                                <option value="light">Light</option>
-                            </select>
-                        </div>
-                        <div class="theme-option">
-                            <span> Sidebar Position </span>
-                            <select class="sidebar-pos-option form-control input-sm">
-                                <option value="left" selected="selected">Left</option>
-                                <option value="right">Right</option>
-                            </select>
-                        </div>
-                        <div class="theme-option">
-                            <span> Footer </span>
-                            <select class="page-footer-option form-control input-sm">
-                                <option value="fixed">Fixed</option>
-                                <option value="default" selected="selected">Default</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <!-- END THEME PANEL -->
-                <!-- BEGIN PAGE BAR -->
-                {% block container%}
-
-                {% endblock %}
-            </div>
-            <!-- END CONTENT BODY -->
+        {% block container %}
+aa
+        {% endblock %}
+        </div> <!-- END CONTENT BODY -->
         </div>
-        <!-- END CONTENT -->
-        <!-- BEGIN QUICK SIDEBAR -->
         <a href="javascript:;" class="page-quick-sidebar-toggler">
             <i class="icon-login"></i>
         </a>
@@ -1745,14 +1516,12 @@
                 </div>
             </div>
         </div>
-        <!-- END QUICK SIDEBAR -->
     </div>
     <!-- END CONTAINER -->
     <!-- BEGIN FOOTER -->
     <div class="page-footer">
-        <div class="page-footer-inner"> 2016 &copy; Metronic Theme By
-            <a target="_blank" href="http://keenthemes.com">Keenthemes</a> &nbsp;|&nbsp;
-            <a href="http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes" title="Purchase Metronic just for 27$ and get lifetime updates for free" target="_blank">Purchase Metronic!</a>
+        <div class="page-footer-inner"> 2017 &copy; Nepsus
+
         </div>
         <div class="scroll-to-top">
             <i class="icon-arrow-up"></i>
@@ -1760,41 +1529,7 @@
     </div>
     <!-- END FOOTER -->
 </div>
-<!-- BEGIN QUICK NAV -->
-<nav class="quick-nav">
-    <a class="quick-nav-trigger" href="#0">
-        <span aria-hidden="true"></span>
-    </a>
-    <ul>
-        <li>
-            <a href="https://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes" target="_blank" class="active">
-                <span>Purchase Metronic</span>
-                <i class="icon-basket"></i>
-            </a>
-        </li>
-        <li>
-            <a href="https://themeforest.net/item/metronic-responsive-admin-dashboard-template/reviews/4021469?ref=keenthemes" target="_blank">
-                <span>Customer Reviews</span>
-                <i class="icon-users"></i>
-            </a>
-        </li>
-        <li>
-            <a href="http://keenthemes.com/showcast/" target="_blank">
-                <span>Showcase</span>
-                <i class="icon-user"></i>
-            </a>
-        </li>
-        <li>
-            <a href="http://keenthemes.com/metronic-theme/changelog/" target="_blank">
-                <span>Changelog</span>
-                <i class="icon-graph"></i>
-            </a>
-        </li>
-    </ul>
-    <span aria-hidden="true" class="quick-nav-bg"></span>
-</nav>
-<div class="quick-nav-overlay"></div>
-<!-- END QUICK NAV -->
+
 {% block javascripts %}
 
     <!-- [if lt IE 9] -->
@@ -1812,23 +1547,33 @@
     <!-- END CORE PLUGINS -->
     <!-- BEGIN PAGE LEVEL PLUGINS -->
 
-    <script src="{{ asset('Template/assets/global/plugins/jquery-validation/js/jquery.validate.min.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('Template/assets/global/plugins/jquery-validation/js/additional-methods.min.js') }}" type="text/javascript"></script>
+
     <!-- END PAGE LEVEL PLUGINS -->
     <!-- BEGIN THEME GLOBAL SCRIPTS -->
     <script src="{{ asset('Template/assets/global/scripts/app.min.js') }}" type="text/javascript"></script>
     <!-- END THEME GLOBAL SCRIPTS -->
     <!-- BEGIN PAGE LEVEL SCRIPTS -->
-    <script src="{{ asset('Template/assets/pages/scripts/form-validation-md.min.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('Template/assets/pages/scripts/ui-sweetalert.min.js')}}" type="text/javascript"></script>
+
     <!-- END PAGE LEVEL SCRIPTS -->
     <!-- BEGIN THEME LAYOUT SCRIPTS -->
     <script src="{{ asset('Template/assets/layouts/layout/scripts/layout.min.js') }}" type="text/javascript"></script>
     <script src="{{ asset('Template/assets/layouts/layout/scripts/demo.min.js') }}" type="text/javascript"></script>
     <script src="{{ asset('Template/assets/layouts/global/scripts/quick-sidebar.min.js') }}" type="text/javascript"></script>
     <script src="{{ asset('Template/assets/layouts/global/scripts/quick-nav.min.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('Template/assets/global/plugins/bootstrap-sweetalert/sweetalert.min.js') }}" type="text/javascript"></script>
     <!-- END THEME LAYOUT SCRIPTS -->
+
+
+
+    <!-- Loader -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+
+    <script>
+
+        $(window).load(function() {
+            // Animate loader off screen
+            $(".se-pre-con").fadeOut("slow");
+        });
+    </script>
 
     <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
     <script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>

@@ -1,0 +1,177 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+
+    {{ parent() }}
+
+    <link href="{{ asset('Template/assets/pages/css/invoice-2.min.css') }}" rel="stylesheet" type="text/css" />
+
+{% endblock %}
+
+{% block container%}
+    <!-- BEGIN PAGE HEADER-->
+    <!-- BEGIN THEME PANEL -->
+
+    <!-- END THEME PANEL -->
+    <!-- BEGIN PAGE BAR -->
+    <div class="page-bar">
+        <ul class="page-breadcrumb">
+            <li>
+                <a href="index.html">Accueil</a>
+                <i class="fa fa-circle"></i>
+            </li>
+            <li>
+                <a href="#">Facturation</a>
+                <i class="fa fa-circle"></i>
+            </li>
+            <li>
+                <span>Liste des factures clients</span>
+                <i class="fa fa-circle"></i>
+            </li>
+
+            <li>
+                <a href="{{ path('editclient', {'id': facture.bc.client.id }) }}">{{ facture.bc.client.raison }}</a>
+                <i class="fa fa-circle"></i>
+            </li>
+        </ul>
+
+    </div>
+    <!-- END PAGE BAR -->
+    <!-- BEGIN PAGE TITLE-->
+
+    <!-- END PAGE TITLE-->
+    <!-- END PAGE HEADER-->
+
+    <div class="invoice-content-2 bordered" >
+        <div class="mt-element-ribbon bg-grey-steel" style="height: 80px">
+            {% if facture.statut=='Payée' %}
+                <div class="ribbon ribbon-right ribbon-border-hor ribbon-color-success ribbon-round ribbon-shadow uppercase" style="width: 200px; height: 60px; font-weight: bold; text-align: center;font-size: x-large">{{ facture.statut }}</div>
+
+            {% else %}
+            <div class="ribbon ribbon-right ribbon-border-hor ribbon-color-danger ribbon-round ribbon-shadow uppercase" style="width: 200px; height: 60px; font-weight: bold; text-align: center;font-size: x-large">{{ facture.statut }}</div>
+            {% endif %}
+            <p class="ribbon-content-left" ><span class="bold" style="font-size: x-large;">Facture #{{ facture.id }}</span></p>
+        </div>
+        <div class="row invoice-head">
+
+            <div class="col-md-7 col-xs-6">
+                <div class="invoice-logo">
+
+
+                    <img src="{{ asset('Template/assets/pages/img/logos/logo5.jpg') }}" class="img-responsive" alt="" />
+
+                </div>
+            </div>
+            <div class="col-md-5 col-xs-6">
+                <div class="company-address">
+                    <span class="bold uppercase">Coordonnées Societé</span>
+                    <br/> 25, Lorem Lis Street, Orange C
+                    <br/> California, US
+                    <br/>
+                    <span class="bold">T</span> 1800 123 456
+                    <br/>
+                    <span class="bold">E</span> support@keenthemes.com
+                    <br/>
+                    <span class="bold">W</span> www.keenthemes.com </div>
+            </div>
+        </div>
+        <div class="row invoice-cust-add">
+            <div class="col-md-5 col-xs-6">
+                <div class="company-address">
+                    <span class="bold uppercase">Coordonnées Client</span>
+                    <br/> Raison sociale : {{ facture.bc.client.raison }}
+                    <br/> Adresse : {{ facture.bc.client.region }},{{ facture.bc.client.ville }}
+                    <br/> <span class="bold">M/F</span> : {{ facture.bc.client.matriculefiscale }}
+                    <br/><span class="bold">R/C</span> {{ facture.bc.client.registre }} </div>
+                    <br/><span class="bold">T</span> {{ facture.bc.client.telephone }}
+
+                    <br/><span class="bold">E</span> {{ facture.bc.client.email }}
+
+
+            </div>
+        </div>
+        <div class="row invoice-body">
+            <div class="col-xs-12 table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th class="invoice-title uppercase text-center">Produit</th>
+                        <th class="invoice-title uppercase text-center">Qt</th>
+                        <th class="invoice-title uppercase text-center">Taxe(%)</th>
+                        <th class="invoice-title uppercase text-center">Prix</th>
+                        <th class="invoice-title uppercase text-center">Total HT</th>
+                        <th class="invoice-title uppercase text-center">Total TTC</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for ligne in facture.lignefc %}
+
+                        <tr style="text-align: center">
+
+                            <td>
+                                {{ ligne.produit.libele }}
+                            </td>
+
+                            <td>
+                                {{ ligne.quatity }}
+                            </td>
+
+                            <td>
+                                {{ ligne.tva }}
+                            </td>
+                            <td>
+                                {{ ligne.produit.prixvente }}
+                            </td>
+
+                            <td>
+                                {{ ligne.totalht }}
+                            </td>
+
+                            <td>
+                                {{ ligne.totalttc }}
+                            </td>
+
+                        </tr>
+
+                        {% endfor %}
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row invoice-subtotal" >
+            <div class="col-xs-3">
+                <h2 class="invoice-title uppercase">Total HT</h2>
+                <p class="invoice-desc">{{ facture.totalht }} TND</p>
+            </div>
+
+    {% for l in facture.lignefc %}
+        {% set val =  l.totalttc - l.totalht  %}
+            <div class="col-xs-3">
+                <h2 class="invoice-title uppercase">Tva {{ l.tva }} (%)</h2>
+                <p class="invoice-desc">{{ val }} TND</p>
+            </div>
+    {% endfor %}
+
+            <div class="col-xs-6">
+                <h2 class="invoice-title uppercase">Total à payer (TTC) </h2>
+                <p class="invoice-desc grand-total">{{ facture.totalttc }} TND</p>
+            </div>
+
+
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-xs-12">
+            <a class="btn btn-lg green-haze hidden-print uppercase print-btn" onclick="javascript:window.print();">Imprimer</a>
+
+
+
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+{% endblock %}

@@ -11,6 +11,7 @@ namespace AppBundle\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM ;
 use Symfony\Component\Validator\Constraints as Assert;
+use Doctrine\Common\Collections\Collection;
 
 
 /**
@@ -27,11 +28,9 @@ class Client
      */private $id ;
 
     /**
-     * @ORM\Column(type="float",nullable=true)
+     * @ORM\Column(type="float")
      */private $capital;
-    /**
-     * @ORM\Column(type="string",nullable=true)
-     */private $ref;
+
     /**
      * @ORM\Column(type="string")
      */private $matriculefiscale;
@@ -39,12 +38,10 @@ class Client
     /**
      * @ORM\Column(type="string")
      * @Assert\Length(min="3",minMessage="This value is to shoort")
-     */private $nom;
+     */private $raison;
+
     /**
-     * @ORM\Column(type="string",nullable=true)
-     */private $prenom;
-    /**
-     * @ORM\Column(type="string",nullable=true)
+     * @ORM\Column(type="string",nullable=true , unique=true)
      */private $email;
     /**
      * @ORM\Column(type="string")
@@ -58,9 +55,7 @@ class Client
     /**
      * @ORM\Column(type="string")
      */private $pays;
-    /**
-     * @ORM\Column(type="string",nullable=true)
-     */private $codepostal;
+
     /**
      * @ORM\Column(type="integer",nullable=true)
      */private $telephone;
@@ -70,6 +65,11 @@ class Client
      * @Assert\Length(max="8",maxMessage="This value is to long")
      */private $mobile;
     /**
+     * @ORM\Column(type="integer",nullable=true)
+     * @Assert\Length(min="8",minMessage="This value is to shoort")
+     * @Assert\Length(max="8",maxMessage="This value is to long")
+     */private $fax;
+    /**
      * @ORM\Column(type="string", nullable=true)
      */private $siteweb;
 
@@ -77,9 +77,55 @@ class Client
      * @ORM\Column(type="string")
      */
     private $registre;
+
+    /**
+     * @ORM\Column(type="string")
+     */
+    private $formejuridique;
+
+
+
+
+
     /**
      * @ORM\Column(type="datetime")
      */private $created;
+
+
+
+    /**
+     * One Product has Many Features.
+     * @var Collection
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\BonCommandeClient", mappedBy="client" , cascade={"persist", "remove"},fetch="EAGER")
+     */
+     private $listecommandes;
+
+    /**
+     * One Product has Many Features.
+     * @var Collection
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\HistoriqueClient", mappedBy="client" , cascade={"persist", "remove"},orphanRemoval=true)
+     */
+    private $historiques;
+
+
+    /**
+     * One Client has Many Contacts.
+     * @ORM\OneToMany(
+     *     targetEntity="AppBundle\Entity\ContactClient",
+     *     mappedBy="client" ,
+     *     cascade={"persist"},
+     *     fetch="EXTRA_LAZY",
+     *     orphanRemoval=true
+     * )
+     */
+    private $contacts;
+
+
+    public function __construct() {
+        $this->listecommandes = new ArrayCollection();
+        $this->historiques = new ArrayCollection();
+        $this->contacts = new ArrayCollection();
+    }
 
 
     /**
@@ -106,21 +152,7 @@ class Client
         $this->capital = $capital;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getRef()
-    {
-        return $this->ref;
-    }
 
-    /**
-     * @param mixed $ref
-     */
-    public function setRef($ref)
-    {
-        $this->ref = $ref;
-    }
 
     /**
      * @return mixed
@@ -137,41 +169,6 @@ class Client
     {
         $this->matriculefiscale = $matriculefiscale;
     }
-
-
-
-    /**
-     * @return mixed
-     */
-    public function getNom()
-    {
-        return $this->nom;
-    }
-
-    /**
-     * @param mixed $nom
-     */
-    public function setNom($nom)
-    {
-        $this->nom = $nom;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getPrenom()
-    {
-        return $this->prenom;
-    }
-
-    /**
-     * @param mixed $prenom
-     */
-    public function setPrenom($prenom)
-    {
-        $this->prenom = $prenom;
-    }
-
 
 
     /**
@@ -254,21 +251,6 @@ class Client
         $this->pays = $pays;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getCodepostal()
-    {
-        return $this->codepostal;
-    }
-
-    /**
-     * @param mixed $codepostal
-     */
-    public function setCodepostal($codepostal)
-    {
-        $this->codepostal = $codepostal;
-    }
 
     /**
      * @return mixed
@@ -334,21 +316,6 @@ class Client
         $this->created = $created;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getContacts()
-    {
-        return $this->contacts;
-    }
-
-    /**
-     * @param mixed $contacts
-     */
-    public function setContacts($contacts)
-    {
-        $this->contacts = $contacts;
-    }
 
     /**
      * @return mixed
@@ -365,6 +332,140 @@ class Client
     {
         $this->registre = $registre;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getListecommandes()
+    {
+        return $this->listecommandes;
+    }
+
+    /**
+     * @param mixed $listecommandes
+     */
+    public function setListecommandes($listecommandes)
+    {
+        $this->listecommandes = $listecommandes;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getRaison()
+    {
+        return $this->raison;
+    }
+
+    /**
+     * @param mixed $raison
+     */
+    public function setRaison($raison)
+    {
+        $this->raison = $raison;
+    }
+
+
+
+
+
+    public function addContact(ContactClient $contact)
+    {
+
+
+        if ($this->contacts->contains($contact)) {
+            return;
+        }
+        $this->contacts[] = $contact;
+        // needed to update the owning side of the relationship!
+        $contact->setClient($this);
+    }
+
+    public function removeContact(ContactClient $contact)
+    {
+        if (!$this->contacts->contains($contact)) {
+            return;
+        }
+        $this->contacts->removeElement($contact);
+        // needed to update the owning side of the relationship!
+        $contact->setClient(null);
+    }
+
+
+    /**
+     * @return ArrayCollection|ContactClient[]
+     */
+    public function getContacts()
+    {
+        return $this->contacts;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getFax()
+    {
+        return $this->fax;
+    }
+
+    /**
+     * @param mixed $fax
+     */
+    public function setFax($fax)
+    {
+        $this->fax = $fax;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getFormejuridique()
+    {
+        return $this->formejuridique;
+    }
+
+    /**
+     * @param mixed $formejuridique
+     */
+    public function setFormejuridique($formejuridique)
+    {
+        $this->formejuridique = $formejuridique;
+    }
+
+    /**
+     * @return ArrayCollection|HistoriqueClient[]
+     */
+    public function getHistoriques()
+    {
+        return $this->historiques;
+    }
+
+
+
+
+    public function addHistorique(HistoriqueClient $his)
+    {
+
+
+        if ($this->historiques->contains($his)) {
+            return;
+        }
+        $this->historiques[] = $his;
+        // needed to update the owning side of the relationship!
+        $his->setClient($this);
+    }
+
+    public function removeHistorique(HistoriqueClient $his)
+    {
+        if (!$this->historiques->contains($his)) {
+            return;
+        }
+        $this->historiques->removeElement($his);
+        // needed to update the owning side of the relationship!
+        $his->setClient(null);
+    }
+
+
 
 
 

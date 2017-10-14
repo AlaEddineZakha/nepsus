@@ -1,0 +1,504 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('Template/assets/global/plugins/select2/css/select2.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('Template/assets/global/plugins/select2/css/select2-bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('Template/assets/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('Template/assets/global/css/components-md.min.css') }}" rel="stylesheet" id="style_components" type="text/css" />
+    <link href="{{ asset('Template/assets/global/css/plugins-md.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="https://jqueryvalidation.org/files/demo/css/screen.css" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('Template/assets/global/plugins/datatables/datatables.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('Template/assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('Template/assets/global/plugins/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css') }}" rel="stylesheet" type="text/css" />
+
+{% endblock %}
+
+{% block container%}
+
+    <div class="page-bar">
+        <ul class="page-breadcrumb">
+            <li>
+                <a href="http://localhost/nepsus/nepsus/web/app_dev.php/">Accueil</a>
+                <i class="fa fa-circle"></i>
+            </li>
+            <li>
+                <span>Gestion des commandes</span>
+                <i class="fa fa-circle"></i>
+            </li>
+            <li>
+                <span>Commandes client</span>
+                <i class="fa fa-circle"></i>
+            </li>
+
+            <li>
+                <span>Nouvelle commande</span>
+
+            </li>
+        </ul>
+
+    </div>
+    <!-- END PAGE BAR -->
+    <!-- BEGIN PAGE TITLE-->
+
+    <!-- END PAGE TITLE-->
+    <!-- END PAGE HEADER-->
+    <div class="m-heading-1 border-green m-bordered">
+        <h3>Nouvelle commande</h3>
+
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <!-- BEGIN VALIDATION STATES-->
+            <div class="portlet light portlet-fit portlet-form bordered" id="form_wizard_1">
+                <div class="portlet-title">
+                    <div class="caption">
+                        <i class=" icon-layers font-green"></i>
+                        <span class="caption-subject font-green sbold uppercase">Bon de commande</span>
+                    </div>
+
+                </div>
+                <div class="portlet-body">
+                    <!-- BEGIN FORM-->
+                    <form  action="{{ path('confirmcommandec')}}" method="post" class="form-horizontal" id="myform">
+
+                        <div class="form-body">
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="col-md-6">
+                                          <div class="form-group">
+                                            <label class="control-label col-md-2" style="text-align: justify">Client
+                                                <span class="required" style="font-size: large"> * </span>
+                                            </label>
+                                            <div class="col-md-6">
+                                                <select class="form-control select2me" id="client" name="client" data-live-search="true">
+                                                    <option value="">Select...</option>
+
+                                              {% for c in client %}
+                                               <option value="{{ c.id }}">{{ c.raison }}</option>
+                                                 {% endfor %}
+
+                                                </select>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-6">
+                                             <div class="form-group">
+                                            <label class="control-label col-md-2" style="text-align: justify">Statut
+                                                <span class="required" style="font-size: large"> * </span>
+                                            </label>
+                                            <div class="col-md-6">
+                                                <select class="form-control select2me" id="statut" name="statut" data-live-search="true" data-size="8">
+                                                    <option value="">Select...</option>
+
+                                              <option value="En attente" selected>En attente</option>
+                                              <option value="En cours de préparation">En cours de préparation</option>
+                                              <option value="En cours de préparation">En cours de livraison</option>
+                                              <option value="Livré">Livré</option>
+                                              <option value="Annulé">Annulé</option>
+
+                                                </select>
+                                            </div>
+
+                                        </div>
+
+                                        </div>
+                                          <div class="col-md-6">
+                                          <div class="form-group">
+                                            <label class="control-label col-md-2" style="text-align: justify">Devise
+                                                <span class="required" style="font-size: large"> * </span>
+                                            </label>
+                                            <div class="col-md-6">
+                                                <select class="form-control select2me" id="devise" name="devise" data-live-search="true">
+                                                    <option value="">Select...</option>
+
+                                              {% for d in devise %}
+                                               <option value="{{ d.id }}">{{ d.libele }}</option>
+                                                 {% endfor %}
+
+                                                </select>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+
+
+
+
+
+<div class="row">
+                                                        <div class="col-md-12 col-sm-12">
+                                                            <div class="portlet grey-cascade box">
+                                                                <div class="portlet-title">
+                                                                    <div class="caption">
+                                                                        <i class="fa fa-cogs"></i>Lignes de commande </div>
+                                                                    <div class="actions">
+                                                                        <a href="javascript:;" class="btn btn-default btn-sm" onclick="addform();">
+                                                                            <i class="fa fa-plus-circle"></i> Ajouter ligne </a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="portlet-body" id="form_ref">
+                                                                    <div class="table-responsive" >
+                                                                        <table  class="table table-hover table-bordered table-striped">
+                                                                            <thead >
+                                                                                <tr>
+                                                                                    <th> Produit </th>
+                                                                                    <th> Quantité </th>
+                                                                                    <th> % de taxe </th>
+                                                                                    <th> Prix </th>
+                                                                                    <th> Total HT </th>
+                                                                                    <th> Total TTC </th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody id="thead">
+
+
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+
+
+                    <!-- END FORM-->
+                          <div class="row">
+
+                                                        <div class="col-md-4">
+                                                            <div class="well">
+                                                                <div class="row static-info align-reverse">
+                                                                    <div class="col-md-5 name" style="text-align: start"> Total HT </div>
+                                                                    <div class="col-md-5 value" id="totalht" >   </div>
+                                                                    <div class="col-md-2 value"  >   TND  </div>
+                                                                </div>
+
+                                                                <div class="row static-info align-reverse">
+                                                                    <div class="col-md-5 name" style="text-align: start"> Total TTC </div>
+                                                                    <div class="col-md-5 value" id="totalttc" >   </div>
+                                                                    <div class="col-md-2 value"   >   TND  </div>
+                                                                    <input type="hidden" name="totalttc" id="hiddentotalttc">
+                                                                    <input type="hidden" name="totalht" id="hiddentotalht">
+                                                                    <input type="hidden" name="size" id="size">
+                                                                </div>
+
+
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                </div>
+
+
+
+                                                     <div class="form-actions">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <button type="submit" class="btn green">Enregistrer</button>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </form>
+            </div>
+            <!-- END VALIDATION STATES-->
+        </div>
+
+    </div>
+
+
+
+
+{% endblock %}
+
+ {% block javascripts %}
+    {{ parent() }}
+ <script src="{{ asset('Template/assets/global/plugins/jquery-validation/js/jquery.validate.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('Template/assets/global/plugins/select2/js/select2.full.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('Template/assets/global/plugins/jquery-validation/js/additional-methods.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('Template/assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('Template/assets/global/plugins/bootstrap-markdown/js/bootstrap-markdown.js') }}" type="text/javascript"></script>
+    <script src="https://rawgit.com/RobinHerbots/jquery.inputmask/3.x/dist/jquery.inputmask.bundle.js" type="text/javascript"></script>
+
+     <script src="{{ asset('Template/assets/global/scripts/datatable.js') }}" type="text/javascript"></script>
+     <script src="{{ asset('Template/assets/global/plugins/datatables/datatables.min.js') }}" type="text/javascript"></script>
+     <script src="{{ asset('Template/assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.js') }}" type="text/javascript"></script>
+     <script src="{{ asset('Template/assets/global/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js') }}" type="text/javascript"></script>
+     <script src="{{ asset('Template/assets/global/plugins/bootstrap-maxlength/bootstrap-maxlength.min.js') }}" type="text/javascript"></script>
+     <script src="{{ asset('Template/assets/pages/scripts/ecommerce-orders-view.min.js') }}" type="text/javascript"></script>
+
+
+   <!-- <script src="{{ asset('Template/assets/pages/scripts/form-validation.min.js') }}" type="text/javascript"></script> -->
+
+
+
+
+
+
+
+
+<script>
+    if (typeof $id === 'undefined') {
+        var $id=0;
+    }
+
+     if (typeof $s === 'undefined') {
+        var $s=0;
+    }
+
+    if (typeof $totalttc === 'undefined') {
+        var $totalttc=0;
+        $('#totalttc').prepend($totalttc);
+        $('#hiddentotalttc').attr("value",$totalttc);
+
+
+    }
+
+    if (typeof $totalht === 'undefined') {
+        var $totalht=0;
+        $('#totalht').prepend($totalht);
+        $('#hiddentotalht').attr("value",$totalht);
+    }
+    if (typeof $idliste === 'undefined') {
+        var $idliste=0;
+    }
+
+    if (typeof $size === 'undefined') {
+        var $size=0;
+    }
+
+    if (typeof $k === 'undefined') {
+        var $k=0;
+    }
+
+
+
+
+
+    // setup an "add a tag" link
+   // var $addTagLink = $('<button type="button" class="btn btn-primary" onclick="addform();">Ajouter produit</button>');
+
+    //var $newLinkLi = $('<p></p>').append($addTagLink);
+    //$('#form_ref').append($newLinkLi);
+
+    function addform() {
+
+
+        $id++;
+        var $removeTagLink = $('<td><a href="javascript:;" class="btn btn-icon-only red" id="deleteform"><i class="fa fa-times"></i> </a></td>');
+
+
+        var $ligne = $('<tr id="ligne'+$id+'" > ' +
+          '<td width="20%">' +
+           '<select class="form-control select2me" id="liste-ligne'+$id+'" name="liste-ligne'+$id+'" data-size="8" data-live-search="true" >' +
+            '<option value="" disabled selected>Select...</option>'+
+            '{% for p in produit %}<option value="{{ p.id}}">{{ p.libele}} </option>' +
+            '{% endfor %}</select> </td>' +
+
+           '<td> <input class="form-control" type="number" name="qt-ligne'+$id+'" id="qt-ligne'+$id+'"/></td>' +
+           ' <td><input class="form-control" type="text"  id="tva-ligne'+$id+'" name="tva-ligne'+$id+'" ></td>' +
+           ' <td><input class="form-control" type="number" id="prixvt-ligne'+$id+'" name="prixvt-ligne'+$id+'"></td>' +
+           ' <td><input class="form-control" type="number" id="prixht-ligne'+$id+'" name="prixht-ligne'+$id+'"></td>' +
+
+            '<td><input class="form-control" type="number" id="prixttc-ligne'+$id+'" name="prixttc-ligne'+$id+'" ></td>' +
+           ' </tr>');
+
+
+        $ligne.append($removeTagLink);
+        $('#thead').append($ligne);
+        $size++;
+         $k=$size;
+        $('#size').attr('value',$size);
+         $('#prixht-'+$id+'').attr('value',0);
+
+
+
+        $('#liste-ligne'+$id+'').change(function () {
+
+            //$('#'#liste-ligne'+$id+'' option:selected").remove();
+
+            var $currentidtext=$(this).closest("tr").prop("id");
+            var $currentid=parseInt($currentidtext.match(/\d/g));
+            var $nextlistid= $currentid+1;
+
+
+             //console.log('Current id : '+$currentid);
+             //console.log('Next id : '+$nextlistid);
+
+            //$('#liste-ligne'+$nextlistid+'').find($op).hide();
+
+            var $a=$('#'+this.id).val();
+            console.log($(this).find('id').val());
+            //console.log(this.id+' touché');
+            var $b=$(this).closest("tr").prop("id");
+            //console.log($b);
+
+
+
+            $.ajax({
+                type: 'GET',
+                url: '{{ url('dashboard') }}api/produits/'+$a,
+                dataType: 'json',
+                data:$(this).serialize(),
+                success: function(data){
+
+                    var $prix=data['prixvente'];
+                    var $tva =data['tva']['montant'];
+                     $('#tva-'+$b+'').attr('value',$tva);
+                     $('#prixvt-'+$b+'').attr('value',$prix);
+
+                    $('#qt-'+$b+'').click(function () {
+                        var $b=$(this).closest("tr").prop("id");
+                        var $q = $('#qt-'+$b+'').val();
+                        $('#prixttc-'+$b+'').attr('value',($prix*$q)+( (($prix*$q)*12)/100 ));
+                        $('#prixht-'+$b+'').attr('value',$prix*$q);
+
+                    })
+
+                }
+
+            })
+
+        });
+
+
+    }
+    $('#thead').on('click', '#deleteform', function(e) {
+
+       e.preventDefault();
+
+
+
+  console.log("Size = "+$k);
+  var $ko=$k;
+
+
+ var  $oldid=parseInt($(this).closest("tr").prop("id").match(/\d/g));
+          console.log("ID deleted :"+$oldid);
+        $size--;
+        $id--;
+
+
+
+
+
+
+
+
+
+
+
+ var $thisid=$(this).closest("tr").prop("id");
+        //console.log("id = "+$thisid);
+//$('#prixht-'+$thisid+'').attr('value',0);
+$(this).closest("tr").remove();
+
+if ($size>0)
+    {
+    var $lastrtid = parseInt($('#thead').find("tr").last().attr('id').match(/\d/g));
+    }
+      // $lastrtid++;
+       console.log("Type of last tr ID = "+typeof $lastrtid);
+       console.log("ID last tr :"+$lastrtid);
+
+
+
+   for (var i=$size; i>0; i--) {
+       if ($lastrtid===$oldid)
+           {
+              // console.log("OldID = "+$oldid);
+
+               $lastrtid--;
+           }
+
+
+       $('#ligne'+$lastrtid+'').attr('id','ligne'+i+'');
+       $('#prixht-ligne'+$lastrtid+'').attr('id','prixht-ligne'+i+'');
+       $('#qt-ligne'+$lastrtid+'').attr('id','qt-ligne'+i+'');
+       $('#prixvt-ligne'+$lastrtid+'').attr('id','prixvt-ligne'+i+'');
+       $('#prixttc-ligne'+$lastrtid+'').attr('id','prixttc-ligne'+i+'');
+       $('#tva-ligne'+$lastrtid+'').attr('id','tva-ligne'+i+'');
+       $('#liste-ligne'+$lastrtid+'').attr('id','liste-ligne'+i+'');
+
+
+$lastrtid--;
+}
+
+
+
+
+
+    });
+$("#myform").click(function() {
+
+    $totalht=0;
+    $totalttc=0;
+
+    //console.log("Changes ");
+    //console.log("Size :"+$size);
+
+   for (var i=1; i<=$size; i++) {
+       //console.log("i = "+i);
+       $totalht+=parseFloat(Number($('#prixht-ligne'+i+'').val()).toPrecision(5));
+       $totalttc+=parseFloat(Number($('#prixttc-ligne'+i+'').val()).toPrecision(5));
+
+
+
+}
+
+
+  // console.log("Type of total = "+typeof $totalht);
+
+$('#totalht').text(parseFloat($totalht.toPrecision(5)));
+$('#totalttc').text(parseFloat($totalttc.toPrecision(5)));
+$('#hiddentotalttc').attr("value",parseFloat($totalttc.toPrecision(5)));
+$('#hiddentotalht').attr("value",parseFloat($totalht.toPrecision(5)));
+$("#myform").validate({
+                rules: {
+
+
+                    client:{
+                        required:true
+                    },
+                    statut:{
+                        required:true
+                    }
+
+
+
+
+                },
+                messages: {
+
+
+                    client:{
+                        required: "Ce champ est obligatoire"
+                    },
+                    statut:{
+                        required: "Ce champ est obligatoire"
+                    }
+
+
+
+
+
+                }
+            });
+
+});
+
+</script>
+
+
+{% endblock %}

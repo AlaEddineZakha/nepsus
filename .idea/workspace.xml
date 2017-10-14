@@ -1,11 +1,309 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="14e57119-6d11-439a-90fa-9334e3be0203" name="Default" comment="02/05/2017  V1.01&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nepsus.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/ContactClient.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Form/ContactClientFormType.php" />
+    <list default="true" id="14e57119-6d11-439a-90fa-9334e3be0203" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/Preloader_1.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/Preloader_4.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/QKIeRaf.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/images/loader-128x/Preloader_1.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/images/loader-128x/Preloader_2.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/images/loader-128x/Preloader_3.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/images/loader-128x/Preloader_4.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/images/loader-128x/Preloader_5.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/images/loader-128x/Preloader_6.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/images/loader-128x/Preloader_7.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/images/loader-32x/loader1.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/images/loader-32x/loader2.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/images/loader-32x/loader3.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/images/loader-32x/loader4.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/images/loader-32x/loader5.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/images/loader-32x/loader6.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/images/loader-32x/loader7.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/images/loader-64x/Preloader_1.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/images/loader-64x/Preloader_2.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/images/loader-64x/Preloader_3.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/images/loader-64x/Preloader_4.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/images/loader-64x/Preloader_5.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/images/loader-64x/Preloader_6.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/images/loader-64x/Preloader_7.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-128x/Preloader_1.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-128x/Preloader_2.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-128x/Preloader_3.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-128x/Preloader_4.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-128x/Preloader_5.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-128x/Preloader_6.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-128x/Preloader_7.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-32x/loader1.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-32x/loader2.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-32x/loader3.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-32x/loader4.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-32x/loader5.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-32x/loader6.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-32x/loader7.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-64x/Preloader_1.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-64x/Preloader_2.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-64x/Preloader_3.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-64x/Preloader_4.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-64x/Preloader_5.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-64x/Preloader_6.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-64x/Preloader_7.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-1-32x64x128.zip" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-2-32x64x128.zip" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-2-32x64x128/128x128/Preloader_1.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-2-32x64x128/128x128/Preloader_10.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-2-32x64x128/128x128/Preloader_2.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-2-32x64x128/128x128/Preloader_3.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-2-32x64x128/128x128/Preloader_4.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-2-32x64x128/128x128/Preloader_5.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-2-32x64x128/128x128/Preloader_6.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-2-32x64x128/128x128/Preloader_7.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-2-32x64x128/128x128/Preloader_8.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-2-32x64x128/128x128/Preloader_9.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-2-32x64x128/32x32/Preloader_1.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-2-32x64x128/32x32/Preloader_10.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-2-32x64x128/32x32/Preloader_2.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-2-32x64x128/32x32/Preloader_3.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-2-32x64x128/32x32/Preloader_4.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-2-32x64x128/32x32/Preloader_5.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-2-32x64x128/32x32/Preloader_6.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-2-32x64x128/32x32/Preloader_7.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-2-32x64x128/32x32/Preloader_8.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-2-32x64x128/32x32/Preloader_9.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-2-32x64x128/64x64/Preloader_1.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-2-32x64x128/64x64/Preloader_10.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-2-32x64x128/64x64/Preloader_2.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-2-32x64x128/64x64/Preloader_3.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-2-32x64x128/64x64/Preloader_4.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-2-32x64x128/64x64/Preloader_5.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-2-32x64x128/64x64/Preloader_6.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-2-32x64x128/64x64/Preloader_7.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-2-32x64x128/64x64/Preloader_8.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-2-32x64x128/64x64/Preloader_9.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loading.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/dist/img/bootstrap-formhelpers-countries.flags.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/dist/img/bootstrap-formhelpers-currencies.flags.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/dist/img/bootstrap-formhelpers-googlefonts.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/img/bootstrap-formhelpers-countries.flags.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/img/bootstrap-formhelpers-currencies.flags.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/img/bootstrap-formhelpers-googlefonts.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/tests/vendor/fonts/glyphicons-halflings-regular.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/tests/vendor/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/tests/vendor/fonts/glyphicons-halflings-regular.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Security/login.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Security/login_content.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/layout.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/CommandeClient/edit.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/CommandeClient/new1.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/CommandeClient/show.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/CommandeFournisseur/edit.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/CommandeFournisseur/new1.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/CommandeFournisseur/show.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/Configuration/configuration.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/FacturesClients/list.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/FacturesClients/view.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/Testlayout/addlayout.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/Testlayout/editlayout.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/Testlayout/emptybody.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/Testlayout/listlayout.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/Testlayout/test.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/Testlayout/testresponse.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/clients/add.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/clients/list.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/dashboard/modules.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/fournisseurs/add.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/fournisseurs/list.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/pagenotfound.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/produits/categories/add.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/produits/categories/new.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/produits/categories/show.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/produits/edit.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/sendmail.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/APIController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/CategoryController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/CommandeClientController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/ConfigurationController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/DeviseController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/FactureClientController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/ProduitController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/ResetController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/TestController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/BonCommandeClient.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/BonCommandeFournisseur.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/BonLivraisonClient.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Category.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Configuration.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Devis/Devis.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Devis/LigneDevis.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Entrepot.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/FactureClient.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/HistoriqueClient.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Journal.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/LigneBCC.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/LigneBCF.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/LigneFC.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Lot.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Modules.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Paiement/Devise.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Paiement/MethodeTransaction.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Paiement/Transaction.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Produit.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Stock.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Taxe.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Form/BCitemsFormType.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Form/BonCommandeClientFormType.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Form/CategoryFormType.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Form/ModuleFormType.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Form/ProduitFormType.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Form/RegistrationType.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Repository/ContactClientRepository.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Repository/ProduitRepository.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/Template/assets/global/plugins/datatables/pdfmake.min.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/Template/printPreview.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/readme.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/.coveralls.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/Gruntfile.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/bfh-colorpicker.jquery.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/bfh-country.jquery.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/bfh-currency.jquery.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/bfh-datepicker.jquery.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/bfh-font.jquery.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/bfh-fontsize.jquery.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/bfh-googlefont.jquery.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/bfh-language.jquery.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/bfh-number.jquery.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/bfh-phone.jquery.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/bfh-select.jquery.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/bfh-slider.jquery.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/bfh-state.jquery.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/bfh-timepicker.jquery.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/bfh-timezone.jquery.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/composer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/dist/css/bootstrap-formhelpers.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/dist/css/bootstrap-formhelpers.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/dist/img/bootstrap-formhelpers-countries.flags-LICENSE.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/dist/js/bootstrap-formhelpers.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/dist/js/bootstrap-formhelpers.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/img/bootstrap-formhelpers-countries.flags-LICENSE.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/.jshintrc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/bootstrap-formhelpers-colorpicker.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/bootstrap-formhelpers-countries.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/bootstrap-formhelpers-currencies.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/bootstrap-formhelpers-datepicker.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/bootstrap-formhelpers-fonts.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/bootstrap-formhelpers-fontsizes.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/bootstrap-formhelpers-googlefonts.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/bootstrap-formhelpers-languages.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/bootstrap-formhelpers-number.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/bootstrap-formhelpers-phone.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/bootstrap-formhelpers-selectbox.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/bootstrap-formhelpers-slider.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/bootstrap-formhelpers-states.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/bootstrap-formhelpers-timepicker.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/bootstrap-formhelpers-timezones.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/lang/ar/bootstrap-formhelpers-countries.ar.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/lang/de_DE/bootstrap-formhelpers-countries.de_DE.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/lang/en_US/bootstrap-formhelpers-countries.en_US.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/lang/en_US/bootstrap-formhelpers-currencies.en_US.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/lang/en_US/bootstrap-formhelpers-datepicker.en_US.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/lang/en_US/bootstrap-formhelpers-fonts.en_US.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/lang/en_US/bootstrap-formhelpers-fontsizes.en_US.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/lang/en_US/bootstrap-formhelpers-googlefonts.en_US.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/lang/en_US/bootstrap-formhelpers-languages.en_US.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/lang/en_US/bootstrap-formhelpers-phone.en_US.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/lang/en_US/bootstrap-formhelpers-states.en_US.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/lang/en_US/bootstrap-formhelpers-timepicker.en_US.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/lang/en_US/bootstrap-formhelpers-timezones.en_US.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/lang/es_ES/bootstrap-formhelpers-countries.es_ES.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/lang/es_ES/bootstrap-formhelpers-datepicker.es_ES.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/lang/es_US/bootstrap-formhelpers-datepicker.es_US.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/lang/fr_CA/bootstrap-formhelpers-countries.fr_CA.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/lang/fr_FR/bootstrap-formhelpers-countries.fr_FR.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/lang/it_IT/bootstrap-formhelpers-countries.it_IT.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/lang/pt_BR/bootstrap-formhelpers-countries.pt_BR.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/lang/ru_RU/bootstrap-formhelpers-countries.ru_RU.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/lang/ru_RU/bootstrap-formhelpers-datepicker.ru_RU.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/lang/zh_CN/bootstrap-formhelpers-countries.zh_CN.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/lang/zh_CN/bootstrap-formhelpers-timezones.zh_CN.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/lang/zh_TW/bootstrap-formhelpers-countries.zh_TW.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/tests/fixture.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/tests/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/tests/unit/bootstrap-formhelpers-colorpicker.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/tests/unit/bootstrap-formhelpers-countries.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/tests/unit/bootstrap-formhelpers-currencies.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/tests/unit/bootstrap-formhelpers-datepicker.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/tests/unit/bootstrap-formhelpers-fonts.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/tests/unit/bootstrap-formhelpers-fontsizes.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/tests/unit/bootstrap-formhelpers-googlefonts.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/tests/unit/bootstrap-formhelpers-languages.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/tests/unit/bootstrap-formhelpers-number.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/tests/unit/bootstrap-formhelpers-phone.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/tests/unit/bootstrap-formhelpers-selectbox.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/tests/unit/bootstrap-formhelpers-slider.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/tests/unit/bootstrap-formhelpers-states.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/tests/unit/bootstrap-formhelpers-timepicker.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/tests/unit/bootstrap-formhelpers-timezones.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/tests/vendor/css/bootstrap-3.0.0.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/tests/vendor/css/qunit-1.12.0.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/tests/vendor/fonts/glyphicons-halflings-regular.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/tests/vendor/js/bootstrap-3.0.0.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/tests/vendor/js/jquery-1.10.2.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/tests/vendor/js/qunit-1.12.0.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/karma.conf.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/less/bootstrap-formhelpers-colorpicker.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/less/bootstrap-formhelpers-datepicker.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/less/bootstrap-formhelpers-flags.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/less/bootstrap-formhelpers-googlefonts.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/less/bootstrap-formhelpers-mixins.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/less/bootstrap-formhelpers-number.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/less/bootstrap-formhelpers-selectbox.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/less/bootstrap-formhelpers-slider.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/less/bootstrap-formhelpers-timepicker.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/less/bootstrap-formhelpers-variables.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/less/bootstrap-formhelpers.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/package.json" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Resources/views/fournisseurs/new.html.twig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Resources/views/fournisseurs/show.html.twig" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Resources/views/clients/new.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/produits/new.html.twig" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Resources/views/clients/show.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/produits/show.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/9be4e9f6-8898-47e5-8cb0-37d770d95d26.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/9be4e9f6-8898-47e5-8cb0-37d770d95d26.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/nepsus.iml" afterPath="$PROJECT_DIR$/.idea/nepsus.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/clients/edit.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/clients/edit.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/dashboard/dashboard1.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/dashboard/dashboard1.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/fournisseurs/edit.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/fournisseurs/edit.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/routing.yml" afterPath="$PROJECT_DIR$/app/config/routing.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/security.yml" afterPath="$PROJECT_DIR$/app/config/security.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/services.yml" afterPath="$PROJECT_DIR$/app/config/services.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/AdminController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/AdminController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/ClientController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/ClientController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/FournisseurController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/FournisseurController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Client.php" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Client.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Entity/ContactClient.php" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/ContactClient.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Fournisseur.php" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Fournisseur.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Entity/User.php" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/User.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Form/ClientFormType.php" afterPath="$PROJECT_DIR$/src/AppBundle/Form/ClientFormType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Form/ContactClientFormType.php" afterPath="$PROJECT_DIR$/src/AppBundle/Form/ContactClientFormType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Form/FournisseurFormType.php" afterPath="$PROJECT_DIR$/src/AppBundle/Form/FournisseurFormType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/SymfonyRequirements.php" afterPath="$PROJECT_DIR$/var/SymfonyRequirements.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/Template/admin_1_material_design/form_validation.html" afterPath="$PROJECT_DIR$/web/Template/admin_1_material_design/form_validation.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/Template/admin_1_material_design/form_wizard.html" afterPath="$PROJECT_DIR$/web/Template/admin_1_material_design/form_wizard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/Template/admin_1_material_design/table_datatables_ajax.html" afterPath="$PROJECT_DIR$/web/Template/admin_1_material_design/table_datatables_ajax.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/Template/assets/pages/scripts/form-wizard.js" afterPath="$PROJECT_DIR$/web/Template/assets/pages/scripts/form-wizard.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/Template/assets/pages/scripts/login-4.js" afterPath="$PROJECT_DIR$/web/Template/assets/pages/scripts/login-4.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app.php" afterPath="$PROJECT_DIR$/web/app.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app_dev.php" afterPath="$PROJECT_DIR$/web/app_dev.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/config.php" afterPath="$PROJECT_DIR$/web/config.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,6 +320,7 @@
     <option name="PATCH_PATH" value="" />
   </component>
   <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
     <option name="GROUP_SCHEMA" value="true" />
     <option name="GROUP_CONTENTS" value="false" />
     <option name="SORT_POSITIONED" value="false" />
@@ -38,136 +337,70 @@
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
     </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="nepsus@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="nepsus" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ClientController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/ClientController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="57" column="8" lean-forward="false" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="8" />
-              <folding>
-                <element signature="e#124#152#0#PHP" expanded="true" />
-                <element signature="e#2816#2834#1#PHP" expanded="true" />
-                <marker date="1493178207339" expanded="true" signature="1310:1342" ph="SELECT p FRO... AppBundle" />
-                <marker date="1493178207339" expanded="true" signature="1310:1346" ph="SELECT p FRO... AppBundle" />
-                <marker date="1493178207339" expanded="true" signature="1356:1410" ph="/** @var $pa... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="AdminController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/AdminController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="22" lean-forward="false" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
-              <folding>
-                <element signature="e#6#87#0#PHP" expanded="true" />
-                <element signature="e#123#182#0#PHP" expanded="true" />
-                <element signature="e#564#596#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="51">
+              <caret line="23" column="5" lean-forward="false" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edit.html.twig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/fournisseurs/edit.html.twig">
+      <file leaf-file-name="parameters.yml.dist" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/config/parameters.yml.dist">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8">
-              <caret line="422" column="36" lean-forward="false" selection-start-line="422" selection-start-column="36" selection-end-line="422" selection-end-column="36" />
-              <folding>
-                <element signature="e#1081#2748#0#HTML" expanded="false" />
-                <element signature="e#1120#1426#0#HTML" expanded="false" />
-                <element signature="e#1490#2706#0#HTML" expanded="false" />
-                <element signature="e#2832#2941#0#HTML" expanded="false" />
-                <element signature="e#3170#3185#0#Twig" expanded="true" />
-              </folding>
+            <state relative-caret-position="136">
+              <caret line="8" column="31" lean-forward="true" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dashboard1.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/dashboard/dashboard1.html.twig">
+      <file leaf-file-name="config_dev.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/config/config_dev.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="117" column="99" lean-forward="false" selection-start-line="117" selection-start-column="99" selection-end-line="117" selection-end-column="99" />
-              <folding>
-                <element signature="e#12#26#0#Twig" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#5;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#7;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#7;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#8;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#div#8;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dashboard_2.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/Template/admin_1_material_design/dashboard_2.html">
+      <file leaf-file-name="config_prod.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/config/config_prod.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="1695" column="22" lean-forward="false" selection-start-line="1695" selection-start-column="22" selection-end-line="4558" selection-end-column="30" />
-              <folding>
-                <element signature="n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#h1#0;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#2;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#3;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#4;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#5;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#6;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#7;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#8;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#9;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#a#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#2;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-              </folding>
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ecommerce_products_edit.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/Template/admin_1_material_design/ecommerce_products_edit.html">
+      <file leaf-file-name="config.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/config/config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="1616" column="16" lean-forward="false" selection-start-line="1616" selection-start-column="16" selection-end-line="2211" selection-end-column="22" />
-              <folding>
-                <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#h1#0;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#a#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#2;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <marker date="1493434015247" expanded="true" signature="848:211470" ph="..." />
-                <marker date="1493434015247" expanded="true" signature="3636:211461" ph="..." />
-                <marker date="1493434015247" expanded="true" signature="3671:207036" ph="..." />
-                <marker date="1493434015247" expanded="true" signature="30999:206310" ph="..." />
-                <marker date="1493434015247" expanded="false" signature="109607:164522" ph="..." />
-                <marker date="1493434015247" expanded="false" signature="109702:164453" ph="..." />
-                <marker date="1493434015247" expanded="false" signature="117756:164426" ph="..." />
-                <marker date="1493434015247" expanded="true" signature="117808:164395" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="456" column="59" lean-forward="false" selection-start-line="456" selection-start-column="59" selection-end-line="456" selection-end-column="59" />
-              <folding>
-                <element signature="e#2967#2976#0#Twig" expanded="true" />
-                <element signature="e#32026#32035#0#Twig" expanded="true" />
-                <element signature="e#33825#33835#0#Twig" expanded="true" />
-                <element signature="e#34113#34122#0#Twig" expanded="true" />
-              </folding>
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -176,40 +409,38 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>matr</find>
-      <find>Client</find>
-      <find>client</find>
-      <find>page-bar</find>
-      <find>Name:</find>
-      <find>Name</find>
-      <find>form_st</find>
-      <find>name</find>
-      <find>Meta</find>
-      <find>Tax Class</find>
-      <find>tva</find>
-      <find>Home</find>
-      <find>..</find>
-      <find>7800</find>
-      <find>.jpg</find>
-      <find>container</find>
-      <find>block co</find>
-      <find>contain</find>
+      <find>addcl</find>
+      <find>block me</find>
+      <find>b</find>
       <find>block</find>
-      <find>page-conten</find>
-      <find>jquery</find>
-      <find>') }}') }}</find>
-      <find>7</find>
-      <find>basiqu</find>
-      <find>nbclient</find>
-      <find>meta</find>
-      <find>.jpg&quot;</find>
-      <find>img2</find>
-      <find>gif</find>
-      <find>both.png</find>
+      <find>list</find>
+      <find>Invoice 2 invoice sample</find>
+      <find>invoi</find>
+      <find>impri</find>
+      <find>facture</find>
+      <find>total</find>
+      <find>dash</find>
+      <find>prix</find>
+      <find>prix de ve</find>
+      <find>preci</find>
+      <find>num</find>
+      <find>statu</find>
+      <find>dev</find>
+      <find>stat</find>
+      <find>ready</find>
+      <find>statut</find>
+      <find>comma</find>
+      <find>devise</find>
+      <find>addfor</find>
+      <find>add</find>
+      <find>show</find>
+      <find>client</find>
+      <find>edit</find>
+      <find>/</find>
+      <find>/clients</find>
+      <find>197</find>
     </findStrings>
     <replaceStrings>
-      <replace>{{ asset('Template/</replace>
-      <replace>.png') }}</replace>
       <replace>fonts/</replace>
       <replace>simple-line-icons/fonts/</replace>
       <replace>fournisseurForm</replace>
@@ -219,6 +450,10 @@
       <replace>.gif') }}</replace>
       <replace>') }}</replace>
       <replace>.jpg') }}&quot;</replace>
+      <replace>produitForm</replace>
+      <replace>{{ asset('Template/</replace>
+      <replace>.png') }}</replace>
+      <replace>fournisseur</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -231,46 +466,56 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/app/config/parameters.yml" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Entity/User.php" />
-        <option value="$PROJECT_DIR$/app/config/security.yml" />
-        <option value="$PROJECT_DIR$/web/Template/admin_1_material_design/form_validation_md.html" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Controller/Admin/AdminController.php" />
-        <option value="$PROJECT_DIR$/app/Resources/views/sidebar.html.twig" />
-        <option value="$PROJECT_DIR$/web/Template/admin_1_material_design/table_datatables_managed.html" />
-        <option value="$PROJECT_DIR$/web/Template/admin_1_material_design/form_wizard.html" />
-        <option value="$PROJECT_DIR$/web/Template/assets/global/plugins/bootstrap-sweetalert/sweetalert.js" />
+        <option value="$PROJECT_DIR$/app/Resources/views/FacturesClients/list.html.twig" />
+        <option value="$PROJECT_DIR$/web/app.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Controller/FactureClientController.php" />
+        <option value="$PROJECT_DIR$/app/Resources/views/CommandeClient/list.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/CommandeClient/show.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/clients/edit.html.twig" />
-        <option value="$PROJECT_DIR$/web/Template/admin_1_material_design/form_validation.html" />
-        <option value="$PROJECT_DIR$/web/css/bootstrap.min.css" />
-        <option value="$PROJECT_DIR$/web/css/simple-line-icons.min.css" />
-        <option value="$PROJECT_DIR$/web/css/font-awesome.min.css" />
-        <option value="$PROJECT_DIR$/app/config/config_dev.yml" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Form/ContactClientFormype.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Entity/ContactClient.php" />
-        <option value="$PROJECT_DIR$/../../../apps/phpmyadmin4.6.4/libraries/php-gettext/gettext.inc" />
-        <option value="$PROJECT_DIR$/../../../bin/apache/apache2.4.23/bin/php.ini" />
-        <option value="$PROJECT_DIR$/../../../logs/php_error.log" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Form/ContactClientFormType.php" />
-        <option value="$PROJECT_DIR$/app/Resources/views/clients/new.html.twig" />
-        <option value="$PROJECT_DIR$/app/AppKernel.php" />
+        <option value="$PROJECT_DIR$/web/Template/assets/pages/css/login-4.css" />
+        <option value="$PROJECT_DIR$/web/Template/admin_1_material_design/page_user_login_4.html" />
+        <option value="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Security/login.html.twig" />
+        <option value="$PROJECT_DIR$/web/Template/assets/pages/scripts/login-4.min.js" />
+        <option value="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/layout.html.twig" />
+        <option value="$PROJECT_DIR$/web/Template/assets/pages/scripts/login-4.js" />
+        <option value="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Security/login_content.html.twig" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Form/RegistrationType.php" />
+        <option value="$PROJECT_DIR$/app/config/services.yml" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Entity/User.php" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Controller/ClientController.php" />
-        <option value="$PROJECT_DIR$/app/Resources/views/clients/show.html.twig" />
-        <option value="$PROJECT_DIR$/../../../logs/mysql.log" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Form/ClientFormType.php" />
-        <option value="$PROJECT_DIR$/app/Resources/views/fournisseurs/new.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/views/fournisseurs/show.html.twig" />
-        <option value="$PROJECT_DIR$/web/Template/admin_1_material_design/ecommerce_products_edit.html" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Entity/Fournisseur.php" />
-        <option value="$PROJECT_DIR$/app/config/routing.yml" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Controller/FournisseurController.php" />
-        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Entity/Client.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Repository/ClientRepository.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Controller/AdminController.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Controller/ResetController.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Controller/ConfigurationController.php" />
+        <option value="$PROJECT_DIR$/web/Template/assets/pages/scripts/form-wizard.js" />
+        <option value="$PROJECT_DIR$/app/Resources/views/Configuration/configuration.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/clients/add.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/clients/list.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/dashboard/dashboard1.html.twig" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Form/FournisseurFormType.php" />
+        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/FacturesClients/view.html.twig" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Controller/DeviseController.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Entity/Configuration.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Entity/Devise.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Entity/Devis/Devis.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Entity/Devis/LigneDevis.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Entity/Stock.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Entity/Lot.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Entity/BonLivraisonClient.php" />
+        <option value="$PROJECT_DIR$/app/Resources/views/CommandeClient/new1.html.twig" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Controller/CommandeClientController.php" />
+        <option value="$PROJECT_DIR$/app/Resources/views/CommandeClient/edit.html.twig" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Entity/Fournisseur.php" />
+        <option value="$PROJECT_DIR$/app/Resources/views/fournisseurs/add.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/fournisseurs/list.html.twig" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Entity/Paiement/Devise.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Controller/FournisseurController.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/fournisseurs/edit.html.twig" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Controller/AdminController.php" />
+        <option value="$PROJECT_DIR$/app/config/security.yml" />
+        <option value="$PROJECT_DIR$/app/Resources/views/pagenotfound.html.twig" />
+        <option value="$PROJECT_DIR$/app/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Controller/TestController.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Controller/ClientController.php" />
+        <option value="$PROJECT_DIR$/app/config/parameters.yml.dist" />
       </list>
     </option>
   </component>
@@ -323,12 +568,16 @@
       <path value="$PROJECT_DIR$/vendor/symfony/phpunit-bridge" />
       <path value="$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle" />
       <path value="$PROJECT_DIR$/vendor/knplabs/knp-components" />
+      <path value="$PROJECT_DIR$/vendor/fig/link-util" />
+      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/psr/link" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1370" />
+    <option name="width" value="1378" />
     <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -349,6 +598,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -359,20 +610,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="nepsus" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nepsus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nepsus" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="composer.phar" />
-              <option name="myItemType" value="com.jetbrains.php.phar.PsiPharFileNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -399,15 +636,47 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
+              <option name="myItemId" value="web" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AppBundle" />
+              <option name="myItemId" value="Template" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nepsus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nepsus" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Controller" />
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Template" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin_1_material_design" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nepsus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nepsus" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="var" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -440,50 +709,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="AppBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nepsus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nepsus" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Repository" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nepsus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nepsus" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Form" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -527,37 +752,266 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Entity" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Paiement" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nepsus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nepsus" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AppBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Entity" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Devis" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nepsus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nepsus" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AppBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Controller" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nepsus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nepsus" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bin" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nepsus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nepsus" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nepsus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nepsus" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nepsus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nepsus" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Testlayout" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nepsus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nepsus" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FOSUserBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nepsus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nepsus" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FOSUserBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Security" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nepsus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nepsus" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="js.eslint.eslintPackage" value="" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../sonataadmin" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
-    <property name="ChangesBrowser.SHOW_FLATTEN" value="true" />
+    <property name="ChangesBrowser.SHOW_FLATTEN" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\nepsus\nepsus\app\Resources\views\fournisseurs" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\nepsus\src\AppBundle\Entity\Devis" />
+      <recent name="C:\xampp\htdocs\nepsus\src\AppBundle\Entity\Paiement" />
       <recent name="C:\wamp64\www\nepsus\nepsus\web" />
       <recent name="C:\wamp64\www\nepsus\nepsus\app\Resources" />
       <recent name="C:\wamp64\www\nepsus\nepsus\src\AppBundle\Controller" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\nepsus\app\Resources\views\CommandeFournisseur" />
+      <recent name="C:\xampp\htdocs\nepsus\app\Resources\views\fournisseurs" />
+      <recent name="C:\xampp\htdocs\nepsus\app\Resources\FOSUserBundle\views" />
+      <recent name="C:\xampp\htdocs\nepsus\app\Resources\views" />
+      <recent name="C:\xampp\htdocs\nepsus\app\Resources\FOSUserBundle\views\Security" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="CodeceptionConfigurationType" factoryName="Codeception">
+      <PhpTestRunnerSettings />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
     <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
       <config-file value="" />
       <node-interpreter value="project" />
@@ -618,6 +1072,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="14e57119-6d11-439a-90fa-9334e3be0203" name="Default" comment="" />
@@ -631,7 +1088,33 @@
       <workItem from="1491779917653" duration="56873000" />
       <workItem from="1492387009392" duration="97577000" />
       <workItem from="1493160427216" duration="22167000" />
-      <workItem from="1493390707366" duration="30191000" />
+      <workItem from="1493390707366" duration="38497000" />
+      <workItem from="1493798046335" duration="34000" />
+      <workItem from="1493798098335" duration="19500000" />
+      <workItem from="1494002204642" duration="42309000" />
+      <workItem from="1494432489112" duration="7369000" />
+      <workItem from="1494518036163" duration="4484000" />
+      <workItem from="1494778039424" duration="89265000" />
+      <workItem from="1495715873626" duration="104383000" />
+      <workItem from="1497125917902" duration="50395000" />
+      <workItem from="1497262545949" duration="21150000" />
+      <workItem from="1497822255390" duration="40049000" />
+      <workItem from="1498766291892" duration="27558000" />
+      <workItem from="1499369215736" duration="9954000" />
+      <workItem from="1500318341139" duration="60633000" />
+      <workItem from="1501328514287" duration="1846000" />
+      <workItem from="1501340738081" duration="183000" />
+      <workItem from="1501340967566" duration="499000" />
+      <workItem from="1501341489211" duration="8495000" />
+      <workItem from="1501498497338" duration="208545000" />
+      <workItem from="1502559852884" duration="10294000" />
+      <workItem from="1503093859525" duration="6649000" />
+      <workItem from="1503416452048" duration="67342000" />
+      <workItem from="1505772340109" duration="54249000" />
+      <workItem from="1507112110693" duration="19677000" />
+      <workItem from="1507774460294" duration="5484000" />
+      <workItem from="1507921409184" duration="651000" />
+      <workItem from="1507922862415" duration="6914000" />
     </task>
     <task id="LOCAL-00001" summary="02/05/2017  V1.01&#10;">
       <created>1493722777132</created>
@@ -640,34 +1123,47 @@
       <option name="project" value="LOCAL" />
       <updated>1493722777132</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="02/05/2017  V1.01&#10;">
+      <created>1493734474530</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1493734474530</updated>
+    </task>
+    <task id="LOCAL-00003" summary="02/05/2017  V1.01 Changing parameters dist">
+      <created>1508006243915</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1508006243915</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="230815000" />
+    <option name="totallyTimeSpent" value="1107032000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1370" height="744" extended-state="0" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20088626" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="546" y="47" width="274" height="634" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19676946" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="546" y="47" width="274" height="634" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41009465" sideWeight="0.4970458" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.055205047" sideWeight="0.5029542" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12629247" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7050473" sideWeight="0.4970588" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.4970588" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.058359623" sideWeight="0.52928257" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2239354" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.4970588" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41009465" sideWeight="0.4970458" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7050473" sideWeight="0.47071743" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -678,13 +1174,298 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="02/05/2017  V1.01&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="02/05/2017  V1.01&#10;" />
+    <MESSAGE value="02/05/2017  V1.01 Changing parameters dist" />
+    <MESSAGE value="02/05/2017  V1.02" />
+    <option name="LAST_COMMIT_MESSAGE" value="02/05/2017  V1.02" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="5" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Lot.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="33" column="4" lean-forward="true" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Modules.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/LigneFC.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/LigneBCF.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/LigneBCC.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Journal.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/HistoriqueClient.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/FactureClient.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Entrepot.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/ContactClient.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Configuration.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Category.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/BonLivraisonClient.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/BonCommandeFournisseur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/BonCommandeClient.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Devis/Devis.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="20" column="7" lean-forward="true" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/CommandeClient/new1.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="82" column="0" lean-forward="true" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Devis/LigneDevis.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="8" column="33" lean-forward="true" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Paiement/MethodeTransaction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding>
+            <element signature="e#127#175#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/clients/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8249">
+          <caret line="812" column="7" lean-forward="false" selection-start-line="812" selection-start-column="7" selection-end-line="814" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/CommandeClient/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="321" column="37" lean-forward="false" selection-start-line="321" selection-start-column="37" selection-end-line="321" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/CommandeClientController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="87" column="0" lean-forward="true" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+          <folding>
+            <element signature="e#39#74#0#PHP" expanded="false" />
+            <element signature="e#2990#3019#1#PHP" expanded="false" />
+            <element signature="e#6699#6708#1#PHP" expanded="false" />
+            <element signature="e#6753#6785#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Fournisseur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-221">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <element signature="e#119#167#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/fournisseurs/add.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8925">
+          <caret line="525" column="42" lean-forward="false" selection-start-line="525" selection-start-column="42" selection-end-line="525" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/services.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Paiement/Transaction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="35" column="31" lean-forward="true" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Client.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="48" />
+          <folding>
+            <element signature="e#118#166#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Paiement/Devise.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding>
+            <element signature="e#128#160#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/Testlayout/test.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Template/admin_1_material_design/page_system_404_1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="26" column="58" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="2396" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/fournisseurs/list.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="35" lean-forward="false" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/CommandeFournisseur/show.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="41" lean-forward="false" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/fournisseurs/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="706" column="48" lean-forward="true" selection-start-line="706" selection-start-column="48" selection-end-line="706" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Template/admin_1_material_design/page_system_404_2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-510">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="90" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="31" column="60" lean-forward="false" selection-start-line="31" selection-start-column="60" selection-end-line="31" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/routing_dev.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -692,373 +1473,113 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/app_dev.php">
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/pagenotfound.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-102">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="160">
+          <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/composer.lock">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-255">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="55" column="30" lean-forward="true" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/var/cache/dev/assetic/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/fontsgoogleapis.css" />
-    <entry file="file://$PROJECT_DIR$/web/css/layouts/layout/css/custom.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/font-awesome/css/font-awesome.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="3" column="259" lean-forward="false" selection-start-line="3" selection-start-column="250" selection-end-line="3" selection-end-column="259" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/bootstrap/css/bootstrap.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/layouts/layout/css/themes/darkblue.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/morris/morris.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/bootstrap.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-15622">
-          <caret line="4" column="3177" lean-forward="false" selection-start-line="4" selection-start-column="3177" selection-end-line="4" selection-end-column="3177" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/simple-line-icons.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="49" lean-forward="false" selection-start-line="1" selection-start-column="49" selection-end-line="1" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/font-awesome.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="3" column="314" lean-forward="false" selection-start-line="3" selection-start-column="314" selection-end-line="3" selection-end-column="316" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config_dev.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="28" column="33" lean-forward="false" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
-          <folding>
-            <element signature="e#117#159#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/Template/admin_1_material_design/form_validation_md.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="77" lean-forward="false" selection-start-line="2" selection-start-column="74" selection-end-line="2" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../bin/apache/apache2.4.23/bin/php.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="889" column="22" lean-forward="false" selection-start-line="889" selection-start-column="10" selection-end-line="889" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../logs/php_error.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="165" lean-forward="false" selection-start-line="0" selection-start-column="112" selection-end-line="0" selection-end-column="165" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../apps/phpmyadmin4.6.4/libraries/php-gettext/gettext.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="182" column="34" lean-forward="false" selection-start-line="182" selection-start-column="15" selection-end-line="182" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/ContactClient.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="17" column="6" lean-forward="false" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/Template/admin_1_material_design/form_validation.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="1961" column="38" lean-forward="false" selection-start-line="1961" selection-start-column="38" selection-end-line="1961" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/Template/admin_1_material_design/form_input_mask.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="1811" column="101" lean-forward="false" selection-start-line="1811" selection-start-column="93" selection-end-line="1811" selection-end-column="101" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/clients/new.html.twig">
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/Testlayout/addlayout.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/FournisseurController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="19" column="61" lean-forward="false" selection-start-line="19" selection-start-column="61" selection-end-line="19" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="93" column="92" lean-forward="false" selection-start-line="93" selection-start-column="92" selection-end-line="93" selection-end-column="92" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/Template/admin_1_material_design/table_datatables_managed.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="128" column="68" lean-forward="false" selection-start-line="128" selection-start-column="68" selection-end-line="128" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/9be4e9f6-8898-47e5-8cb0-37d770d95d26/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../logs/mysql.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/ContactClientFormType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="17" column="30" lean-forward="true" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+        <state relative-caret-position="85">
+          <caret line="65" column="31" lean-forward="false" selection-start-line="65" selection-start-column="31" selection-end-line="65" selection-end-column="31" />
           <folding>
-            <element signature="e#33#68#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/ClientFormType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/fournisseurs/show.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="184" column="149" lean-forward="true" selection-start-line="184" selection-start-column="149" selection-end-line="184" selection-end-column="149" />
-          <folding>
-            <element signature="e#2906#2920#0#Twig" expanded="true" />
-            <element signature="e#7512#7527#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/Template/admin_1_material_design/page_system_500_2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-913">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/fournisseurs/new.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2668">
-          <caret line="85" column="0" lean-forward="false" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Fournisseur.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="68" column="32" lean-forward="false" selection-start-line="68" selection-start-column="32" selection-end-line="68" selection-end-column="32" />
-          <folding>
-            <element signature="e#119#151#0#PHP" expanded="true" />
+            <element signature="e#40#73#0#PHP" expanded="false" />
+            <element signature="e#1736#1753#1#PHP" expanded="false" />
+            <element signature="e#1797#1825#1#PHP" expanded="false" />
+            <element signature="e#2069#2092#1#PHP" expanded="false" />
+            <element signature="e#3373#3390#1#PHP" expanded="false" />
+            <element signature="e#3433#3462#0#PHP" expanded="false" />
+            <element signature="e#3823#3846#1#PHP" expanded="false" />
+            <element signature="e#3958#3975#1#PHP" expanded="false" />
+            <element signature="e#4552#4582#0#PHP" expanded="false" />
+            <marker date="1507133295426" expanded="true" signature="4200:4237" ph="SELECT p FRO... AppBundle" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+        <state relative-caret-position="271">
+          <caret line="113" column="0" lean-forward="false" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/clients/show.html.twig">
+    <entry file="uml://DATABASE/9be4e9f6-8898-47e5-8cb0-37d770d95d26.SCHEMA:nepsus">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>9be4e9f6-8898-47e5-8cb0-37d770d95d26.SCHEMA:nepsus</OriginalElement>
+          <nodes>
+            <node x="" y="">9be4e9f6-8898-47e5-8cb0-37d770d95d26.TABLE:nepsus.ligne_devis</node>
+            <node x="" y="">9be4e9f6-8898-47e5-8cb0-37d770d95d26.TABLE:nepsus.fournisseur</node>
+            <node x="" y="">9be4e9f6-8898-47e5-8cb0-37d770d95d26.TABLE:nepsus.historique_client</node>
+            <node x="" y="">9be4e9f6-8898-47e5-8cb0-37d770d95d26.TABLE:nepsus.devise</node>
+            <node x="" y="">9be4e9f6-8898-47e5-8cb0-37d770d95d26.TABLE:nepsus.methode_transaction</node>
+            <node x="" y="">9be4e9f6-8898-47e5-8cb0-37d770d95d26.TABLE:nepsus.lot</node>
+            <node x="" y="">9be4e9f6-8898-47e5-8cb0-37d770d95d26.TABLE:nepsus.bon_livraison_client</node>
+            <node x="" y="">9be4e9f6-8898-47e5-8cb0-37d770d95d26.TABLE:nepsus.stock</node>
+            <node x="" y="">9be4e9f6-8898-47e5-8cb0-37d770d95d26.TABLE:nepsus.bon_commande_fournisseur</node>
+            <node x="" y="">9be4e9f6-8898-47e5-8cb0-37d770d95d26.TABLE:nepsus.user</node>
+            <node x="" y="">9be4e9f6-8898-47e5-8cb0-37d770d95d26.TABLE:nepsus.ligne_bcf</node>
+            <node x="" y="">9be4e9f6-8898-47e5-8cb0-37d770d95d26.TABLE:nepsus.entrepot</node>
+            <node x="" y="">9be4e9f6-8898-47e5-8cb0-37d770d95d26.TABLE:nepsus.ligne_bcc</node>
+            <node x="" y="">9be4e9f6-8898-47e5-8cb0-37d770d95d26.TABLE:nepsus.ligne_fc</node>
+            <node x="" y="">9be4e9f6-8898-47e5-8cb0-37d770d95d26.TABLE:nepsus.configuration</node>
+            <node x="" y="">9be4e9f6-8898-47e5-8cb0-37d770d95d26.TABLE:nepsus.contact_client</node>
+            <node x="" y="">9be4e9f6-8898-47e5-8cb0-37d770d95d26.TABLE:nepsus.devis</node>
+            <node x="" y="">9be4e9f6-8898-47e5-8cb0-37d770d95d26.TABLE:nepsus.bon_commande_client</node>
+            <node x="" y="">9be4e9f6-8898-47e5-8cb0-37d770d95d26.TABLE:nepsus.transaction</node>
+            <node x="" y="">9be4e9f6-8898-47e5-8cb0-37d770d95d26.TABLE:nepsus.produit</node>
+            <node x="" y="">9be4e9f6-8898-47e5-8cb0-37d770d95d26.TABLE:nepsus.modules</node>
+            <node x="" y="">9be4e9f6-8898-47e5-8cb0-37d770d95d26.TABLE:nepsus.taxe</node>
+            <node x="" y="">9be4e9f6-8898-47e5-8cb0-37d770d95d26.TABLE:nepsus.facture_client</node>
+            <node x="" y="">9be4e9f6-8898-47e5-8cb0-37d770d95d26.TABLE:nepsus.client</node>
+            <node x="" y="">9be4e9f6-8898-47e5-8cb0-37d770d95d26.TABLE:nepsus.category</node>
+            <node x="" y="">9be4e9f6-8898-47e5-8cb0-37d770d95d26.TABLE:nepsus.journal</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.4026967528893781" x="982.6453464534645" y="871.6878502118354" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Columns</Category>
+            <Category>Key columns</Category>
+          </Categories>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/ClientController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="181" column="82" lean-forward="false" selection-start-line="181" selection-start-column="82" selection-end-line="181" selection-end-column="82" />
+        <state relative-caret-position="102">
+          <caret line="90" column="24" lean-forward="true" selection-start-line="90" selection-start-column="24" selection-end-line="90" selection-end-column="24" />
+          <folding>
+            <element signature="e#123#158#0#PHP" expanded="true" />
+            <marker date="1507779333433" expanded="true" signature="3319:3351" ph="SELECT p FRO... AppBundle" />
+            <marker date="1507779333433" expanded="true" signature="3351:3355" ph="SELECT p FRO... AppBundle" />
+            <marker date="1507779333433" expanded="true" signature="3365:3419" ph="/** @var $pa... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/TestController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="26" lean-forward="true" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/clients/edit.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="71" column="26" lean-forward="true" selection-start-line="71" selection-start-column="26" selection-end-line="71" selection-end-column="26" />
-          <folding>
-            <element signature="e#3302#3312#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/Template/admin_1_material_design/ecommerce_products_edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="1616" column="16" lean-forward="false" selection-start-line="1616" selection-start-column="16" selection-end-line="2211" selection-end-column="22" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#h1#0;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#a#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#2;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <marker date="1493434015247" expanded="true" signature="848:211470" ph="..." />
-            <marker date="1493434015247" expanded="true" signature="3636:211461" ph="..." />
-            <marker date="1493434015247" expanded="true" signature="3671:207036" ph="..." />
-            <marker date="1493434015247" expanded="true" signature="30999:206310" ph="..." />
-            <marker date="1493434015247" expanded="false" signature="109607:164522" ph="..." />
-            <marker date="1493434015247" expanded="false" signature="109702:164453" ph="..." />
-            <marker date="1493434015247" expanded="false" signature="117756:164426" ph="..." />
-            <marker date="1493434015247" expanded="true" signature="117808:164395" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/Template/admin_1_material_design/dashboard_2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="1695" column="22" lean-forward="false" selection-start-line="1695" selection-start-column="22" selection-end-line="4558" selection-end-column="30" />
-          <folding>
-            <element signature="n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#h1#0;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#2;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#3;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#4;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#5;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#6;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#7;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#8;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#9;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#a#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#2;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="456" column="59" lean-forward="false" selection-start-line="456" selection-start-column="59" selection-end-line="456" selection-end-column="59" />
-          <folding>
-            <element signature="e#2967#2976#0#Twig" expanded="true" />
-            <element signature="e#32026#32035#0#Twig" expanded="true" />
-            <element signature="e#33825#33835#0#Twig" expanded="true" />
-            <element signature="e#34113#34122#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/FournisseurController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="76" column="0" lean-forward="true" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
-          <folding>
-            <element signature="e#40#73#0#PHP" expanded="true" />
-            <element signature="e#968#985#1#PHP" expanded="true" />
-            <element signature="e#1029#1057#0#PHP" expanded="true" />
-            <element signature="e#1677#1706#0#PHP" expanded="true" />
-            <element signature="e#2423#2440#1#PHP" expanded="true" />
-            <element signature="e#2484#2513#0#PHP" expanded="true" />
-            <element signature="e#3058#3075#1#PHP" expanded="true" />
-            <marker date="1493433626145" expanded="true" signature="1325:1362" ph="SELECT p FRO... AppBundle" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/AppBundle.php">
+    <entry file="file://$PROJECT_DIR$/app/config/config_prod.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1066,84 +1587,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Client.php">
+    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Repository/ClientRepository.php">
+    <entry file="file://$PROJECT_DIR$/app/config/config_dev.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="1" lean-forward="false" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-          <folding>
-            <marker date="1493655448553" expanded="true" signature="352:395" ph="SELECT COUNT... AppBundle" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/dashboard/dashboard1.html.twig">
+    <entry file="file://$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Security/login.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="117" column="99" lean-forward="false" selection-start-line="117" selection-start-column="99" selection-end-line="117" selection-end-column="99" />
-          <folding>
-            <element signature="e#12#26#0#Twig" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#5;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#7;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#7;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#8;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#div#8;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Security/login_content.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-459">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/AdminController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="22" lean-forward="false" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
-          <folding>
-            <element signature="e#6#87#0#PHP" expanded="true" />
-            <element signature="e#123#182#0#PHP" expanded="true" />
-            <element signature="e#564#596#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/ClientController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="57" column="8" lean-forward="false" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="8" />
-          <folding>
-            <element signature="e#124#152#0#PHP" expanded="true" />
-            <element signature="e#2816#2834#1#PHP" expanded="true" />
-            <marker date="1493178207339" expanded="true" signature="1310:1342" ph="SELECT p FRO... AppBundle" />
-            <marker date="1493178207339" expanded="true" signature="1310:1346" ph="SELECT p FRO... AppBundle" />
-            <marker date="1493178207339" expanded="true" signature="1356:1410" ph="/** @var $pa... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/FournisseurFormType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="67" column="8" lean-forward="false" selection-start-line="67" selection-start-column="8" selection-end-line="67" selection-end-column="8" />
+        <state relative-caret-position="51">
+          <caret line="23" column="5" lean-forward="false" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/fournisseurs/edit.html.twig">
+    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml.dist">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8">
-          <caret line="422" column="36" lean-forward="false" selection-start-line="422" selection-start-column="36" selection-end-line="422" selection-end-column="36" />
-          <folding>
-            <element signature="e#1081#2748#0#HTML" expanded="false" />
-            <element signature="e#1120#1426#0#HTML" expanded="false" />
-            <element signature="e#1490#2706#0#HTML" expanded="false" />
-            <element signature="e#2832#2941#0#HTML" expanded="false" />
-            <element signature="e#3170#3185#0#Twig" expanded="true" />
-          </folding>
+        <state relative-caret-position="136">
+          <caret line="8" column="31" lean-forward="true" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>

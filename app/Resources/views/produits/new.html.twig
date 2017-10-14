@@ -1,0 +1,278 @@
+{% extends 'base.html.twig' %}
+{% block javascripts %}
+
+
+    {% if not produitForm.category.vars | length %}
+
+        <script type="application/javascript">
+
+            document.getElementById("icone_libele").className = "fa fa-warning tooltips";
+            document.getElementById("form_libele").className = "form-group has-error";
+        </script>
+    {% endif %}
+
+
+
+
+
+    {{ parent() }}
+{% endblock %}
+{% block container%}
+    {{ parent() }}
+    <div class="page-bar">
+        <ul class="page-breadcrumb">
+            <li>
+                <a href="index.html">Home</a>
+                <i class="fa fa-circle"></i>
+            </li>
+            <li>
+                <span>Form Stuff</span>
+            </li>
+        </ul>
+        <div class="page-toolbar">
+            <div class="btn-group pull-right">
+                <button type="button" class="btn green btn-sm btn-outline dropdown-toggle" data-toggle="dropdown"> Actions
+                    <i class="fa fa-angle-down"></i>
+                </button>
+                <ul class="dropdown-menu pull-right" role="menu">
+                    <li>
+                        <a href="#">
+                            <i class="icon-bell"></i> Action</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="icon-shield"></i> Another action</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="icon-user"></i> Something else here</a>
+                    </li>
+                    <li class="divider"> </li>
+                    <li>
+                        <a href="#">
+                            <i class="icon-bag"></i> Separated link</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- END PAGE BAR -->
+    <!-- BEGIN PAGE TITLE-->
+    <h1 class="page-title"> Material Design Form Validation
+        <small>material design form validation</small>
+    </h1>
+    <!-- END PAGE TITLE-->
+    <!-- END PAGE HEADER-->
+    <div class="m-heading-1 border-green m-bordered">
+        <h3>jQuery Validation Plugin</h3>
+        <p> This jQuery plugin makes simple clientside form validation easy, whilst still offering plenty of customization options. For more info please check out
+            <a class="btn red btn-outline" href="http://jqueryvalidation.org" target="_blank">the official documentation</a>
+        </p>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <!-- BEGIN VALIDATION STATES-->
+            <div class="portlet light portlet-fit portlet-form bordered" id="form_wizard_1">
+                <div class="portlet-title">
+                    <div class="caption">
+                        <i class=" icon-layers font-green"></i>
+                        <span class="caption-subject font-green sbold uppercase">Information générales</span>
+                    </div>
+
+                </div>
+                <div class="portlet-body">
+                    <!-- BEGIN FORM-->
+                    {{ form_start(produitForm , {'attr': {'class': 'form-horizontal'}}) }}
+
+                        <div class="form-body">
+
+
+
+
+                            <div class="form-group" id="form_libele">
+                                <label class="control-label col-md-3">Libele</label>
+                                <div class="col-md-9">
+                                    <div class="input-icon right">
+                                        <i class="" data-original-title="" id="icone_libele"></i>
+                                        {{ form_widget(produitForm.libele, { 'attr' : { 'class' : 'form-control' } }) }}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group" id="form_ville">
+                                <label class="control-label col-md-3">Etat de vente</label>
+                                <div class="col-md-9">
+                                    <div class="input-icon right">
+                                        <i class="" data-original-title="" id="icone_ville"></i>
+                                        {{ form_widget(produitForm.etat, { 'attr' : { 'class' : 'form-control' } }) }}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group" id="form_ville">
+                                <label class="control-label col-md-3">Type</label>
+                                <div class="col-md-9">
+                                    <div class="input-icon right">
+                                        <i class="" data-original-title="" id="icone_ville"></i>
+                                        {{ form_widget(produitForm.type, { 'attr' : { 'class' : 'form-control' } }) }}
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+
+                            <div class="form-group" id="form_pays">
+                                <label class="control-label col-md-3">Origine</label>
+                                <div class="col-md-9">
+                                    <div class="input-icon right">
+                                        <i class="" data-original-title="" id="icone_pays"></i>
+                                        {{ form_widget(produitForm.origine, { 'attr' : { 'class' : 'form-control' } }) }}
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+
+
+                            <div class="form-group" id="form_mf">
+                                <label class="control-label col-md-3">TVA</label>
+                                <div class="col-md-9">
+                                    <div class="input-icon right">
+                                        <i class="" data-original-title="" id="icone_mf"></i>
+                                        {{ form_widget(produitForm.tva, { 'attr' : { 'class' : 'form-control' } }) }}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group" id="form_mf">
+                                <label class="control-label col-md-3">Code douane</label>
+                                <div class="col-md-9">
+                                    <div class="input-icon right">
+                                        <i class="" data-original-title="" id="icone_mf"></i>
+                                        {{ form_widget(produitForm.codedouane, { 'attr' : { 'class' : 'form-control' } }) }}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group" id="form_mf">
+                                <label class="control-label col-md-3">Prix d'achat</label>
+                                <div class="col-md-9">
+                                    <div class="input-icon right">
+                                        <i class="" data-original-title="" id="icone_mf"></i>
+                                        {{ form_widget(produitForm.prixachat, { 'attr' : { 'class' : 'form-control' } }) }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group" id="form_adresse">
+                                <label class="control-label col-md-3">Prix de vente</label>
+                                <div class="col-md-9">
+                                    <div class="input-icon right">
+                                        <i class="" data-original-title="" id="icone_adresse"></i>
+                                        {{ form_widget(produitForm.prixvente, { 'attr' : { 'class' : 'form-control' } }) }}
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="form-group" id="form_adresse">
+                                <label class="control-label col-md-3">Description</label>
+                                <div class="col-md-9">
+                                    <div class="input-icon right">
+                                        <i class="" data-original-title="" id="icone_adresse"></i>
+                                        {{ form_widget(produitForm.description, { 'attr' : { 'class' : 'form-control' } }) }}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group" id="form_adresse">
+                                <label class="control-label col-md-3">Limite stock</label>
+                                <div class="col-md-9">
+                                    <div class="input-icon right">
+                                        <i class="" data-original-title="" id="icone_adresse"></i>
+                                        {{ form_widget(produitForm.limitestock, { 'attr' : { 'class' : 'form-control' } }) }}
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+                        <div class="form-group" id="form_created">
+                            <label class="control-label col-md-3"></label>
+                            <div class="col-md-9" hidden="true">
+                                <div class="input-icon right">
+                                    <i class="" data-original-title="" id="icone_created"></i>
+                                    {{ form_widget(produitForm.created, { 'attr' : { 'class' : 'form-control' } }) }}
+                                </div>
+                            </div>
+                        </div>
+
+                    <!-- END FORM-->
+                </div>
+            </div>
+            <!-- END VALIDATION STATES-->
+        </div>
+        <div class="col-md-6">
+            <!-- BEGIN VALIDATION STATES-->
+            <div class="portlet light portlet-fit portlet-form bordered" id="form_wizard_1">
+                <div class="portlet-title">
+                    <div class="caption">
+                        <i class=" icon-layers font-green"></i>
+                        <span class="caption-subject font-green sbold uppercase">Catégories</span>
+                    </div>
+
+                </div>
+                <div class="portlet-body">
+                    <!-- BEGIN FORM-->
+
+                        <div class="form-body">
+
+                            <div class="form-group" id="form_pays">
+                                <label class="control-label col-md-3">Categorie</label>
+                                <div class="col-md-9">
+                                    <div class="input-icon right">
+                                        <i class="" data-original-title="" id="icone_pays"></i>
+                                        {{ form_widget(produitForm.category, { 'attr' : { 'class' : 'form-control' } }) }}
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                        <div class="form-actions">
+                            <div class="row">
+                                <div class="col-md-offset-3 col-md-9">
+                                    <button type="submit" class="btn green">Save</button>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    {% for flash_message in app.session.flashBag.get('notice') %}
+                        <div class="flash-notice">
+                            {{ flash_message }}
+                        </div>
+                    {% endfor %}
+
+
+
+                    {{ form_end(produitForm) }}
+
+                    <!-- END FORM-->
+                </div>
+            </div>
+            <!-- END VALIDATION STATES-->
+        </div>
+    </div>
+
+
+
+
+{% endblock %}

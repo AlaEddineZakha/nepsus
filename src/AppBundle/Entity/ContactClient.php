@@ -2,8 +2,8 @@
 /**
  * Created by PhpStorm.
  * User: Tlija
- * Date: 26/04/2017
- * Time: 00:47
+ * Date: 16/05/2017
+ * Time: 18:44
  */
 
 namespace AppBundle\Entity;
@@ -14,6 +14,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * @ORM\Entity
  * @ORM\Table(name="contact_client")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\ContactClientRepository")
  */
 class ContactClient
 {
@@ -22,27 +23,42 @@ class ContactClient
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      * @ORM\Column(type="integer")
-     */
-    private $id;
-    /**
-     * @ORM\Column(type="string")
-     */private $nom;
+     */private $id;
     /**
      * @ORM\Column(type="string")
      */
-    private $prenom;
+    private $nom;
+
+
     /**
-     * @ORM\Column(type="string")
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Client", inversedBy="contacts")
+     * @ORM\JoinColumn(nullable=false , name="client_id", referencedColumnName="id")
      */
-    private $mobile;
+    private $client;
+
+
+
     /**
-     * @ORM\Column(type="string")
-     */
-    private $telephone;
+     * @ORM\Column(type="datetime")
+     */private $created;
+
     /**
-     * @ORM\Column(type="string")
+     * @return mixed
      */
-    private $email;
+    public function getCreated()
+    {
+        return $this->created;
+    }
+
+    /**
+     * @param mixed $created
+     */
+    public function setCreated($created)
+    {
+        $this->created = $created;
+    }
+
+
 
     /**
      * @return mixed
@@ -60,78 +76,17 @@ class ContactClient
         $this->nom = $nom;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getPrenom()
-    {
-        return $this->prenom;
-    }
 
-    /**
-     * @param mixed $prenom
-     */
-    public function setPrenom($prenom)
-    {
-        $this->prenom = $prenom;
-    }
 
-    /**
-     * @return mixed
-     */
-    public function getMobile()
+    public function getClient()
     {
-        return $this->mobile;
+        return $this->client;
     }
-
-    /**
-     * @param mixed $mobile
-     */
-    public function setMobile($mobile)
+    public function setClient($client)
     {
-        $this->mobile = $mobile;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getTelephone()
-    {
-        return $this->telephone;
-    }
-
-    /**
-     * @param mixed $telephone
-     */
-    public function setTelephone($telephone)
-    {
-        $this->telephone = $telephone;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getEmail()
-    {
-        return $this->email;
-    }
-
-    /**
-     * @param mixed $email
-     */
-    public function setEmail($email)
-    {
-        $this->email = $email;
+        $this->client = $client;
     }
 
 
-    /**
-     * Get id
-     *
-     * @return integer
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
+
 }
