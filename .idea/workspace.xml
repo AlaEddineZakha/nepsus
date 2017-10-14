@@ -2,308 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14e57119-6d11-439a-90fa-9334e3be0203" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/Preloader_1.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/Preloader_4.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/QKIeRaf.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/images/loader-128x/Preloader_1.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/images/loader-128x/Preloader_2.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/images/loader-128x/Preloader_3.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/images/loader-128x/Preloader_4.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/images/loader-128x/Preloader_5.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/images/loader-128x/Preloader_6.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/images/loader-128x/Preloader_7.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/images/loader-32x/loader1.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/images/loader-32x/loader2.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/images/loader-32x/loader3.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/images/loader-32x/loader4.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/images/loader-32x/loader5.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/images/loader-32x/loader6.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/images/loader-32x/loader7.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/images/loader-64x/Preloader_1.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/images/loader-64x/Preloader_2.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/images/loader-64x/Preloader_3.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/images/loader-64x/Preloader_4.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/images/loader-64x/Preloader_5.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/images/loader-64x/Preloader_6.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/images/loader-64x/Preloader_7.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-128x/Preloader_1.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-128x/Preloader_2.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-128x/Preloader_3.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-128x/Preloader_4.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-128x/Preloader_5.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-128x/Preloader_6.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-128x/Preloader_7.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-32x/loader1.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-32x/loader2.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-32x/loader3.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-32x/loader4.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-32x/loader5.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-32x/loader6.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-32x/loader7.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-64x/Preloader_1.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-64x/Preloader_2.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-64x/Preloader_3.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-64x/Preloader_4.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-64x/Preloader_5.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-64x/Preloader_6.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-64x/Preloader_7.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-1-32x64x128.zip" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-2-32x64x128.zip" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-2-32x64x128/128x128/Preloader_1.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-2-32x64x128/128x128/Preloader_10.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-2-32x64x128/128x128/Preloader_2.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-2-32x64x128/128x128/Preloader_3.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-2-32x64x128/128x128/Preloader_4.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-2-32x64x128/128x128/Preloader_5.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-2-32x64x128/128x128/Preloader_6.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-2-32x64x128/128x128/Preloader_7.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-2-32x64x128/128x128/Preloader_8.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-2-32x64x128/128x128/Preloader_9.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-2-32x64x128/32x32/Preloader_1.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-2-32x64x128/32x32/Preloader_10.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-2-32x64x128/32x32/Preloader_2.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-2-32x64x128/32x32/Preloader_3.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-2-32x64x128/32x32/Preloader_4.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-2-32x64x128/32x32/Preloader_5.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-2-32x64x128/32x32/Preloader_6.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-2-32x64x128/32x32/Preloader_7.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-2-32x64x128/32x32/Preloader_8.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-2-32x64x128/32x32/Preloader_9.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-2-32x64x128/64x64/Preloader_1.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-2-32x64x128/64x64/Preloader_10.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-2-32x64x128/64x64/Preloader_2.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-2-32x64x128/64x64/Preloader_3.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-2-32x64x128/64x64/Preloader_4.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-2-32x64x128/64x64/Preloader_5.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-2-32x64x128/64x64/Preloader_6.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-2-32x64x128/64x64/Preloader_7.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-2-32x64x128/64x64/Preloader_8.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loader-icons-set-2-32x64x128/64x64/Preloader_9.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/loading.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/dist/img/bootstrap-formhelpers-countries.flags.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/dist/img/bootstrap-formhelpers-currencies.flags.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/dist/img/bootstrap-formhelpers-googlefonts.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/img/bootstrap-formhelpers-countries.flags.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/img/bootstrap-formhelpers-currencies.flags.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/img/bootstrap-formhelpers-googlefonts.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/tests/vendor/fonts/glyphicons-halflings-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/tests/vendor/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/tests/vendor/fonts/glyphicons-halflings-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Security/login.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Security/login_content.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/layout.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/CommandeClient/edit.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/CommandeClient/new1.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/CommandeClient/show.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/CommandeFournisseur/edit.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/CommandeFournisseur/new1.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/CommandeFournisseur/show.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/Configuration/configuration.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/FacturesClients/list.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/FacturesClients/view.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/Testlayout/addlayout.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/Testlayout/editlayout.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/Testlayout/emptybody.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/Testlayout/listlayout.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/Testlayout/test.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/Testlayout/testresponse.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/clients/add.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/clients/list.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/dashboard/modules.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/fournisseurs/add.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/fournisseurs/list.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/pagenotfound.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/produits/categories/add.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/produits/categories/new.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/produits/categories/show.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/produits/edit.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/sendmail.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/APIController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/CategoryController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/CommandeClientController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/ConfigurationController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/DeviseController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/FactureClientController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/ProduitController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/ResetController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/TestController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/BonCommandeClient.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/BonCommandeFournisseur.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/BonLivraisonClient.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Category.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Configuration.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Devis/Devis.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Devis/LigneDevis.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Entrepot.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/FactureClient.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/HistoriqueClient.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Journal.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/LigneBCC.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/LigneBCF.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/LigneFC.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Lot.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Modules.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Paiement/Devise.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Paiement/MethodeTransaction.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Paiement/Transaction.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Produit.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Stock.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Taxe.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Form/BCitemsFormType.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Form/BonCommandeClientFormType.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Form/CategoryFormType.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Form/ModuleFormType.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Form/ProduitFormType.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Form/RegistrationType.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Repository/ContactClientRepository.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Repository/ProduitRepository.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/Template/assets/global/plugins/datatables/pdfmake.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/Template/printPreview.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/simple-pre-loader/readme.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/.coveralls.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/Gruntfile.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/bfh-colorpicker.jquery.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/bfh-country.jquery.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/bfh-currency.jquery.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/bfh-datepicker.jquery.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/bfh-font.jquery.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/bfh-fontsize.jquery.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/bfh-googlefont.jquery.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/bfh-language.jquery.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/bfh-number.jquery.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/bfh-phone.jquery.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/bfh-select.jquery.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/bfh-slider.jquery.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/bfh-state.jquery.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/bfh-timepicker.jquery.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/bfh-timezone.jquery.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/composer.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/dist/css/bootstrap-formhelpers.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/dist/css/bootstrap-formhelpers.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/dist/img/bootstrap-formhelpers-countries.flags-LICENSE.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/dist/js/bootstrap-formhelpers.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/dist/js/bootstrap-formhelpers.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/img/bootstrap-formhelpers-countries.flags-LICENSE.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/.jshintrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/bootstrap-formhelpers-colorpicker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/bootstrap-formhelpers-countries.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/bootstrap-formhelpers-currencies.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/bootstrap-formhelpers-datepicker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/bootstrap-formhelpers-fonts.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/bootstrap-formhelpers-fontsizes.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/bootstrap-formhelpers-googlefonts.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/bootstrap-formhelpers-languages.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/bootstrap-formhelpers-number.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/bootstrap-formhelpers-phone.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/bootstrap-formhelpers-selectbox.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/bootstrap-formhelpers-slider.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/bootstrap-formhelpers-states.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/bootstrap-formhelpers-timepicker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/bootstrap-formhelpers-timezones.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/lang/ar/bootstrap-formhelpers-countries.ar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/lang/de_DE/bootstrap-formhelpers-countries.de_DE.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/lang/en_US/bootstrap-formhelpers-countries.en_US.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/lang/en_US/bootstrap-formhelpers-currencies.en_US.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/lang/en_US/bootstrap-formhelpers-datepicker.en_US.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/lang/en_US/bootstrap-formhelpers-fonts.en_US.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/lang/en_US/bootstrap-formhelpers-fontsizes.en_US.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/lang/en_US/bootstrap-formhelpers-googlefonts.en_US.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/lang/en_US/bootstrap-formhelpers-languages.en_US.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/lang/en_US/bootstrap-formhelpers-phone.en_US.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/lang/en_US/bootstrap-formhelpers-states.en_US.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/lang/en_US/bootstrap-formhelpers-timepicker.en_US.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/lang/en_US/bootstrap-formhelpers-timezones.en_US.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/lang/es_ES/bootstrap-formhelpers-countries.es_ES.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/lang/es_ES/bootstrap-formhelpers-datepicker.es_ES.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/lang/es_US/bootstrap-formhelpers-datepicker.es_US.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/lang/fr_CA/bootstrap-formhelpers-countries.fr_CA.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/lang/fr_FR/bootstrap-formhelpers-countries.fr_FR.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/lang/it_IT/bootstrap-formhelpers-countries.it_IT.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/lang/pt_BR/bootstrap-formhelpers-countries.pt_BR.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/lang/ru_RU/bootstrap-formhelpers-countries.ru_RU.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/lang/ru_RU/bootstrap-formhelpers-datepicker.ru_RU.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/lang/zh_CN/bootstrap-formhelpers-countries.zh_CN.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/lang/zh_CN/bootstrap-formhelpers-timezones.zh_CN.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/lang/zh_TW/bootstrap-formhelpers-countries.zh_TW.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/tests/fixture.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/tests/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/tests/unit/bootstrap-formhelpers-colorpicker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/tests/unit/bootstrap-formhelpers-countries.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/tests/unit/bootstrap-formhelpers-currencies.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/tests/unit/bootstrap-formhelpers-datepicker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/tests/unit/bootstrap-formhelpers-fonts.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/tests/unit/bootstrap-formhelpers-fontsizes.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/tests/unit/bootstrap-formhelpers-googlefonts.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/tests/unit/bootstrap-formhelpers-languages.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/tests/unit/bootstrap-formhelpers-number.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/tests/unit/bootstrap-formhelpers-phone.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/tests/unit/bootstrap-formhelpers-selectbox.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/tests/unit/bootstrap-formhelpers-slider.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/tests/unit/bootstrap-formhelpers-states.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/tests/unit/bootstrap-formhelpers-timepicker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/tests/unit/bootstrap-formhelpers-timezones.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/tests/vendor/css/bootstrap-3.0.0.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/tests/vendor/css/qunit-1.12.0.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/tests/vendor/fonts/glyphicons-halflings-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/tests/vendor/js/bootstrap-3.0.0.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/tests/vendor/js/jquery-1.10.2.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/js/tests/vendor/js/qunit-1.12.0.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/karma.conf.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/less/bootstrap-formhelpers-colorpicker.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/less/bootstrap-formhelpers-datepicker.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/less/bootstrap-formhelpers-flags.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/less/bootstrap-formhelpers-googlefonts.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/less/bootstrap-formhelpers-mixins.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/less/bootstrap-formhelpers-number.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/less/bootstrap-formhelpers-selectbox.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/less/bootstrap-formhelpers-slider.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/less/bootstrap-formhelpers-timepicker.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/less/bootstrap-formhelpers-variables.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/less/bootstrap-formhelpers.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/winmarkltd-BootstrapFormHelpers-d4201db/package.json" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Resources/views/fournisseurs/new.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Resources/views/fournisseurs/show.html.twig" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Resources/views/clients/new.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/produits/new.html.twig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Resources/views/clients/show.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/produits/show.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/9be4e9f6-8898-47e5-8cb0-37d770d95d26.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/9be4e9f6-8898-47e5-8cb0-37d770d95d26.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/nepsus.iml" afterPath="$PROJECT_DIR$/.idea/nepsus.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/clients/edit.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/clients/edit.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/dashboard/dashboard1.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/dashboard/dashboard1.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/fournisseurs/edit.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/fournisseurs/edit.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/routing.yml" afterPath="$PROJECT_DIR$/app/config/routing.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/parameters.yml.dist" afterPath="$PROJECT_DIR$/app/config/parameters.yml.dist" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/security.yml" afterPath="$PROJECT_DIR$/app/config/security.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/services.yml" afterPath="$PROJECT_DIR$/app/config/services.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/AdminController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/AdminController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/ClientController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/ClientController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/FournisseurController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/FournisseurController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Client.php" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Client.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Entity/ContactClient.php" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/ContactClient.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Fournisseur.php" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Fournisseur.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Entity/User.php" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Form/ClientFormType.php" afterPath="$PROJECT_DIR$/src/AppBundle/Form/ClientFormType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Form/ContactClientFormType.php" afterPath="$PROJECT_DIR$/src/AppBundle/Form/ContactClientFormType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Form/FournisseurFormType.php" afterPath="$PROJECT_DIR$/src/AppBundle/Form/FournisseurFormType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/SymfonyRequirements.php" afterPath="$PROJECT_DIR$/var/SymfonyRequirements.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/Template/admin_1_material_design/form_validation.html" afterPath="$PROJECT_DIR$/web/Template/admin_1_material_design/form_validation.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/Template/admin_1_material_design/form_wizard.html" afterPath="$PROJECT_DIR$/web/Template/admin_1_material_design/form_wizard.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/Template/admin_1_material_design/table_datatables_ajax.html" afterPath="$PROJECT_DIR$/web/Template/admin_1_material_design/table_datatables_ajax.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/Template/assets/pages/scripts/form-wizard.js" afterPath="$PROJECT_DIR$/web/Template/assets/pages/scripts/form-wizard.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/Template/assets/pages/scripts/login-4.js" afterPath="$PROJECT_DIR$/web/Template/assets/pages/scripts/login-4.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app.php" afterPath="$PROJECT_DIR$/web/app.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app_dev.php" afterPath="$PROJECT_DIR$/web/app_dev.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/config.php" afterPath="$PROJECT_DIR$/web/config.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -358,18 +60,50 @@
       <file leaf-file-name="AdminController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/AdminController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
+            <state relative-caret-position="255">
               <caret line="23" column="5" lean-forward="false" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="parameters.yml.dist" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ClientController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/ClientController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="91" column="10" lean-forward="false" selection-start-line="91" selection-start-column="10" selection-end-line="91" selection-end-column="10" />
+              <folding>
+                <marker date="1508010268624" expanded="true" signature="3323:3355" ph="SELECT p FRO... AppBundle" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routing.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="271">
+              <caret line="113" column="0" lean-forward="false" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="security.yml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/config/security.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="470">
+              <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="parameters.yml.dist" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/config/parameters.yml.dist">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="31" lean-forward="true" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+            <state relative-caret-position="323">
+              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -510,12 +244,12 @@
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/FournisseurController.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/fournisseurs/edit.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/AdminController.php" />
-        <option value="$PROJECT_DIR$/app/config/security.yml" />
         <option value="$PROJECT_DIR$/app/Resources/views/pagenotfound.html.twig" />
         <option value="$PROJECT_DIR$/app/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/TestController.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Controller/ClientController.php" />
         <option value="$PROJECT_DIR$/app/config/parameters.yml.dist" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Controller/ClientController.php" />
+        <option value="$PROJECT_DIR$/app/config/security.yml" />
       </list>
     </option>
   </component>
@@ -598,8 +332,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -902,6 +634,32 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CommandeClient" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nepsus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nepsus" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="FOSUserBundle" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -960,6 +718,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1114,7 +874,9 @@
       <workItem from="1507112110693" duration="19677000" />
       <workItem from="1507774460294" duration="5484000" />
       <workItem from="1507921409184" duration="651000" />
-      <workItem from="1507922862415" duration="6914000" />
+      <workItem from="1507922862415" duration="7834000" />
+      <workItem from="1508009479942" duration="53000" />
+      <workItem from="1508009548847" duration="667000" />
     </task>
     <task id="LOCAL-00001" summary="02/05/2017  V1.01&#10;">
       <created>1493722777132</created>
@@ -1137,11 +899,25 @@
       <option name="project" value="LOCAL" />
       <updated>1508006243915</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="02/05/2017  V1.02">
+      <created>1508008423955</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1508008423955</updated>
+    </task>
+    <task id="LOCAL-00005" summary="02/05/2017  V1.02">
+      <created>1508009128086</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1508009128086</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1107032000" />
+    <option name="totallyTimeSpent" value="1108672000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
@@ -1150,12 +926,12 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.058359623" sideWeight="0.52928257" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2239354" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.4970588" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41009465" sideWeight="0.4970458" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1189,7 +965,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="415">
           <caret line="33" column="4" lean-forward="true" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1197,7 +972,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1205,7 +979,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1213,7 +986,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1221,7 +993,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1229,7 +1000,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1237,7 +1007,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1245,7 +1014,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1253,7 +1021,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1261,7 +1028,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1269,7 +1035,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1277,7 +1042,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1285,7 +1049,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1293,7 +1056,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1301,7 +1063,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1309,7 +1070,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="20" column="7" lean-forward="true" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1324,7 +1084,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="8" column="33" lean-forward="true" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1332,9 +1091,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding>
-            <element signature="e#127#175#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1356,12 +1112,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="83">
           <caret line="87" column="0" lean-forward="true" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
-          <folding>
-            <element signature="e#39#74#0#PHP" expanded="false" />
-            <element signature="e#2990#3019#1#PHP" expanded="false" />
-            <element signature="e#6699#6708#1#PHP" expanded="false" />
-            <element signature="e#6753#6785#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1369,9 +1119,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-221">
           <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <element signature="e#119#167#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1393,7 +1140,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="35" column="31" lean-forward="true" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1401,9 +1147,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="48" />
-          <folding>
-            <element signature="e#118#166#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1411,9 +1154,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding>
-            <element signature="e#128#160#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1459,13 +1199,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="31" column="60" lean-forward="false" selection-start-line="31" selection-start-column="60" selection-end-line="31" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/routing_dev.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1491,26 +1224,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="65" column="31" lean-forward="false" selection-start-line="65" selection-start-column="31" selection-end-line="65" selection-end-column="31" />
-          <folding>
-            <element signature="e#40#73#0#PHP" expanded="false" />
-            <element signature="e#1736#1753#1#PHP" expanded="false" />
-            <element signature="e#1797#1825#1#PHP" expanded="false" />
-            <element signature="e#2069#2092#1#PHP" expanded="false" />
-            <element signature="e#3373#3390#1#PHP" expanded="false" />
-            <element signature="e#3433#3462#0#PHP" expanded="false" />
-            <element signature="e#3823#3846#1#PHP" expanded="false" />
-            <element signature="e#3958#3975#1#PHP" expanded="false" />
-            <element signature="e#4552#4582#0#PHP" expanded="false" />
-            <marker date="1507133295426" expanded="true" signature="4200:4237" ph="SELECT p FRO... AppBundle" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="113" column="0" lean-forward="false" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1549,25 +1262,13 @@
           </nodes>
           <notes />
           <edges />
-          <settings layout="Hierarchic Group" zoom="0.4026967528893781" x="982.6453464534645" y="871.6878502118354" />
+          <settings layout="Hierarchic Group" zoom="0.4026967528893781" x="983.0" y="872.0" />
           <SelectedNodes />
           <Categories>
             <Category>Columns</Category>
             <Category>Key columns</Category>
           </Categories>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/ClientController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="90" column="24" lean-forward="true" selection-start-line="90" selection-start-column="24" selection-end-line="90" selection-end-column="24" />
-          <folding>
-            <element signature="e#123#158#0#PHP" expanded="true" />
-            <marker date="1507779333433" expanded="true" signature="3319:3351" ph="SELECT p FRO... AppBundle" />
-            <marker date="1507779333433" expanded="true" signature="3351:3355" ph="SELECT p FRO... AppBundle" />
-            <marker date="1507779333433" expanded="true" signature="3365:3419" ph="/** @var $pa... " />
-          </folding>
+          <SCOPE>All</SCOPE>
         </state>
       </provider>
     </entry>
@@ -1575,7 +1276,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="26" lean-forward="true" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1607,7 +1307,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1615,7 +1314,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-459">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1623,22 +1321,47 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml.dist">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/AdminController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
+        <state relative-caret-position="255">
           <caret line="23" column="5" lean-forward="false" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml.dist">
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/ClientController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="31" lean-forward="true" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+        <state relative-caret-position="221">
+          <caret line="91" column="10" lean-forward="false" selection-start-line="91" selection-start-column="10" selection-end-line="91" selection-end-column="10" />
+          <folding>
+            <marker date="1508010268624" expanded="true" signature="3323:3355" ph="SELECT p FRO... AppBundle" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="113" column="0" lean-forward="false" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="470">
+          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
           <folding />
         </state>
       </provider>

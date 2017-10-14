@@ -84,12 +84,12 @@ class ClientController extends  Controller
      * @Route("/clients" , name="listclient")
      */
     public function showAllAction(Request $request)
-    {    $route='listclient';
+    {    //$route='listclient';
         //$route = $this->get('router')->getRouteCollection()->get('initconfig');
         //$object = $request->attributes->get('_route','initconfig');
         //$object=$this->get('router')->getRouteCollection()->get('initconfig');
        // dump($object);
-        $this->denyAccessUnlessGranted('ROLE_ADMIN', $route, 'Unable to access this page!');
+        //$this->denyAccessUnlessGranted('ROLE_ADMIN', $route, 'Unable to access this page!');
         $em = $this->getDoctrine()->getManager();
         $query = $em->createQuery('SELECT p FROM AppBundle:Client p');
 
