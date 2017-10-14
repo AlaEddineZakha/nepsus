@@ -4,16 +4,16 @@
 parameters:
     database_host: 127.0.0.1
     database_port: ~
-    database_name: symfony
-    database_user: root
-    database_password: ~
+    database_name: nepsus
+    database_user: achref
+    database_password: pe8Z4$6p
     # You should uncomment this if you want to use pdo_sqlite
     #database_path: '%kernel.root_dir%/../var/data/data.sqlite'
 
-    mailer_transport: smtp
-    mailer_host: 127.0.0.1
-    mailer_user: ~
-    mailer_password: ~
+    mailer_transport: gmail
+    mailer_host: 74.125.133.108
+    mailer_user: achref.tlija@gmail.com
+    mailer_password: gmail1305914022
 
     # A secret key that's used to generate certain security-related tokens
     secret: ThisTokenIsNotSoSecretChangeIt
