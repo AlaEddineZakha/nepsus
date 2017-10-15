@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="14e57119-6d11-439a-90fa-9334e3be0203" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/parameters.yml.dist" afterPath="$PROJECT_DIR$/app/config/parameters.yml.dist" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/ClientController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/ClientController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/CommandeClientController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/CommandeClientController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Paiement/Devise.php" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Paiement/Devise.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -901,7 +896,7 @@
       <workItem from="1507922862415" duration="7834000" />
       <workItem from="1508009479942" duration="53000" />
       <workItem from="1508009548847" duration="8981000" />
-      <workItem from="1508027836801" duration="3052000" />
+      <workItem from="1508027836801" duration="3103000" />
     </task>
     <task id="LOCAL-00001" summary="02/05/2017  V1.01&#10;">
       <created>1493722777132</created>
@@ -952,11 +947,18 @@
       <option name="project" value="LOCAL" />
       <updated>1508017620772</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="02/05/2017  V1.03 Send mail fixed">
+      <created>1508031448134</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1508031448134</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1120038000" />
+    <option name="totallyTimeSpent" value="1120089000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
@@ -992,7 +994,8 @@
     <MESSAGE value="02/05/2017  V1.01 Changing parameters dist" />
     <MESSAGE value="02/05/2017  V1.02" />
     <MESSAGE value="02/05/2017  V1.03 Ajout produit" />
-    <option name="LAST_COMMIT_MESSAGE" value="02/05/2017  V1.03 Ajout produit" />
+    <MESSAGE value="02/05/2017  V1.03 Send mail fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="02/05/2017  V1.03 Send mail fixed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
