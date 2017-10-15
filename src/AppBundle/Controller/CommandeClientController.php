@@ -99,6 +99,9 @@ class CommandeClientController extends Controller
         $repository = $this->getDoctrine()->getRepository('AppBundle:Client');
         $client = $repository->findAll();
 
+        $repository = $this->getDoctrine()->getRepository('AppBundle:Paiement\Devise');
+        $devise = $repository->findAll();
+
         if ($request->isMethod('POST')) {
 
             $total=0;
@@ -223,7 +226,8 @@ class CommandeClientController extends Controller
         return $this->render(':CommandeClient:edit.html.twig', [
             'commande'=>$commande,
             'produit'=>$produit,
-            'client'=>$client
+            'client'=>$client,
+            'devise'=>$devise
 
         ]);
 

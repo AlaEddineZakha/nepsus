@@ -348,10 +348,13 @@ class ClientController extends  Controller
         $client = $repository->findAll();
         $repository2 = $this->getDoctrine()->getRepository('AppBundle:Produit');
         $produit = $repository2->getAll();
+        $repository = $this->getDoctrine()->getRepository('AppBundle:Paiement\Devise');
+        $devise = $repository->findAll();
 
         return $this->render(':CommandeClient:new1.html.twig', [
             'client'=>$client,
-            'produit'=>$produit
+            'produit'=>$produit,
+            'devise'=>$devise
 
         ]);
 
