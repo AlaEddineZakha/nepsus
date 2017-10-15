@@ -4,9 +4,9 @@
 parameters:
     database_host: 127.0.0.1
     database_port: ~
-    database_name: symfony
-    database_user: root
-    database_password: secret
+    database_name: nepsus
+    database_user: achref
+    database_password: pe8Z4$6p
     # You should uncomment this if you want to use pdo_sqlite
     #database_path: '%kernel.root_dir%/../var/data/data.sqlite'
 
@@ -17,3 +17,4 @@ parameters:
 
     # A secret key that's used to generate certain security-related tokens
     secret: ThisTokenIsNotSoSecretChangeIt
+
