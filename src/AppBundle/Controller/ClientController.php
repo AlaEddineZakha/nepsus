@@ -15,17 +15,6 @@ use AppBundle\Entity\LigneFC;
 use AppBundle\Entity\LigneBCC;
 use AppBundle\Entity\BonCommandeClient;
 use AppBundle\Entity\Client;
-use AppBundle\Entity\Journal;
-use Symfony\Component\HttpFoundation\AcceptHeader;
-
-use AppBundle\Entity\Category;
-use AppBundle\Entity\ContactClient;
-
-use AppBundle\Entity\Produit;
-use AppBundle\Form\BCitemsFormType;
-use AppBundle\Form\BonCommandeClientFormType;
-use AppBundle\Form\ClientFormType;
-use AppBundle\Repository\ProduitRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Serializer\Serializer;

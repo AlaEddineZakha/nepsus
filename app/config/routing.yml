@@ -32,6 +32,32 @@ deleteclient:
 listclient:
     path:      /clients
     defaults:  { _controller: AppBundle:Client:showAll }
+
+#--------------------- Entrepots -------------------#
+addentrepot:
+    path:      /entrepots/new
+    defaults:  { _controller: AppBundle:Entrepot:new }
+
+editentrepot:
+    path:      /entrepots/{id}/edit
+    defaults:  { _controller: AppBundle:Entrepot:edit }
+    requirements:
+            id: \d+
+deleteentrepot:
+    path:      /entrepots/{id}/delete
+    defaults:  { _controller: AppBundle:Entrepot:delete }
+    requirements:
+            id: \d+
+    options:
+            expose: true
+
+listentrepot:
+    path:      /entrepots
+    defaults:  { _controller: AppBundle:Entrepot:showAll }
+
+
+
+
 #--------------------- Fournisseurs -------------------#
 addfournisseur:
     path:      /fournisseurs/add
