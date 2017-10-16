@@ -122,6 +122,12 @@ pageNotFound:
     requirements:
         path: .*
 
+confirmcommandec:
+    path:      /commandes/confirm
+    defaults:  { _controller: AppBundle:Client:confirmCommande }
+
+
+
 
 
 
