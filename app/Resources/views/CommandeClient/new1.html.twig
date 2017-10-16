@@ -318,6 +318,7 @@
         $ligne.append($removeTagLink);
         $('#thead').append($ligne);
         $size++;
+        console.log("Size = "+$size);
          $k=$size;
         $('#size').attr('value',$size);
          $('#prixht-'+$id+'').attr('value',0);
@@ -378,15 +379,16 @@
 
        e.preventDefault();
 
+$size--;
+$('#size').attr('value',$size);
 
-
-  console.log("Size = "+$k);
+  console.log("Size = "+$size);
   var $ko=$k;
 
 
  var  $oldid=parseInt($(this).closest("tr").prop("id").match(/\d/g));
           console.log("ID deleted :"+$oldid);
-        $size--;
+
         $id--;
 
 

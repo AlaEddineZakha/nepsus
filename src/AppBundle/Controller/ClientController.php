@@ -380,14 +380,17 @@ class ClientController extends  Controller
         $historique = new HistoriqueClient();
 
         $repository = $this->getDoctrine()->getRepository('AppBundle:Client');
-        $repository2 = $this->getDoctrine()->getRepository('AppBundle:Produit');
+
         $client = $repository->find($request->request->get('client'));
 
         for ($i=1;$i <=$size;$i++)
         {
             $total+=$request->request->get('prixttc-ligne'.$i);
             $totalht+=$request->request->get('prixht-ligne'.$i);
+            $repository2 = $this->getDoctrine()->getRepository('AppBundle:Produit');
             $produit = $repository2->find($request->request->get('liste-ligne'.$i));
+            dump($produit);
+
 
             $lc= new LigneBCC();
             $lfc= new LigneFC();
@@ -479,12 +482,21 @@ class ClientController extends  Controller
 
 
 
-        $message = (new \Swift_Message(" Nepsus Nouvelle notification de commande #".$bc->getId()." a été créé  "))
+
+
+
+
+
+
+
+
+        $message = (new \Swift_Message(" Nepsus : nouvelle notification de commande #".$bc->getId()." a été créé  "))
             ->setFrom('achref.tlija@gmail.com')
-            ->setTo('achref13.tlija@gmail.com')
+            ->setTo('aladinne.k@gmail.com')
+            ->attach(\Swift_Attachment::fromPath('https://madeby.google.com/static/images/google_g_logo.svg'))
             ->setBody($this->renderView(
 
-                'sendmail.html.twig', [
+                ':Testlayout:emailtemplate.html.twig', [
                     'facture'=>$facture]
             ),
                 'text/html'
