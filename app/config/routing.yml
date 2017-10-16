@@ -51,7 +51,7 @@ deleteentrepot:
     options:
             expose: true
 
-listentrepot:
+listentrepots:
     path:      /entrepots
     defaults:  { _controller: AppBundle:Entrepot:showAll }
 
