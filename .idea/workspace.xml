@@ -114,8 +114,8 @@
       <file leaf-file-name="ClientController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/ClientController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
-              <caret line="479" column="0" lean-forward="true" selection-start-line="479" selection-start-column="0" selection-end-line="479" selection-end-column="0" />
+            <state relative-caret-position="387">
+              <caret line="469" column="14" lean-forward="true" selection-start-line="469" selection-start-column="14" selection-end-line="469" selection-end-column="14" />
               <folding>
                 <element signature="e#123#158#0#PHP" expanded="true" />
                 <element signature="e#5483#5508#1#PHP" expanded="true" />
@@ -123,7 +123,7 @@
                 <element signature="e#10104#10122#1#PHP" expanded="true" />
                 <element signature="e#14894#14931#0#PHP" expanded="true" />
                 <element signature="e#15171#15192#1#PHP" expanded="true" />
-                <marker date="1508176374902" expanded="true" signature="3325:3357" ph="SELECT p FRO... AppBundle" />
+                <marker date="1508176680996" expanded="true" signature="3325:3357" ph="SELECT p FRO... AppBundle" />
               </folding>
             </state>
           </provider>
@@ -986,7 +986,7 @@
       <workItem from="1507922862415" duration="7834000" />
       <workItem from="1508009479942" duration="53000" />
       <workItem from="1508009548847" duration="8981000" />
-      <workItem from="1508027836801" duration="24241000" />
+      <workItem from="1508027836801" duration="24552000" />
     </task>
     <task id="LOCAL-00001" summary="02/05/2017  V1.01&#10;">
       <created>1493722777132</created>
@@ -1093,11 +1093,18 @@
       <option name="project" value="LOCAL" />
       <updated>1508175955730</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="02/05/2017  V1.04 add invoice fix">
+      <created>1508176385399</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1508176385399</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1141227000" />
+    <option name="totallyTimeSpent" value="1141538000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1378" height="735" extended-state="0" />
@@ -1146,13 +1153,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/BonLivraisonClient.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/BonCommandeFournisseur.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1230,13 +1230,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/Testlayout/test.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/Template/admin_1_material_design/page_system_404_1.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -1269,13 +1262,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-510">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="90" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/routing_dev.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1591,10 +1577,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/routing_dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/Testlayout/test.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/Testlayout/testresponse.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/ClientController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="479" column="0" lean-forward="true" selection-start-line="479" selection-start-column="0" selection-end-line="479" selection-end-column="0" />
+        <state relative-caret-position="387">
+          <caret line="469" column="14" lean-forward="true" selection-start-line="469" selection-start-column="14" selection-end-line="469" selection-end-column="14" />
           <folding>
             <element signature="e#123#158#0#PHP" expanded="true" />
             <element signature="e#5483#5508#1#PHP" expanded="true" />
@@ -1602,7 +1612,7 @@
             <element signature="e#10104#10122#1#PHP" expanded="true" />
             <element signature="e#14894#14931#0#PHP" expanded="true" />
             <element signature="e#15171#15192#1#PHP" expanded="true" />
-            <marker date="1508176374902" expanded="true" signature="3325:3357" ph="SELECT p FRO... AppBundle" />
+            <marker date="1508176680996" expanded="true" signature="3325:3357" ph="SELECT p FRO... AppBundle" />
           </folding>
         </state>
       </provider>

@@ -464,7 +464,10 @@ class ClientController extends  Controller
 
         }
         catch (\Exception $e) {
-            $this->get('session')->setFlash('error',$e->getMessage());
+
+            return new Response(
+                "Error ! : ".$e->getMessage()
+            );
         }
 
 
