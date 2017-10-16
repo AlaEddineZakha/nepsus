@@ -3,7 +3,7 @@
 namespace AppBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use AppBundle\Entity\entrepot;
+use AppBundle\Entity\Entrepot;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Serializer\Serializer;
@@ -38,7 +38,7 @@ class EntrepotController extends Controller
             $em->persist($entrepot);
             $em->flush();
 
-            return $this->redirectToRoute('listentrepot');
+            return $this->redirectToRoute('listentrepots');
         }
 
 
