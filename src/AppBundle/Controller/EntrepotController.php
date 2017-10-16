@@ -46,4 +46,21 @@ class EntrepotController extends Controller
 
 
     }
+
+
+
+    /**
+     * @Route("/entrepots" , name="listentrepots")
+     */
+    public function showAllAction(Request $request)
+    {
+        $repository = $this->getDoctrine()->getRepository('AppBundle:Entrepot');
+        $entrepots = $repository->findAll();
+        return $this->render('Entrepots/list.html.twig', [
+            'entrepots' => $entrepots,
+
+        ]);
+
+
+    }
 }

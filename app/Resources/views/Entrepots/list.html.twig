@@ -15,11 +15,11 @@
 
 
 
-            var url = Routing.generate('deleteclient',{'id':$id});
+            var url = Routing.generate('deleteentrepot',{'id':$id});
 
             swal({
                     title: "Vous etes sure?",
-                    text: "Ce client sera supprimé définitevement",
+                    text: "Cet entrepot sera supprimé définitevement",
                     type: "warning",
                     showCancelButton: true,
                     confirmButtonClass: "btn-danger",
@@ -32,10 +32,10 @@
                 },
                 function (isConfirm) {
                     if (isConfirm) {
-                        swal("Deleted!", "Le client a été supprimé.", "success");
+                        swal("Deleted!", "L'entrepot a été supprimé.", "success");
                         location.href=url;
                     } else {
-                        swal("Cancelled", "Le client n'a pas été supprimé :)", "error");
+                        swal("Cancelled", "L'entrepot n'a pas été supprimé", "error");
                     }
                 });
 
@@ -86,42 +86,38 @@
                         <thead>
                         <tr>
                             <th>Id</th>
-                            <th>Raison</th>
-                            <th>Email</th>
+                            <th>Libele</th>
+                            <th>Location</th>
+                            <th>Capacité</th>
                             <th>Date d'ajout</th>
-                            <th>Telephone</th>
-                            <th>Matricule fiscal</th>
-                            <th>Capital</th>
                             <th>Actions</th>
                         </tr>
                         </thead>
                         <tfoot>
                         <tr>
                             <th>Id</th>
-                            <th>Raison</th>
-                            <th>Email</th>
+                            <th>Libele</th>
+                            <th>Location</th>
+                            <th>Capacité</th>
                             <th>Date d'ajout</th>
-                            <th>Telephone</th>
-                            <th>Matricule fiscal</th>
-                            <th>Capital</th>
                             <th>Actions</th>
                         </tr>
                         </tfoot>
                         <tbody>
 
-                        {% for client in clients %}
+                        {% for entrepot in entrepots %}
                             <tr>
-                                <td>{{ client.id }}</td>
-                                <td>{{ client.raison }}</td>
-                                <td>{{ client.email }}</td>
-                                <td>{{ client.created|date('Y-m-d') }}</td>
-                                <td>{{ client.telephone }}</td>
-                                <td>{{ client.matriculefiscale }}</td>
-                                <td>{{ client.capital }} TND</td>
+                                <td>{{ entrepot.id }}</td>
+                                <td>{{ entrepot.nom }}</td>
+                                <td>{{ entrepot.location }}</td>
+                                <td>{{ entrepot.capacite }}</td>
+                                <td>{{ entrepot.created|date('Y-m-d') }}</td>
+
+
                                 <td>
                                     <a href="javascript:;" class="btn btn-icon-only blue" ><i class="fa fa-search"></i> </a>
-                                    <a href="{{ path('editclient', {'id': client.id }) }}" class="btn btn-icon-only yellow" ><i class="fa fa-edit"></i> </a>
-                                    <a href="javascript:;" class="btn btn-icon-only red" onclick="myFunction({{ client.id }})"><i class="fa fa-times"></i> </a>
+                                    <a href="{{ path('editentrepot', {'id': entrepot.id }) }}" class="btn btn-icon-only yellow" ><i class="fa fa-edit"></i> </a>
+                                    <a href="javascript:;" class="btn btn-icon-only red" onclick="myFunction({{ entrepot.id }})"><i class="fa fa-times"></i> </a>
 
                                 </td>
 
