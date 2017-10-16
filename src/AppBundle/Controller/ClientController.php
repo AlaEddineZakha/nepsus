@@ -338,17 +338,13 @@ class ClientController extends  Controller
      */
     public function addCommandeAction(Request $request)
     {
-
+        $repository = $this->getDoctrine()->getRepository('AppBundle:Client');
+        $client = $repository->findAll();
+        $repository2 = $this->getDoctrine()->getRepository('AppBundle:Produit');
+        $produit = $repository2->getAll();
+        $repository = $this->getDoctrine()->getRepository('AppBundle:Paiement\Devise');
+        $devise = $repository->findAll();
         try {
-
-
-            $repository = $this->getDoctrine()->getRepository('AppBundle:Client');
-            $client = $repository->findAll();
-            $repository2 = $this->getDoctrine()->getRepository('AppBundle:Produit');
-            $produit = $repository2->getAll();
-            $repository = $this->getDoctrine()->getRepository('AppBundle:Paiement\Devise');
-            $devise = $repository->findAll();
-
 
             if ($request->isMethod('POST')) {
                 $total = 0;
@@ -466,18 +462,21 @@ class ClientController extends  Controller
 
             }
 
-
-            return $this->render(':CommandeClient:new1.html.twig', [
-                'client' => $client,
-                'produit' => $produit,
-                'devise' => $devise
-
-            ]);
-
-
-        } catch (\Exception $e) {
-            return new Response($e);
         }
+        catch (\Exception $e) {
+            $this->get('session')->setFlash('error',$e->getMessage());
+        }
+
+
+
+
+        return $this->render(':CommandeClient:new1.html.twig', [
+            'client' => $client,
+            'produit' => $produit,
+            'devise' => $devise
+
+        ]);
+
 
     }
 }
