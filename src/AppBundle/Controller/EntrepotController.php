@@ -3,11 +3,6 @@
 namespace AppBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use AppBundle\Entity\Factureentrepot;
-use AppBundle\Entity\Historiqueentrepot;
-use AppBundle\Entity\LigneFC;
-use AppBundle\Entity\LigneBCC;
-use AppBundle\Entity\BonCommandeentrepot;
 use AppBundle\Entity\entrepot;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Component\HttpFoundation\Response;
@@ -47,7 +42,7 @@ class EntrepotController extends Controller
         }
 
 
-        return $this->render('entrepots/add.html.twig');
+        return $this->render('Entrepots/add.html.twig');
 
 
     }
