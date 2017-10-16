@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14e57119-6d11-439a-90fa-9334e3be0203" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/Testlayout/emailtemplate.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/CommandeClient/new1.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/CommandeClient/new1.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/ClientController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/ClientController.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -150,15 +148,15 @@
       <file leaf-file-name="ClientController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/ClientController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="494" column="41" lean-forward="false" selection-start-line="494" selection-start-column="41" selection-end-line="494" selection-end-column="41" />
+            <state relative-caret-position="282">
+              <caret line="500" column="14" lean-forward="true" selection-start-line="500" selection-start-column="14" selection-end-line="500" selection-end-column="14" />
               <folding>
                 <element signature="e#123#158#0#PHP" expanded="true" />
                 <element signature="e#5468#5493#1#PHP" expanded="true" />
                 <element signature="e#8465#8483#1#PHP" expanded="true" />
                 <element signature="e#10098#10116#1#PHP" expanded="true" />
-                <element signature="e#14573#14610#0#PHP" expanded="true" />
-                <marker date="1508098476175" expanded="true" signature="3323:3355" ph="SELECT p FRO... AppBundle" />
+                <element signature="e#14577#14614#0#PHP" expanded="true" />
+                <marker date="1508121820355" expanded="true" signature="3323:3355" ph="SELECT p FRO... AppBundle" />
               </folding>
             </state>
           </provider>
@@ -1009,7 +1007,7 @@
       <workItem from="1507922862415" duration="7834000" />
       <workItem from="1508009479942" duration="53000" />
       <workItem from="1508009548847" duration="8981000" />
-      <workItem from="1508027836801" duration="19018000" />
+      <workItem from="1508027836801" duration="19085000" />
     </task>
     <task id="LOCAL-00001" summary="02/05/2017  V1.01&#10;">
       <created>1493722777132</created>
@@ -1081,14 +1079,21 @@
       <option name="project" value="LOCAL" />
       <updated>1508031616862</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="02/05/2017  V1.04 Mail template added">
+      <created>1508121758587</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1508121758587</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1136004000" />
+    <option name="totallyTimeSpent" value="1136071000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1378" height="735" extended-state="1" />
+    <frame x="-7" y="0" width="1378" height="735" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19676946" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="546" y="47" width="274" height="634" />
@@ -1575,15 +1580,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/ClientController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="494" column="41" lean-forward="false" selection-start-line="494" selection-start-column="41" selection-end-line="494" selection-end-column="41" />
+        <state relative-caret-position="282">
+          <caret line="500" column="14" lean-forward="true" selection-start-line="500" selection-start-column="14" selection-end-line="500" selection-end-column="14" />
           <folding>
             <element signature="e#123#158#0#PHP" expanded="true" />
             <element signature="e#5468#5493#1#PHP" expanded="true" />
             <element signature="e#8465#8483#1#PHP" expanded="true" />
             <element signature="e#10098#10116#1#PHP" expanded="true" />
-            <element signature="e#14573#14610#0#PHP" expanded="true" />
-            <marker date="1508098476175" expanded="true" signature="3323:3355" ph="SELECT p FRO... AppBundle" />
+            <element signature="e#14577#14614#0#PHP" expanded="true" />
+            <marker date="1508121820355" expanded="true" signature="3323:3355" ph="SELECT p FRO... AppBundle" />
           </folding>
         </state>
       </provider>
