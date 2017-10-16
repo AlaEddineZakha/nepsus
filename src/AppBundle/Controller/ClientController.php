@@ -49,7 +49,7 @@ class ClientController extends  Controller
 
 
         if ($request->isMethod('POST')) {
-            $client= new Client();
+            $client = new Client();
             $client->setCapital($request->request->get('cap'));
             $client->setMatriculefiscale($request->request->get('mf'));
             $client->setRaison($request->request->get('raison'));
@@ -78,8 +78,8 @@ class ClientController extends  Controller
         return $this->render('clients/add.html.twig');
 
 
-
     }
+
     /**
      * @Route("/clients" , name="listclient")
      */
@@ -88,15 +88,15 @@ class ClientController extends  Controller
         //$route = $this->get('router')->getRouteCollection()->get('initconfig');
         //$object = $request->attributes->get('_route','initconfig');
         //$object=$this->get('router')->getRouteCollection()->get('initconfig');
-       // dump($object);
+        // dump($object);
         //$this->denyAccessUnlessGranted('ROLE_ADMIN', $route, 'Unable to access this page!');
         $em = $this->getDoctrine()->getManager();
         $query = $em->createQuery('SELECT p FROM AppBundle:Client p');
 
 
         /** @var  $paginator \Knp\Component\Pager\Paginator */
-        $paginator  = $this->get('knp_paginator');
-        $result= $paginator->paginate(
+        $paginator = $this->get('knp_paginator');
+        $result = $paginator->paginate(
             $query,
             $request->query->getInt('page', 1),
             $request->query->getInt('limit', 5)
@@ -129,9 +129,9 @@ class ClientController extends  Controller
     }
 
     /**
- * @Route("/api/clients/{id}")
- * @Method("GET")
- */
+     * @Route("/api/clients/{id}")
+     * @Method("GET")
+     */
     public function JsonFindByIdAction($id)
     {
 
@@ -166,7 +166,7 @@ class ClientController extends  Controller
         //$client = $repository1->find($id);
 
 
-        $repository2 =$em->getRepository('AppBundle:ContactClient');
+        $repository2 = $em->getRepository('AppBundle:ContactClient');
         $client = $repository2->getByClientId($id);
 
 
@@ -175,8 +175,6 @@ class ClientController extends  Controller
 
         $jsonContent = $serializer->serialize($client, 'json');
         return new Response($jsonContent);
-
-
 
 
     }
@@ -231,20 +229,16 @@ class ClientController extends  Controller
         $product = $repository->findOneBy(
             array('email' => $email)
         );
-        if ($product)
-        {
+        if ($product) {
             return new Response(
                 '<html><body>Exist</body></html>'
             );
-        }
-        else
+        } else
             return new Response(
                 '<html><body>Not exist</body></html>'
             );
 
     }
-
-
 
 
     /**
@@ -264,16 +258,16 @@ class ClientController extends  Controller
 
 
         $repository2 = $this->getDoctrine()->getRepository('AppBundle:Produit');
-        $produits= $repository2->getByCategId($idcateg);
+        $produits = $repository2->getByCategId($idcateg);
 
 
         $categ = $serializer->serialize($categories, 'json');
 
         $prod = $serializer->serialize($produits, 'json');
-        $data =[ 'categ'=>$categ,
-            'produits' =>$prod
+        $data = ['categ' => $categ,
+            'produits' => $prod
 
-     ];
+        ];
 
 
         return new JsonResponse($data);
@@ -283,7 +277,7 @@ class ClientController extends  Controller
     /**
      * @Route("clients/{id}/edit", name="editclient")
      */
-    public function editAction($id,Request $request)
+    public function editAction($id, Request $request)
     {
         $em = $this->getDoctrine()->getManager();
         $client = $em->getRepository('AppBundle:Client')->find($id);
@@ -314,7 +308,7 @@ class ClientController extends  Controller
         }
 
         return $this->render('clients/edit.html.twig', [
-            'client'=>$client
+            'client' => $client
 
         ]);
 
@@ -323,7 +317,7 @@ class ClientController extends  Controller
     }
 
     /**
-     *@Route("clients/{id}/delete", name="deleteclient")
+     * @Route("clients/{id}/delete", name="deleteclient")
      */
     public function deleteAction($id)
     {
@@ -338,12 +332,13 @@ class ClientController extends  Controller
 
     }
 
+
+
     /**
-     *@Route("commandes/add", name="addcommandec")
+     * @Route("commandes/add", name="addcommandec")
      */
     public function addCommandeAction(Request $request)
     {
-
         $repository = $this->getDoctrine()->getRepository('AppBundle:Client');
         $client = $repository->findAll();
         $repository2 = $this->getDoctrine()->getRepository('AppBundle:Produit');
@@ -351,169 +346,131 @@ class ClientController extends  Controller
         $repository = $this->getDoctrine()->getRepository('AppBundle:Paiement\Devise');
         $devise = $repository->findAll();
 
-        return $this->render(':CommandeClient:new1.html.twig', [
-            'client'=>$client,
-            'produit'=>$produit,
-            'devise'=>$devise
 
-        ]);
-
-    }
-
-    /**
-     *@Route("commandes/confirm", name="confirmcommandec")
-     */
-    public function confirmCommandeAction(Request $request)
-    {
-
-        $total=0;
-        $totalht=0;
-        $size = $request->request->get('size');
-        $commandeclientliste = new ArrayCollection();
+        if ($request->isMethod('POST')) {
+            $total = 0;
+            $totalht = 0;
+            $size = $request->request->get('size');
+            $commandeclientliste = new ArrayCollection();
 
 
+            $em = $this->get('doctrine')->getManager();
 
-        $em = $this->get('doctrine')->getManager();
+            $bc = new BonCommandeClient();
+            $facture = new FactureClient();
+            $historique = new HistoriqueClient();
 
-        $bc= new BonCommandeClient();
-        $facture= new FactureClient();
-        $historique = new HistoriqueClient();
+            $repository = $this->getDoctrine()->getRepository('AppBundle:Client');
 
-        $repository = $this->getDoctrine()->getRepository('AppBundle:Client');
+            $client = $repository->find($request->request->get('client'));
 
-        $client = $repository->find($request->request->get('client'));
-
-        for ($i=1;$i <=$size;$i++)
-        {
-            $total+=$request->request->get('prixttc-ligne'.$i);
-            $totalht+=$request->request->get('prixht-ligne'.$i);
-            $repository2 = $this->getDoctrine()->getRepository('AppBundle:Produit');
-            $produit = $repository2->find($request->request->get('liste-ligne'.$i));
-            dump($produit);
+            for ($i = 1; $i <= $size; $i++) {
+                $total += $request->request->get('prixttc-ligne' . $i);
+                $totalht += $request->request->get('prixht-ligne' . $i);
+                $repository2 = $this->getDoctrine()->getRepository('AppBundle:Produit');
+                $produit = $repository2->find($request->request->get('liste-ligne' . $i));
+                dump($produit);
 
 
-            $lc= new LigneBCC();
-            $lfc= new LigneFC();
+                $lc = new LigneBCC();
+                $lfc = new LigneFC();
 
 
+                $lc->setQuatity($request->request->get('qt-ligne' . $i));
+                $lc->setTva($request->request->get('tva-ligne' . $i));
+                $lc->setProduit($produit);
+                $lc->setTotalht($request->request->get('prixht-ligne' . $i));
+                $lc->setTotalttc($request->request->get('prixttc-ligne' . $i));
+                $lc->setBc($bc);
+
+                $em->persist($lc);
 
 
+                $lfc->setQuatity($request->request->get('qt-ligne' . $i));
+                $lfc->setTva($request->request->get('tva-ligne' . $i));
+                $lfc->setProduit($produit);
+                $lfc->setTotalht($request->request->get('prixht-ligne' . $i));
+                $lfc->setTotalttc($request->request->get('prixttc-ligne' . $i));
+                $lfc->setFacture($facture);
 
-            $lc->setQuatity($request->request->get('qt-ligne'.$i));
-            $lc->setTva($request->request->get('tva-ligne'.$i));
-            $lc->setProduit($produit);
-            $lc->setTotalht($request->request->get('prixht-ligne'.$i));
-            $lc->setTotalttc($request->request->get('prixttc-ligne'.$i));
-            $lc->setBc($bc);
-
-            $em->persist($lc);
-
+                $em->persist($lfc);
 
 
-            $lfc->setQuatity($request->request->get('qt-ligne'.$i));
-            $lfc->setTva($request->request->get('tva-ligne'.$i));
-            $lfc->setProduit($produit);
-            $lfc->setTotalht($request->request->get('prixht-ligne'.$i));
-            $lfc->setTotalttc($request->request->get('prixttc-ligne'.$i));
-            $lfc->setFacture($facture);
-
-            $em->persist($lfc);
+                $produit->addLigne($lc);
+                $produit->addLigneFC($lfc);
+                $facture->addLignefc($lfc);
+                $bc->addLigne($lc);
 
 
+                $em->persist($produit);
+                $em->persist($bc);
+                $em->persist($facture);
 
 
+            }
+
+            $bc->setClient($client);
+            $commandeclientliste->add($bc);
+            $client->setListecommandes($commandeclientliste);
 
 
+            $bc->setTotalttc($request->request->get('totalttc'));
+            $bc->setTotalht($request->request->get('totalht'));
+            $bc->setCreated(new \DateTime());
+            $bc->setDateecheance((new \DateTime('+30 day')));
+            $bc->setStatut($request->request->get('statut'));
+            $bc->addFacture($facture);
 
-            $produit->addLigne($lc);
-            $produit->addLigneFC($lfc);
-            $facture->addLignefc($lfc);
-            $bc->addLigne($lc);
+
+            $facture->setTotalttc($request->request->get('totalttc'));
+            $facture->setTotalht($request->request->get('totalht'));
+            $facture->setCreated(new \DateTime());
+            $facture->setDateecheance((new \DateTime('+30 day')));
+            $facture->setStatut('Impayée');
+            $facture->setBc($bc);
 
 
-            $em->persist($produit);
+            $historique->setClient($client);
+            $historique->setTime(new \DateTime());
+            $historique->setAction(" Nouvelle commande #" . $bc->getId() . " a été créé  ");
+            $client->addHistorique($historique);
+
+
             $em->persist($bc);
             $em->persist($facture);
+            $em->persist($client);
+            $em->persist($historique);
+
+            $em->flush();
 
 
+            $message = (new \Swift_Message(" Nepsus : nouvelle notification de commande #" . $bc->getId() . " a été créé  "))
+                ->setFrom('achref.tlija@gmail.com')
+                ->setTo('achref13.tlija@gmail.com')
+                ->attach(\Swift_Attachment::fromPath('https://madeby.google.com/static/images/google_g_logo.svg'))
+                ->setBody($this->renderView(
 
+                    ':Testlayout:emailtemplate.html.twig', [
+                        'facture' => $facture]
+                ),
+                    'text/html'
+                );
+
+            $this->get('mailer')->send($message);
+
+
+            return $this->redirectToRoute('listfacturesclients');
 
         }
 
-        $bc->setClient($client);
-        $commandeclientliste->add($bc);
-        $client->setListecommandes($commandeclientliste);
 
+        return $this->render(':CommandeClient:new1.html.twig', [
+            'client' => $client,
+            'produit' => $produit,
+            'devise' => $devise
 
-        $bc->setTotalttc($request->request->get('totalttc'));
-        $bc->setTotalht($request->request->get('totalht'));
-        $bc->setCreated(new \DateTime());
-        $bc->setDateecheance((new \DateTime('+30 day')));
-        $bc->setStatut($request->request->get('statut'));
-        $bc->addFacture($facture);
-
-
-
-        $facture->setTotalttc($request->request->get('totalttc'));
-        $facture->setTotalht($request->request->get('totalht'));
-        $facture->setCreated(new \DateTime());
-        $facture->setDateecheance((new \DateTime('+30 day')));
-        $facture->setStatut('Impayée');
-        $facture->setBc($bc);
-
-
-
-
-
-
-        $historique->setClient($client);
-        $historique->setTime(new \DateTime());
-        $historique->setAction(" Nouvelle commande #".$bc->getId()." a été créé  ");
-        $client->addHistorique($historique);
-
-
-
-        $em->persist($bc);
-        $em->persist($facture);
-        $em->persist($client);
-        $em->persist($historique);
-
-        $em->flush();
-
-
-
-
-
-
-
-
-
-
-
-        $message = (new \Swift_Message(" Nepsus : nouvelle notification de commande #".$bc->getId()." a été créé  "))
-            ->setFrom('achref.tlija@gmail.com')
-            ->setTo('achref13.tlija@gmail.com')
-            ->attach(\Swift_Attachment::fromPath('https://madeby.google.com/static/images/google_g_logo.svg'))
-            ->setBody($this->renderView(
-
-                ':Testlayout:emailtemplate.html.twig', [
-                    'facture'=>$facture]
-            ),
-                'text/html'
-            );
-
-        $this->get('mailer')->send($message);
-
-
-
-
-
-        return $this->redirectToRoute('listfacturesclients');
-
+        ]);
 
 
     }
-
-
-
 }
