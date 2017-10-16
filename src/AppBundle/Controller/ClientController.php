@@ -88,7 +88,7 @@ class ClientController extends  Controller
         //$route = $this->get('router')->getRouteCollection()->get('initconfig');
         //$object = $request->attributes->get('_route','initconfig');
         //$object=$this->get('router')->getRouteCollection()->get('initconfig');
-        // dump($object);
+
         //$this->denyAccessUnlessGranted('ROLE_ADMIN', $route, 'Unable to access this page!');
         $em = $this->getDoctrine()->getManager();
         $query = $em->createQuery('SELECT p FROM AppBundle:Client p');
@@ -368,7 +368,7 @@ class ClientController extends  Controller
                     $totalht += $request->request->get('prixht-ligne' . $i);
                     $repository2 = $this->getDoctrine()->getRepository('AppBundle:Produit');
                     $produit = $repository2->find($request->request->get('liste-ligne' . $i));
-                    dump($produit);
+
 
 
                     $lc = new LigneBCC();
