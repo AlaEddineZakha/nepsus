@@ -54,6 +54,34 @@ class APIController extends Controller
     {
         return new Response('Let\'s do this!');
     }
+
+
+    /**
+     * @Route("/api/categories",name="getallcategories")
+     * @Method("GET")
+     */
+    public function ApiGetAllCategoriesdAction()
+    {
+        $repository = $this->getDoctrine()->getRepository('AppBundle:Category');
+        $categories = $repository->findAll();
+
+        $normalizer = new ObjectNormalizer();
+        $normalizer->setCircularReferenceHandler(function ($object) {
+            return $object->getId();
+        });
+        $normalizer->setIgnoredAttributes(array('products'));
+
+
+
+        $encoder = new JsonEncode();
+
+        $serializer = new Serializer(array($normalizer), array($encoder));
+
+        $jsonContent = $serializer->serialize($categories, 'json');
+
+
+        return new Response($jsonContent);
+    }
 }
 
 

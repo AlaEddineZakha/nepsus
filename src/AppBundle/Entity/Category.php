@@ -41,6 +41,11 @@ class Category
      */
     private $products;
 
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $depth ;
+
 
     // ...
     /**
@@ -158,6 +163,22 @@ class Category
     public function setChildren($children)
     {
         $this->children = $children;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDepth()
+    {
+        return $this->depth;
+    }
+
+    /**
+     * @param mixed $depth
+     */
+    public function setDepth($depth)
+    {
+        $this->depth = $depth;
     }
 
 

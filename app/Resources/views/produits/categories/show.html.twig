@@ -185,25 +185,20 @@
 
 
 
-
-
-
-
-
-
-
-
                     <div class="dd" id="nestable_list_1">
 
                         {% macro recursiveCategory(category) %}
                             {% import _self as self %}
+
                             <li><h4>{{ category.nom }}</h4>
 
 
                                 {% if category.children|length %}
                                     <ul>
                                         {% for child in category.children %}
+
                                             {{ self.recursiveCategory(child) }}
+
                                         {% endfor %}
                                     </ul>
                                 {% endif %}
@@ -216,15 +211,19 @@
                         {% if categories %}
                             <div id="categories">
                                 <ul>
-                                    {% set break = false %}
-                                    {% for category in categories if not break %}
-                                        {%  if loop.first %}
-                                            {% set break = true %}
 
-                                        {% endif %}
+
+                                    {% for category in categories  %}
+
+                                    {% if category.depth== 1 %}
+
                                           {{ recursiveCategory(category) }}
 
+                                    {% endif %}
+
                                     {% endfor %}
+
+
                                 </ul>
                             </div>
                         {% endif %}

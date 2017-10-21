@@ -4,6 +4,7 @@ namespace AppBundle\Controller;
 
 use AppBundle\Entity\Category;
 use AppBundle\Form\CategoryFormType;
+use function PHPSTORM_META\type;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -19,7 +20,7 @@ class CategoryController extends Controller
         $categories = $repository->findAll();
 
 
-        return $this->render('produits/categories/show.html.twig', [
+        return $this->render('produits/categories/list.html.twig', [
             'categories' => $categories,
 
         ]);
@@ -44,17 +45,21 @@ class CategoryController extends Controller
             if ( empty($request->request->get('parent')))
             {
                 $categorie->setParent(null);
+                $categorie->setDepth(1);
 
             }
             else
             {
-            $categorie->setParent($request->request->get('parent'));
+                $parent=$repository->find($request->request->get('parent'));
+                $categorie->setParent($parent);
+                $categorie->setDepth($parent->getDepth()+1);
+
             }
 
             $em->persist($categorie);
             $em->flush();
 
-            return $this->redirectToRoute('listclient');
+            return $this->redirectToRoute('app_category_showall');
 
 
         }

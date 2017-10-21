@@ -24,15 +24,15 @@
     <div class="page-bar">
         <ul class="page-breadcrumb">
             <li>
-                <a href="http://localhost/nepsus/nepsus/web/app_dev.php/">Accueil</a>
+                <a href="/">Accueil</a>
                 <i class="fa fa-circle"></i>
             </li>
             <li>
-                <span>Gestion des clients</span>
+                <span>Gestion des entrepots</span>
                 <i class="fa fa-circle"></i>
             </li>
             <li>
-                <span>Modifier client</span>
+                <span>Modifier entrepot</span>
 
             </li>
         </ul>
@@ -40,18 +40,18 @@
     </div>
     <!-- END PAGE BAR -->
     <!-- BEGIN PAGE TITLE-->
-    <h1 class="page-title"> Modifier client
+    <h1 class="page-title"> Modifier entrepot
         <small></small>
     </h1>
     <!-- END PAGE TITLE-->
     <!-- END PAGE HEADER-->
     <div class="row">
         <div class="col-md-12">
-            <form class="form-horizontal form-row-seperated" action="{{ path('editclient' , {'id': client.id } ) }}" method="post" id="signupForm">
+            <form class="form-horizontal form-row-seperated" action="{{ path('editentrepot' , {'id': entrepot.id } ) }}" method="post" id="signupForm">
                 <div class="portlet">
                     <div class="portlet-title">
                         <div class="caption">
-                            <i class="fa fa-user-plus"></i>{{ client.raison }} </div>
+                            <i class="fa fa-user-plus"></i>{{ entrepot.nom }} </div>
                         <div class="actions btn-set">
 
                             <button class="btn btn-success">
@@ -65,26 +65,22 @@
                         <div class="tabbable-line">
                             <ul class="nav nav-tabs nav-tabs-lg">
                                 <li class="active">
-                                    <a href="#tab_0" data-toggle="tab"> Résumé </a>
+                                    <a href="#tab_0" data-toggle="tab"> Apercu </a>
                                 </li>
                                 <li>
-                                    <a href="#tab_1" data-toggle="tab"> Profil
+                                    <a href="#tab_1" data-toggle="tab"> Produits
 
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#tab_2" data-toggle="tab"> Contacts
+                                    <a href="#tab_2" data-toggle="tab"> Entrés
 
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#tab_3" data-toggle="tab"> Factures </a>
+                                    <a href="#tab_3" data-toggle="tab"> Sorites </a>
                                 </li>
-                                <li>
-                                    <a href="#tab_4" data-toggle="tab"> Transactions
-                                        <span class="badge badge-danger"> 2 </span>
-                                    </a>
-                                </li>
+
                                 <li>
                                     <a href="#tab_5" data-toggle="tab"> Historique </a>
                                 </li>
