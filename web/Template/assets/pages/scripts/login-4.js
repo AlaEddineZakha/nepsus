@@ -255,10 +255,10 @@ var Login = function () {
 
             // init background slide images
             $.backstretch([
-                    "1.jpg",
-                    "2.jpg",
-                    "3.jpg",
-                    "4.jpg"
+                    "../1.jpg",
+                    "../2.jpg",
+                    "../3.jpg",
+                    "../4.jpg"
                 ], {
                     fade: 1000,
                     duration: 8000
