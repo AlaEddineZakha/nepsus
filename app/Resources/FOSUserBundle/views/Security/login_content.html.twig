@@ -22,7 +22,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
 <head>
     <meta charset="utf-8" />
-    <title>Metronic Admin Theme #1 | User Login 4</title>
+    <title>Nepsus | Login</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <meta content="Preview page of Metronic Admin Theme #1 for " name="description" />
@@ -71,33 +71,34 @@ License: You must have a valid license purchased only from themeforest(the above
         {% if csrf_token %}
             <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
         {% endif %}
-        <h3 class="form-title">Login to your account</h3>
+        <h3 class="form-title">Connectez-vous à votre compte
+        </h3>
         <div class="alert alert-danger display-hide">
             <button class="close" data-close="alert"></button>
-            <span> Enter any username and password. </span>
+            <span> Entrez un nom d'utilisateur et un mot de passe. </span>
         </div>
         <div class="form-group">
             <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
-            <label class="control-label visible-ie8 visible-ie9">Username</label>
+            <label class="control-label visible-ie8 visible-ie9">Nom d'utilisateur</label>
             <div class="input-icon">
                 <i class="fa fa-user"></i>
-                <input class="form-control placeholder-no-fix" type="text" autocomplete="off" placeholder="Username"  id="username" name="_username" /> </div>
+                <input class="form-control placeholder-no-fix" type="text" autocomplete="off" placeholder="Nom d'utilisateur"  id="username" name="_username" /> </div>
         </div>
         <div class="form-group">
-            <label class="control-label visible-ie8 visible-ie9">Password</label>
+            <label class="control-label visible-ie8 visible-ie9">Mot de passe</label>
             <div class="input-icon">
                 <i class="fa fa-lock"></i>
-                <input class="form-control placeholder-no-fix" type="password" autocomplete="off" placeholder="Password"  id="password" name="_password" /> </div>
+                <input class="form-control placeholder-no-fix" type="password" autocomplete="off" placeholder="Mot de passe"  id="password" name="_password" /> </div>
         </div>
         <div class="form-actions">
             <label class="rememberme mt-checkbox mt-checkbox-outline">
-                <input type="checkbox"  value="1" id="remember_me" name="_remember_me" /> Remember me
+                <input type="checkbox"  value="1" id="remember_me" name="_remember_me" /> Se souvenir de moi
                 <span></span>
             </label>
-            <button type="submit" class="btn green pull-right" id="_submit" name="_submit"> Login </button>
+            <button type="submit" class="btn green pull-right" id="_submit" name="_submit"> Se connecter </button>
         </div>
         <div class="login-options">
-            <h4>Or login with</h4>
+            <h4>Ou connectez-vous avec</h4>
             <ul class="social-icons">
                 <li>
                     <a class="facebook" data-original-title="facebook" href="javascript:;"> </a>
@@ -114,41 +115,46 @@ License: You must have a valid license purchased only from themeforest(the above
             </ul>
         </div>
         <div class="forget-password">
-            <h4>Forgot your password ?</h4>
-            <p> no worries, click
-                <a href="javascript:;" id="forget-password"> here </a> to reset your password. </p>
+            <h4>Mot de passe oublié ?</h4>
+            <p> pas de soucis, cliquez
+                <a href="javascript:;" id="forget-password"> ici </a> pour réinitialiser votre mot de passe. </p>
         </div>
         <div class="create-account">
-            <p> Don't have an account yet ?&nbsp;
-                <a href="javascript:;" id="register-btn"> Create an account </a>
+            <p> Vous n'avez pas encore de compte?&nbsp;
+                <a href="javascript:;" id="register-btn"> Créer un compte
+                </a>
             </p>
         </div>
     </form>
     <!-- END LOGIN FORM -->
     <!-- BEGIN FORGOT PASSWORD FORM -->
     <form class="forget-form" action="index.html" method="post">
-        <h3>Forget Password ?</h3>
-        <p> Enter your e-mail address below to reset your password. </p>
+        <h3>Mot de passe oublié ?</h3>
+        <p> Entrez votre adresse e-mail ci-dessous pour réinitialiser votre mot de passe. </p>
         <div class="form-group">
             <div class="input-icon">
                 <i class="fa fa-envelope"></i>
                 <input class="form-control placeholder-no-fix" type="text" autocomplete="off" placeholder="Email" name="email" /> </div>
         </div>
         <div class="form-actions">
-            <button type="button" id="back-btn" class="btn red btn-outline">Back </button>
-            <button type="submit" class="btn green pull-right"> Submit </button>
+            <button type="button" id="back-btn" class="btn red btn-outline">Arrière </button>
+            <button type="submit" class="btn green pull-right"> Soumettre
+            </button>
         </div>
     </form>
     <!-- END FORGOT PASSWORD FORM -->
     <!-- BEGIN REGISTRATION FORM -->
     <form class="register-form" action="index.html" method="post">
-        <h3>Sign Up</h3>
-        <p> Enter your personal details below: </p>
+        <h3>S'inscrire
+        </h3>
+        <p> Entrez vos informations personnelles ci-dessous: </p>
         <div class="form-group">
-            <label class="control-label visible-ie8 visible-ie9">Full Name</label>
+            <label class="control-label visible-ie8 visible-ie9">Nom complet
+            </label>
             <div class="input-icon">
                 <i class="fa fa-font"></i>
-                <input class="form-control placeholder-no-fix" type="text" placeholder="Full Name" name="fullname" /> </div>
+                <input class="form-control placeholder-no-fix" type="text" placeholder="Nom complet
+" name="fullname" /> </div>
         </div>
         <div class="form-group">
             <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
@@ -158,19 +164,19 @@ License: You must have a valid license purchased only from themeforest(the above
                 <input class="form-control placeholder-no-fix" type="text" placeholder="Email" name="email" /> </div>
         </div>
         <div class="form-group">
-            <label class="control-label visible-ie8 visible-ie9">Address</label>
+            <label class="control-label visible-ie8 visible-ie9">Addresse</label>
             <div class="input-icon">
                 <i class="fa fa-check"></i>
-                <input class="form-control placeholder-no-fix" type="text" placeholder="Address" name="address" /> </div>
+                <input class="form-control placeholder-no-fix" type="text" placeholder="Addresse" name="address" /> </div>
         </div>
         <div class="form-group">
-            <label class="control-label visible-ie8 visible-ie9">City/Town</label>
+            <label class="control-label visible-ie8 visible-ie9">Ville / Région</label>
             <div class="input-icon">
                 <i class="fa fa-location-arrow"></i>
-                <input class="form-control placeholder-no-fix" type="text" placeholder="City/Town" name="city" /> </div>
+                <input class="form-control placeholder-no-fix" type="text" placeholder="Ville / Région" name="city" /> </div>
         </div>
         <div class="form-group">
-            <label class="control-label visible-ie8 visible-ie9">Country</label>
+            <label class="control-label visible-ie8 visible-ie9">Pays</label>
             <select name="country" id="country_list" class="select2 form-control">
                 <option value=""></option>
                 <option value="AF">Afghanistan</option>
@@ -409,46 +415,52 @@ License: You must have a valid license purchased only from themeforest(the above
                 <option value="ZW">Zimbabwe</option>
             </select>
         </div>
-        <p> Enter your account details below: </p>
+        <p> Entrez les détails de votre compte ci-dessous: </p>
         <div class="form-group">
-            <label class="control-label visible-ie8 visible-ie9">Username</label>
+            <label class="control-label visible-ie8 visible-ie9">Nom d'utilisateur
+            </label>
             <div class="input-icon">
                 <i class="fa fa-user"></i>
-                <input class="form-control placeholder-no-fix" type="text" autocomplete="off" placeholder="Username" name="username" /> </div>
+                <input class="form-control placeholder-no-fix" type="text" autocomplete="off" placeholder="Nom d'utilisateur
+" name="username" /> </div>
         </div>
         <div class="form-group">
-            <label class="control-label visible-ie8 visible-ie9">Password</label>
+            <label class="control-label visible-ie8 visible-ie9">Mot de passe</label>
             <div class="input-icon">
                 <i class="fa fa-lock"></i>
-                <input class="form-control placeholder-no-fix" type="password" autocomplete="off" id="register_password" placeholder="Password" name="password" /> </div>
+                <input class="form-control placeholder-no-fix" type="password" autocomplete="off" id="register_password" placeholder="Mot de passe" name="password" /> </div>
         </div>
         <div class="form-group">
-            <label class="control-label visible-ie8 visible-ie9">Re-type Your Password</label>
+            <label class="control-label visible-ie8 visible-ie9">Retaper votre mot de passe</label>
             <div class="controls">
                 <div class="input-icon">
                     <i class="fa fa-check"></i>
-                    <input class="form-control placeholder-no-fix" type="password" autocomplete="off" placeholder="Re-type Your Password" name="rpassword" /> </div>
+                    <input class="form-control placeholder-no-fix" type="password" autocomplete="off" placeholder="Retaper votre mot de passe" name="rpassword" /> </div>
             </div>
         </div>
         <div class="form-group">
             <label class="mt-checkbox mt-checkbox-outline">
-                <input type="checkbox" name="tnc" /> I agree to the
-                <a href="javascript:;">Terms of Service </a> &
-                <a href="javascript:;">Privacy Policy </a>
+                <input type="checkbox" name="tnc" /> Je suis d'accord avec le
+                <a href="javascript:;">Conditions d'utilisation
+                </a> &
+                <a href="javascript:;">Politique de confidentialité
+                </a>
                 <span></span>
             </label>
             <div id="register_tnc_error"> </div>
         </div>
         <div class="form-actions">
-            <button id="register-back-btn" type="button" class="btn red btn-outline"> Back </button>
-            <button type="submit" id="register-submit-btn" class="btn green pull-right"> Sign Up </button>
+            <button id="register-back-btn" type="button" class="btn red btn-outline"> Arrière
+            </button>
+            <button type="submit" id="register-submit-btn" class="btn green pull-right"> S'inscrire
+            </button>
         </div>
     </form>
     <!-- END REGISTRATION FORM -->
 </div>
 <!-- END LOGIN -->
 <!-- BEGIN COPYRIGHT -->
-<div class="copyright"> 2014 &copy; Metronic - Admin Dashboard Template. </div>
+<div class="copyright"> 2017 &copy; Nepsus </div>
 <!-- END COPYRIGHT -->
 <!--[if lt IE 9]>
 <script src="{{ asset('Template/assets/global/plugins/respond.min.js')}}"></script>
