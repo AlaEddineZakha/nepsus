@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="14e57119-6d11-439a-90fa-9334e3be0203" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Security/login_content.html.twig" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Security/login_content.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/layout.html.twig" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/layout.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/Configuration/configuration.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/Configuration/configuration.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -135,8 +133,8 @@
       <file leaf-file-name="configuration.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/Configuration/configuration.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="616" column="219" lean-forward="false" selection-start-line="616" selection-start-column="219" selection-end-line="616" selection-end-column="219" />
+            <state relative-caret-position="168">
+              <caret line="198" column="54" lean-forward="true" selection-start-line="198" selection-start-column="54" selection-end-line="198" selection-end-column="54" />
               <folding>
                 <element signature="n#div#2;n#div#1;n#div#0;n#div#0;n#form#0;n#div#1;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#3;n#div#1;n#div#0;n#div#0;n#form#0;n#div#1;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -1101,7 +1099,7 @@
       <workItem from="1508009479942" duration="53000" />
       <workItem from="1508009548847" duration="8981000" />
       <workItem from="1508027836801" duration="33386000" />
-      <workItem from="1508428768249" duration="61873000" />
+      <workItem from="1508428768249" duration="62559000" />
     </task>
     <task id="LOCAL-00001" summary="02/05/2017  V1.01&#10;">
       <created>1493722777132</created>
@@ -1299,11 +1297,18 @@
       <option name="project" value="LOCAL" />
       <updated>1508935880362</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="02/05/2017  V1.05 Fix dynamic background">
+      <created>1508947714242</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1508947714242</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1212245000" />
+    <option name="totallyTimeSpent" value="1212931000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1378" height="735" extended-state="0" />
@@ -1813,8 +1818,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/Configuration/configuration.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="616" column="219" lean-forward="false" selection-start-line="616" selection-start-column="219" selection-end-line="616" selection-end-column="219" />
+        <state relative-caret-position="168">
+          <caret line="198" column="54" lean-forward="true" selection-start-line="198" selection-start-column="54" selection-end-line="198" selection-end-column="54" />
           <folding>
             <element signature="n#div#2;n#div#1;n#div#0;n#div#0;n#form#0;n#div#1;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#3;n#div#1;n#div#0;n#div#0;n#form#0;n#div#1;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
