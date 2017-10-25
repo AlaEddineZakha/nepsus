@@ -55,7 +55,49 @@ listentrepots:
     path:      /entrepots
     defaults:  { _controller: AppBundle:Entrepot:showAll }
 
+#--------------------- Devises -------------------#
+adddevise:
+    path:      /devises/new
+    defaults:  { _controller: AppBundle:Devise:new }
 
+editdevise:
+    path:      /devises/{id}/edit
+    defaults:  { _controller: AppBundle:Devise:edit }
+    requirements:
+            id: \d+
+deletedevise:
+    path:      /devises/{id}/delete
+    defaults:  { _controller: AppBundle:Devise:delete }
+    requirements:
+            id: \d+
+    options:
+            expose: true
+
+listdevises:
+    path:      /devises
+    defaults:  { _controller: AppBundle:Devise:showAll }
+
+#--------------------- Taxes -------------------#
+addtaxe:
+    path:      /taxes/new
+    defaults:  { _controller: AppBundle:Taxe:new }
+
+editetaxe:
+    path:      /taxes/{id}/edit
+    defaults:  { _controller: AppBundle:Taxe:edit }
+    requirements:
+            id: \d+
+deletetaxe:
+    path:      /taxes/{id}/delete
+    defaults:  { _controller: AppBundle:Taxe:delete }
+    requirements:
+            id: \d+
+    options:
+            expose: true
+
+listtaxes:
+    path:      /taxes
+    defaults:  { _controller: AppBundle:Taxe:showAll }
 
 
 #--------------------- Fournisseurs -------------------#
@@ -133,9 +175,15 @@ annulerfacture:
     defaults:  { _controller: AppBundle:FactureClient:annuler }
     requirements:
             id: \d+
-resetapplication:
-    path:      /reset
-    defaults:  { _controller: AppBundle:Reset:sendSpool }
+adduser:
+    path:      /adduser
+    defaults:  { _controller: AppBundle:Reset:createUser }
+activateuser:
+    path:      /activate
+    defaults:  { _controller: AppBundle:Reset:activateUser }
+promoteuser:
+    path:      /promote
+    defaults:  { _controller: AppBundle:Reset:promoteUser }
 
 initconfig:
     path:      /config

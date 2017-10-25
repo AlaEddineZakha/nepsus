@@ -30,7 +30,7 @@ class Taxe
      */
     private $montant;
     /**
-     * @ORM\Column(type="boolean")
+     * @ORM\Column(type="string")
      */
     private $active;
     /**

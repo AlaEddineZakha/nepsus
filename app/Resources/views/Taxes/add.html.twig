@@ -28,12 +28,12 @@
                 <i class="fa fa-circle"></i>
             </li>
             <li>
-                <span>Gestion des catégories</span>
+                <span>Gestion des taxes</span>
                 <i class="fa fa-circle"></i>
             </li>
 
             <li>
-                <span>Nouvelle Catégorie</span>
+                <span>Nouveau taxe</span>
 
             </li>
         </ul>
@@ -45,7 +45,7 @@
     <!-- END PAGE TITLE-->
     <!-- END PAGE HEADER-->
     <div class="m-heading-1 border-green m-bordered">
-        <h3>Nouveau client</h3>
+        <h3>Nouveau taxe</h3>
 
     </div>
 
@@ -57,33 +57,32 @@
 
                 <div class="portlet-body">
                     <!-- BEGIN FORM-->
-                    <form action="{{ path('addcategory') }}" id="signupForm" class="form-horizontal" method="post">
+                    <form action="{{ path('addtaxe') }}" id="signupForm" class="form-horizontal" method="post">
 
                         <div class="form-body">
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label class="control-label col-md-4" for="nom" style="text-align: start">Libelle
+                                            <label class="control-label col-md-4" style="text-align: start">Taux (%)
                                                 <span class="required" style="font-size: large"> * </span>
                                             </label>
                                             <div class="col-md-8">
-                                                <input type="text" name="nom" id="nom" data-required="1" class="form-control" />
+                                                <input type="text" name="taux" id="taux"  class="form-control" />
+
                                             </div>
                                         </div>
                                     </div>
+
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label class="control-label col-md-4" style="text-align: justify">Catégorie parent
-                                                <span class="required" style="font-size: large"> * </span>
+                                            <label class="control-label col-md-4" style="text-align: start">Activé
+
                                             </label>
                                             <div class="col-md-8">
-                                                <select class="form-control select2me" id="parent" name="parent" data-live-search="true" data-size="8">
-                                                    <option value="">Select...</option>
-                                                    {% for parent in parents %}
-                                                    <option value="{{ parent.id}}">{{ parent.nom }}</option>
-                                                    {% endfor %}
-                                                </select>
+
+                                                <input name="active" id="active" type="checkbox" class="make-switch" checked data-on-color="success" data-off-color="warning">
+                                                <span class="help-block"> Ce taxe sera appliqué par défaut </span>
                                             </div>
 
                                         </div>
@@ -91,6 +90,12 @@
 
                                 </div>
                             </div>
+
+
+
+
+
+
 
                         <div class="form-actions">
                             <div class="row">
@@ -156,19 +161,26 @@
             $("#signupForm").validate({
                 rules: {
 
-                    nom: {
-                        required: true,
-                        minlength: 3
+                    taux:{
+                        number:true,
+                        required:true,
+                        minlength:1,
+                        maxlength:2
 
                     }
+
+
+
 
 
                 },
                 messages: {
 
-                    nom: {
+                    taux: {
                         required: "Ce champ est obligatoire",
-                        minlength: "Ce champ doit contenir 3 caractères au minimum"
+                        taux:"Ce champ ne peut contenir que des numéros",
+                        minlength: "Ce champ doit contenir 1 chiffre au minimum",
+                        maxlength: "Ce champ doit contenir 2 chiffres au maximum"
                     }
 
 
