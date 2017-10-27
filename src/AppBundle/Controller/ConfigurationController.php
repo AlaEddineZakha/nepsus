@@ -20,4 +20,9 @@ class ConfigurationController extends Controller
     {
         return $this->render(':Configuration:configuration.html.twig');
     }
+
+    public function loadingAction()
+    {
+        return $this->render(':Configuration:loading.html.twig');
+    }
 }

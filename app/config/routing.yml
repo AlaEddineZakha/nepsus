@@ -189,6 +189,10 @@ initconfig:
     path:      /config
     defaults:  { _controller: AppBundle:Configuration:index }
 
+loadingconfig:
+    path:      /loading
+    defaults:  { _controller: AppBundle:Configuration:loading }
+
 
 pageNotFound:
     path:  /{path}
