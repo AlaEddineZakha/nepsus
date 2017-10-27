@@ -48,57 +48,78 @@ var FormWizard = function () {
                         required: true,
                         equalTo: "#submit_form_password"
                     },
-                    //profile
-                    fullname: {
-                        required: true
+
+                    abreviation: {
+
+                        minlength: 2
+
+                    },
+                    raison: {
+                        required: true,
+                        minlength: 3
+
+                    },
+                    mf: {
+                        required: true,
+                        minlength: 8
+
+                    },
+                    registre: {
+                        required: true,
+                        minlength: 10
                     },
                     email: {
                         required: true,
                         email: true
                     },
-                    phone: {
+                    telephone: {
                         required: true
                     },
-                    gender: {
+                    fax: {
                         required: true
                     },
-                    address: {
+
+                    addresse: {
                         required: true
                     },
-                    city: {
+                    ville: {
                         required: true
                     },
-                    country: {
+                    pays: {
                         required: true
                     },
                     //payment
-                    card_name: {
-                        required: true
-                    },
-                    card_number: {
-                        minlength: 16,
-                        maxlength: 16,
-                        required: true
-                    },
-                    card_cvc: {
-                        digits: true,
+                    logo: {
                         required: true,
-                        minlength: 3,
+                        accept:"image/*"
+                    },
+                    bic: {
+                        minlength: 8,
+                        maxlength: 8
+
+                    },
+                    codedouane: {
+                        minlength: 4,
                         maxlength: 4
+
                     },
-                    card_expiry_date: {
-                        required: true
+                    iban: {
+
+                        minlength: 27,
+                        maxlength: 27
                     },
-                    'payment[]': {
-                        required: true,
-                        minlength: 1
+                    rib: {
+
+                        minlength: 20,
+                        maxlength: 20
                     }
+
+
                 },
 
                 messages: { // custom messages for radio buttons and checkboxes
-                    'payment[]': {
-                        required: "Please select at least one option",
-                        minlength: jQuery.validator.format("Please select at least one option")
+                    logo:{
+                        accept:"Veuillez charger un fichier de type image"
                     }
                 },
 
@@ -150,7 +171,7 @@ var FormWizard = function () {
             });
 
             var displayConfirm = function() {
-                $('#tab4 .form-control-static', form).each(function(){
+                $('#tab5 .form-control-static', form).each(function(){
                     var input = $('[name="'+$(this).attr("data-display")+'"]', form);
                     if (input.is(":radio")) {
                         input = $('[name="'+$(this).attr("data-display")+'"]:checked', form);
