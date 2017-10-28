@@ -82,6 +82,9 @@ var FormWizard = function () {
                     addresse: {
                         required: true
                     },
+                    formejuridique: {
+                        required: true
+                    },
                     ville: {
                         required: true
                     },
