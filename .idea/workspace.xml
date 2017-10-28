@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14e57119-6d11-439a-90fa-9334e3be0203" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/9be4e9f6-8898-47e5-8cb0-37d770d95d26.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/9be4e9f6-8898-47e5-8cb0-37d770d95d26.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Configuration.php" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Configuration.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -188,8 +188,8 @@
       <file leaf-file-name="Configuration.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Configuration.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="15" column="35" lean-forward="false" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+            <state relative-caret-position="204">
+              <caret line="23" column="34" lean-forward="true" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -313,8 +313,8 @@
         <option value="$PROJECT_DIR$/web/Template/assets/pages/scripts/form-wizard.js" />
         <option value="$PROJECT_DIR$/app/Resources/views/Configuration/loading.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/Configuration/configuration.html.twig" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Entity/Configuration.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/ConfigurationController.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Entity/Configuration.php" />
       </list>
     </option>
   </component>
@@ -1137,7 +1137,7 @@
       <workItem from="1508009479942" duration="53000" />
       <workItem from="1508009548847" duration="8981000" />
       <workItem from="1508027836801" duration="33386000" />
-      <workItem from="1508428768249" duration="115978000" />
+      <workItem from="1508428768249" duration="116403000" />
     </task>
     <task id="LOCAL-00001" summary="02/05/2017  V1.01&#10;">
       <created>1493722777132</created>
@@ -1419,11 +1419,18 @@
       <option name="project" value="LOCAL" />
       <updated>1509161140083</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="02/05/2017  V1.08">
+      <created>1509229377380</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1509229377380</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1266350000" />
+    <option name="totallyTimeSpent" value="1266775000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1378" height="735" extended-state="0" />
@@ -1955,8 +1962,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Configuration.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="15" column="35" lean-forward="false" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+        <state relative-caret-position="204">
+          <caret line="23" column="34" lean-forward="true" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
           <folding />
         </state>
       </provider>

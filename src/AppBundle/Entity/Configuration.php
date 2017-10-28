@@ -26,7 +26,7 @@ class Configuration
     private $id;
 
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="integer")
      */
     private $raison;
 
