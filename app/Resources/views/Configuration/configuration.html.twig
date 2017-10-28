@@ -103,7 +103,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
                         </div>
                         <div class="portlet-body form">
-                            <form class="form-horizontal" action="#" id="submit_form" method="POST">
+                            <form class="form-horizontal" action="{{ path('initconfig') }}" id="submit_form" method="POST">
                                 <div class="form-wizard">
                                     <div class="form-body">
                                         <ul class="nav nav-pills nav-justified steps">
@@ -243,6 +243,15 @@ License: You must have a valid license purchased only from themeforest(the above
                                                     <div class="col-md-4">
                                                         <input type="text" class="form-control" name="addresse" />
                                                         <span class="help-block"> Indiquez votre adresse </span>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-3">Site web
+                                                        <span class="required">  </span>
+                                                    </label>
+                                                    <div class="col-md-4">
+                                                        <input type="text" class="form-control" name="siteweb" id="siteweb" />
+                                                        <span class="help-block"> e.g: http://www.demo.com </span>
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
@@ -899,9 +908,9 @@ License: You must have a valid license purchased only from themeforest(the above
 
                                                     <i class="fa fa-angle-right"></i>
                                                 </a>
-                                                <a href="javascript:;" class="btn green button-submit"> Soumettre
-                                                    <i class="fa fa-check"></i>
-                                                </a>
+                                                <button class="btn green button-submit" type="submit"> Soumettre</button>
+
+
                                             </div>
                                         </div>
                                     </div>

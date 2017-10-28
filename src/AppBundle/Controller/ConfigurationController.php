@@ -2,7 +2,14 @@
 
 namespace AppBundle\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use AppBundle\Entity\Configuration;
+use AppBundle\Entity\FactureClient;
+use AppBundle\Entity\HistoriqueClient;
+use AppBundle\Entity\LigneFC;
+use AppBundle\Entity\LigneBCC;
+use AppBundle\Entity\BonCommandeClient;
+use AppBundle\Entity\Client;
+use AppBundle\Entity\User;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Serializer\Serializer;
@@ -10,14 +17,54 @@ use Symfony\Component\Serializer\Encoder\XmlEncoder;
 use Symfony\Component\Serializer\Encoder\JsonEncoder;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Doctrine\Common\Collections\ArrayCollection;
 
 class ConfigurationController extends Controller
 {
-    public function indexAction()
+    public function indexAction(Request $request)
     {
+
+        if ($request->isMethod('POST')) {
+            $em = $this->getDoctrine()->getManager();
+            $config = new Configuration();
+            $admin = new User();
+            $admin->setPlainPassword($request->request->get('password'));
+            $admin->setEnabled('true');
+            $admin->setRoles(array('ROLE_SUPER_ADMIN'));
+            $admin->setEmail($request->request->get('email'));
+            $admin->setUsername($request->request->get('username'));
+            $em->persist($admin);
+
+            $config->setInit(1);
+            $config->setMatriculefiscale($request->request->get('mf'));
+            $config->setRaison($request->request->get('raison'));
+            $config->setAdresse($request->request->get('addresse'));
+            $config->setVille($request->request->get('ville'));
+            $config->setPays($request->request->get('pays'));
+            $config->setTelephone($request->request->get('telephone'));
+            $config->setSiteweb($request->request->get('siteweb'));
+            $config->setRegistredecommerce($request->request->get('registre'));
+            $config->setCreated(new \DateTime());
+            $config->setFax($request->request->get('fax'));
+            $config->setFormejuridique($request->request->get('formejuridique'));
+            $config->setCodedouane($request->request->get('codedouane'));
+            $config->setIban($request->request->get('iban'));
+            $config->setRib($request->request->get('rib'));
+            $config->setBic($request->request->get('bic'));
+            $config->setAbreviation($request->request->get('abreviation'));
+            $config->setAdministrateur($admin);
+
+
+
+            $em->persist($config);
+            $em->flush();
+
+            return $this->redirectToRoute('loadingconfig');
+        }
+
         return $this->render(':Configuration:configuration.html.twig');
     }
 

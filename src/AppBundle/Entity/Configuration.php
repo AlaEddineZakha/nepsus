@@ -29,8 +29,23 @@ class Configuration
      * @ORM\Column(type="string")
      */
     private $raison;
+
     /**
-     * @ORM\Column(type="blob")
+     * @ORM\Column(type="boolean")
+     */
+    private $init;
+
+    /**
+     * @ORM\Column(type="string")
+     */
+    private $ville;
+
+    /**
+     * @ORM\Column(type="string")
+     */
+    private $siteweb;
+    /**
+     * @ORM\Column(type="blob", nullable=true)
      */
     private $logo;
     /**
@@ -381,6 +396,54 @@ class Configuration
     public function setLastmodified($lastmodified)
     {
         $this->lastmodified = $lastmodified;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getVille()
+    {
+        return $this->ville;
+    }
+
+    /**
+     * @param mixed $ville
+     */
+    public function setVille($ville)
+    {
+        $this->ville = $ville;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSiteweb()
+    {
+        return $this->siteweb;
+    }
+
+    /**
+     * @param mixed $siteweb
+     */
+    public function setSiteweb($siteweb)
+    {
+        $this->siteweb = $siteweb;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getInit()
+    {
+        return $this->init;
+    }
+
+    /**
+     * @param mixed $init
+     */
+    public function setInit($init)
+    {
+        $this->init = $init;
     }
 
 

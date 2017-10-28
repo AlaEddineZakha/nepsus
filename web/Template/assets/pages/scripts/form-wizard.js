@@ -106,6 +106,9 @@ var FormWizard = function () {
                     logo: {
                         accept:"image/*"
                     },
+                    site: {
+                        url:true
+                    },
                     bic: {
                         minlength: 8,
                         maxlength: 8
