@@ -24,6 +24,17 @@ var FormWizard = function () {
                 }
             });
 
+            $("#formejuridique").select2({
+                placeholder: "Select",
+                allowClear: true,
+                formatResult: format,
+                width: 'auto',
+                formatSelection: format,
+                escapeMarkup: function (m) {
+                    return m;
+                }
+            });
+
             var form = $('#submit_form');
             var error = $('.alert-danger', form);
             var success = $('.alert-success', form);
@@ -271,6 +282,10 @@ var FormWizard = function () {
 
             //apply validation on select2 dropdown value change, this only needed for chosen dropdown integration.
             $('#country_list', form).change(function () {
+                form.validate().element($(this)); //revalidate the chosen dropdown value and show error or success message for the input
+            });
+
+            $('#formejuridique', form).change(function () {
                 form.validate().element($(this)); //revalidate the chosen dropdown value and show error or success message for the input
             });
         }

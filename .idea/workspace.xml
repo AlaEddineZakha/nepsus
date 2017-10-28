@@ -141,11 +141,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="configuration.html.twig" pinned="false" current-in-tab="true">
+      <file leaf-file-name="configuration.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/Configuration/configuration.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="529" column="74" lean-forward="true" selection-start-line="529" selection-start-column="74" selection-end-line="529" selection-end-column="74" />
+            <state relative-caret-position="227">
+              <caret line="530" column="87" lean-forward="false" selection-start-line="530" selection-start-column="87" selection-end-line="530" selection-end-column="87" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#7;n#div#3;n#div#1;n#div#0;n#div#0;n#form#0;n#div#1;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#7;n#div#3;n#div#1;n#div#0;n#div#0;n#form#0;n#div#1;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -169,11 +169,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jquery.validate.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="jquery.validate.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/Template/assets/global/plugins/jquery-validation/js/jquery.validate.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="323" column="6" lean-forward="true" selection-start-line="323" selection-start-column="6" selection-end-line="323" selection-end-column="6" />
+            <state relative-caret-position="194">
+              <caret line="507" column="21" lean-forward="false" selection-start-line="507" selection-start-column="21" selection-end-line="507" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -182,11 +182,11 @@
       <file leaf-file-name="form-wizard.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/Template/assets/pages/scripts/form-wizard.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="94" column="27" lean-forward="false" selection-start-line="94" selection-start-column="27" selection-end-line="94" selection-end-column="27" />
+            <state relative-caret-position="245">
+              <caret line="29" column="37" lean-forward="true" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
               <folding>
-                <marker date="1509157650330" expanded="true" signature="418:424" ph=" " />
-                <marker date="1509157650330" expanded="true" signature="424:430" ph=" " />
+                <marker date="1509157910026" expanded="true" signature="418:424" ph=" " />
+                <marker date="1509157910026" expanded="true" signature="424:430" ph=" " />
               </folding>
             </state>
           </provider>
@@ -204,9 +204,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>type</find>
-      <find>valid</find>
-      <find>please</find>
       <find>enter</find>
       <find>requi</find>
       <find>required</find>
@@ -232,8 +229,11 @@
       <find>Ani</find>
       <find>onetoone</find>
       <find>logo</find>
-      <find>pays</find>
       <find>forme</find>
+      <find>pays</find>
+      <find>country</find>
+      <find>formejuridique</find>
+      <find>countr</find>
     </findStrings>
     <replaceStrings>
       <replace>fonts/</replace>
@@ -1156,7 +1156,7 @@
       <workItem from="1508009479942" duration="53000" />
       <workItem from="1508009548847" duration="8981000" />
       <workItem from="1508027836801" duration="33386000" />
-      <workItem from="1508428768249" duration="108872000" />
+      <workItem from="1508428768249" duration="109097000" />
     </task>
     <task id="LOCAL-00001" summary="02/05/2017  V1.01&#10;">
       <created>1493722777132</created>
@@ -1417,11 +1417,18 @@
       <option name="project" value="LOCAL" />
       <updated>1509150588777</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="02/05/2017  V1.06">
+      <created>1509157753498</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1509157753498</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1259244000" />
+    <option name="totallyTimeSpent" value="1259469000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1378" height="735" extended-state="0" />
@@ -1467,7 +1474,8 @@
     <MESSAGE value="02/05/2017  V1.05 Fix dynamic background" />
     <MESSAGE value="02/05/2017  V1.05 Form config" />
     <MESSAGE value="02/05/2017  V1.05 Form loading after config" />
-    <option name="LAST_COMMIT_MESSAGE" value="02/05/2017  V1.05 Form loading after config" />
+    <MESSAGE value="02/05/2017  V1.06" />
+    <option name="LAST_COMMIT_MESSAGE" value="02/05/2017  V1.06" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1908,25 +1916,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/Template/assets/global/plugins/jquery-validation/js/jquery.validate.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="323" column="6" lean-forward="true" selection-start-line="323" selection-start-column="6" selection-end-line="323" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/Template/assets/pages/scripts/form-wizard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="94" column="27" lean-forward="false" selection-start-line="94" selection-start-column="27" selection-end-line="94" selection-end-column="27" />
-          <folding>
-            <marker date="1509157650330" expanded="true" signature="418:424" ph=" " />
-            <marker date="1509157650330" expanded="true" signature="424:430" ph=" " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Configuration.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -1937,8 +1926,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/Configuration/configuration.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="529" column="74" lean-forward="true" selection-start-line="529" selection-start-column="74" selection-end-line="529" selection-end-column="74" />
+        <state relative-caret-position="227">
+          <caret line="530" column="87" lean-forward="false" selection-start-line="530" selection-start-column="87" selection-end-line="530" selection-end-column="87" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#7;n#div#3;n#div#1;n#div#0;n#div#0;n#form#0;n#div#1;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#7;n#div#3;n#div#1;n#div#0;n#div#0;n#form#0;n#div#1;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1948,6 +1937,25 @@
             <element signature="n#style#0;n#h3#0;n#div#2;n#div#5;n#div#1;n#div#0;n#div#0;n#form#0;n#div#1;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h3#0;n#div#3;n#div#5;n#div#1;n#div#0;n#div#0;n#form#0;n#div#1;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Template/assets/pages/scripts/form-wizard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="29" column="37" lean-forward="true" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
+          <folding>
+            <marker date="1509157910026" expanded="true" signature="418:424" ph=" " />
+            <marker date="1509157910026" expanded="true" signature="424:430" ph=" " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Template/assets/global/plugins/jquery-validation/js/jquery.validate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="507" column="21" lean-forward="false" selection-start-line="507" selection-start-column="21" selection-end-line="507" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
