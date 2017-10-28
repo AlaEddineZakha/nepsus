@@ -18,4 +18,11 @@ use Doctrine\ORM\Mapping as ORM;
 class Test
 {
 
+    /**
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     * @ORM\Column(type="integer")
+     */
+    private $id;
+
 }
