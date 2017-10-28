@@ -93,7 +93,6 @@ var FormWizard = function () {
                     },
                     //payment
                     logo: {
-                        required: true,
                         accept:"image/*"
                     },
                     bic: {

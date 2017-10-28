@@ -4,8 +4,6 @@
     <list default="true" id="14e57119-6d11-439a-90fa-9334e3be0203" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/Configuration/configuration.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/Configuration/configuration.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/Configuration/loading.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/Configuration/loading.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Configuration.php" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Configuration.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/Template/assets/pages/scripts/form-wizard.js" afterPath="$PROJECT_DIR$/web/Template/assets/pages/scripts/form-wizard.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -143,13 +141,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="configuration.html.twig" pinned="false" current-in-tab="false">
+      <file leaf-file-name="configuration.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/Configuration/configuration.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="211" column="101" lean-forward="false" selection-start-line="211" selection-start-column="90" selection-end-line="211" selection-end-column="101" />
+            <state relative-caret-position="168">
+              <caret line="529" column="74" lean-forward="true" selection-start-line="529" selection-start-column="74" selection-end-line="529" selection-end-column="74" />
               <folding>
-                <element signature="n#select#0;n#div#0;n#div#6;n#div#3;n#div#1;n#div#0;n#div#0;n#form#0;n#div#1;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#7;n#div#3;n#div#1;n#div#0;n#div#0;n#form#0;n#div#1;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#7;n#div#3;n#div#1;n#div#0;n#div#0;n#form#0;n#div#1;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#div#1;n#div#0;n#div#7;n#div#3;n#div#1;n#div#0;n#div#0;n#form#0;n#div#1;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -162,7 +159,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Configuration.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Configuration.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Configuration.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
@@ -175,8 +172,8 @@
       <file leaf-file-name="jquery.validate.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/Template/assets/global/plugins/jquery-validation/js/jquery.validate.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="325" column="15" lean-forward="false" selection-start-line="325" selection-start-column="15" selection-end-line="325" selection-end-column="15" />
+            <state relative-caret-position="119">
+              <caret line="323" column="6" lean-forward="true" selection-start-line="323" selection-start-column="6" selection-end-line="323" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -185,11 +182,11 @@
       <file leaf-file-name="form-wizard.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/Template/assets/pages/scripts/form-wizard.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="83" column="22" lean-forward="false" selection-start-line="83" selection-start-column="22" selection-end-line="83" selection-end-column="22" />
+            <state relative-caret-position="166">
+              <caret line="94" column="27" lean-forward="false" selection-start-line="94" selection-start-column="27" selection-end-line="94" selection-end-column="27" />
               <folding>
-                <marker date="1509135073761" expanded="true" signature="418:424" ph=" " />
-                <marker date="1509135073761" expanded="true" signature="424:430" ph=" " />
+                <marker date="1509157650330" expanded="true" signature="418:424" ph=" " />
+                <marker date="1509157650330" expanded="true" signature="424:430" ph=" " />
               </folding>
             </state>
           </provider>
@@ -233,10 +230,10 @@
       <find>Animated</find>
       <find>config</find>
       <find>Ani</find>
-      <find>logo</find>
-      <find>forme</find>
-      <find>pays</find>
       <find>onetoone</find>
+      <find>logo</find>
+      <find>pays</find>
+      <find>forme</find>
     </findStrings>
     <replaceStrings>
       <replace>fonts/</replace>
@@ -312,9 +309,9 @@
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/ConfigurationController.php" />
         <option value="$PROJECT_DIR$/app/config/routing.yml" />
         <option value="$PROJECT_DIR$/app/Resources/views/Configuration/loading.html.twig" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Entity/Configuration.php" />
         <option value="$PROJECT_DIR$/web/Template/assets/pages/scripts/form-wizard.js" />
         <option value="$PROJECT_DIR$/app/Resources/views/Configuration/configuration.html.twig" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Entity/Configuration.php" />
       </list>
     </option>
   </component>
@@ -1159,7 +1156,7 @@
       <workItem from="1508009479942" duration="53000" />
       <workItem from="1508009548847" duration="8981000" />
       <workItem from="1508027836801" duration="33386000" />
-      <workItem from="1508428768249" duration="108170000" />
+      <workItem from="1508428768249" duration="108872000" />
     </task>
     <task id="LOCAL-00001" summary="02/05/2017  V1.01&#10;">
       <created>1493722777132</created>
@@ -1413,11 +1410,18 @@
       <option name="project" value="LOCAL" />
       <updated>1509089045269</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="02/05/2017  V1.05 Form loading after config">
+      <created>1509150588777</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1509150588777</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1258542000" />
+    <option name="totallyTimeSpent" value="1259244000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1378" height="735" extended-state="0" />
@@ -1856,42 +1860,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/Template/assets/global/plugins/jquery-validation/js/jquery.validate.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="325" column="15" lean-forward="false" selection-start-line="325" selection-start-column="15" selection-end-line="325" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/Template/assets/pages/scripts/form-wizard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="83" column="22" lean-forward="false" selection-start-line="83" selection-start-column="22" selection-end-line="83" selection-end-column="22" />
-          <folding>
-            <marker date="1509135073761" expanded="true" signature="418:424" ph=" " />
-            <marker date="1509135073761" expanded="true" signature="424:430" ph=" " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/Configuration/configuration.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="211" column="101" lean-forward="false" selection-start-line="211" selection-start-column="90" selection-end-line="211" selection-end-column="101" />
-          <folding>
-            <element signature="n#select#0;n#div#0;n#div#6;n#div#3;n#div#1;n#div#0;n#div#0;n#form#0;n#div#1;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#7;n#div#3;n#div#1;n#div#0;n#div#0;n#form#0;n#div#1;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#7;n#div#3;n#div#1;n#div#0;n#div#0;n#form#0;n#div#1;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#div#1;n#div#0;n#div#7;n#div#3;n#div#1;n#div#0;n#div#0;n#form#0;n#div#1;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#h3#0;n#div#0;n#div#5;n#div#1;n#div#0;n#div#0;n#form#0;n#div#1;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h3#0;n#div#1;n#div#5;n#div#1;n#div#0;n#div#0;n#form#0;n#div#1;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h3#0;n#div#2;n#div#5;n#div#1;n#div#0;n#div#0;n#form#0;n#div#1;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h3#0;n#div#3;n#div#5;n#div#1;n#div#0;n#div#0;n#form#0;n#div#1;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Modules.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -1940,11 +1908,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/Template/assets/global/plugins/jquery-validation/js/jquery.validate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="323" column="6" lean-forward="true" selection-start-line="323" selection-start-column="6" selection-end-line="323" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Template/assets/pages/scripts/form-wizard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="94" column="27" lean-forward="false" selection-start-line="94" selection-start-column="27" selection-end-line="94" selection-end-column="27" />
+          <folding>
+            <marker date="1509157650330" expanded="true" signature="418:424" ph=" " />
+            <marker date="1509157650330" expanded="true" signature="424:430" ph=" " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Configuration.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="27" column="7" lean-forward="true" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/Configuration/configuration.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="529" column="74" lean-forward="true" selection-start-line="529" selection-start-column="74" selection-end-line="529" selection-end-column="74" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#7;n#div#3;n#div#1;n#div#0;n#div#0;n#form#0;n#div#1;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#7;n#div#3;n#div#1;n#div#0;n#div#0;n#form#0;n#div#1;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#1;n#div#0;n#div#7;n#div#3;n#div#1;n#div#0;n#div#0;n#form#0;n#div#1;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#h3#0;n#div#0;n#div#5;n#div#1;n#div#0;n#div#0;n#form#0;n#div#1;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#div#1;n#div#5;n#div#1;n#div#0;n#div#0;n#form#0;n#div#1;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#div#2;n#div#5;n#div#1;n#div#0;n#div#0;n#form#0;n#div#1;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#div#3;n#div#5;n#div#1;n#div#0;n#div#0;n#form#0;n#div#1;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
