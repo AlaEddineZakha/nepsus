@@ -3,6 +3,7 @@
 namespace AppBundle\Controller;
 
 use AppBundle\Entity\Category;
+use AppBundle\Entity\Modules;
 use AppBundle\Form\CategoryFormType;
 use function PHPSTORM_META\type;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -15,15 +16,22 @@ class CategoryController extends Controller
      * @Route("/categories")
      */
     public function showAllAction(Request $request)
-    {
+    {   $em = $this->getDoctrine()->getManager();
+        $modulecategories=$em->getRepository(Modules::class)->findOneBy(array('nom' => 'Categories'));
+
         $repository = $this->getDoctrine()->getRepository('AppBundle:Category');
         $categories = $repository->findAll();
 
+        if ($modulecategories->getActive()==true)
+        {
+            return $this->render('produits/categories/list.html.twig', [
+                'categories' => $categories
 
-        return $this->render('produits/categories/list.html.twig', [
-            'categories' => $categories,
+            ]);
 
-        ]);
+        }
+
+        return $this->redirectToRoute('pagenotallowed');
 
     }
 
@@ -35,6 +43,7 @@ class CategoryController extends Controller
     public function newAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
+        $modulecategories=$em->getRepository(Modules::class)->findOneBy(array('nom' => 'Categories'));
         $repository=$em->getRepository('AppBundle:Category');
         $parents=$repository->findAll();
         if ($request->isMethod('POST')) {

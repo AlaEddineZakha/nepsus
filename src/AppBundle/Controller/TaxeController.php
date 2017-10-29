@@ -43,7 +43,7 @@ class TaxeController extends Controller
 
             $taxe->setMontant($request->request->get('taux'));
 
-             dump($taxe);
+
 
 
             $em = $this->getDoctrine()->getManager();

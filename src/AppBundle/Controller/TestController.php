@@ -57,6 +57,15 @@ class TestController extends Controller
 
     }
 
+
+    public function notallowedAction(Request $request)
+    {
+
+
+        return $this->render('pagenotallowed.html.twig');
+
+    }
+
     /**
      *@Route("/fill10kproducts", name="testproduct")
      */

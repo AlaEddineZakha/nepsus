@@ -193,12 +193,37 @@ loadingconfig:
     path:      /loading
     defaults:  { _controller: AppBundle:Configuration:loading }
 
+pagenotallowed:
+    path:     /pagenotallowed
+    defaults: { _controller: AppBundle:Test:notallowed }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 pageNotFound:
-    path:  /{path}
-    defaults: { _controller: AppBundle:Test:notfound, path: '' }
+    path:      /{path}
+    defaults:  { _controller: AppBundle:Test:notfound, path: '' }
     requirements:
         path: .*
+
+
+
 
 
 

@@ -9,6 +9,7 @@ use AppBundle\Entity\LigneFC;
 use AppBundle\Entity\LigneBCC;
 use AppBundle\Entity\BonCommandeClient;
 use AppBundle\Entity\Client;
+use AppBundle\Entity\Modules;
 use AppBundle\Entity\User;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Component\HttpFoundation\Response;
@@ -31,6 +32,37 @@ class ConfigurationController extends Controller
             $em = $this->getDoctrine()->getManager();
             $config = new Configuration();
             $admin = new User();
+            $modules = $em->getRepository(Modules::class)->findAll();
+            foreach ($modules as $module) {
+                // $advert est une instance de Advert
+                if ($module->getNom() == 'Entrepots') {
+                    if (empty($request->request->get('module_entrepots'))) {
+                        $module->setActive(0);
+                    } else {
+                        $module->setActive(1);
+
+                    }
+                }
+
+                if ($module->getNom() == 'Fournisseurs') {
+                    if (empty($request->request->get('module_fournisseurs'))) {
+                        $module->setActive(0);
+                    } else {
+                        $module->setActive(1);
+
+                    }
+                }
+
+                if ($module->getNom() == 'Categories') {
+                    if (empty($request->request->get('module_categories'))) {
+                        $module->setActive(0);
+                    } else {
+                        $module->setActive(1);
+
+                    }
+                }
+            }
+            $em->persist($module);
             $admin->setPlainPassword($request->request->get('password'));
             $admin->setEnabled('true');
             $admin->setRoles(array('ROLE_SUPER_ADMIN'));
@@ -58,7 +90,6 @@ class ConfigurationController extends Controller
             $config->setAdministrateur($admin);
 
 
-
             $em->persist($config);
             $em->flush();
 
@@ -72,4 +103,5 @@ class ConfigurationController extends Controller
     {
         return $this->render(':Configuration:loading.html.twig');
     }
+
 }
