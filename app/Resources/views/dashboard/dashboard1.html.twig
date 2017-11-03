@@ -746,7 +746,18 @@
     <script>
         $( document ).ready(function() {
             $.getJSON( "api/modules", function( data ) {
-             console.log(data);
+                $.each($(data), function(key, value) {
+
+                    if (value['nom']==='Categories')
+                    {
+                        if (value['active']===false)
+                        {
+                            $('#menucategories').hide();
+                        }
+
+
+                    }
+                });
             });
 
         /*$.ajax({
