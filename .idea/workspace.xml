@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="14e57119-6d11-439a-90fa-9334e3be0203" name="Default" comment="02/05/2017  V1.1">
+    <list default="true" id="14e57119-6d11-439a-90fa-9334e3be0203" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/dashboard/dashboard1.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/dashboard/dashboard1.html.twig" />
     </list>
@@ -193,8 +193,8 @@
       <file leaf-file-name="dashboard1.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/dashboard/dashboard1.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="751" column="21" lean-forward="true" selection-start-line="751" selection-start-column="21" selection-end-line="751" selection-end-column="21" />
+            <state relative-caret-position="347">
+              <caret line="759" column="15" lean-forward="true" selection-start-line="759" selection-start-column="15" selection-end-line="759" selection-end-column="15" />
               <folding>
                 <element signature="e#798#3439#0#Twig" expanded="false" />
                 <element signature="e#4168#10814#0#Twig" expanded="false" />
@@ -1112,7 +1112,7 @@
       <workItem from="1508009479942" duration="53000" />
       <workItem from="1508009548847" duration="8981000" />
       <workItem from="1508027836801" duration="33386000" />
-      <workItem from="1508428768249" duration="171594000" />
+      <workItem from="1508428768249" duration="171891000" />
     </task>
     <task id="LOCAL-00001" summary="02/05/2017  V1.01&#10;">
       <created>1493722777132</created>
@@ -1436,11 +1436,18 @@
       <option name="project" value="LOCAL" />
       <updated>1509676755636</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="02/05/2017  V1.1">
+      <created>1509678192671</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1509678192671</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1321966000" />
+    <option name="totallyTimeSpent" value="1322263000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1989,8 +1996,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/dashboard/dashboard1.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="751" column="21" lean-forward="true" selection-start-line="751" selection-start-column="21" selection-end-line="751" selection-end-column="21" />
+        <state relative-caret-position="347">
+          <caret line="759" column="15" lean-forward="true" selection-start-line="759" selection-start-column="15" selection-end-line="759" selection-end-column="15" />
           <folding>
             <element signature="e#798#3439#0#Twig" expanded="false" />
             <element signature="e#4168#10814#0#Twig" expanded="false" />

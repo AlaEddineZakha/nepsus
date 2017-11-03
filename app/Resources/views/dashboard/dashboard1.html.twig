@@ -752,39 +752,13 @@
                     {
                         if (value['active']===false)
                         {
-                            $('#menucategories').hide();
+                            //$('#menucategories').hide();
+                            document.getElementById('menucategories').style.display="none";
                         }
-
-
                     }
                 });
             });
 
-        /*$.ajax({
-            type: 'GET',
-            url: 'api/modules',
-            dataType: 'json',
-            data:$(this).serialize(),
-            success: function(data)
-            {
-
-                $.each($(data), function(key, value) {
-
-                    if (value['nom']==='Categories')
-                    {
-                        if (value['active']===false)
-                        {
-                            $('#menucategories').hide();
-                        }
-
-
-                    }
-                });
-
-            }
-
-             });
- */
         });
 
     </script>
