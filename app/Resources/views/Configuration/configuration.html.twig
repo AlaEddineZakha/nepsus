@@ -104,8 +104,8 @@ License: You must have a valid license purchased only from themeforest(the above
                         </div>
                         <div class="portlet-body form">
                             <form class="form-horizontal" action="{{ path('initconfig') }}" id="submit_form" method="POST">
-                                <div class="form-wizard">
-                                    <div class="form-body">
+                                <div class="form-wizard" >
+                                    <div class="form-body" id="tabs_form">
                                         <ul class="nav nav-pills nav-justified steps">
                                             <li>
                                                 <a href="#tab1" data-toggle="tab" class="step">
@@ -908,7 +908,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
                                                     <i class="fa fa-angle-right"></i>
                                                 </a>
-                                                <button class="btn green button-submit" type="submit"> Soumettre</button>
+                                                <button class="btn green button-submit" type="submit" id="soumettre"> Soumettre</button>
 
 
                                             </div>
@@ -996,6 +996,19 @@ for(var i=0;i<$k.length;i++)
         }
     });
 }
+
+</script>
+<script>
+    $( document ).ready(function() {
+        $( '#soumettre' ).hide();
+        $( '#continuer' ).click(function() {
+            if ($('#tab4').attr('class')==="tab-pane active")
+            {
+                $( '#soumettre' ).show();
+            }
+        });
+
+    });
 
 </script>
 <!-- BEGIN LOGO -->
