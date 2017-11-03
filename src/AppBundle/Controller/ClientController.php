@@ -434,7 +434,7 @@ class ClientController extends  Controller
 
                 $message = (new \Swift_Message(" Nepsus : nouvelle notification de commande #" . $bc->getId() . " a été créé  "))
                     ->setFrom('achref.tlija@gmail.com')
-                    ->setTo('achref13.tlija@gmail.com')
+                    ->setTo($client->getEmail())
                     ->attach(\Swift_Attachment::fromPath('https://madeby.google.com/static/images/google_g_logo.svg'))
                     ->setBody($this->renderView(
 
