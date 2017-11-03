@@ -185,6 +185,9 @@ promoteuser:
     path:      /promote
     defaults:  { _controller: AppBundle:Reset:promoteUser }
 
+
+#--------------------- Fournisseurs -------------------#
+
 initconfig:
     path:      /config
     defaults:  { _controller: AppBundle:Configuration:index }
@@ -192,6 +195,12 @@ initconfig:
 loadingconfig:
     path:      /loading
     defaults:  { _controller: AppBundle:Configuration:loading }
+
+configurationgenerale:
+    path:      /configuration/{id}/generale
+    defaults:  { _controller: AppBundle:Configuration:edit }
+    requirements:
+                id: \d+
 
 pagenotallowed:
     path:     /pagenotallowed

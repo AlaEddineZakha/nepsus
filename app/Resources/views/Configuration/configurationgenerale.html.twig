@@ -28,11 +28,11 @@
                 <i class="fa fa-circle"></i>
             </li>
             <li>
-                <span>Gestion des clients</span>
+                <span>Configuration</span>
                 <i class="fa fa-circle"></i>
             </li>
             <li>
-                <span>Modifier client</span>
+                <span>Générale</span>
 
             </li>
         </ul>
@@ -40,22 +40,22 @@
     </div>
     <!-- END PAGE BAR -->
     <!-- BEGIN PAGE TITLE-->
-    <h1 class="page-title"> Modifier client
+    <h1 class="page-title"> Configuration générale
         <small></small>
     </h1>
     <!-- END PAGE TITLE-->
     <!-- END PAGE HEADER-->
     <div class="row">
         <div class="col-md-12">
-            <form class="form-horizontal form-row-seperated" action="{{ path('editclient' , {'id': client.id } ) }}" method="post" id="signupForm">
+            <form class="form-horizontal form-row-seperated" action="{{ path('configurationgenerale' , {'id': config.id } ) }}" method="post" id="signupForm">
                 <div class="portlet">
                     <div class="portlet-title">
                         <div class="caption">
-                            <i class="fa fa-user-plus"></i>{{ client.raison }} </div>
+                            <i class="fa fa-user-plus"></i>{{ config.raison }} </div>
                         <div class="actions btn-set">
 
                             <button class="btn btn-success">
-                                <i class="fa fa-check"></i> Save</button>
+                                <i class="fa fa-check"></i> Enregistrer</button>
 
 
                         </div>
@@ -72,22 +72,13 @@
 
                                     </a>
                                 </li>
+
                                 <li>
-                                    <a href="#tab_2" data-toggle="tab"> Contacts
+                                    <a href="#tab_2" data-toggle="tab"> Régulation
 
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="#tab_3" data-toggle="tab"> Factures </a>
-                                </li>
-                                <li>
-                                    <a href="#tab_4" data-toggle="tab"> Transactions
-                                        <span class="badge badge-danger"> 2 </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#tab_5" data-toggle="tab"> Historique </a>
-                                </li>
+
                             </ul>
                             <div class="tab-content">
                                 <div class="tab-pane active" id="tab_0">
@@ -96,24 +87,26 @@
                                             <div class="portlet yellow-crusta box">
                                                 <div class="portlet-title">
                                                     <div class="caption">
-                                                        <i class="fa fa-cogs"></i>Factures </div>
+                                                        <i class="fa fa-cogs"></i>Information bancaires </div>
 
                                                 </div>
                                                 <div class="portlet-body">
                                                     <div class="row static-info">
-                                                        <div class="col-md-5 name"> Payés : </div>
+                                                        <div class="col-md-5 name"> IBAN : </div>
                                                         <div class="col-md-7 value">
-
+                                                            {{ config.iban }}
                                                         </div>
                                                     </div>
                                                     <div class="row static-info">
-                                                        <div class="col-md-5 name"> Non payés: </div>
-                                                        <div class="col-md-7 value"></div>
+                                                        <div class="col-md-5 name"> RIB: </div>
+                                                        <div class="col-md-7 value">
+                                                            {{ config.rib }}
+                                                        </div>
                                                     </div>
                                                     <div class="row static-info">
-                                                        <div class="col-md-5 name"> Annulé: </div>
+                                                        <div class="col-md-5 name"> BIC: </div>
                                                         <div class="col-md-7 value">
-
+                                                            {{ config.bic }}
                                                         </div>
                                                     </div>
 
@@ -124,25 +117,25 @@
                                             <div class="portlet blue-hoki box">
                                                 <div class="portlet-title">
                                                     <div class="caption">
-                                                        <i class="fa fa-cogs"></i>Informations du client </div>
+                                                        <i class="fa fa-cogs"></i>Informations du société </div>
 
                                                 </div>
                                                 <div class="portlet-body">
                                                     <div class="row static-info">
                                                         <div class="col-md-5 name"> Raison social: </div>
-                                                        <div class="col-md-7 value"> {{ client.raison }} </div>
-                                                    </div>
-                                                    <div class="row static-info">
-                                                        <div class="col-md-5 name"> Email: </div>
-                                                        <div class="col-md-7 value"> {{ client.email }} </div>
+                                                        <div class="col-md-7 value"> {{ config.raison }} </div>
                                                     </div>
                                                     <div class="row static-info">
                                                         <div class="col-md-5 name"> Ville: </div>
-                                                        <div class="col-md-7 value"> {{ client.ville }} </div>
+                                                        <div class="col-md-7 value"> {{ config.ville }} </div>
                                                     </div>
                                                     <div class="row static-info">
                                                         <div class="col-md-5 name"> Numéro de téléphone: </div>
-                                                        <div class="col-md-7 value"> {{ client.telephone }} </div>
+                                                        <div class="col-md-7 value"> {{ config.telephone }} </div>
+                                                    </div>
+                                                    <div class="row static-info">
+                                                        <div class="col-md-5 name"> Numéro de fax: </div>
+                                                        <div class="col-md-7 value"> {{ config.fax }} </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -158,10 +151,10 @@
                                                 </div>
                                                 <div class="portlet-body">
                                                     <div class="row static-info">
-                                                        <div class="col-md-12 value"> {{ client.raison }}
-                                                            <br> # {{ client.adresse }}
-                                                            <br> {{ client.ville }},{{ client.region }}
-                                                            <br> {{ client.pays }}
+                                                        <div class="col-md-12 value"> {{ config.raison }}
+                                                            <br> # {{ config.adresse }}
+                                                            <br> {{ config.ville }}
+                                                            <br> {{ config.pays }}
 
                                                             <br> </div>
                                                     </div>
@@ -177,12 +170,11 @@
                                                 </div>
                                                 <div class="portlet-body">
                                                     <div class="row static-info">
-                                                            <div class="col-md-12 value"> {{ client.raison }}
-                                                                <br> # {{ client.adresse }}
-                                                                <br> {{ client.ville }},{{ client.region }}
-                                                                <br> {{ client.pays }}
+                                                        <div class="col-md-12 value">
 
-                                                                <br> </div>
+
+                                                               </div>
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -199,51 +191,19 @@
                                                         <span class="required" style="font-size: large"> * </span>
                                                     </label>
                                                     <div class="col-md-8">
-                                                        <input type="text" name="raison" id="raison" data-required="1" class="form-control" value="{{ client.raison }}" />
+                                                        <input type="text" name="raison" id="raison" data-required="1" class="form-control" value="{{ config.raison }}" />
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label class="control-label col-md-4"  style="text-align: start">Capital
-                                                        <span class="required" style="font-size: large"> * </span>
+                                                    <label class="control-label col-md-4"  style="text-align: start">Abréviation
+                                                        <span class="required" style="font-size: large"> </span>
                                                     </label>
                                                     <div class="col-md-8">
-                                                        <input type="text" name="cap" id="cap"  class="form-control" value="{{ client.capital }}" />
+                                                        <input type="text" name="abreviation" id="abreviation"  class="form-control" value="{{ config.abreviation }}" />
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label class="col-md-4 control-label" style="text-align: start">Email
-                                                        <span class="required" style="font-size: large"> * </span>
-                                                    </label>
-                                                    <div class="col-md-8">
-
-
-                                                        <input type="email" name="email" class="form-control" value="{{ client.email }}"> </div>
-
-                                                </div>
-
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label class="control-label col-md-4"  style="text-align: start">Registre de commerce
-                                                        <span class="required" style="font-size: large"> * </span>
-                                                    </label>
-                                                    <div class="col-md-8">
-                                                        <input type="text" name="registre" id="registre"  class="form-control" value="{{ client.registre }}" />
-                                                    </div>
-
-                                                </div>
-
-
-
                                             </div>
                                         </div>
                                     </div>
@@ -251,109 +211,42 @@
                                         <div class="col-md-12">
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label class="control-label col-md-4" style="text-align: start">Télephone 1
+                                                    <label class="control-label col-md-4" for="raison" style="text-align: start">Téléphone
                                                         <span class="required" style="font-size: large"> * </span>
                                                     </label>
                                                     <div class="col-md-8">
-                                                        <input type="text" name="tel1" id="tel1"  class="form-control" value="{{ client.telephone }}" />
-
+                                                        <input type="text" name="telephone" id="telephone" data-required="1" class="form-control" value="{{ config.telephone }}" />
                                                     </div>
                                                 </div>
-
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label class="control-label col-md-4" style="text-align: justify">Forme juridique
-                                                        <span class="required" style="font-size: large"> * </span>
+                                                    <label class="control-label col-md-4"  style="text-align: start">Fax
+                                                        <span class="required" style="font-size: large"> </span>
                                                     </label>
                                                     <div class="col-md-8">
-                                                        <select class="form-control select2me" id="formejuridique" name="formejuridique" data-live-search="true" data-size="8" >
-                                                            <option value="">Select...</option>
-                                                            <option value="Entreprise individuelle">Entreprise individuelle</option>
-                                                            <option value="Société à responsabilité limitée (SARL)">Société à responsabilité limitée (SARL)</option>
-                                                            <option value="Société unipersonnelle à responsabilité limitée (SUARL)">Société unipersonnelle à responsabilité limitée (SUARL)</option>
-                                                            <option value="Société anonyme (SA)">Société anonyme (SA)</option>
-                                                            <option value="Société en commandite par actions (SCA)">Société en commandite par actions (SCA)</option>
-
-                                                        </select>
+                                                        <input type="text" name="fax" id="fax"  class="form-control" value="{{ config.fax }}" />
                                                     </div>
-
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label class="control-label col-md-4" style="text-align: start">Télephone 2
-
-                                                    </label>
-                                                    <div class="col-md-8">
-                                                        <input type="text" name="tel2" id="tel2"  class="form-control" value="{{ client.mobile }}" />
-
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label class="control-label col-md-4"  style="text-align: start">Matricule fiscal
+                                                    <label class="control-label col-md-4" for="raison" style="text-align: start">Ville
                                                         <span class="required" style="font-size: large"> * </span>
                                                     </label>
                                                     <div class="col-md-8">
-                                                        <input type="text" name="mf" id="mf"  class="form-control" value="{{ client.matriculefiscale }}" />
-                                                    </div>
-
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-
-                                                    <label class="control-label col-md-4" style="text-align: start">Fax
-
-                                                    </label>
-                                                    <div class="col-md-8">
-                                                        <input type="text" name="fax" id="fax"  class="form-control" value="{{ client.fax }}"/>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-
-                                                    <label class="control-label col-md-4" style="text-align: start">Region
-
-                                                    </label>
-                                                    <div class="col-md-8">
-                                                        <input type="text" name="region" id="region"  class="form-control" value="{{ client.region }}"/>
+                                                        <input type="text" name="ville" id="ville" data-required="1" class="form-control" value="{{ config.ville }}" />
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
-
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label class="control-label col-md-4" style="text-align: start">Ville
-
-                                                    </label>
-                                                    <div class="col-md-8">
-                                                        <input type="text" name="ville" id="ville"  class="form-control" value="{{ client.ville }}" />
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="control-label col-md-4" style="text-align: start">Pays
-                                                        <span class="required" style="font-size: large"> * </span>
+                                                    <label class="control-label col-md-4"  style="text-align: start">Pays
+                                                        <span class="required" style="font-size: large"> </span>
                                                     </label>
                                                     <div class="col-md-8">
                                                         <select class="form-control select2me" name="pays" id="pays" data-live-search="true" data-size="8">
@@ -598,177 +491,92 @@
                                                     </div>
                                                 </div>
                                             </div>
-
-                                            <div class="col-md-6">
-
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label class="control-label col-md-4" style="text-align: start">Adresse
-                                                        <span class="required" style="font-size: large"> * </span>
-
-                                                    </label>
-                                                    <div class="col-md-8">
-                                                        <input type="text" name="adresse" id="adresse"  class="form-control" value="{{ client.adresse }}" />
-                                                    </div>
-                                                </div>
-
-                                            </div>
-
-                                            <div class="col-md-6">
-
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label class="control-label col-md-4"  style="text-align: start">Site web
-
-                                                    </label>
-                                                    <div class="col-md-8">
-                                                        <input name="site" id="site" type="text" class="form-control" value="{{ client.siteweb }}" />
-                                                        <span class="help-block"> e.g: http://www.demo.com </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-6">
-
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="tab-pane" id="tab_2">
-
-                                </div>
-
-                                <div class="tab-pane" id="tab_3">
-                                    <div class="col-md-12">
-                                        <!-- BEGIN EXAMPLE TABLE PORTLET-->
-                                        <div class="portlet light bordered">
-                                            <div class="portlet-title">
-                                                <div class="caption font-dark">
-
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-4" for="raison" style="text-align: start">IBAN
+                                                        <span class="required" style="font-size: large">  </span>
+                                                    </label>
+                                                    <div class="col-md-8">
+                                                        <input type="text" name="raison" id="raison" data-required="1" class="form-control" value="{{ config.iban }}" />
+                                                    </div>
                                                 </div>
-                                                <div class="tools"> </div>
                                             </div>
-                                            <div class="portlet-body">
-                                                <table class="table table-striped table-bordered table-hover" id="sample_1">
-                                                    <thead>
-                                                    <tr>
-                                                        <th>Id</th>
-                                                        <th>Ajout</th>
-                                                        <th>Echeance</th>
-                                                        <th>TotalHT</th>
-                                                        <th>TotalTTC</th>
-                                                        <th>Statut</th>
-                                                        <th>Actions</th>
-                                                    </tr>
-                                                    </thead>
-                                                    <tfoot>
-                                                    <tr>
-                                                        <th>Id</th>
-                                                        <th>Ajout</th>
-                                                        <th>Echeance</th>
-                                                        <th>TotalHT</th>
-                                                        <th>TotalTTC</th>
-                                                        <th>Statut</th>
-                                                        <th>Actions</th>
-                                                    </tr>
-                                                    </tfoot>
-                                                    <tbody>
-
-
-                                                    {% for e in client.listecommandes %}
-
-                                                        {% for a in e.facture %}
-
-                                                            <tr>
-                                                                <td>{{ a.id }}</td>
-                                                                <td>{{ a.created|date('Y-m-d') }}</td>
-                                                                <td>{{ a.dateecheance|date('Y-m-d') }}</td>
-                                                                <td>{{ a.totalht }} TND</td>
-                                                                <td>{{ a.totalttc }} TND</td>
-                                                                <td> <span class="label label-sm label-warning">{{ a.statut }} </span></td>
-                                                                <td>
-                                                                    <a href="javascript:;" class="btn btn-icon-only blue" ><i class="fa fa-search"></i> </a>
-                                                                    <a href="{{ path('viewfactureclient', {'id': a.id }) }}" class="btn btn-icon-only yellow" ><i class="fa fa-edit"></i> </a>
-                                                                    <a href="javascript:;" class="btn btn-icon-only red" onclick="myFunction({{ a.id }})"><i class="fa fa-times"></i> </a>
-
-                                                                </td>
-
-                                                            </tr>
-                                                        {% endfor %}
-                                                    {% endfor %}
-
-                                                    </tbody>
-                                                </table>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-4"  style="text-align: start">RIB
+                                                        <span class="required" style="font-size: large"> </span>
+                                                    </label>
+                                                    <div class="col-md-8">
+                                                        <input type="text" name="cap" id="cap"  class="form-control" value="{{ config.rib }}" />
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-
                                     </div>
-                                </div>
-                                <div class="tab-pane" id="tab_4">
-
-                                </div>
-                                <div class="tab-pane" id="tab_5">
-                                    <div class="col-md-12">
-                                        <!-- BEGIN EXAMPLE TABLE PORTLET-->
-                                        <div class="portlet light bordered">
-                                            <div class="portlet-title">
-                                                <div class="caption font-dark">
-
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-4" for="raison" style="text-align: start">BIC
+                                                        <span class="required" style="font-size: large">  </span>
+                                                    </label>
+                                                    <div class="col-md-8">
+                                                        <input type="text" name="raison" id="raison" data-required="1" class="form-control" value="{{ config.bic }}" />
+                                                    </div>
                                                 </div>
-                                                <div class="tools"> </div>
                                             </div>
-                                            <div class="portlet-body">
-                                                <table class="table table-striped table-bordered table-hover" id="sample_1">
-                                                    <thead>
-                                                    <tr>
-                                                        <th>Id</th>
-                                                        <th>Date</th>
-                                                        <th>Description</th>
-                                                    </tr>
-                                                    </thead>
-                                                    <tfoot>
-                                                    <tr>
-                                                        <th>Id</th>
-                                                        <th>Date</th>
-                                                        <th>Description</th>
-
-                                                    </tr>
-                                                    </tfoot>
-                                                    <tbody>
-
-
-                                                    {% for c in client.historiques %}
-                                                        <tr>
-                                                            <td>{{ c.id }}</td>
-                                                            <td>{{ c.time|date('Y-m-d  H:m:s') }}</td>
-                                                            <td>{{ c.action }}</td>
-                                                        </tr>
-                                                    {% endfor %}
-
-                                                    </tbody>
-                                                </table>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-4"  style="text-align: start">Code douane
+                                                        <span class="required" style="font-size: large">  </span>
+                                                    </label>
+                                                    <div class="col-md-8">
+                                                        <input type="text" name="cap" id="cap"  class="form-control" value="{{ config.codedouane }}" />
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-4" for="raison" style="text-align: start">Registre de commerce
+                                                        <span class="required" style="font-size: large"> * </span>
+                                                    </label>
+                                                    <div class="col-md-8">
+                                                        <input type="text" name="raison" id="raison" data-required="1" class="form-control" value="{{ config.registredecommerce }}" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-4"  style="text-align: start">Matricuel fiscal
+                                                        <span class="required" style="font-size: large"> * </span>
+                                                    </label>
+                                                    <div class="col-md-8">
+                                                        <input type="text" name="cap" id="cap"  class="form-control" value="{{ config.matriculefiscale }}" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
+
+
                             </div>
                         </div>
                     </div>
+
                 </div>
+
             </form>
         </div>
     </div>
@@ -811,8 +619,8 @@
 
 
         $().ready(function() {
-            $("#formejuridique").val("{{ client.formejuridique }}").change();
-            $("#pays").val("{{ client.pays }}").change();
+            $("#formejuridique").val("{{ config.formejuridique }}").change();
+           $("#pays").val("{{ config.pays }}").change();
 
             /*
              console.log($('#tva').val());

@@ -2,11 +2,10 @@
 
 {% block menu %}
 
-
     {% if app.request.attributes.get('_route') =='dashboard' %}
         <li class="nav-item active open">
             <a href="{{ path('dashboard') }}" class="nav-link nav-toggle">
-                <i class="icon-home"></i>
+                <i class="icon-speedometer"></i>
                 <span class="title">Tableau de bord</span>
 
 
@@ -425,6 +424,29 @@
 
         </ul>
     </li>
+    <li class="nav-item  ">
+        <a href="javascript:;" class="nav-link nav-toggle">
+            <i class="icon-credit-card"></i>
+            <span class="title">Dépenses</span>
+            <span class="arrow"></span>
+
+        </a>
+        <ul class="sub-menu ">
+            <li class="nav-item  ">
+                <a href="{{ path('addclient') }}" class="nav-link">
+                    <span class="title">Nouvelle transaction</span>
+
+                </a>
+            </li>
+            <li class="nav-item  ">
+                <a href="{{ path('listclient') }}" class="nav-link ">
+                    <span class="title">Liste des transactions</span>
+                </a>
+            </li>
+
+
+        </ul>
+    </li>
     <li class="heading" >
         <h3 class="uppercase" style="font-weight: 600 ; color: white;"><i class="icon-grid"></i>  Stock</h3>
     </li>
@@ -451,8 +473,10 @@
 
         </ul>
     </li>
-   {% if modulecategories.active==true %}
-    <li class="nav-item">
+
+
+
+    <li class="nav-item" id="menucategories">
         <a href="javascript:;" class="nav-link nav-toggle">
             <i class="icon-tag"></i>
             <span class="title">Categories</span>
@@ -475,11 +499,77 @@
 
         </ul>
     </li>
-{% endif %}
+
+    <li class="nav-item">
+        <a href="javascript:;" class="nav-link nav-toggle">
+            <i class="icon-tag"></i>
+            <span class="title">Lots</span>
+            <span class="arrow"></span>
+
+        </a>
+        <ul class="sub-menu ">
+            <li class="nav-item  ">
+                <a href="{{ path('addcategory') }}" class="nav-link">
+                    <span class="title">Nouveau lot</span>
+
+                </a>
+            </li>
+            <li class="nav-item  ">
+                <a href="{{ path('listcategories') }}" class="nav-link ">
+                    <span class="title">Liste des lots</span>
+                </a>
+            </li>
+
+
+        </ul>
+    </li>
+    <li class="nav-item">
+        <a href="javascript:;" class="nav-link nav-toggle">
+            <i class="icon-home"></i>
+            <span class="title">Entrepots</span>
+            <span class="arrow"></span>
+
+        </a>
+        <ul class="sub-menu ">
+            <li class="nav-item  ">
+                <a href="{{ path('addcategory') }}" class="nav-link">
+                    <span class="title">Nouveau entrepot</span>
+
+                </a>
+            </li>
+            <li class="nav-item  ">
+                <a href="{{ path('listcategories') }}" class="nav-link ">
+                    <span class="title">Liste des entrepots</span>
+                </a>
+            </li>
+
+
+        </ul>
+    </li>
+
     <li class="heading">
 
         <h3 class="uppercase" style="font-weight: 600 ; color: white;"> <i class="icon-settings"></i>  Configuration</h3>
     </li>
+    <li class="nav-item  ">
+        <a href="javascript:;" class="nav-link nav-toggle">
+            <i class="icon-equalizer"></i>
+            <span class="title">Générale</span>
+
+
+        </a>
+
+    </li>
+    <li class="nav-item  ">
+        <a href="javascript:;" class="nav-link nav-toggle">
+            <i class="icon-rocket"></i>
+            <span class="title">Application</span>
+
+
+        </a>
+
+    </li>
+
 {% endblock %}
 {% block container %}
     <div class="page-bar">
@@ -652,4 +742,39 @@
 
     <script src="{{ asset('Template/assets/pages/scripts/dashboard.min.js') }}" type="text/javascript"></script>
 
+
+    <script>
+        $( document ).ready(function() {
+            $.getJSON( "api/modules", function( data ) {
+             console.log(data);
+            });
+
+        /*$.ajax({
+            type: 'GET',
+            url: 'api/modules',
+            dataType: 'json',
+            data:$(this).serialize(),
+            success: function(data)
+            {
+
+                $.each($(data), function(key, value) {
+
+                    if (value['nom']==='Categories')
+                    {
+                        if (value['active']===false)
+                        {
+                            $('#menucategories').hide();
+                        }
+
+
+                    }
+                });
+
+            }
+
+             });
+ */
+        });
+
+    </script>
 {% endblock %}

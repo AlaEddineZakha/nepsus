@@ -104,4 +104,49 @@ class ConfigurationController extends Controller
         return $this->render(':Configuration:loading.html.twig');
     }
 
+    public function editAction(Request $request ,$id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $config = $em->getRepository(Configuration::class)->find($id);
+        $modulecategories=$em->getRepository(Modules::class)->findOneBy(array('nom' => 'Categories'));
+        $logo=$config->getLogo();
+
+
+            $image = base64_encode(stream_get_contents($logo));
+
+        if ($request->isMethod('POST')) {
+
+
+            $config->setInit(1);
+            $config->setMatriculefiscale($request->request->get('mf'));
+            $config->setRaison($request->request->get('raison'));
+            $config->setAdresse($request->request->get('addresse'));
+            $config->setVille($request->request->get('ville'));
+            $config->setPays($request->request->get('pays'));
+            $config->setTelephone($request->request->get('telephone'));
+            $config->setSiteweb($request->request->get('siteweb'));
+            $config->setRegistredecommerce($request->request->get('registre'));
+            $config->setLastmodified(new \DateTime());
+            $config->setFax($request->request->get('fax'));
+            $config->setFormejuridique($request->request->get('formejuridique'));
+            $config->setCodedouane($request->request->get('codedouane'));
+            $config->setIban($request->request->get('iban'));
+            $config->setRib($request->request->get('rib'));
+            $config->setBic($request->request->get('bic'));
+            $config->setAbreviation($request->request->get('abreviation'));
+
+
+
+            $em->persist($config);
+            $em->flush();
+
+            return $this->redirectToRoute('dashboard');
+        }
+
+        return $this->render(':Configuration:configurationgenerale.html.twig', [
+            'config' => $config
+
+        ]);
+    }
+
 }

@@ -82,6 +82,31 @@ class APIController extends Controller
 
         return new Response($jsonContent);
     }
+
+    /**
+     * @Route("/api/modules",name="getallmodules")
+     * @Method("GET")
+     */
+    public function getallmodulesAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $modulecategories=$em->getRepository(Modules::class)->findOneBy(array('nom' => 'Categories'))->getActive();
+        $module=$em->getRepository(Modules::class)->findAll();
+
+        $normalizer = new ObjectNormalizer();
+        $normalizer->setCircularReferenceHandler(function ($object) {
+            return $object->getId();
+        });
+
+        $encoder = new JsonEncode();
+
+        $serializer = new Serializer(array($normalizer), array($encoder));
+
+        $jsonContent = $serializer->serialize($module, 'json');
+
+        return new Response($jsonContent);
+
+    }
 }
 
 

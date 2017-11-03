@@ -26,17 +26,12 @@ class AdminController extends  Controller
         if( $this->getUser()) {
 
         $em = $this->getDoctrine()->getManager();
-        $modulecategories=$em->getRepository(Modules::class)->findOneBy(array('nom' => 'Categories'));
-        $moduleentrepots=$em->getRepository(Modules::class)->findOneBy(array('nom' => 'Entrepots'));
-        $modulefournisseurs=$em->getRepository(Modules::class)->findOneBy(array('nom' => 'Fournisseurs'));
+
         $result = $em->getRepository('AppBundle:Client')
             ->count();
 
         return $this->render('dashboard/dashboard1.html.twig', [
-            'nbclient' => $result,
-            'modulecategories'=>$modulecategories,
-            'moduleentrepots'=>$moduleentrepots,
-            'modulefournisseurs'=>$modulefournisseurs
+            'nbclient' => $result
 
         ]);
         }
