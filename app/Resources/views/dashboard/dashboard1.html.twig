@@ -485,7 +485,7 @@
         </a>
         <ul class="sub-menu ">
             <li class="nav-item  ">
-                <a href="{{ path('addcategory') }}" class="nav-link">
+                <a href="{{ path('addcategorie') }}" class="nav-link">
                     <span class="title">Nouvelle catégorie</span>
 
                 </a>
@@ -509,7 +509,7 @@
         </a>
         <ul class="sub-menu ">
             <li class="nav-item  ">
-                <a href="{{ path('addcategory') }}" class="nav-link">
+                <a href="#" class="nav-link">
                     <span class="title">Nouveau lot</span>
 
                 </a>
@@ -532,14 +532,37 @@
         </a>
         <ul class="sub-menu ">
             <li class="nav-item  ">
-                <a href="{{ path('addcategory') }}" class="nav-link">
+                <a href="{{ path('addentrepot') }}" class="nav-link">
                     <span class="title">Nouveau entrepot</span>
 
                 </a>
             </li>
             <li class="nav-item  ">
-                <a href="{{ path('listcategories') }}" class="nav-link ">
+                <a href="{{ path('listentrepots') }}" class="nav-link ">
                     <span class="title">Liste des entrepots</span>
+                </a>
+            </li>
+
+
+        </ul>
+    </li>
+    <li class="nav-item">
+        <a href="javascript:;" class="nav-link nav-toggle">
+            <i class="icon-home"></i>
+            <span class="title">Taxes</span>
+            <span class="arrow"></span>
+
+        </a>
+        <ul class="sub-menu ">
+            <li class="nav-item  ">
+                <a href="{{ path('addtaxe') }}" class="nav-link">
+                    <span class="title">Nouveau taxe</span>
+
+                </a>
+            </li>
+            <li class="nav-item  ">
+                <a href="{{ path('listtaxes') }}" class="nav-link ">
+                    <span class="title">Liste des taxes</span>
                 </a>
             </li>
 

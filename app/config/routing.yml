@@ -123,10 +123,28 @@ listfournisseur:
     defaults:  { _controller: AppBundle:Fournisseur:showAll }
 
 
-
+#--------------------- Categories -------------------#
 listcategories:
     path:      /categories
     defaults:  { _controller: AppBundle:Category:showAll }
+
+editcategorie:
+    path:      /categories/{id}/edit
+    defaults:  { _controller: AppBundle:Category:edit }
+    requirements:
+                    id: \d+
+
+addcategorie:
+    path:      /categories
+    defaults:  { _controller: AppBundle:Category:new }
+
+deletecategorie:
+    path:      /categories/{id}/delete
+    defaults:  { _controller: AppBundle:Category:delete }
+    requirements:
+                    id: \d+
+    options:
+                expose: true
 
 listbcc:
     path:      /clients/commandes

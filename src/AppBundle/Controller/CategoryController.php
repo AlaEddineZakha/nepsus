@@ -24,7 +24,7 @@ class CategoryController extends Controller
 
         if ($modulecategories->getActive()==true)
         {
-            return $this->render('produits/categories/list.html.twig', [
+            return $this->render('produits/categories/show.html.twig', [
                 'categories' => $categories
 
             ]);
@@ -36,10 +36,7 @@ class CategoryController extends Controller
     }
 
 
-    /**
-     * @Route("/categories/new",name="addcategory")
-     *
-     */
+
     public function newAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
@@ -76,5 +73,69 @@ class CategoryController extends Controller
             'parents' => $parents,
 
         ]);
+    }
+
+    /**
+     * @Route("categories/{id}/delete", name="deletecategorie")
+     */
+    public function deleteAction($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $categorie = $em->getRepository('AppBundle:Category')->find($id);
+
+        $em->remove($categorie);
+
+
+        $em->flush();
+        return $this->redirectToRoute('listcategories');
+
+    }
+
+    /**
+     * @Route("categories/{id}/edit", name="editcategorie")
+     */
+    public function editAction($id, Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $categorie =$em->getRepository('AppBundle:Category')->find($id);
+
+        $parents=$em->getRepository('AppBundle:Category')->findAll();
+        $repository=$em->getRepository('AppBundle:Category');
+        if ($request->isMethod('POST')) {
+
+
+            $categorie->setNom($request->request->get('nom'));
+
+            if ( empty($request->request->get('parent')))
+            {
+                $categorie->setParent(null);
+                $categorie->setDepth(1);
+
+            }
+            else
+            {
+                $parent=$repository->find($request->request->get('parent'));
+                $categorie->setParent($parent);
+                $categorie->setDepth($parent->getDepth()+1);
+
+            }
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($categorie);
+            $em->flush();
+
+            return $this->redirectToRoute('app_category_showall');
+
+
+        }
+
+        return $this->render('produits/categories/edit.html.twig', [
+            'categorie' => $categorie,
+            'parents'=>$parents
+
+
+        ]);
+
+
+        // ... do something, like pass the $product object into a template
     }
 }

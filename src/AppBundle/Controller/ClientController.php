@@ -269,6 +269,7 @@ class ClientController extends  Controller
     public function editAction($id, Request $request)
     {
         $em = $this->getDoctrine()->getManager();
+
         $client = $em->getRepository('AppBundle:Client')->find($id);
         if ($request->isMethod('POST')) {
 

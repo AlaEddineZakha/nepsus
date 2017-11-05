@@ -45,22 +45,22 @@ var Datatable = function() {
                     "pageLength": 10, // default records per page
                     "language": { // language settings
                         // metronic spesific
-                        "metronicGroupActions": "_TOTAL_ records selected:  ",
-                        "metronicAjaxRequestGeneralError": "Could not complete request. Please check your internet connection",
+                        "metronicGroupActions": "_TOTAL_ enregistrements sélectionnés:  ",
+                        "metronicAjaxRequestGeneralError": "Impossible de terminer la requête. S'il vous plaît vérifier votre connexion internet",
 
                         // data tables spesific
                         "lengthMenu": "<span class='seperator'>|</span>View _MENU_ records",
                         "info": "<span class='seperator'>|</span>Found total _TOTAL_ records",
-                        "infoEmpty": "No records found to show",
-                        "emptyTable": "No data available in table",
-                        "zeroRecords": "No matching records found",
+                        "infoEmpty": "Aucun enregistrement trouvé pour montrer",
+                        "emptyTable": "aucune donnée disponible",
+                        "zeroRecords": "Aucun enregistrements correspondants trouvé",
                         "paginate": {
-                            "previous": "Prev",
-                            "next": "Next",
-                            "last": "Last",
-                            "first": "First",
+                            "previous": "Précédent",
+                            "next": "Suivant",
+                            "last": "Dernier",
+                            "first": "Premier",
                             "page": "Page",
-                            "pageOf": "of"
+                            "pageOf": "de"
                         }
                     },
 

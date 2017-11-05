@@ -1,246 +1,219 @@
 {% extends 'dashboard/dashboard1.html.twig' %}
 {% block stylesheets %}
-    <link href="{{ asset('Template/assets/global/plugins/jquery-nestable/jquery.nestable.css') }}" rel="stylesheet" type="text/css" />
+
     {{ parent() }}
+
+    <link href="{{ asset('Template/assets/global/plugins/datatables/datatables.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('Template/assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('Template/assets/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('Template/assets/global/plugins/jstree/dist/themes/default/style.min.css') }}" rel="stylesheet" type="text/css" />
+
 {% endblock %}
 
-{% block container%}
-    <!-- BEGIN PAGE HEADER-->
-    <!-- BEGIN THEME PANEL -->
-    <div class="theme-panel hidden-xs hidden-sm">
-        <div class="toggler"> </div>
-        <div class="toggler-close"> </div>
-        <div class="theme-options">
-            <div class="theme-option theme-colors clearfix">
-                <span> THEME COLOR </span>
-                <ul>
-                    <li class="color-default current tooltips" data-style="default" data-container="body" data-original-title="Default"> </li>
-                    <li class="color-darkblue tooltips" data-style="darkblue" data-container="body" data-original-title="Dark Blue"> </li>
-                    <li class="color-blue tooltips" data-style="blue" data-container="body" data-original-title="Blue"> </li>
-                    <li class="color-grey tooltips" data-style="grey" data-container="body" data-original-title="Grey"> </li>
-                    <li class="color-light tooltips" data-style="light" data-container="body" data-original-title="Light"> </li>
-                    <li class="color-light2 tooltips" data-style="light2" data-container="body" data-html="true" data-original-title="Light 2"> </li>
-                </ul>
-            </div>
-            <div class="theme-option">
-                <span> Layout </span>
-                <select class="layout-option form-control input-sm">
-                    <option value="fluid" selected="selected">Fluid</option>
-                    <option value="boxed">Boxed</option>
-                </select>
-            </div>
-            <div class="theme-option">
-                <span> Header </span>
-                <select class="page-header-option form-control input-sm">
-                    <option value="fixed" selected="selected">Fixed</option>
-                    <option value="default">Default</option>
-                </select>
-            </div>
-            <div class="theme-option">
-                <span> Top Menu Dropdown</span>
-                <select class="page-header-top-dropdown-style-option form-control input-sm">
-                    <option value="light" selected="selected">Light</option>
-                    <option value="dark">Dark</option>
-                </select>
-            </div>
-            <div class="theme-option">
-                <span> Sidebar Mode</span>
-                <select class="sidebar-option form-control input-sm">
-                    <option value="fixed">Fixed</option>
-                    <option value="default" selected="selected">Default</option>
-                </select>
-            </div>
-            <div class="theme-option">
-                <span> Sidebar Menu </span>
-                <select class="sidebar-menu-option form-control input-sm">
-                    <option value="accordion" selected="selected">Accordion</option>
-                    <option value="hover">Hover</option>
-                </select>
-            </div>
-            <div class="theme-option">
-                <span> Sidebar Style </span>
-                <select class="sidebar-style-option form-control input-sm">
-                    <option value="default" selected="selected">Default</option>
-                    <option value="light">Light</option>
-                </select>
-            </div>
-            <div class="theme-option">
-                <span> Sidebar Position </span>
-                <select class="sidebar-pos-option form-control input-sm">
-                    <option value="left" selected="selected">Left</option>
-                    <option value="right">Right</option>
-                </select>
-            </div>
-            <div class="theme-option">
-                <span> Footer </span>
-                <select class="page-footer-option form-control input-sm">
-                    <option value="fixed">Fixed</option>
-                    <option value="default" selected="selected">Default</option>
-                </select>
-            </div>
-        </div>
-    </div>
+{% block container %}
+    <script type="application/javascript">
+        function myFunction($id) {
+
+
+
+            var url = Routing.generate('deletecategorie',{'id':$id});
+
+            swal({
+                    title: "Vous etes sure?",
+                    text: "Cette categorie supprimé définitevement",
+                    type: "warning",
+                    showCancelButton: true,
+                    confirmButtonClass: "btn-danger",
+                    confirmButtonText: "Oui, supprimer le!",
+                    cancelButtonText: "Non, anuuler!",
+                    closeOnConfirm: false,
+                    closeOnCancel: false,
+                    showOkButton:false
+
+                },
+                function (isConfirm) {
+                    if (isConfirm) {
+                        swal("Deleted!", "La catégorie a été supprimé.", "success");
+                        location.href=url;
+                    } else {
+                        swal("Cancelled", "La catégorie n'a pas été supprimé", "error");
+                    }
+                });
+
+        }
+    </script>
+
     <!-- END THEME PANEL -->
     <!-- BEGIN PAGE BAR -->
     <div class="page-bar">
         <ul class="page-breadcrumb">
             <li>
-                <a href="index.html">Home</a>
+                <a href="{{ path('dashboard') }}">Accueil</a>
                 <i class="fa fa-circle"></i>
             </li>
             <li>
-                <span>UI Features</span>
+                <a href="#">Catégories</a>
+                <i class="fa fa-circle"></i>
+            </li>
+            <li>
+                <span>Liste des catégories</span>
             </li>
         </ul>
-        <div class="page-toolbar">
-            <div class="btn-group pull-right">
-                <button type="button" class="btn green btn-sm btn-outline dropdown-toggle" data-toggle="dropdown"> Actions
-                    <i class="fa fa-angle-down"></i>
-                </button>
-                <ul class="dropdown-menu pull-right" role="menu">
-                    <li>
-                        <a href="#">
-                            <i class="icon-bell"></i> Action</a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="icon-shield"></i> Another action</a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="icon-user"></i> Something else here</a>
-                    </li>
-                    <li class="divider"> </li>
-                    <li>
-                        <a href="#">
-                            <i class="icon-bag"></i> Separated link</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+
     </div>
     <!-- END PAGE BAR -->
     <!-- BEGIN PAGE TITLE-->
-    <h1 class="page-title"> Nestable List
-        <small>Drag & drop hierarchical list with mouse and touch compatibility</small>
+    <h1 class="page-title"> Listes des catégories
+
     </h1>
     <!-- END PAGE TITLE-->
     <!-- END PAGE HEADER-->
-    <div class="note note-success">
-        <span class="label label-danger">NOTE!</span>
-        <span class="bold">Nestable List Plugin </span> supported in Firefox, Chrome, Opera, Safari, Internet Explorer 10 and Internet Explorer 9 only. Internet Explorer 8 not supported. For more info please check out
-        <a href="http://dbushell.github.com/Nestable/"
-           target="_blank">the official documentation</a>. </div>
-    <div class="portlet light bordered">
-        <div class="portlet-body ">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="margin-bottom-10" id="nestable_list_menu">
-                        <button type="button" class="btn green btn-outline sbold uppercase" data-action="expand-all">Expand All</button>
-                        <button type="button" class="btn red btn-outline sbold uppercase" data-action="collapse-all">Collapse All</button>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <h3>Serialised Output (per list)</h3>
-                    <textarea id="nestable_list_1_output" class="form-control col-md-12 margin-bottom-10"></textarea>
-                    <textarea id="nestable_list_2_output" class="form-control col-md-12 margin-bottom-10"></textarea>
-                </div>
-            </div>
-        </div>
+    <div class="m-heading-1 border-green m-bordered">
+        <h3>Listes des catégories</h3>
+
     </div>
+
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-8">
+            <!-- BEGIN EXAMPLE TABLE PORTLET-->
             <div class="portlet light bordered">
                 <div class="portlet-title">
                     <div class="caption">
-                        <i class="icon-bubble font-green"></i>
-                        <span class="caption-subject font-green sbold uppercase">Nestable List 1</span>
+                        <i class=" icon-layers font-green"></i>
+                        <span class="caption-subject font-green sbold uppercase">Liste</span>
                     </div>
-                    <div class="actions">
-                        <div class="btn-group">
-                            <a class="btn green-haze btn-outline btn-circle btn-sm" href="javascript:;" data-toggle="dropdown" data-hover="dropdown" data-close-others="true"> Actions
-                                <i class="fa fa-angle-down"></i>
-                            </a>
-                            <ul class="dropdown-menu pull-right">
-                                <li>
-                                    <a href="javascript:;"> Option 1</a>
-                                </li>
-                                <li class="divider"> </li>
-                                <li>
-                                    <a href="javascript:;">Option 2</a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">Option 3</a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">Option 4</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+
                 </div>
-                <div class="portlet-body ">
+                <div class="portlet-body">
+                    <table class="table table-striped table-bordered table-hover" id="sample_1">
+                        <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Libele</th>
+                            <th>Parent</th>
+                            <th>Profendeur</th>
 
+                            <th>Actions</th>
+                        </tr>
+                        </thead>
+                        <tfoot>
+                        <tr>
+                            <th>Id</th>
+                            <th>Libele</th>
+                            <th>Parent</th>
+                            <th>Profendeur</th>
 
+                            <th>Actions</th>
+                        </tr>
+                        </tfoot>
+                        <tbody>
 
-                    <div class="dd" id="nestable_list_1">
-
-                        {% macro recursiveCategory(category) %}
-                            {% import _self as self %}
-
-                            <li><h4>{{ category.nom }}</h4>
-
-
-                                {% if category.children|length %}
-                                    <ul>
-                                        {% for child in category.children %}
-
-                                            {{ self.recursiveCategory(child) }}
-
-                                        {% endfor %}
-                                    </ul>
+                        {% for categorie in categories %}
+                            <tr>
+                                <td>{{ categorie.id }}</td>
+                                <td>{{ categorie.nom }}</td>
+                                {% if categorie.parent %}
+                                <td>{{ categorie.parent.nom }}</td>
+                                    {% else %}
+                                        <td>#</td>
                                 {% endif %}
+                                <td>{{ categorie.depth }}</td>
 
-                            </li>
-                        {% endmacro %}
+                                <td>
+                                    <a href="{{ path('editcategorie', {'id': categorie.id }) }}" class="btn btn-icon-only yellow" ><i class="fa fa-edit"></i> </a>
+                                    <a href="javascript:;" class="btn btn-icon-only red" onclick="myFunction({{ categorie.id }})"><i class="fa fa-times"></i> </a>
 
-                        {% from _self import recursiveCategory %}
+                                </td>
 
-                        {% if categories %}
-                            <div id="categories">
-                                <ul>
+                            </tr>
+                        {% endfor %}
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-4">
+            <!-- BEGIN EXAMPLE TABLE PORTLET-->
+            <div class="portlet light bordered">
+                <div class="portlet-title">
+                    <div class="caption">
+                        <i class=" icon-layers font-green"></i>
+                        <span class="caption-subject font-green sbold uppercase">Arboresence</span>
+                    </div>
+
+                </div>
+                <div class="portlet-body">
+                    <div id="tree_1" class="tree-demo">
+                        <ul>
+
+                            {% macro recursiveCategory(category) %}
+                                {% import _self as self %}
+
+                                <li>{{ category.nom }}
 
 
-                                    {% for category in categories  %}
+                                    {% if category.children|length %}
+                                        <ul>
+                                            {% for child in category.children %}
+
+                                                {{ self.recursiveCategory(child) }}
+
+                                            {% endfor %}
+
+                                        </ul>
+                                    {% endif %}
+
+                                </li>
+                            {% endmacro %}
+
+                            {% from _self import recursiveCategory %}
+
+                            {% if categories %}
+
+
+
+                                {% for category in categories  %}
 
                                     {% if category.depth== 1 %}
 
-                                          {{ recursiveCategory(category) }}
+                                        {{ recursiveCategory(category) }}
 
                                     {% endif %}
 
-                                    {% endfor %}
+                                {% endfor %}
 
 
-                                </ul>
-                            </div>
-                        {% endif %}
+
+                            {% endif %}
 
 
+                        </ul>
                     </div>
                 </div>
             </div>
-        </div>
 
+        </div>
     </div>
+
 
 
 {% endblock %}
 
-{% block javascript %}
-    <script src="{{ asset('Template/assets/global/plugins/jquery-nestable/jquery.nestable.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('Template/assets/pages/scripts/ui-nestable.min.js') }}" type="text/javascript"></script>
+{% block javascripts %}
+
     {{ parent() }}
+
+    <script src="{{ asset('Template/assets/global/scripts/datatable.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('Template/assets/global/plugins/datatables/datatables.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('Template/assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('Template/assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js') }}" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+    <script src="{{ asset('Template/assets/global/plugins/jstree/dist/jstree.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('Template/assets/pages/scripts/ui-tree.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('Template/assets/pages/scripts/table-datatables-buttons.min.js') }}" type="text/javascript"></script>
+
+
 {% endblock %}
