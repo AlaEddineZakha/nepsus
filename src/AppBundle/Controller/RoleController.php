@@ -79,7 +79,7 @@ class RoleController extends Controller
                 $permission=$em->getRepository('AppBundle:Permission')->findOneBy(array('libele' => 'ajouterclient'));
                 $rolepermission =$em->getRepository(RolePermission::class)->findOneBy(array('permission' =>$permission->getId() ));
                 if (!empty($rolepermission))
-                {   dump($rolepermission);
+                {
                     $em->remove($rolepermission);
                 }
 
@@ -100,7 +100,7 @@ class RoleController extends Controller
                 $rolepermission =$em->getRepository(RolePermission::class)->findOneBy(array('permission' =>$permission->getId() ));
                 if (!empty($rolepermission))
                 {
-                    dump($rolepermission);
+
                     $em->remove($rolepermission);
                 }
 
@@ -120,7 +120,7 @@ class RoleController extends Controller
                 $rolepermission =$em->getRepository(RolePermission::class)->findOneBy(array('permission' =>$permission->getId() ));
                 if (!empty($rolepermission))
                 {
-                    dump($rolepermission);
+
                     $em->remove($rolepermission);
                 }
 
