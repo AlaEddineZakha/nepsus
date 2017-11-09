@@ -29,7 +29,7 @@ class AdminController extends  Controller
         $em = $this->getDoctrine()->getManager();
         $user=$em->getRepository(User::class)->find($this->getUser()->getId());
         $idrole=$user->getRole();
-        dump($user->isSuperAdmin());
+
        // dump($idrole);
 
         $result = $em->getRepository('AppBundle:Client')
