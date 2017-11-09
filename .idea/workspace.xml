@@ -169,8 +169,8 @@
       <file leaf-file-name="dashboard1.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/dashboard/dashboard1.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="780" column="32" lean-forward="false" selection-start-line="780" selection-start-column="32" selection-end-line="780" selection-end-column="32" />
+            <state relative-caret-position="84">
+              <caret line="771" column="35" lean-forward="false" selection-start-line="771" selection-start-column="35" selection-end-line="771" selection-end-column="35" />
               <folding>
                 <element signature="e#12#26#0#Twig" expanded="true" />
                 <element signature="e#186#195#0#Twig" expanded="true" />
@@ -215,7 +215,7 @@
                 <element signature="e#18531#18538#0#Twig" expanded="true" />
                 <element signature="e#18733#18742#0#Twig" expanded="true" />
                 <element signature="e#19618#19627#0#Twig" expanded="true" />
-                <element signature="e#30141#30150#0#Twig" expanded="true" />
+                <element signature="e#30131#30140#0#Twig" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1039,14 +1039,7 @@
       <workItem from="1508027836801" duration="33386000" />
       <workItem from="1508428768249" duration="175758000" />
       <workItem from="1509715830276" duration="72474000" />
-      <workItem from="1510244198390" duration="2579000" />
-    </task>
-    <task id="LOCAL-00009" summary="02/05/2017  V1.03 Send mail fixed">
-      <created>1508031465271</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1508031465271</updated>
+      <workItem from="1510244198390" duration="2789000" />
     </task>
     <task id="LOCAL-00010" summary="02/05/2017  V1.03 Send mail fixed">
       <created>1508031616862</created>
@@ -1384,11 +1377,18 @@
       <option name="project" value="LOCAL" />
       <updated>1510246836924</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="02/05/2017  V1.4 Role and permission added">
+      <created>1510247449605</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1510247449605</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1401183000" />
+    <option name="totallyTimeSpent" value="1401393000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1370" height="744" extended-state="0" />
@@ -1929,8 +1929,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/dashboard/dashboard1.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="780" column="32" lean-forward="false" selection-start-line="780" selection-start-column="32" selection-end-line="780" selection-end-column="32" />
+        <state relative-caret-position="84">
+          <caret line="771" column="35" lean-forward="false" selection-start-line="771" selection-start-column="35" selection-end-line="771" selection-end-column="35" />
           <folding>
             <element signature="e#12#26#0#Twig" expanded="true" />
             <element signature="e#186#195#0#Twig" expanded="true" />
@@ -1975,7 +1975,7 @@
             <element signature="e#18531#18538#0#Twig" expanded="true" />
             <element signature="e#18733#18742#0#Twig" expanded="true" />
             <element signature="e#19618#19627#0#Twig" expanded="true" />
-            <element signature="e#30141#30150#0#Twig" expanded="true" />
+            <element signature="e#30131#30140#0#Twig" expanded="true" />
           </folding>
         </state>
       </provider>

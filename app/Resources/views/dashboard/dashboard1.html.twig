@@ -769,16 +769,15 @@
 
     <script>
 
-        {% if not user.superAdmin %}
+        {% if not user.role=="admin" %}
 
 
-
+        var $idrole= {{ user.role.id }};
+        var isajouterclient=0;
+        var islisteclient=0;
 
 
         $( document ).ready(function() {
-            var $idrole= {{ user.role.id }};
-            var isajouterclient=0;
-            var islisteclient=0;
             $.getJSON( "api/modules", function( data ) {
                 $.each($(data), function(key, value) {
 
