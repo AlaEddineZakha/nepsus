@@ -68,7 +68,7 @@ class RoleController extends Controller
             if (($request->request->get('ajouterclient'))) {
 
                 $permission=$em->getRepository('AppBundle:Permission')->findOneBy(array('libele' => 'ajouterclient'));
-                $rolepermission =$em->getRepository(RolePermission::class)->findOneBy(array('permission' =>$permission->getId() ));
+                $rolepermission =$em->getRepository(RolePermission::class)->findOneBy(array('permission' =>$permission->getId(),'role'=>$id ));
                 if (empty($rolepermission))
                 {
                     $rolepermission=new RolePermission();
@@ -82,7 +82,7 @@ class RoleController extends Controller
             if (empty($request->request->get('ajouterclient'))) {
 
                 $permission=$em->getRepository('AppBundle:Permission')->findOneBy(array('libele' => 'ajouterclient'));
-                $rolepermission =$em->getRepository(RolePermission::class)->findOneBy(array('permission' =>$permission->getId() ));
+                $rolepermission =$em->getRepository(RolePermission::class)->findOneBy(array('permission' =>$permission->getId(),'role'=>$id ));
                 if (!empty($rolepermission))
                 {
                     $em->remove($rolepermission);
@@ -94,7 +94,7 @@ class RoleController extends Controller
             if (($request->request->get('modifierclient'))) {
 
                 $permission=$em->getRepository('AppBundle:Permission')->findOneBy(array('libele' => 'modifierclient'));
-                $rolepermission =$em->getRepository(RolePermission::class)->findOneBy(array('permission' =>$permission->getId() ));
+                $rolepermission =$em->getRepository(RolePermission::class)->findOneBy(array('permission' =>$permission->getId(),'role'=>$id ));
                 if (empty($rolepermission))
                 {
                     $rolepermission=new RolePermission();
@@ -106,7 +106,7 @@ class RoleController extends Controller
             if (empty($request->request->get('modifierclient'))) {
 
                 $permission=$em->getRepository('AppBundle:Permission')->findOneBy(array('libele' => 'modifierclient'));
-                $rolepermission =$em->getRepository(RolePermission::class)->findOneBy(array('permission' =>$permission->getId() ));
+                $rolepermission =$em->getRepository(RolePermission::class)->findOneBy(array('permission' =>$permission->getId(),'role'=>$id ));
                 if (!empty($rolepermission))
                 {
 
@@ -118,7 +118,7 @@ class RoleController extends Controller
             if (($request->request->get('supprimerclient'))) {
 
                 $permission=$em->getRepository('AppBundle:Permission')->findOneBy(array('libele' => 'supprimerclient'));
-                $rolepermission =$em->getRepository(RolePermission::class)->findOneBy(array('permission' =>$permission->getId() ));
+                $rolepermission =$em->getRepository(RolePermission::class)->findOneBy(array('permission' =>$permission->getId(),'role'=>$id ));
                 if (empty($rolepermission))
                 {
                     $rolepermission=new RolePermission();
@@ -130,7 +130,7 @@ class RoleController extends Controller
             if (empty($request->request->get('supprimerclient'))) {
 
                 $permission=$em->getRepository('AppBundle:Permission')->findOneBy(array('libele' => 'supprimerclient'));
-                $rolepermission =$em->getRepository(RolePermission::class)->findOneBy(array('permission' =>$permission->getId() ));
+                $rolepermission =$em->getRepository(RolePermission::class)->findOneBy(array('permission' =>$permission->getId(),'role'=>$id ));
                 if (!empty($rolepermission))
                 {
 
@@ -142,7 +142,7 @@ class RoleController extends Controller
             if (($request->request->get('voirclient'))) {
 
                 $permission=$em->getRepository('AppBundle:Permission')->findOneBy(array('libele' => 'voirclient'));
-                $rolepermission =$em->getRepository(RolePermission::class)->findOneBy(array('permission' =>$permission->getId() ));
+                $rolepermission =$em->getRepository(RolePermission::class)->findOneBy(array('permission' =>$permission->getId(),'role'=>$id ));
                 if (empty($rolepermission))
                 {
                     $rolepermission=new RolePermission();
@@ -154,7 +154,7 @@ class RoleController extends Controller
             if (empty($request->request->get('voirclient'))) {
 
                 $permission=$em->getRepository('AppBundle:Permission')->findOneBy(array('libele' => 'voirclient'));
-                $rolepermission =$em->getRepository(RolePermission::class)->findOneBy(array('permission' =>$permission->getId() ));
+                $rolepermission =$em->getRepository(RolePermission::class)->findOneBy(array('permission' =>$permission->getId(),'role'=>$id ));
                 if (!empty($rolepermission))
                 {
 
@@ -162,6 +162,8 @@ class RoleController extends Controller
                 }
 
             }
+
+
 
             $role->setNom($request->request->get('libele'));
             $role->setDescription($request->request->get('description'));

@@ -768,6 +768,10 @@
 
 
     <script>
+
+        {% if not user.superAdmin %}
+
+
         var $idrole= {{ user.role.id }};
         var isajouterclient=0;
         var islisteclient=0;
@@ -817,5 +821,6 @@
 
         });
 
+        {% endif %}
     </script>
 {% endblock %}

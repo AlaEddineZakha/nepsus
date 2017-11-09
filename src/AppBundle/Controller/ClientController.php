@@ -15,6 +15,7 @@ use AppBundle\Entity\LigneFC;
 use AppBundle\Entity\LigneBCC;
 use AppBundle\Entity\BonCommandeClient;
 use AppBundle\Entity\Client;
+use AppBundle\Entity\User;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Serializer\Serializer;
@@ -90,8 +91,10 @@ class ClientController extends  Controller
             $request->query->getInt('page', 1),
             $request->query->getInt('limit', 5)
         );
+        $user=$em->getRepository(User::class)->find($this->getUser()->getId());
         return $this->render(':clients:list.html.twig', [
             'clients' => $result,
+            'user'=>$user
 
         ]);
 
