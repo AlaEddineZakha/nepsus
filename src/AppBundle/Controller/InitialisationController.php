@@ -3,6 +3,8 @@
 namespace AppBundle\Controller;
 
 use AppBundle\Entity\Permission;
+use AppBundle\Entity\Role;
+use AppBundle\Entity\RolePermission;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 
@@ -15,29 +17,37 @@ class InitialisationController extends Controller
     public function initialiserAction()
     {
         $em = $this->getDoctrine()->getManager();
-        $permission= new Permission();
-        $permission->setLibele("ajouterclient");
-        $permission->setDescription("Permet d'ajouter un client");
-        $permission->setCreated(new \DateTime());
-        $em->persist($permission);
+        $permission1= new Permission();
+        $permission1->setLibele("ajouterclient");
+        $permission1->setDescription("Permet d'ajouter un client");
+        $permission1->setCreated(new \DateTime());
+        $em->persist($permission1);
 
-        $permission= new Permission();
-        $permission->setLibele("modifierclient");
-        $permission->setDescription("Permet de modifier un client");
-        $permission->setCreated(new \DateTime());
-        $em->persist($permission);
+        $permission2= new Permission();
+        $permission2->setLibele("modifierclient");
+        $permission2->setDescription("Permet de modifier un client");
+        $permission2->setCreated(new \DateTime());
+        $em->persist($permission2);
 
-        $permission= new Permission();
-        $permission->setLibele("supprimerclient");
-        $permission->setDescription("Permet de supprimer un client");
-        $permission->setCreated(new \DateTime());
-        $em->persist($permission);
+        $permission3= new Permission();
+        $permission3->setLibele("supprimerclient");
+        $permission3->setDescription("Permet de supprimer un client");
+        $permission3->setCreated(new \DateTime());
+        $em->persist($permission3);
 
-        $permission= new Permission();
-        $permission->setLibele("voirclient");
-        $permission->setDescription("Permet de voir la liste des clients");
-        $permission->setCreated(new \DateTime());
-        $em->persist($permission);
+        $permission4= new Permission();
+        $permission4->setLibele("voirclient");
+        $permission4->setDescription("Permet de voir la liste des clients");
+        $permission4->setCreated(new \DateTime());
+        $em->persist($permission4);
+
+        $role=new Role();
+        $role->setNom('Magasinier');
+        $role->setCreated(new \DateTime());
+
+        $rolepermission= new RolePermission();
+        $rolepermission->setPermission($role);
+        $em->persist($rolepermission);
 
 
 

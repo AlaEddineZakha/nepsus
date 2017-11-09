@@ -128,8 +128,19 @@ class APIController extends Controller
         $encoder = new JsonEncode();
 
         $serializer = new Serializer(array($normalizer), array($encoder));
+        if (empty($permissions))
+        {
 
-        $jsonContent = $serializer->serialize($permissions, 'json');
+            $jsonContent = null;
+
+        }
+        else
+        {
+            $jsonContent = $serializer->serialize($permissions, 'json');
+
+        }
+
+
 
         return new Response($jsonContent);
 
