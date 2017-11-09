@@ -31,13 +31,15 @@ class AdminController extends  Controller
         $idrole=$user->getRole();
 
        // dump($idrole);
-
+            $auth_checker = $this->get('security.authorization_checker');
+            $isRoleAdmin = $auth_checker->isGranted('ROLE_SUPER_ADMIN');
         $result = $em->getRepository('AppBundle:Client')
             ->count();
 
         return $this->render('dashboard/dashboard1.html.twig', [
             'nbclient' => $result,
-            'user'=>$user
+            'user'=>$user,
+            'isRoleAdmin'=>$isRoleAdmin
 
         ]);
         }

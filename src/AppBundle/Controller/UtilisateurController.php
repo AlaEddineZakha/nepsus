@@ -41,10 +41,10 @@ class UtilisateurController extends Controller
             return $this->redirectToRoute('listusers');
         }
 
-
+        $user=$em->getRepository(User::class)->find($this->getUser()->getId());
         return $this->render('Utilisateurs/add.html.twig', [
             'roles' => $roles,
-
+            'user'=>$user
 
         ]);
 

@@ -769,7 +769,9 @@
 
     <script>
 
-        {% if not user.role=="admin" %}
+        {% if is_granted('ROLE_SUPER_ADMIN') %}
+
+        {% else%}
 
 
         var $idrole= {{ user.role.id }};
@@ -815,7 +817,6 @@
                     }
 
 
-                    ////
                 });
             });
 
