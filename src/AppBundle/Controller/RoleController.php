@@ -62,17 +62,22 @@ class RoleController extends Controller
 
         if ($request->isMethod('POST')) {
 
-            $role->setNom($request->request->get('libele'));
-            $role->setDescription($request->request->get('description'));
+
 
 
             if (($request->request->get('ajouterclient'))) {
 
                 $permission=$em->getRepository('AppBundle:Permission')->findOneBy(array('libele' => 'ajouterclient'));
-                $rolepermission=new RolePermission();
-                $rolepermission->setPermission($permission);
-                $rolepermission->setRole($role);
-                $em->persist($rolepermission);
+                $rolepermission =$em->getRepository(RolePermission::class)->findOneBy(array('permission' =>$permission->getId() ));
+                if (empty($rolepermission))
+                {
+                    $rolepermission=new RolePermission();
+                    $rolepermission->setPermission($permission);
+                    $rolepermission->setRole($role);
+                    $em->persist($rolepermission);
+                }
+
+
             }
             if (empty($request->request->get('ajouterclient'))) {
 
@@ -89,10 +94,14 @@ class RoleController extends Controller
             if (($request->request->get('modifierclient'))) {
 
                 $permission=$em->getRepository('AppBundle:Permission')->findOneBy(array('libele' => 'modifierclient'));
-                $rolepermission=new RolePermission();
-                $rolepermission->setPermission($permission);
-                $rolepermission->setRole($role);
-                $em->persist($rolepermission);
+                $rolepermission =$em->getRepository(RolePermission::class)->findOneBy(array('permission' =>$permission->getId() ));
+                if (empty($rolepermission))
+                {
+                    $rolepermission=new RolePermission();
+                    $rolepermission->setPermission($permission);
+                    $rolepermission->setRole($role);
+                    $em->persist($rolepermission);
+                }
             }
             if (empty($request->request->get('modifierclient'))) {
 
@@ -109,10 +118,14 @@ class RoleController extends Controller
             if (($request->request->get('supprimerclient'))) {
 
                 $permission=$em->getRepository('AppBundle:Permission')->findOneBy(array('libele' => 'supprimerclient'));
-                $rolepermission=new RolePermission();
-                $rolepermission->setPermission($permission);
-                $rolepermission->setRole($role);
-                $em->persist($rolepermission);
+                $rolepermission =$em->getRepository(RolePermission::class)->findOneBy(array('permission' =>$permission->getId() ));
+                if (empty($rolepermission))
+                {
+                    $rolepermission=new RolePermission();
+                    $rolepermission->setPermission($permission);
+                    $rolepermission->setRole($role);
+                    $em->persist($rolepermission);
+                }
             }
             if (empty($request->request->get('supprimerclient'))) {
 
@@ -129,10 +142,14 @@ class RoleController extends Controller
             if (($request->request->get('voirclient'))) {
 
                 $permission=$em->getRepository('AppBundle:Permission')->findOneBy(array('libele' => 'voirclient'));
-                $rolepermission=new RolePermission();
-                $rolepermission->setPermission($permission);
-                $rolepermission->setRole($role);
-                $em->persist($rolepermission);
+                $rolepermission =$em->getRepository(RolePermission::class)->findOneBy(array('permission' =>$permission->getId() ));
+                if (empty($rolepermission))
+                {
+                    $rolepermission=new RolePermission();
+                    $rolepermission->setPermission($permission);
+                    $rolepermission->setRole($role);
+                    $em->persist($rolepermission);
+                }
             }
             if (empty($request->request->get('voirclient'))) {
 
@@ -146,7 +163,8 @@ class RoleController extends Controller
 
             }
 
-
+            $role->setNom($request->request->get('libele'));
+            $role->setDescription($request->request->get('description'));
             $em->persist($role);
             $em->flush();
 
