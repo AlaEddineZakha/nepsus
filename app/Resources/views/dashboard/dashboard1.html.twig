@@ -29,7 +29,7 @@
         <h3 class="uppercase" style="font-weight: 600 ; color: white"> <i class="icon-wrench"></i> Gestion</h3>
     </li>
     {% if app.request.attributes.get('_route') =='addclient' %}
-        <li class="nav-item active open">
+        <li class="nav-item active open" id="menuclients">
             <a href="javascript:;" class="nav-link nav-toggle">
                 <i class="icon-users"></i>
                 <span class="title">Clients</span>
@@ -37,6 +37,7 @@
 
             </a>
             <ul class="sub-menu ">
+
                 <li class="nav-item active ">
                     <a href="{{ path('addclient') }}" class="nav-link">
                         <span class="title">Nouveau client</span>
@@ -87,13 +88,13 @@
 
             </a>
             <ul class="sub-menu ">
-                <li class="nav-item  ">
+                <li class="nav-item  " id="menuaddclient">
                     <a href="{{ path('addclient') }}" class="nav-link">
                         <span class="title">Nouveau client</span>
 
                     </a>
                 </li>
-                <li class="nav-item  ">
+                <li class="nav-item  " id="menulisteclient">
                     <a href="{{ path('listclient') }}" class="nav-link ">
                         <span class="title">Liste des clients</span>
                     </a>
@@ -104,7 +105,7 @@
         </li>
     {% endif %}
 
-    <li class="nav-item">
+    <li class="nav-item" id="menufournisseurs">
         <a href="javascript:;" class="nav-link nav-toggle">
             <i class="icon-user-following"></i>
             <span class="title">Fournisseurs</span>
@@ -317,7 +318,7 @@
     <li class="heading">
         <h3 class="uppercase" style="font-weight: 600 ; color: white"> <i class="icon-layers"></i> Facturation</h3>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" id="menucfactures">
         <a href="javascript:;" class="nav-link nav-toggle">
             <i class="icon-docs"></i>
             <span class="title">Factures</span>
@@ -378,7 +379,7 @@
 
 
     </li>
-    <li class="nav-item  ">
+    <li class="nav-item  " id="menudevis">
         <a href="javascript:;" class="nav-link nav-toggle">
             <i class="icon-note"></i>
             <span class="title">Devis</span>
@@ -401,7 +402,7 @@
 
         </ul>
     </li>
-    <li class="nav-item  ">
+    <li class="nav-item  " id="menutransactions">
         <a href="javascript:;" class="nav-link nav-toggle">
             <i class="icon-credit-card"></i>
             <span class="title">Transactions</span>
@@ -424,7 +425,7 @@
 
         </ul>
     </li>
-    <li class="nav-item  ">
+    <li class="nav-item  " id="menudepenses">
         <a href="javascript:;" class="nav-link nav-toggle">
             <i class="icon-credit-card"></i>
             <span class="title">Dépenses</span>
@@ -450,7 +451,7 @@
     <li class="heading" >
         <h3 class="uppercase" style="font-weight: 600 ; color: white;"><i class="icon-grid"></i>  Stock</h3>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" id="menuproduits">
         <a href="javascript:;" class="nav-link nav-toggle">
             <i class="icon-social-dropbox"></i>
             <span class="title">Produits</span>
@@ -500,7 +501,7 @@
         </ul>
     </li>
 
-    <li class="nav-item">
+    <li class="nav-item" id="menulots">
         <a href="javascript:;" class="nav-link nav-toggle">
             <i class="icon-tag"></i>
             <span class="title">Lots</span>
@@ -523,7 +524,7 @@
 
         </ul>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" id="menuentrepots">
         <a href="javascript:;" class="nav-link nav-toggle">
             <i class="icon-home"></i>
             <span class="title">Entrepots</span>
@@ -546,7 +547,7 @@
 
         </ul>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" id="menutaxes">
         <a href="javascript:;" class="nav-link nav-toggle">
             <i class="icon-home"></i>
             <span class="title">Taxes</span>
@@ -767,6 +768,11 @@
 
 
     <script>
+        var $idrole= {{ user.role.id }};
+        var isajouterclient=0;
+        var islisteclient=0;
+
+
         $( document ).ready(function() {
             $.getJSON( "api/modules", function( data ) {
                 $.each($(data), function(key, value) {
@@ -778,6 +784,34 @@
                             $('#menucategories').hide();
                         }
                     }
+                });
+            });
+
+            $.getJSON("{{ url('dashboard') }}api/roles/"+$idrole+'/permissions', function( data ) {
+                $.each($(data), function(key, value) {
+                  //Droit clients
+                    if (isajouterclient===0)
+                    {
+                        $('#menuaddclient').hide();
+                    }
+                    if (value['permission']['libele']==="ajouterclient") {
+
+                        isajouterclient++;
+                        $('#menuaddclient').show();
+                    }
+
+                    if (islisteclient===0)
+                    {
+                        $('#menulisteclient').hide();
+                    }
+                    if (value['permission']['libele']==="voirclient") {
+
+                        islisteclient++;
+                        $('#menulisteclient').show();
+                    }
+
+
+                    ////
                 });
             });
 

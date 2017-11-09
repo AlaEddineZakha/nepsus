@@ -10,6 +10,7 @@ namespace AppBundle\Controller;
 
 
 use AppBundle\Entity\Modules;
+use AppBundle\Entity\User;
 use AppBundle\Form\ModuleFormType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -26,12 +27,16 @@ class AdminController extends  Controller
         if( $this->getUser()) {
 
         $em = $this->getDoctrine()->getManager();
+        $user=$em->getRepository(User::class)->find($this->getUser()->getId());
+        $idrole=$user->getRole();
+       // dump($idrole);
 
         $result = $em->getRepository('AppBundle:Client')
             ->count();
 
         return $this->render('dashboard/dashboard1.html.twig', [
-            'nbclient' => $result
+            'nbclient' => $result,
+            'user'=>$user
 
         ]);
         }

@@ -1,0 +1,238 @@
+{% extends 'dashboard/dashboard1.html.twig' %}
+{% block stylesheets %}
+    {{ parent() }}
+
+    <link href="{{ asset('Template/assets/global/plugins/select2/css/select2.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('Template/assets/global/plugins/select2/css/select2-bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('Template/assets/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('Template/assets/global/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('Template/assets/global/plugins/bootstrap-markdown/css/bootstrap-markdown.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('Template/assets/global/css/components-md.min.css') }}" rel="stylesheet" id="style_components" type="text/css" />
+    <link href="{{ asset('Template/assets/global/css/plugins-md.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="https://jqueryvalidation.org/files/demo/css/screen.css" rel="stylesheet" type="text/css" />
+
+
+
+{% endblock %}
+
+{% block container%}
+    <!-- BEGIN PAGE HEADER-->
+    <!-- BEGIN THEME PANEL -->
+
+    <!-- END THEME PANEL -->
+    <!-- BEGIN PAGE BAR -->
+    <div class="page-bar">
+        <ul class="page-breadcrumb">
+            <li>
+                <a href="{{ path('dashboard') }}/">Accueil</a>
+                <i class="fa fa-circle"></i>
+            </li>
+            <li>
+                <span>Gestion des utilisateurs</span>
+                <i class="fa fa-circle"></i>
+            </li>
+
+            <li>
+                <span>Nouveau utilisateur</span>
+
+            </li>
+        </ul>
+
+    </div>
+    <!-- END PAGE BAR -->
+    <!-- BEGIN PAGE TITLE-->
+
+    <!-- END PAGE TITLE-->
+    <!-- END PAGE HEADER-->
+    <div class="m-heading-1 border-green m-bordered">
+        <h3>Nouveau utilisateur</h3>
+
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <!-- BEGIN VALIDATION STATES-->
+            <div class="portlet light portlet-fit portlet-form bordered">
+
+                <div class="portlet-body">
+                    <!-- BEGIN FORM-->
+                    <form action="{{ path('adduser') }}" id="signupForm" class="form-horizontal" method="post">
+
+                        <div class="form-body">
+                            <div class="row">
+                                <div class="col-md-12">
+
+
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">Nom d'utilisateur
+
+                                            <span class="required"> * </span>
+                                        </label>
+                                        <div class="col-md-4">
+                                            <input type="text" class="form-control" name="username" />
+                                            <span class="help-block"> Indiquez votre nom d'utilisateur </span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">Mot de passe
+
+                                            <span class="required"> * </span>
+                                        </label>
+                                        <div class="col-md-4">
+                                            <input type="password" class="form-control" name="password" id="submit_form_password" />
+                                            <span class="help-block"> Fournissez votre mot de passe. </span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">Confirmer votre mot de passe
+                                            <span class="required"> * </span>
+                                        </label>
+                                        <div class="col-md-4">
+                                            <input type="password" class="form-control" name="rpassword" />
+                                            <span class="help-block"> Fournissez votre mot de passe.</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">Email
+                                            <span class="required"> * </span>
+                                        </label>
+                                        <div class="col-md-4">
+                                            <input type="text" class="form-control" name="email" />
+                                            <span class="help-block"> Indiquez votre adresse e-mail </span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">Activé
+                                            <span class="required"> * </span>
+                                        </label>
+                                        <div class="col-md-4">
+                                            <input name="active" id="active" type="checkbox" class="make-switch" checked data-on-color="success" data-off-color="warning">
+                                            <span class="help-block"> </span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">Role
+                                            <span class="required"> * </span>
+                                        </label>
+                                        <div class="col-md-4">
+                                            <select class="form-control select2me" id="role" name="role" data-live-search="true">
+                                                <option value="">Select...</option>
+
+                                                {% for role in roles %}
+                                                    <option value="{{ role.id }}">{{ role.nom }}</option>
+                                                {% endfor %}
+
+                                            </select>
+                                            <span class="help-block">  </span>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+
+
+
+
+
+
+
+                            <div class="form-actions">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <button type="submit" class="btn green">Enregistrer</button>
+                                        <button type="reset" class="btn default">Annuler</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!-- END FORM-->
+                </div>
+                <!-- END VALIDATION STATES-->
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+
+
+    {{ parent() }}
+    <script src="{{ asset('Template/assets/global/plugins/jquery-validation/js/jquery.validate.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('Template/assets/pages/scripts/form-validation.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('Template/assets/global/plugins/select2/js/select2.full.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('Template/assets/global/plugins/jquery-validation/js/additional-methods.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('Template/assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('Template/assets/global/plugins/bootstrap-wysihtml5/wysihtml5-0.3.0.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('Template/assets/global/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('Template/assets/global/plugins/ckeditor/ckeditor.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('Template/assets/global/plugins/bootstrap-markdown/lib/markdown.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('Template/assets/global/plugins/bootstrap-markdown/js/bootstrap-markdown.js') }}" type="text/javascript"></script>
+    <script src="https://rawgit.com/RobinHerbots/jquery.inputmask/3.x/dist/jquery.inputmask.bundle.js" type="text/javascript"></script>
+
+
+    <script>
+
+
+
+
+
+        $().ready(function() {
+
+            /*
+             console.log($('#tva').val());
+             if (!($('#tva').bootstrapSwitch('state')))
+             {
+             $( "#tva" ).attr( "value", "Non" );
+             alert( $('#tva').val());
+             console.log($('#tva').val());
+             }
+             */
+
+
+            // validate the comment form when it is submitted
+
+
+            // validate signup form on keyup and submit
+            $("#signupForm").validate({
+                rules: {
+
+                    taux:{
+                        number:true,
+                        required:true,
+                        minlength:1,
+                        maxlength:2
+
+                    }
+
+
+
+
+
+                },
+                messages: {
+
+                    taux: {
+                        required: "Ce champ est obligatoire",
+                        taux:"Ce champ ne peut contenir que des numéros",
+                        minlength: "Ce champ doit contenir 1 chiffre au minimum",
+                        maxlength: "Ce champ doit contenir 2 chiffres au maximum"
+                    }
+
+
+
+                }
+            });
+
+        });
+
+
+    </script>
+
+{% endblock %}

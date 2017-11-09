@@ -145,6 +145,28 @@ deletecategorie:
                     id: \d+
     options:
                 expose: true
+#--------------------- Roles -------------------#
+addrole:
+    path:      /roles/new
+    defaults:  { _controller: AppBundle:Role:new }
+editrole:
+    path:      /roles/{id}/edit
+    defaults:  { _controller: AppBundle:Role:edit }
+    requirements:
+                    id: \d+
+listroles:
+    path:      /roles
+    defaults:  { _controller: AppBundle:Role:showAll }
+#--------------------- Users -------------------#
+listusers:
+    path:      /utilisateurs
+    defaults:  { _controller: AppBundle:Utilisateur:showAll }
+
+adduser:
+    path:      /utilisateurs/new
+    defaults:  { _controller: AppBundle:Utilisateur:new }
+
+
 
 listbcc:
     path:      /clients/commandes
@@ -193,9 +215,7 @@ annulerfacture:
     defaults:  { _controller: AppBundle:FactureClient:annuler }
     requirements:
             id: \d+
-adduser:
-    path:      /adduser
-    defaults:  { _controller: AppBundle:Reset:createUser }
+
 activateuser:
     path:      /activate
     defaults:  { _controller: AppBundle:Reset:activateUser }
@@ -209,6 +229,8 @@ promoteuser:
 initconfig:
     path:      /config
     defaults:  { _controller: AppBundle:Configuration:index }
+
+
 
 loadingconfig:
     path:      /loading

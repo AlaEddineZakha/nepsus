@@ -25,6 +25,10 @@ class User extends BaseUser
     protected $id;
 
     /**
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Role", inversedBy="user")
+     */
+    private $role;
+    /**
      * @ORM\Column(type="string", length=255  ,nullable=true)
      *
      * @Assert\NotBlank(message="Please enter your name.", groups={"Registration", "Profile"})
@@ -61,6 +65,23 @@ class User extends BaseUser
     {
         parent::__construct();
     }
+
+    /**
+     * @return mixed
+     */
+    public function getRole()
+    {
+        return $this->role;
+    }
+
+    /**
+     * @param mixed $role
+     */
+    public function setRole($role)
+    {
+        $this->role = $role;
+    }
+
 
 
 }

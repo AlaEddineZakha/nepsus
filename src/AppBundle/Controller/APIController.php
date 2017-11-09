@@ -3,6 +3,8 @@
 namespace AppBundle\Controller;
 
 use AppBundle\Entity\Modules;
+use AppBundle\Entity\Permission;
+use AppBundle\Entity\RolePermission;
 use AppBundle\Entity\Taxe;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -103,6 +105,31 @@ class APIController extends Controller
         $serializer = new Serializer(array($normalizer), array($encoder));
 
         $jsonContent = $serializer->serialize($module, 'json');
+
+        return new Response($jsonContent);
+
+    }
+
+    /**
+     * @Route("/api/roles/{id}/permissions",name="getpermissionsbyroleid")
+     * @Method("GET")
+     */
+    public function getpermissionsbyroleidAction($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+       // $role=$em->getRepository('AppBundle:Role')->find($id);
+        $permissions=$em->getRepository(RolePermission::class)->findBy(array('role' => $id));
+        $normalizer = new ObjectNormalizer();
+        $normalizer->setCircularReferenceHandler(function ($object) {
+            return $object->getId();
+        });
+        $normalizer->setIgnoredAttributes(array('role','id','rolepermission','created','description'));
+
+        $encoder = new JsonEncode();
+
+        $serializer = new Serializer(array($normalizer), array($encoder));
+
+        $jsonContent = $serializer->serialize($permissions, 'json');
 
         return new Response($jsonContent);
 
