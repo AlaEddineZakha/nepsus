@@ -38,14 +38,14 @@
             </a>
             <ul class="sub-menu ">
 
-                <li class="nav-item active ">
+                <li class="nav-item active " id="menuaddclient">
                     <a href="{{ path('addclient') }}" class="nav-link">
                         <span class="title">Nouveau client</span>
                         <span class="selected"></span>
 
                     </a>
                 </li>
-                <li class="nav-item  ">
+                <li class="nav-item  " id="menulisteclient">
                     <a href="{{ path('listclient') }}" class="nav-link ">
                         <span class="title">Liste des clients</span>
                     </a>
@@ -63,13 +63,13 @@
 
             </a>
             <ul class="sub-menu ">
-                <li class="nav-item  ">
+                <li class="nav-item  " id="menuaddclient">
                     <a href="{{ path('addclient') }}" class="nav-link">
                         <span class="title">Nouveau client</span>
 
                     </a>
                 </li>
-                <li class="nav-item active ">
+                <li class="nav-item active " id="menulisteclient">
                     <a href="{{ path('listclient') }}" class="nav-link ">
                         <span class="title">Liste des clients</span>
                         <span class="selected"></span>
@@ -128,192 +128,7 @@
 
         </ul>
     </li>
-    {% if app.request.attributes.get('_route') =='addcommandec' %}
-        <li class="nav-item active open">
-            <a href="javascript:;" class="nav-link nav-toggle">
-                <i class="icon-basket"></i>
-                <span class="title">Commandes</span>
-                <span class="arrow open"></span>
 
-            </a>
-            <ul class="sub-menu ">
-                <li class="nav-item active open">
-                    <a href="javascript:;" class="nav-link nav-toggle">
-
-                        <span class="title">Clients</span>
-                        <span class="arrow open"></span>
-
-                    </a>
-                    <ul class="sub-menu ">
-                        <li class="nav-item active">
-                            <a href="{{ path('addcommandec') }}" class="nav-link">
-                                <span class="title">Nouvelle commande</span>
-                                <span class="selected"></span>
-
-                            </a>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="{{ path('listbcc') }}" class="nav-link ">
-                                <span class="title">Liste des commandes</span>
-                            </a>
-                        </li>
-
-
-                    </ul>
-                </li>
-                <li class="nav-item  ">
-                    <a href="javascript:;" class="nav-link nav-toggle">
-
-                        <span class="title">Fournisseurs</span>
-                        <span class="arrow"></span>
-
-                    </a>
-                    <ul class="sub-menu ">
-                        <li class="nav-item  ">
-                            <a href="{{ path('addclient') }}" class="nav-link">
-                                <span class="title">Nouvau commande</span>
-
-                            </a>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="{{ path('listclient') }}" class="nav-link ">
-                                <span class="title">Liste des commandes</span>
-                            </a>
-                        </li>
-
-
-                    </ul>
-                </li>
-
-
-            </ul>
-
-        </li>
-
-    {% elseif app.request.attributes.get('_route') =='listbcc' %}
-        <li class="nav-item active open">
-            <a href="javascript:;" class="nav-link nav-toggle">
-                <i class="icon-basket"></i>
-                <span class="title">Commandes</span>
-                <span class="arrow open"></span>
-
-            </a>
-            <ul class="sub-menu ">
-                <li class="nav-item active open">
-                    <a href="javascript:;" class="nav-link nav-toggle">
-
-                        <span class="title">Clients</span>
-                        <span class="arrow open"></span>
-
-                    </a>
-                    <ul class="sub-menu ">
-                        <li class="nav-item ">
-                            <a href="{{ path('addcommandec') }}" class="nav-link">
-                                <span class="title">Nouvelle commande</span>
-
-
-                            </a>
-                        </li>
-                        <li class="nav-item active ">
-                            <a href="{{ path('listbcc') }}" class="nav-link ">
-                                <span class="title">Liste des commandes</span>
-                                <span class="selected"></span>
-                            </a>
-                        </li>
-
-
-                    </ul>
-                </li>
-                <li class="nav-item  ">
-                    <a href="javascript:;" class="nav-link nav-toggle">
-
-                        <span class="title">Fournisseurs</span>
-                        <span class="arrow"></span>
-
-                    </a>
-                    <ul class="sub-menu ">
-                        <li class="nav-item  ">
-                            <a href="{{ path('addclient') }}" class="nav-link">
-                                <span class="title">Nouvau commande</span>
-
-                            </a>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="{{ path('listclient') }}" class="nav-link ">
-                                <span class="title">Liste des commandes</span>
-                            </a>
-                        </li>
-
-
-                    </ul>
-                </li>
-
-
-            </ul>
-
-        </li>
-    {% else  %}
-        <li class="nav-item">
-            <a href="javascript:;" class="nav-link nav-toggle">
-                <i class="icon-basket"></i>
-                <span class="title">Commandes</span>
-                <span class="arrow "></span>
-
-            </a>
-            <ul class="sub-menu ">
-                <li class="nav-item  ">
-                    <a href="javascript:;" class="nav-link nav-toggle">
-
-                        <span class="title">Clients</span>
-                        <span class="arrow "></span>
-
-                    </a>
-                    <ul class="sub-menu ">
-                        <li class="nav-item ">
-                            <a href="{{ path('addcommandec') }}" class="nav-link">
-                                <span class="title">Nouvelle commande</span>
-
-
-                            </a>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="{{ path('listbcc') }}" class="nav-link ">
-                                <span class="title">Liste des commandes</span>
-                            </a>
-                        </li>
-
-
-                    </ul>
-                </li>
-                <li class="nav-item  ">
-                    <a href="javascript:;" class="nav-link nav-toggle">
-
-                        <span class="title">Fournisseurs</span>
-                        <span class="arrow"></span>
-
-                    </a>
-                    <ul class="sub-menu ">
-                        <li class="nav-item  ">
-                            <a href="{{ path('addclient') }}" class="nav-link">
-                                <span class="title">Nouvau commande</span>
-
-                            </a>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="{{ path('listclient') }}" class="nav-link ">
-                                <span class="title">Liste des commandes</span>
-                            </a>
-                        </li>
-
-
-                    </ul>
-                </li>
-
-
-            </ul>
-
-        </li>
-    {% endif %}
 
     <li class="heading">
         <h3 class="uppercase" style="font-weight: 600 ; color: white"> <i class="icon-layers"></i> Facturation</h3>
@@ -777,10 +592,12 @@
         var $idrole= {{ user.role.id }};
         var isajouterclient=0;
         var islisteclient=0;
+        var ismodifierclient=0;
+        var issupprimerclient=0;
 
 
         $( document ).ready(function() {
-            $.getJSON( "api/modules", function( data ) {
+            $.getJSON( "{{ url('dashboard') }}api/modules", function( data ) {
                 $.each($(data), function(key, value) {
 
                     if (value['nom']==='Categories')
@@ -796,10 +613,6 @@
            var jqxhr= $.getJSON("{{ url('dashboard') }}api/roles/"+$idrole+'/permissions', function( data ) {
 
                 $.each($(data), function(key, value) {
-                  //Droit clients
-
-
-
                     if (isajouterclient===0)
                     {
                         $('#menuaddclient').hide();
@@ -819,6 +632,25 @@
                         islisteclient++;
                         $('#menulisteclient').show();
                     }
+                    if (issupprimerclient===0)
+                    {
+                        $('#buttonsupprimerclient').hide();
+                    }
+                    if (value['permission']['libele']==="supprimerclient") {
+
+                        issupprimerclient++;
+                        $('#buttonsupprimerclient').show();
+                    }
+
+                    if (ismodifierclient===0)
+                    {
+                        $('#buttonmodifierclient').hide();
+                    }
+                    if (value['permission']['libele']==="modifierclient") {
+
+                        ismodifierclient++;
+                        $('#buttonmodifierclient').show();
+                    }
 
 
                 });
@@ -827,6 +659,8 @@
             jqxhr.fail(function() {
                 $('#menulisteclient').hide();
                 $('#menuaddclient').hide();
+                $('#buttonmodifierclient').hide();
+                $('#buttonsupprimerclient').hide();
 
             });
 
