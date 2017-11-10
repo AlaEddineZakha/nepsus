@@ -4,8 +4,7 @@
     <list default="true" id="14e57119-6d11-439a-90fa-9334e3be0203" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/clients/list.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/clients/list.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/ClientController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/ClientController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/RoleController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/RoleController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/dashboard/dashboard1.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/dashboard/dashboard1.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -171,8 +170,8 @@
       <file leaf-file-name="dashboard1.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/dashboard/dashboard1.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1078">
-              <caret line="822" column="0" lean-forward="true" selection-start-line="822" selection-start-column="0" selection-end-line="822" selection-end-column="0" />
+            <state relative-caret-position="354">
+              <caret line="827" column="14" lean-forward="true" selection-start-line="827" selection-start-column="14" selection-end-line="828" selection-end-column="43" />
               <folding>
                 <element signature="e#12#26#0#Twig" expanded="true" />
                 <element signature="e#186#195#0#Twig" expanded="true" />
@@ -223,10 +222,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ContactClient.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ContactClient.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/ContactClient.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
+            <state relative-caret-position="119">
               <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
               <folding />
             </state>
@@ -236,8 +235,8 @@
       <file leaf-file-name="ClientController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/ClientController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="83" column="0" lean-forward="true" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+            <state relative-caret-position="470">
+              <caret line="81" column="26" lean-forward="true" selection-start-line="81" selection-start-column="26" selection-end-line="81" selection-end-column="41" />
               <folding>
                 <element signature="e#123#158#0#PHP" expanded="true" />
                 <element signature="e#1552#1578#1#PHP" expanded="true" />
@@ -271,11 +270,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="list.html.twig" pinned="false" current-in-tab="false">
+      <file leaf-file-name="list.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/clients/list.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="172" column="19" lean-forward="true" selection-start-line="172" selection-start-column="19" selection-end-line="172" selection-end-column="19" />
+            <state relative-caret-position="255">
+              <caret line="198" column="0" lean-forward="true" selection-start-line="198" selection-start-column="0" selection-end-line="198" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -400,10 +399,10 @@
         <option value="$PROJECT_DIR$/app/config/config.yml" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/InitialisationController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/APIController.php" />
-        <option value="$PROJECT_DIR$/app/Resources/views/dashboard/dashboard1.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/views/clients/list.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/RoleController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/ClientController.php" />
+        <option value="$PROJECT_DIR$/app/Resources/views/dashboard/dashboard1.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/clients/list.html.twig" />
       </list>
     </option>
   </component>
@@ -1141,14 +1140,7 @@
       <workItem from="1508027836801" duration="33386000" />
       <workItem from="1508428768249" duration="175758000" />
       <workItem from="1509715830276" duration="72474000" />
-      <workItem from="1510244198390" duration="16647000" />
-    </task>
-    <task id="LOCAL-00014" summary="02/05/2017  V1.04 add invoice fix">
-      <created>1508174710412</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1508174710412</updated>
+      <workItem from="1510244198390" duration="17300000" />
     </task>
     <task id="LOCAL-00015" summary="02/05/2017  V1.04 add invoice fix">
       <created>1508175955730</created>
@@ -1486,11 +1478,18 @@
       <option name="project" value="LOCAL" />
       <updated>1510264828655</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="02/05/2017  V1.4 Role and permission added">
+      <created>1510319110233</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1510319110233</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1415251000" />
+    <option name="totallyTimeSpent" value="1415904000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1370" height="744" extended-state="0" />
@@ -1945,14 +1944,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/clients/list.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="172" column="19" lean-forward="true" selection-start-line="172" selection-start-column="19" selection-end-line="172" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/RoleController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
@@ -1983,10 +1974,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/ContactClient.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/ClientController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="83" column="0" lean-forward="true" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+        <state relative-caret-position="470">
+          <caret line="81" column="26" lean-forward="true" selection-start-line="81" selection-start-column="26" selection-end-line="81" selection-end-column="41" />
           <folding>
             <element signature="e#123#158#0#PHP" expanded="true" />
             <element signature="e#1552#1578#1#PHP" expanded="true" />
@@ -2021,8 +2020,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/dashboard/dashboard1.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1078">
-          <caret line="822" column="0" lean-forward="true" selection-start-line="822" selection-start-column="0" selection-end-line="822" selection-end-column="0" />
+        <state relative-caret-position="354">
+          <caret line="827" column="14" lean-forward="true" selection-start-line="827" selection-start-column="14" selection-end-line="828" selection-end-column="43" />
           <folding>
             <element signature="e#12#26#0#Twig" expanded="true" />
             <element signature="e#186#195#0#Twig" expanded="true" />
@@ -2072,10 +2071,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/ContactClient.php">
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/clients/list.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        <state relative-caret-position="255">
+          <caret line="198" column="0" lean-forward="true" selection-start-line="198" selection-start-column="0" selection-end-line="198" selection-end-column="0" />
           <folding />
         </state>
       </provider>
