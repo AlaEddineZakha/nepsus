@@ -151,6 +151,9 @@
     <script src="{{ asset('Template/assets/pages/scripts/table-datatables-buttons.min.js') }}" type="text/javascript"></script>
 
     <script>
+        {% if is_granted('ROLE_SUPER_ADMIN') %}
+
+        {% else%}
         var $idrole= {{ user.role.id }};
         var ismodifierclient=0;
         var issupprimerclient=0;
@@ -170,7 +173,7 @@
                 });
             });
 
-            $.getJSON("{{ url('dashboard') }}api/roles/"+$idrole+'/permissions', function( data ) {
+            var jqxhr=$.getJSON("{{ url('dashboard') }}api/roles/"+$idrole+'/permissions', function( data ) {
                 $.each($(data), function(key, value) {
                     //Droit clients
                     if (issupprimerclient===0)
@@ -198,7 +201,12 @@
                 });
             });
 
-        });
 
+            jqxhr.fail(function() {
+                $('#buttonmodifierclient').hide();
+                $('#buttonsupprimerclient').hide();
+            });
+        });
+        {% endif %}
     </script>
 {% endblock %}

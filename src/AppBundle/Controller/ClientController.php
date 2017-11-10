@@ -15,6 +15,8 @@ use AppBundle\Entity\LigneFC;
 use AppBundle\Entity\LigneBCC;
 use AppBundle\Entity\BonCommandeClient;
 use AppBundle\Entity\Client;
+use AppBundle\Entity\Permission;
+use AppBundle\Entity\RolePermission;
 use AppBundle\Entity\User;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Component\HttpFoundation\Response;
@@ -36,36 +38,53 @@ class ClientController extends  Controller
      */
     public function newAction(Request $request)
     {
+        $em = $this->getDoctrine()->getManager();
+        $user=$em->getRepository(User::class)->find($this->getUser()->getId());
+        $idroleuser=$user->getRole();
+        $permissions=$em->getRepository(Permission::class)->findOneBy(array('libele' => 'ajouterclient'));
+        $idpermission=$permissions->getId();
+        $currentrolepermission =$em->getRepository('AppBundle:RolePermission')->findBy(array('role' => $idroleuser,'permission'=>$idpermission));
+        if ($currentrolepermission) {
+            if ($request->isMethod('POST')) {
+                $client = new Client();
+                $client->setCapital($request->request->get('cap'));
+                $client->setMatriculefiscale($request->request->get('mf'));
+                $client->setRaison($request->request->get('raison'));
+                $client->setEmail($request->request->get('email'));
+                $client->setAdresse($request->request->get('adresse'));
+                $client->setRegion($request->request->get('region'));
+                $client->setVille($request->request->get('ville'));
+                $client->setPays($request->request->get('pays'));
+                $client->setTelephone($request->request->get('tel1'));
+                $client->setMobile($request->request->get('tel2'));
+                $client->setSiteweb($request->request->get('site'));
+                $client->setRegistre($request->request->get('registre'));
+                $client->setCreated(new \DateTime());
+                $client->setFax($request->request->get('fax'));
+                $client->setFormejuridique($request->request->get('formejuridique'));
 
 
-        if ($request->isMethod('POST')) {
-            $client = new Client();
-            $client->setCapital($request->request->get('cap'));
-            $client->setMatriculefiscale($request->request->get('mf'));
-            $client->setRaison($request->request->get('raison'));
-            $client->setEmail($request->request->get('email'));
-            $client->setAdresse($request->request->get('adresse'));
-            $client->setRegion($request->request->get('region'));
-            $client->setVille($request->request->get('ville'));
-            $client->setPays($request->request->get('pays'));
-            $client->setTelephone($request->request->get('tel1'));
-            $client->setMobile($request->request->get('tel2'));
-            $client->setSiteweb($request->request->get('site'));
-            $client->setRegistre($request->request->get('registre'));
-            $client->setCreated(new \DateTime());
-            $client->setFax($request->request->get('fax'));
-            $client->setFormejuridique($request->request->get('formejuridique'));
+
+                $em->persist($client);
+                $em->flush();
+
+                return $this->redirectToRoute('listclient');
+            }
 
 
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($client);
-            $em->flush();
+            return $this->render('clients/add.html.twig',[
+                'user'=>$user
+            ]);
 
-            return $this->redirectToRoute('listclient');
+        }
+        else
+        {
+            return $this->redirectToRoute('pagenotallowed');
         }
 
 
-        return $this->render('clients/add.html.twig');
+
+
 
 
     }
@@ -80,23 +99,40 @@ class ClientController extends  Controller
         //$object=$this->get('router')->getRouteCollection()->get('initconfig');
 
         //$this->denyAccessUnlessGranted('ROLE_ADMIN', $route, 'Unable to access this page!');
+
+
         $em = $this->getDoctrine()->getManager();
-        $query = $em->createQuery('SELECT p FROM AppBundle:Client p');
-
-
-        /** @var  $paginator \Knp\Component\Pager\Paginator */
-        $paginator = $this->get('knp_paginator');
-        $result = $paginator->paginate(
-            $query,
-            $request->query->getInt('page', 1),
-            $request->query->getInt('limit', 5)
-        );
         $user=$em->getRepository(User::class)->find($this->getUser()->getId());
-        return $this->render(':clients:list.html.twig', [
-            'clients' => $result,
-            'user'=>$user
+        $idroleuser=$user->getRole();
+        $permissions=$em->getRepository(Permission::class)->findOneBy(array('libele' => 'voirclient'));
+        $idpermission=$permissions->getId();
+        $currentrolepermission =$em->getRepository('AppBundle:RolePermission')->findBy(array('role' => $idroleuser,'permission'=>$idpermission));
+        if ($currentrolepermission)
+        {
+            $query = $em->createQuery('SELECT p FROM AppBundle:Client p');
 
-        ]);
+
+            /** @var  $paginator \Knp\Component\Pager\Paginator */
+            $paginator = $this->get('knp_paginator');
+            $result = $paginator->paginate(
+                $query,
+                $request->query->getInt('page', 1),
+                $request->query->getInt('limit', 5)
+            );
+
+            return $this->render(':clients:list.html.twig', [
+                'clients' => $result,
+                'user'=>$user
+
+            ]);
+        }
+        else
+        {
+            return  $this->redirectToRoute('pagenotallowed');
+        }
+
+
+
 
 
     }

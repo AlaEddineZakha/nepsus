@@ -60,6 +60,7 @@ class RoleController extends Controller
         $currentrolepermission =$em->getRepository('AppBundle:RolePermission')->findBy(array('role' => $role));
 
 
+
         if ($request->isMethod('POST')) {
 
 
