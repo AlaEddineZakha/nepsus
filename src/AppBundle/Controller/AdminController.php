@@ -30,7 +30,7 @@ class AdminController extends  Controller
         $user=$em->getRepository(User::class)->find($this->getUser()->getId());
         $idrole=$user->getRole();
 
-       // dump($idrole);
+
             $auth_checker = $this->get('security.authorization_checker');
             $isRoleAdmin = $auth_checker->isGranted('ROLE_SUPER_ADMIN');
         $result = $em->getRepository('AppBundle:Client')
