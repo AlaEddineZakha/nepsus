@@ -29,9 +29,7 @@ class Fournisseur
      * @ORM\Column(type="integer")
      */private $id ;
 
-    /**
-     * @ORM\Column(type="float")
-     */private $capital;
+
 
     /**
      * @ORM\Column(type="string")
@@ -95,12 +93,7 @@ class Fournisseur
 
 
 
-    /**
-     * One Product has Many Features.
-     * @var Collection
-     * @ORM\OneToMany(targetEntity="AppBundle\Entity\BonCommandeClient", mappedBy="client" , cascade={"persist", "remove"},fetch="EAGER")
-     */
-    private $listecommandes;
+
 
     /**
      * One Product has Many Features.
@@ -138,21 +131,7 @@ class Fournisseur
         return $this->id;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getCapital()
-    {
-        return $this->capital;
-    }
 
-    /**
-     * @param mixed $capital
-     */
-    public function setCapital($capital)
-    {
-        $this->capital = $capital;
-    }
 
 
 
@@ -335,21 +314,7 @@ class Fournisseur
         $this->registre = $registre;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getListecommandes()
-    {
-        return $this->listecommandes;
-    }
 
-    /**
-     * @param mixed $listecommandes
-     */
-    public function setListecommandes($listecommandes)
-    {
-        $this->listecommandes = $listecommandes;
-    }
 
     /**
      * @return mixed

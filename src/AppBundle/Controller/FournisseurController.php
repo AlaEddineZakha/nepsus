@@ -54,10 +54,11 @@ class FournisseurController extends Controller
     /**
      * @Route("fournisseurs/{id}/edit", name="editfournisseur")
      */
-    public function editAction($id,Request $request)
+    public function editAction(Request $request,$id)
     {
         $em = $this->getDoctrine()->getManager();
         $fournisseur = $em->getRepository('AppBundle:Fournisseur')->find($id);
+
         if ($request->isMethod('POST')) {
 
             $fournisseur->setCapital($request->request->get('cap'));
@@ -90,7 +91,6 @@ class FournisseurController extends Controller
         ]);
 
 
-        // ... do something, like pass the $product object into a template
     }
 
 

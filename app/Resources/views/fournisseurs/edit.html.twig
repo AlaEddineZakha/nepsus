@@ -687,27 +687,6 @@
                                                     <tbody>
 
 
-                                                    {% for e in fournisseur.listecommandes %}
-
-                                                        {% for a in e.facture %}
-
-                                                            <tr>
-                                                                <td>{{ a.id }}</td>
-                                                                <td>{{ a.created|date('Y-m-d') }}</td>
-                                                                <td>{{ a.dateecheance|date('Y-m-d') }}</td>
-                                                                <td>{{ a.totalht }} TND</td>
-                                                                <td>{{ a.totalttc }} TND</td>
-                                                                <td> <span class="label label-sm label-warning">{{ a.statut }} </span></td>
-                                                                <td>
-                                                                    <a href="javascript:;" class="btn btn-icon-only blue" ><i class="fa fa-search"></i> </a>
-                                                                    <a href="{{ path('viewfactureclient', {'id': a.id }) }}" class="btn btn-icon-only yellow" ><i class="fa fa-edit"></i> </a>
-                                                                    <a href="javascript:;" class="btn btn-icon-only red" onclick="myFunction({{ a.id }})"><i class="fa fa-times"></i> </a>
-
-                                                                </td>
-
-                                                            </tr>
-                                                        {% endfor %}
-                                                    {% endfor %}
 
                                                     </tbody>
                                                 </table>
@@ -749,13 +728,7 @@
                                                     <tbody>
 
 
-                                                    {% for c in fournisseur.historiques %}
-                                                        <tr>
-                                                            <td>{{ c.id }}</td>
-                                                            <td>{{ c.time|date('Y-m-d  H:m:s') }}</td>
-                                                            <td>{{ c.action }}</td>
-                                                        </tr>
-                                                    {% endfor %}
+
 
                                                     </tbody>
                                                 </table>
