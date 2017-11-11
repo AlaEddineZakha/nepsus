@@ -24,4 +24,9 @@ class Test
  */
     private $id;
 
+    /**
+     * @ORM\Column(type="string")
+     */
+    private $nom;
+
 }
