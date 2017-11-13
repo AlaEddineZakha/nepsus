@@ -157,6 +157,14 @@ editrole:
 listroles:
     path:      /roles
     defaults:  { _controller: AppBundle:Role:showAll }
+
+deleterole:
+    path:      /roles/{id}/delete
+    defaults:  { _controller: AppBundle:Role:delete }
+    requirements:
+                    id: \d+
+    options:
+                expose: true
 #--------------------- Users -------------------#
 listusers:
     path:      /utilisateurs
@@ -166,7 +174,20 @@ adduser:
     path:      /utilisateurs/new
     defaults:  { _controller: AppBundle:Utilisateur:new }
 
+edituser:
+    path:      /utilisateurs/{id}/edit
+    defaults:  { _controller: AppBundle:Utilisateur:edit }
+    requirements:
+                    id: \d+
+deleteuser:
+    path:      /utilisateurs/{id}/delete
+    defaults:  { _controller: AppBundle:Utilisateur:delete }
+    requirements:
+                    id: \d+
+    options:
+                expose: true}
 
+#--------------------- Bon de commande -------------------#
 
 listbcc:
     path:      /clients/commandes
