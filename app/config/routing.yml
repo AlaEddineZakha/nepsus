@@ -135,7 +135,7 @@ editcategorie:
                     id: \d+
 
 addcategorie:
-    path:      /categories
+    path:      /categories/new
     defaults:  { _controller: AppBundle:Category:new }
 
 deletecategorie:
@@ -187,7 +187,7 @@ deleteuser:
     options:
                 expose: true}
 
-#--------------------- Bon de commande -------------------#
+#--------------------- Commande clients -------------------#
 
 listbcc:
     path:      /clients/commandes
@@ -203,9 +203,36 @@ editcommandec:
     requirements:
                 id: \d+
 
+#--------------------- Commande clients -------------------#
+
+listbcf:
+    path:      /fournisseurs/commandes
+    defaults:  { _controller: AppBundle:CommandeFournisseur:showAll }
+
+addcommandef:
+    path:      /fournisseurs/commandes/add
+    defaults:  { _controller: AppBundle:CommandeFournisseur:addCommande }
+
+editcommandef:
+    path:      /fournisseurs/commandes/{id}/edit
+    defaults:  { _controller: AppBundle:CommandeFournisseur:editCommande }
+    requirements:
+                id: \d+
+
+
+confirmlot:
+    path:      /fournisseurs/commandes/{id}/lot/confirm
+    defaults:  { _controller: AppBundle:Lot:index }
+    requirements:
+            id: \d+
+#--------------------- Produits -------------------#
 listproduits:
     path:      /produits
     defaults:  { _controller: AppBundle:Produit:showAll }
+
+addproduit:
+    path:      /produits/new
+    defaults:  { _controller: AppBundle:Produit:newProduit }
 
 checkemail:
     path:      /checkemail/{email}

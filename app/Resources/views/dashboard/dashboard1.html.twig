@@ -409,6 +409,58 @@
 
     </li>
 
+    <li class="heading">
+
+        <h3 class="uppercase" style="font-weight: 600 ; color: white;"> <i class="icon-settings"></i>  Sécurité</h3>
+    </li>
+
+    <li class="nav-item" >
+        <a href="javascript:;" class="nav-link nav-toggle">
+            <i class="icon-home"></i>
+            <span class="title">Utilisateurs</span>
+            <span class="arrow"></span>
+
+        </a>
+        <ul class="sub-menu ">
+            <li class="nav-item  ">
+                <a href="{{ path('adduser') }}" class="nav-link">
+                    <span class="title">Nouveau utilisateur</span>
+
+                </a>
+            </li>
+            <li class="nav-item  ">
+                <a href="{{ path('listusers') }}" class="nav-link ">
+                    <span class="title">Liste des utilisateurs</span>
+                </a>
+            </li>
+
+
+        </ul>
+    </li>
+    <li class="nav-item" >
+        <a href="javascript:;" class="nav-link nav-toggle">
+            <i class="icon-home"></i>
+            <span class="title">Roles & permissions</span>
+            <span class="arrow"></span>
+
+        </a>
+        <ul class="sub-menu ">
+            <li class="nav-item  ">
+                <a href="{{ path('addrole') }}" class="nav-link">
+                    <span class="title">Nouveau role</span>
+
+                </a>
+            </li>
+            <li class="nav-item  ">
+                <a href="{{ path('listroles') }}" class="nav-link ">
+                    <span class="title">Liste des roles</span>
+                </a>
+            </li>
+
+
+        </ul>
+    </li>
+
 {% endblock %}
 {% block container %}
     <div class="page-bar">
@@ -521,7 +573,8 @@
                 <div class="display">
                     <div class="number">
                         <h3 class="font-purple-soft">
-                            <span data-counter="counterup" data-value="{{ nbclient|number_format }}"></span>
+
+                            <span data-counter="counterup" data-value=""></span>
                         </h3>
                         <small>NEW USERS</small>
                     </div>

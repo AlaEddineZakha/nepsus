@@ -36,7 +36,9 @@ class CategoryController extends Controller
     }
 
 
-
+    /**
+     * @Route("/categories/new", name="addcategorie")
+     */
     public function newAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();

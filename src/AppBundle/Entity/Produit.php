@@ -98,11 +98,29 @@ class Produit
     /**
      * One Cart has One Customer.
      *
+     * @var \Doctrine\Common\Collections\Collection|LigneBCF[]
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\LigneBCF", mappedBy="produit" ,cascade={"persist"})
+     * @ORM\JoinColumn(name="lignebcf_id", referencedColumnName="id")
+     */
+    private $lignebcf;
+
+    /**
+     * One Cart has One Customer.
+     *
      * @var \Doctrine\Common\Collections\Collection|LigneFC[]
      * @ORM\OneToMany(targetEntity="AppBundle\Entity\LigneFC", mappedBy="produit" ,cascade={"persist"})
      * @ORM\JoinColumn(name="lignefc_id", referencedColumnName="id")
      */
     private $lignefc;
+
+    /**
+     * One Cart has One Customer.
+     *
+     * @var \Doctrine\Common\Collections\Collection|LigneFF[]
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\LigneFF", mappedBy="produit" ,cascade={"persist"})
+     * @ORM\JoinColumn(name="ligneff_id", referencedColumnName="id")
+     */
+    private $ligneff;
 
 
 
@@ -110,6 +128,8 @@ class Produit
     public function __construct() {
         $this->ligne = new ArrayCollection();
         $this->lignefc = new ArrayCollection();
+        $this->lignebcf = new ArrayCollection();
+        $this->ligneff = new ArrayCollection();
 
     }
 
@@ -326,6 +346,28 @@ class Produit
         $produit->setProduit(null);
     }
 
+    public function addLigneBCF(LigneBCF $produit)
+    {
+
+
+        if ($this->lignebcf->contains($produit)) {
+            return;
+        }
+        $this->lignebcf[] = $produit;
+        // needed to update the owning side of the relationship!
+        $produit->setProduit($this);
+    }
+
+    public function removeLigneBCF(LigneBCF $produit)
+    {
+        if (!$this->lignebcf->contains($produit)) {
+            return;
+        }
+        $this->lignebcf->removeElement($produit);
+        // needed to update the owning side of the relationship!
+        $produit->setProduit(null);
+    }
+
 
     /**
      * @return ArrayCollection|LigneBCC[]
@@ -342,6 +384,23 @@ class Produit
     public function setLigne($ligne)
     {
         $this->ligne = $ligne;
+    }
+
+    /**
+     * @return ArrayCollection|LigneBCF[]
+     */
+    public function getLigneBCF()
+    {
+        return $this->lignebcf;
+    }
+
+
+    /**
+     * @param mixed $lignebcf
+     */
+    public function setLigneBCF($lignebcf)
+    {
+        $this->lignebcf = $lignebcf;
     }
 
 
@@ -370,6 +429,29 @@ class Produit
     }
 
 
+    public function addLigneFF(LigneFF $produit)
+    {
+
+
+        if ($this->ligneff->contains($produit)) {
+            return;
+        }
+        $this->ligneff[] = $produit;
+        // needed to update the owning side of the relationship!
+        $produit->setProduit($this);
+    }
+
+    public function removeLigneFF(LigneFF $produit)
+    {
+        if (!$this->ligneff->contains($produit)) {
+            return;
+        }
+        $this->ligneff->removeElement($produit);
+        // needed to update the owning side of the relationship!
+        $produit->setProduit(null);
+    }
+
+
     /**
      * @return ArrayCollection|LigneFC[]
      */
@@ -385,6 +467,25 @@ class Produit
     public function setLigneFC($ligne)
     {
         $this->lignefc = $ligne;
+    }
+
+
+
+    /**
+     * @return ArrayCollection|LigneFF[]
+     */
+    public function getLigneFF()
+    {
+        return $this->ligneff;
+    }
+
+
+    /**
+     * @param mixed $ligneff
+     */
+    public function setLigneFF($ligneff)
+    {
+        $this->ligneff = $ligneff;
     }
 
 

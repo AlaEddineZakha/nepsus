@@ -93,12 +93,17 @@ class Fournisseur
 
 
 
-
+    /**
+     * One Product has Many Features.
+     * @var Collection
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\BonCommandeFournisseur", mappedBy="fournisseur" , cascade={"persist", "remove"},fetch="EAGER")
+     */
+    private $listecommandes;
 
     /**
      * One Product has Many Features.
      * @var Collection
-     * @ORM\OneToMany(targetEntity="AppBundle\Entity\HistoriqueClient", mappedBy="client" , cascade={"persist", "remove"},orphanRemoval=true)
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\HistoriqueFournisseur", mappedBy="fournisseur" , cascade={"persist", "remove"},orphanRemoval=true)
      */
     private $historiques;
 
@@ -400,7 +405,7 @@ class Fournisseur
     }
 
     /**
-     * @return ArrayCollection|HistoriqueClient[]
+     * @return ArrayCollection|HistoriqueFournisseur[]
      */
     public function getHistoriques()
     {
@@ -408,9 +413,26 @@ class Fournisseur
     }
 
 
+    /**
+     * @return mixed
+     */
+    public function getListecommandes()
+    {
+        return $this->listecommandes;
+    }
+
+    /**
+     * @param mixed $listecommandes
+     */
+    public function setListecommandes($listecommandes)
+    {
+        $this->listecommandes = $listecommandes;
+    }
 
 
-    public function addHistorique(HistoriqueClient $his)
+
+
+    public function addHistorique(HistoriqueFournisseur $his)
     {
 
 
@@ -419,17 +441,17 @@ class Fournisseur
         }
         $this->historiques[] = $his;
         // needed to update the owning side of the relationship!
-        $his->setClient($this);
+        $his->setFournisseur($this);
     }
 
-    public function removeHistorique(HistoriqueClient $his)
+    public function removeHistorique(HistoriqueFournisseur $his)
     {
         if (!$this->historiques->contains($his)) {
             return;
         }
         $this->historiques->removeElement($his);
         // needed to update the owning side of the relationship!
-        $his->setClient(null);
+        $his->setFournisseur(null);
     }
 
 

@@ -33,8 +33,7 @@ class AdminController extends  Controller
 
             $auth_checker = $this->get('security.authorization_checker');
             $isRoleAdmin = $auth_checker->isGranted('ROLE_SUPER_ADMIN');
-        $result = $em->getRepository('AppBundle:Client')
-            ->count();
+            $result = $em->getRepository('AppBundle:Client')->count();
 
         return $this->render('dashboard/dashboard1.html.twig', [
             'nbclient' => $result,

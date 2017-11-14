@@ -26,7 +26,7 @@
                 <i class="fa fa-circle"></i>
             </li>
             <li>
-                <span>Commandes client</span>
+                <span>Commandes fournisseur</span>
                 <i class="fa fa-circle"></i>
             </li>
 
@@ -59,7 +59,7 @@
                 </div>
                 <div class="portlet-body">
                     <!-- BEGIN FORM-->
-                    <form  action="{{ path('confirmcommandec')}}" method="post" class="form-horizontal" id="myform">
+                    <form  action="{{ path('addcommandef')}}" method="post" class="form-horizontal" id="myform">
 
                         <div class="form-body">
 
@@ -67,14 +67,14 @@
                                 <div class="col-md-12">
                                     <div class="col-md-6">
                                           <div class="form-group">
-                                            <label class="control-label col-md-2" style="text-align: justify">Client
+                                            <label class="control-label col-md-2" style="text-align: justify">Fournisseur
                                                 <span class="required" style="font-size: large"> * </span>
                                             </label>
                                             <div class="col-md-6">
-                                                <select class="form-control select2me" id="client" name="client" data-live-search="true">
+                                                <select class="form-control select2me" id="fournisseur" name="fournisseur" data-live-search="true">
                                                     <option value="">Select...</option>
 
-                                              {% for c in client %}
+                                              {% for c in fournisseur %}
                                                <option value="{{ c.id }}">{{ c.raison }}</option>
                                                  {% endfor %}
 
@@ -124,6 +124,7 @@
                                         </div>
 
                                     </div>
+
 
                                 </div>
                             </div>
@@ -318,6 +319,7 @@
         $ligne.append($removeTagLink);
         $('#thead').append($ligne);
         $size++;
+        console.log("Size = "+$size);
          $k=$size;
         $('#size').attr('value',$size);
          $('#prixht-'+$id+'').attr('value',0);
@@ -378,15 +380,16 @@
 
        e.preventDefault();
 
+$size--;
+$('#size').attr('value',$size);
 
-
-  console.log("Size = "+$k);
+  console.log("Size = "+$size);
   var $ko=$k;
 
 
  var  $oldid=parseInt($(this).closest("tr").prop("id").match(/\d/g));
           console.log("ID deleted :"+$oldid);
-        $size--;
+
         $id--;
 
 

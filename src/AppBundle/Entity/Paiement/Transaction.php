@@ -32,6 +32,13 @@ class Transaction
      * @ORM\JoinColumn(name="facture_id", referencedColumnName="id")
      */
     private $facture;
+
+    /**
+     * Many Features have One Product.
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\FactureFournisseur", inversedBy="paiement" , fetch="EAGER")
+     * @ORM\JoinColumn(name="facturefournisseur_id", referencedColumnName="id")
+     */
+    private $facturefournisseur;
     /**
      * @ORM\Column(type="date")
      */
@@ -192,6 +199,22 @@ class Transaction
     public function setMethodetransaction($methodetransaction)
     {
         $this->methodetransaction = $methodetransaction;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getFacturefournisseur()
+    {
+        return $this->facturefournisseur;
+    }
+
+    /**
+     * @param mixed $facturefournisseur
+     */
+    public function setFacturefournisseur($facturefournisseur)
+    {
+        $this->facturefournisseur = $facturefournisseur;
     }
 
 

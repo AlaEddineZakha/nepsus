@@ -57,33 +57,28 @@
 
                 <div class="portlet-body">
                     <!-- BEGIN FORM-->
-                    <form action="{{ path('addcategorie') }}" id="signupForm" class="form-horizontal" method="post">
+                    <form action="{{ path('confirmlot', {'id': lot.id }) }}" id="signupForm" class="form-horizontal" method="post">
 
                         <div class="form-body">
                             <div class="row">
                                 <div class="col-md-12">
+
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label class="control-label col-md-4" for="nom" style="text-align: start">Libelle
+                                            <label class="control-label col-md-4" style="text-align: justify">Entrepots disponibles
                                                 <span class="required" style="font-size: large"> * </span>
                                             </label>
                                             <div class="col-md-8">
-                                                <input type="text" name="nom" id="nom" data-required="1" class="form-control" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label class="control-label col-md-4" style="text-align: justify">Catégorie parent
-                                                <span class="required" style="font-size: large"> * </span>
-                                            </label>
-                                            <div class="col-md-8">
-                                                <select class="form-control select2me" id="parent" name="parent" data-live-search="true" data-size="8">
+                                                {% if entrepots %}
+                                                <select class="form-control select2me" id="entrepot" name="entrepot" data-live-search="true" data-size="8">
                                                     <option value="">Select...</option>
-                                                    {% for parent in parents %}
-                                                    <option value="{{ parent.id}}">{{ parent.nom }}</option>
+                                                    {% for e in entrepots %}
+                                                        <option value="{{ e.id}}">{{ e.nom }} ( Espace libre {{ e.espacerestant }} )</option>
                                                     {% endfor %}
                                                 </select>
+                                               {% else %}
+                                                    Tous les entrepots sont pleins ! Veuillez effectuer un mouvement de stock pour liberer de l'espace.
+                                                {% endif %}
                                             </div>
 
                                         </div>
@@ -92,15 +87,15 @@
                                 </div>
                             </div>
 
-                        <div class="form-actions">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <button type="submit" class="btn green">Enregistrer</button>
-                                    <button type="button" class="btn default">Annuler</button>
-                                </div>
+                            <div class="form-actions">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <button type="submit" class="btn green">Enregistrer</button>
+                                        <button type="button" class="btn default">Annuler</button>
+                                    </div>
 
+                                </div>
                             </div>
-                        </div>
                         </div>
                     </form>
 
@@ -138,15 +133,15 @@
 
         $().ready(function() {
 
-   /*
-            console.log($('#tva').val());
-            if (!($('#tva').bootstrapSwitch('state')))
-            {
-                $( "#tva" ).attr( "value", "Non" );
-                alert( $('#tva').val());
-                console.log($('#tva').val());
-            }
-     */
+            /*
+             console.log($('#tva').val());
+             if (!($('#tva').bootstrapSwitch('state')))
+             {
+             $( "#tva" ).attr( "value", "Non" );
+             alert( $('#tva').val());
+             console.log($('#tva').val());
+             }
+             */
 
 
             // validate the comment form when it is submitted

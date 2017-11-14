@@ -91,7 +91,7 @@
                             <th>Date d'ajout</th>
                             <th>Telephone</th>
                             <th>Matricule fiscal</th>
-                            <th>Capital</th>
+
                             <th>Actions</th>
                         </tr>
                         </thead>
@@ -103,7 +103,7 @@
                             <th>Date d'ajout</th>
                             <th>Telephone</th>
                             <th>Matricule fiscal</th>
-                            <th>Capital</th>
+
                             <th>Actions</th>
                         </tr>
                         </tfoot>
@@ -117,7 +117,7 @@
                                 <td>{{ fournisseur.created|date('Y-m-d') }}</td>
                                 <td>{{ fournisseur.telephone }}</td>
                                 <td>{{ fournisseur.matriculefiscale }}</td>
-                                <td>{{ fournisseur.capital }} TND</td>
+
                                 <td>
                                     <a href="javascript:;" class="btn btn-icon-only blue" ><i class="fa fa-search"></i> </a>
                                     <a href="{{ path('editfournisseur', {'id': fournisseur.id }) }}" class="btn btn-icon-only yellow" ><i class="fa fa-edit"></i> </a>

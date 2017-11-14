@@ -20,7 +20,6 @@ class FournisseurController extends Controller
 
         if ($request->isMethod('POST')) {
             $fournisseur= new Fournisseur();
-            $fournisseur->setCapital($request->request->get('cap'));
             $fournisseur->setMatriculefiscale($request->request->get('mf'));
             $fournisseur->setRaison($request->request->get('raison'));
             $fournisseur->setEmail($request->request->get('email'));
@@ -61,7 +60,6 @@ class FournisseurController extends Controller
 
         if ($request->isMethod('POST')) {
 
-            $fournisseur->setCapital($request->request->get('cap'));
             $fournisseur->setMatriculefiscale($request->request->get('mf'));
             $fournisseur->setRaison($request->request->get('raison'));
             $fournisseur->setEmail($request->request->get('email'));
