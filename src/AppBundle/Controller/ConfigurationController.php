@@ -71,6 +71,7 @@ class ConfigurationController extends Controller
 
             $admin->setPlainPassword($request->request->get('password'));
             $admin->setEnabled('true');
+            $admin->setSuperAdmin('true');
             $admin->setRoles(array('ROLE_SUPER_ADMIN'));
             $admin->setEmail($request->request->get('email'));
             $admin->setUsername($request->request->get('username'));
