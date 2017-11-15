@@ -67,7 +67,7 @@
                                 <div class="col-md-12">
                                     <div class="col-md-6">
                                           <div class="form-group">
-                                            <label class="control-label col-md-2" style="text-align: justify">Client
+                                            <label class="control-label col-md-2" style="text-align: justify" for="client">Client
                                                 <span class="required" style="font-size: large"> * </span>
                                             </label>
                                             <div class="col-md-6">
@@ -86,7 +86,7 @@
                                     </div>
                                     <div class="col-md-6">
                                              <div class="form-group">
-                                            <label class="control-label col-md-2" style="text-align: justify">Statut
+                                            <label class="control-label col-md-2" style="text-align: justify" for="statut">Statut
                                                 <span class="required" style="font-size: large"> * </span>
                                             </label>
                                             <div class="col-md-6">
@@ -107,7 +107,7 @@
                                         </div>
                                           <div class="col-md-6">
                                           <div class="form-group">
-                                            <label class="control-label col-md-2" style="text-align: justify">Devise
+                                            <label class="control-label col-md-2" style="text-align: justify" for="devise">Devise
                                                 <span class="required" style="font-size: large"> * </span>
                                             </label>
                                             <div class="col-md-6">
@@ -138,7 +138,7 @@
                                                                     <div class="caption">
                                                                         <i class="fa fa-cogs"></i>Lignes de commande </div>
                                                                     <div class="actions">
-                                                                        <a href="javascript:;" class="btn btn-default btn-sm" onclick="addform();">
+                                                                        <a href="javascript:" class="btn btn-default btn-sm" onclick="addform();">
                                                                             <i class="fa fa-plus-circle"></i> Ajouter ligne </a>
                                                                     </div>
                                                                 </div>
@@ -341,9 +341,9 @@
 
             //$('#'#liste-ligne'+$id+'' option:selected").remove();
 
-            var $currentidtext=$(this).closest("tr").prop("id");
-            var $currentid=parseInt($currentidtext.match(/\d/g));
-            var $nextlistid= $currentid+1;
+           // var $currentidtext=$(this).closest("tr").prop("id");
+           // var $currentid=parseInt($currentidtext.match(/\d/g));
+           // var $nextlistid= $currentid+1;
 
 
              //console.log('Current id : '+$currentid);
@@ -394,7 +394,7 @@
 
 
   console.log("Size = "+$k);
-  var $ko=$k;
+  //var $ko=$k;
 
 
  var  $oldid=parseInt($(this).closest("tr").prop("id").match(/\d/g));
@@ -412,7 +412,7 @@
 
 
 
- var $thisid=$(this).closest("tr").prop("id");
+// var $thisid=$(this).closest("tr").prop("id");
  //console.log("id = "+$thisid);
 //$('#prixht-'+$thisid+'').attr('value',0);
 $(this).closest("tr").remove();
