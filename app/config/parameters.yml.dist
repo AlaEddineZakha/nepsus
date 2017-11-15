@@ -5,8 +5,8 @@ parameters:
     database_host: localhost
     database_port: 3306
     database_name: nepsus
-    database_user: admin_nepsus
-    database_password: admin_nepsus
+    database_user: achref
+    database_password: pe8Z4$6p
     # You should uncomment this if you want to use pdo_sqlite
     #database_path: '%kernel.root_dir%/../var/data/data.sqlite'
 
