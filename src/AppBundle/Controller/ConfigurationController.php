@@ -62,7 +62,7 @@ class ConfigurationController extends Controller
                     }
                 }
             }
-            $em->persist($module);
+            $em->persist($modules);
             $admin->setPlainPassword($request->request->get('password'));
             $admin->setEnabled('true');
             $admin->setRoles(array('ROLE_SUPER_ADMIN'));
