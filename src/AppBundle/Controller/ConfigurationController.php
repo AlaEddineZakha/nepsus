@@ -38,8 +38,10 @@ class ConfigurationController extends Controller
                 if ($module->getNom() == 'Entrepots') {
                     if (empty($request->request->get('module_entrepots'))) {
                         $module->setActive(0);
+                        $em->persist($module);
                     } else {
                         $module->setActive(1);
+                        $em->persist($module);
 
                     }
                 }
@@ -47,8 +49,10 @@ class ConfigurationController extends Controller
                 if ($module->getNom() == 'Fournisseurs') {
                     if (empty($request->request->get('module_fournisseurs'))) {
                         $module->setActive(0);
+                        $em->persist($module);
                     } else {
                         $module->setActive(1);
+                        $em->persist($module);
 
                     }
                 }
@@ -56,13 +60,15 @@ class ConfigurationController extends Controller
                 if ($module->getNom() == 'Categories') {
                     if (empty($request->request->get('module_categories'))) {
                         $module->setActive(0);
+                        $em->persist($module);
                     } else {
                         $module->setActive(1);
+                        $em->persist($module);
 
                     }
                 }
             }
-            $em->persist($modules);
+
             $admin->setPlainPassword($request->request->get('password'));
             $admin->setEnabled('true');
             $admin->setRoles(array('ROLE_SUPER_ADMIN'));

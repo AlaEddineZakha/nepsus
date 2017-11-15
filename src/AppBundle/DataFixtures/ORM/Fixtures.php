@@ -9,6 +9,7 @@
 namespace AppBundle\DataFixtures\ORM;
 
 
+use AppBundle\Entity\Modules;
 use AppBundle\Entity\Permission;
 use AppBundle\Entity\Role;
 use AppBundle\Entity\RolePermission;
@@ -44,6 +45,23 @@ class Fixtures extends Fixture
         $permission4->setDescription("Permet d'ajouter un client");
         $permission4->setCreated(new \DateTime());
         $manager->persist($permission4);
+
+        $module1= new Modules();
+        $module1->setNom("Entrepots");
+        $module1->setActive("Module entrepots");
+        $manager->persist($module1);
+
+        $module2= new Modules();
+        $module2->setNom("Fournisseurs");
+        $module2->setActive("Module Fournisseurs");
+        $manager->persist($module2);
+
+        $module3= new Modules();
+        $module3->setNom("Categories");
+        $module3->setActive("Module Categories");
+        $manager->persist($module3);
+
+
 
 
         $role=new Role();
