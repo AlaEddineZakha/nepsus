@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="14e57119-6d11-439a-90fa-9334e3be0203" name="Default" comment="02/05/2017  V1.4 Fixture">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/nepsus.iml" afterPath="$PROJECT_DIR$/.idea/nepsus.iml" />
+    <list default="true" id="14e57119-6d11-439a-90fa-9334e3be0203" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Fournisseur.php" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Fournisseur.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -130,7 +129,18 @@
     <favorites_list name="nepsus" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="ContactFournisseur.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/ContactFournisseur.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="31" column="59" lean-forward="true" selection-start-line="31" selection-start-column="59" selection-end-line="31" selection-end-column="59" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -220,7 +230,6 @@
         <option value="$PROJECT_DIR$/src/AppBundle/DataFixtures/ORM/Fixtures.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/Produit.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/HistoriqueFournisseur.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Entity/Fournisseur.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/Paiement/Transaction.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/LigneBCF.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/CategoryController.php" />
@@ -253,6 +262,7 @@
         <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
         <option value="$PROJECT_DIR$/app/config/parameters.yml.dist" />
         <option value="$PROJECT_DIR$/app/config/parameters.yml" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Entity/Fournisseur.php" />
       </list>
     </option>
   </component>
@@ -931,14 +941,7 @@
       <workItem from="1508027836801" duration="33386000" />
       <workItem from="1508428768249" duration="175758000" />
       <workItem from="1509715830276" duration="72474000" />
-      <workItem from="1510244198390" duration="73163000" />
-    </task>
-    <task id="LOCAL-00031" summary="02/05/2017  V1.05 Form config">
-      <created>1509071341350</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1509071341350</updated>
+      <workItem from="1510244198390" duration="74013000" />
     </task>
     <task id="LOCAL-00032" summary="02/05/2017  V1.05 Form config">
       <created>1509071391719</created>
@@ -1276,16 +1279,24 @@
       <option name="project" value="LOCAL" />
       <updated>1510757971201</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="02/05/2017  V1.4 Symfony 3.12">
+      <created>1510758686592</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1510758686592</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1471767000" />
+    <option name="totallyTimeSpent" value="1472617000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1370" height="735" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27769572" sideWeight="0.8681507" order="0" side_tool="false" content_ui="combo" x="546" y="47" width="274" height="634" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27769572" sideWeight="0.8681507" order="0" side_tool="false" content_ui="combo" x="546" y="47" width="274" height="634" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2736" sideWeight="0.37223044" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2704" sideWeight="0.6277696" order="8" side_tool="true" content_ui="tabs" />
@@ -1333,7 +1344,8 @@
     <MESSAGE value="02/05/2017  V1.3" />
     <MESSAGE value="02/05/2017  V1.4 Role and permission added" />
     <MESSAGE value="02/05/2017  V1.4 Fixture" />
-    <option name="LAST_COMMIT_MESSAGE" value="02/05/2017  V1.4 Fixture" />
+    <MESSAGE value="02/05/2017  V1.4 Symfony 3.12" />
+    <option name="LAST_COMMIT_MESSAGE" value="02/05/2017  V1.4 Symfony 3.12" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1380,22 +1392,6 @@
           <caret line="97" column="31" lean-forward="true" selection-start-line="97" selection-start-column="31" selection-end-line="97" selection-end-column="31" />
           <folding>
             <element signature="e#12#42#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/FournisseurController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="20" column="41" lean-forward="true" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
-          <folding>
-            <element signature="e#40#73#0#PHP" expanded="true" />
-            <element signature="e#1667#1684#1#PHP" expanded="true" />
-            <element signature="e#2000#2023#1#PHP" expanded="true" />
-            <element signature="e#3236#3253#1#PHP" expanded="true" />
-            <element signature="e#3296#3325#0#PHP" expanded="true" />
-            <element signature="e#3611#3634#1#PHP" expanded="true" />
-            <marker date="1510592731409" expanded="true" signature="3988:4025" ph="SELECT p FRO... AppBundle" />
           </folding>
         </state>
       </provider>
@@ -1544,14 +1540,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="19" column="3" lean-forward="false" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Fournisseur.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6">
-          <caret line="423" column="7" lean-forward="true" selection-start-line="423" selection-start-column="7" selection-end-line="423" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -1707,14 +1695,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="472">
           <caret line="87" column="5" lean-forward="true" selection-start-line="21" selection-start-column="2" selection-end-line="87" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/ContactFournisseur.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="82" column="5" lean-forward="true" selection-start-line="82" selection-start-column="5" selection-end-line="82" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -1925,6 +1905,38 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/FournisseurController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="20" column="41" lean-forward="false" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
+          <folding>
+            <element signature="e#40#73#0#PHP" expanded="true" />
+            <element signature="e#1667#1684#1#PHP" expanded="true" />
+            <element signature="e#2000#2023#1#PHP" expanded="true" />
+            <element signature="e#3236#3253#1#PHP" expanded="true" />
+            <element signature="e#3296#3325#0#PHP" expanded="true" />
+            <element signature="e#3611#3634#1#PHP" expanded="true" />
+            <marker date="1510592731409" expanded="true" signature="3988:4025" ph="SELECT p FRO... AppBundle" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Fournisseur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="114" column="32" lean-forward="false" selection-start-line="114" selection-start-column="32" selection-end-line="114" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/ContactFournisseur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="31" column="59" lean-forward="true" selection-start-line="31" selection-start-column="59" selection-end-line="31" selection-end-column="59" />
           <folding />
         </state>
       </provider>

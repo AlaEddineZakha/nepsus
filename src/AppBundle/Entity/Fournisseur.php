@@ -111,8 +111,8 @@ class Fournisseur
     /**
      * One Client has Many Contacts.
      * @ORM\OneToMany(
-     *     targetEntity="AppBundle\Entity\ContactClient",
-     *     mappedBy="client" ,
+     *     targetEntity="AppBundle\Entity\ContactFournisseur",
+     *     mappedBy="fournisseur" ,
      *     cascade={"persist"},
      *     fetch="EXTRA_LAZY",
      *     orphanRemoval=true
