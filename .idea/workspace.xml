@@ -133,8 +133,8 @@
       <file leaf-file-name="parameters.yml.dist" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/config/parameters.yml.dist">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="35" lean-forward="false" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+            <state relative-caret-position="119">
+              <caret line="7" column="30" lean-forward="true" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -941,14 +941,7 @@
       <workItem from="1508027836801" duration="33386000" />
       <workItem from="1508428768249" duration="175758000" />
       <workItem from="1509715830276" duration="72474000" />
-      <workItem from="1510244198390" duration="74404000" />
-    </task>
-    <task id="LOCAL-00033" summary="02/05/2017  V1.05 Form config">
-      <created>1509071432399</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1509071432399</updated>
+      <workItem from="1510244198390" duration="74502000" />
     </task>
     <task id="LOCAL-00034" summary="02/05/2017  V1.05 Form loading after config">
       <created>1509088646684</created>
@@ -1286,11 +1279,18 @@
       <option name="project" value="LOCAL" />
       <updated>1510759591862</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="02/05/2017  V1.4 Symfony 3.12">
+      <created>1510759981796</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1510759981796</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1473008000" />
+    <option name="totallyTimeSpent" value="1473106000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1370" height="735" extended-state="0" />
@@ -1935,8 +1935,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/parameters.yml.dist">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="35" lean-forward="false" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+        <state relative-caret-position="119">
+          <caret line="7" column="30" lean-forward="true" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
           <folding />
         </state>
       </provider>
