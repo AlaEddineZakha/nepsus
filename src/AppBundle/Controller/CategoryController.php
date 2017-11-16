@@ -4,8 +4,6 @@ namespace AppBundle\Controller;
 
 use AppBundle\Entity\Category;
 use AppBundle\Entity\Modules;
-use AppBundle\Form\CategoryFormType;
-use function PHPSTORM_META\type;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -13,9 +11,9 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 class CategoryController extends Controller
 {
     /**
-     * @Route("/categories")
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
      */
-    public function showAllAction(Request $request)
+    public function showAllAction()
     {   $em = $this->getDoctrine()->getManager();
         $modulecategories=$em->getRepository(Modules::class)->findOneBy(array('nom' => 'Categories'));
 
@@ -37,12 +35,13 @@ class CategoryController extends Controller
 
 
     /**
-     * @Route("/categories/new", name="addcategorie")
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
      */
     public function newAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
-        $modulecategories=$em->getRepository(Modules::class)->findOneBy(array('nom' => 'Categories'));
+       // $modulecategories=$em->getRepository(Modules::class)->findOneBy(array('nom' => 'Categories'));
         $repository=$em->getRepository('AppBundle:Category');
         $parents=$repository->findAll();
         if ($request->isMethod('POST')) {
