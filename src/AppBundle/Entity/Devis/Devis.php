@@ -26,7 +26,4 @@ class Devis
     private $id;
 
 
-
-
-
 }

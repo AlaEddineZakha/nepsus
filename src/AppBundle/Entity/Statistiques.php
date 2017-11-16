@@ -23,4 +23,9 @@ class Statistiques
      * @ORM\Column(type="integer")
      */
     private $id;
+
+    /**
+     * @ORM\Column(type="string")
+     */
+    private $nom;
 }
