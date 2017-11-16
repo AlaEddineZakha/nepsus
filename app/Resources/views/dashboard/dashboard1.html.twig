@@ -30,7 +30,7 @@
     </li>
     {% if app.request.attributes.get('_route') =='addclient' %}
         <li class="nav-item active open" id="menuclients">
-            <a href="javascript:;" class="nav-link nav-toggle">
+            <a href="javascript:" class="nav-link nav-toggle">
                 <i class="icon-users"></i>
                 <span class="title">Clients</span>
                 <span class="arrow open"></span>
@@ -56,7 +56,7 @@
         </li>
     {% elseif app.request.attributes.get('_route') =='listclient' %}
         <li class="nav-item active open">
-            <a href="javascript:;" class="nav-link nav-toggle">
+            <a href="javascript:" class="nav-link nav-toggle">
                 <i class="icon-users"></i>
                 <span class="title">Clients</span>
                 <span class="arrow open"></span>
@@ -81,7 +81,7 @@
         </li>
     {% else  %}
         <li class="nav-item">
-            <a href="javascript:;" class="nav-link nav-toggle">
+            <a href="javascript:" class="nav-link nav-toggle">
                 <i class="icon-users"></i>
                 <span class="title">Clients</span>
                 <span class="arrow"></span>
@@ -106,7 +106,7 @@
     {% endif %}
 
     <li class="nav-item" id="menufournisseurs">
-        <a href="javascript:;" class="nav-link nav-toggle">
+        <a href="javascript:" class="nav-link nav-toggle">
             <i class="icon-user-following"></i>
             <span class="title">Fournisseurs</span>
             <span class="arrow"></span>
@@ -134,7 +134,7 @@
         <h3 class="uppercase" style="font-weight: 600 ; color: white"> <i class="icon-layers"></i> Facturation</h3>
     </li>
     <li class="nav-item" id="menucfactures">
-        <a href="javascript:;" class="nav-link nav-toggle">
+        <a href="javascript:" class="nav-link nav-toggle">
             <i class="icon-docs"></i>
             <span class="title">Factures</span>
             <span class="arrow"></span>
@@ -142,7 +142,7 @@
         </a>
         <ul class="sub-menu ">
             <li class="nav-item  ">
-                <a href="javascript:;" class="nav-link nav-toggle">
+                <a href="javascript:" class="nav-link nav-toggle">
 
                     <span class="title">Clients</span>
                     <span class="arrow"></span>
@@ -165,7 +165,7 @@
                 </ul>
             </li>
             <li class="nav-item  ">
-                <a href="javascript:;" class="nav-link nav-toggle">
+                <a href="javascript:" class="nav-link nav-toggle">
 
                     <span class="title">Fournisseurs</span>
                     <span class="arrow"></span>
@@ -195,7 +195,7 @@
 
     </li>
     <li class="nav-item  " id="menudevis">
-        <a href="javascript:;" class="nav-link nav-toggle">
+        <a href="javascript:" class="nav-link nav-toggle">
             <i class="icon-note"></i>
             <span class="title">Devis</span>
             <span class="arrow"></span>
@@ -218,7 +218,7 @@
         </ul>
     </li>
     <li class="nav-item  " id="menutransactions">
-        <a href="javascript:;" class="nav-link nav-toggle">
+        <a href="javascript:" class="nav-link nav-toggle">
             <i class="icon-credit-card"></i>
             <span class="title">Transactions</span>
             <span class="arrow"></span>
@@ -241,7 +241,7 @@
         </ul>
     </li>
     <li class="nav-item  " id="menudepenses">
-        <a href="javascript:;" class="nav-link nav-toggle">
+        <a href="javascript:" class="nav-link nav-toggle">
             <i class="icon-credit-card"></i>
             <span class="title">Dépenses</span>
             <span class="arrow"></span>
@@ -267,7 +267,7 @@
         <h3 class="uppercase" style="font-weight: 600 ; color: white;"><i class="icon-grid"></i>  Stock</h3>
     </li>
     <li class="nav-item" id="menuproduits">
-        <a href="javascript:;" class="nav-link nav-toggle">
+        <a href="javascript:" class="nav-link nav-toggle">
             <i class="icon-social-dropbox"></i>
             <span class="title">Produits</span>
             <span class="arrow"></span>
@@ -275,13 +275,13 @@
         </a>
         <ul class="sub-menu ">
             <li class="nav-item  ">
-                <a href="{{ path('addclient') }}" class="nav-link">
+                <a href="{{ path('addproduit') }}" class="nav-link">
                     <span class="title">Nouveau produit</span>
 
                 </a>
             </li>
             <li class="nav-item  ">
-                <a href="{{ path('listclient') }}" class="nav-link ">
+                <a href="{{ path('listproduits') }}" class="nav-link ">
                     <span class="title">Liste des produits</span>
                 </a>
             </li>
@@ -293,7 +293,7 @@
 
 
     <li class="nav-item" id="menucategories">
-        <a href="javascript:;" class="nav-link nav-toggle">
+        <a href="javascript:" class="nav-link nav-toggle">
             <i class="icon-tag"></i>
             <span class="title">Categories</span>
             <span class="arrow"></span>
@@ -317,7 +317,7 @@
     </li>
 
     <li class="nav-item" id="menulots">
-        <a href="javascript:;" class="nav-link nav-toggle">
+        <a href="javascript:" class="nav-link nav-toggle">
             <i class="icon-tag"></i>
             <span class="title">Lots</span>
             <span class="arrow"></span>
@@ -340,7 +340,7 @@
         </ul>
     </li>
     <li class="nav-item" id="menuentrepots">
-        <a href="javascript:;" class="nav-link nav-toggle">
+        <a href="javascript:" class="nav-link nav-toggle">
             <i class="icon-home"></i>
             <span class="title">Entrepots</span>
             <span class="arrow"></span>
@@ -363,7 +363,7 @@
         </ul>
     </li>
     <li class="nav-item" id="menutaxes">
-        <a href="javascript:;" class="nav-link nav-toggle">
+        <a href="javascript:" class="nav-link nav-toggle">
             <i class="icon-home"></i>
             <span class="title">Taxes</span>
             <span class="arrow"></span>
@@ -377,7 +377,7 @@
                 </a>
             </li>
             <li class="nav-item  ">
-                <a href="{{ path('listtaxes') }}" class="nav-link ">
+                <a href="#" class="nav-link ">
                     <span class="title">Liste des taxes</span>
                 </a>
             </li>
@@ -391,7 +391,7 @@
         <h3 class="uppercase" style="font-weight: 600 ; color: white;"> <i class="icon-settings"></i>  Configuration</h3>
     </li>
     <li class="nav-item  ">
-        <a href="javascript:;" class="nav-link nav-toggle">
+        <a href="javascript:" class="nav-link nav-toggle">
             <i class="icon-equalizer"></i>
             <span class="title">Générale</span>
 
@@ -400,7 +400,7 @@
 
     </li>
     <li class="nav-item  ">
-        <a href="javascript:;" class="nav-link nav-toggle">
+        <a href="javascript:" class="nav-link nav-toggle">
             <i class="icon-rocket"></i>
             <span class="title">Application</span>
 
@@ -415,7 +415,7 @@
     </li>
 
     <li class="nav-item" >
-        <a href="javascript:;" class="nav-link nav-toggle">
+        <a href="javascript:" class="nav-link nav-toggle">
             <i class="icon-home"></i>
             <span class="title">Utilisateurs</span>
             <span class="arrow"></span>
@@ -438,7 +438,7 @@
         </ul>
     </li>
     <li class="nav-item" >
-        <a href="javascript:;" class="nav-link nav-toggle">
+        <a href="javascript:" class="nav-link nav-toggle">
             <i class="icon-home"></i>
             <span class="title">Roles & permissions</span>
             <span class="arrow"></span>
