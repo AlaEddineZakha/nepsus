@@ -10,6 +10,7 @@ use AppBundle\Entity\LigneBCC;
 use AppBundle\Entity\BonCommandeClient;
 use AppBundle\Entity\Client;
 use AppBundle\Entity\Modules;
+use AppBundle\Entity\Role;
 use AppBundle\Entity\User;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Component\HttpFoundation\Response;
@@ -73,6 +74,7 @@ class ConfigurationController extends Controller
             $admin->setEnabled('true');
             $admin->setSuperAdmin('true');
             $admin->setRoles(array('ROLE_SUPER_ADMIN'));
+            $admin->setRole($em->getRepository(Role::class)->findOneBy(array('nom' => 'admin')));
             $admin->setEmail($request->request->get('email'));
             $admin->setUsername($request->request->get('username'));
             $em->persist($admin);

@@ -9,6 +9,7 @@
 namespace AppBundle\DataFixtures\ORM;
 
 
+use AppBundle\Entity\Category;
 use AppBundle\Entity\Modules;
 use AppBundle\Entity\Permission;
 use AppBundle\Entity\Role;
@@ -70,6 +71,13 @@ class Fixtures extends Fixture
         $role->setCreated(new \DateTime());
         $manager->persist($role);
 
+        $categorie= new Category();
+        $categorie->setNom("Indéfinie");
+        $categorie->setDepth(1);
+        $manager->persist($categorie);
+
+
+        /* Role et permission administrateur  */
         $roleadmin=new Role();
         $roleadmin->setNom('admin');
         $roleadmin->setDescription('Toutes les permission');
@@ -79,7 +87,37 @@ class Fixtures extends Fixture
         $rolepermission= new RolePermission();
         $rolepermission->setPermission($permission1);
         $rolepermission->setRole($role);
+        $manager->persist($roleadmin);
+
+        $rolepermission= new RolePermission();
+        $rolepermission->setPermission($permission2);
+        $rolepermission->setRole($role);
+        $manager->persist($roleadmin);
+
+        $rolepermission= new RolePermission();
+        $rolepermission->setPermission($permission3);
+        $rolepermission->setRole($role);
+        $manager->persist($roleadmin);
+
+        $rolepermission= new RolePermission();
+        $rolepermission->setPermission($permission4);
+        $rolepermission->setRole($role);
+        $manager->persist($roleadmin);
+
+
+
+        /* ------------------------------------------------  */
+
+
+
+
+
+        $rolepermission= new RolePermission();
+        $rolepermission->setPermission($permission1);
+        $rolepermission->setRole($role);
         $manager->persist($rolepermission);
+
+
 
         $rolepermission= new RolePermission();
         $rolepermission->setPermission($permission2);
