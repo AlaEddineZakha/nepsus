@@ -77,7 +77,7 @@ class Fixtures extends Fixture
         $manager->persist($categorie);
 
 
-        /* Role et permission administrateur  */
+
         $roleadmin=new Role();
         $roleadmin->setNom('admin');
         $roleadmin->setDescription('Toutes les permission');
@@ -86,27 +86,24 @@ class Fixtures extends Fixture
 
         $rolepermission= new RolePermission();
         $rolepermission->setPermission($permission1);
-        $rolepermission->setRole($role);
-        $manager->persist($roleadmin);
+        $rolepermission->setRole($roleadmin);
+        $manager->persist($rolepermission);
 
         $rolepermission= new RolePermission();
         $rolepermission->setPermission($permission2);
-        $rolepermission->setRole($role);
-        $manager->persist($roleadmin);
+        $rolepermission->setRole($roleadmin);
+        $manager->persist($rolepermission);
 
         $rolepermission= new RolePermission();
         $rolepermission->setPermission($permission3);
-        $rolepermission->setRole($role);
-        $manager->persist($roleadmin);
+        $rolepermission->setRole($roleadmin);
+        $manager->persist($rolepermission);
 
         $rolepermission= new RolePermission();
         $rolepermission->setPermission($permission4);
-        $rolepermission->setRole($role);
-        $manager->persist($roleadmin);
+        $rolepermission->setRole($roleadmin);
+        $manager->persist($rolepermission);
 
-
-
-        /* ------------------------------------------------  */
 
 
 
