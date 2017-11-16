@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="14e57119-6d11-439a-90fa-9334e3be0203" name="Default" comment="02/05/2017  V1.4 Symfony 3.12">
+    <list default="true" id="14e57119-6d11-439a-90fa-9334e3be0203" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/nepsus.iml" afterPath="$PROJECT_DIR$/.idea/nepsus.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/dashboard/dashboard1.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/dashboard/dashboard1.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Devis/Devis.php" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Devis/Devis.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -130,11 +134,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="dashboard1.html.twig" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dashboard1.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/dashboard/dashboard1.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="131" column="4" lean-forward="false" selection-start-line="131" selection-start-column="4" selection-end-line="316" selection-end-column="15" />
+            <state relative-caret-position="187">
+              <caret line="131" column="61" lean-forward="false" selection-start-line="131" selection-start-column="53" selection-end-line="131" selection-end-column="61" />
               <folding>
                 <element signature="e#12#26#0#Twig" expanded="true" />
                 <element signature="e#186#195#0#Twig" expanded="true" />
@@ -147,43 +151,55 @@
                 <element signature="e#3373#3383#0#Twig" expanded="true" />
                 <element signature="e#3938#3952#0#Twig" expanded="true" />
                 <element signature="e#4154#4169#0#Twig" expanded="true" />
-                <element signature="e#5110#5122#0#Twig" expanded="true" />
-                <element signature="e#5445#5452#0#Twig" expanded="true" />
-                <element signature="e#6062#6071#0#Twig" expanded="true" />
-                <element signature="e#6329#6339#0#Twig" expanded="true" />
-                <element signature="e#7365#7377#0#Twig" expanded="true" />
-                <element signature="e#7644#7651#0#Twig" expanded="true" />
-                <element signature="e#8324#8333#0#Twig" expanded="true" />
-                <element signature="e#8591#8601#0#Twig" expanded="true" />
-                <element signature="e#9546#9558#0#Twig" expanded="true" />
-                <element signature="e#9819#9826#0#Twig" expanded="true" />
-                <element signature="e#10436#10445#0#Twig" expanded="true" />
-                <element signature="e#10703#10713#0#Twig" expanded="true" />
-                <element signature="e#11764#11773#0#Twig" expanded="true" />
-                <element signature="e#12012#12022#0#Twig" expanded="true" />
-                <element signature="e#12578#12587#0#Twig" expanded="true" />
-                <element signature="e#12826#12836#0#Twig" expanded="true" />
-                <element signature="e#13402#13411#0#Twig" expanded="true" />
-                <element signature="e#13606#13616#0#Twig" expanded="true" />
-                <element signature="e#14131#14140#0#Twig" expanded="true" />
-                <element signature="e#14343#14353#0#Twig" expanded="true" />
-                <element signature="e#14867#14876#0#Twig" expanded="true" />
-                <element signature="e#15079#15089#0#Twig" expanded="true" />
-                <element signature="e#15749#15759#0#Twig" expanded="true" />
-                <element signature="e#15957#15969#0#Twig" expanded="true" />
-                <element signature="e#16476#16488#0#Twig" expanded="true" />
-                <element signature="e#16689#16703#0#Twig" expanded="true" />
-                <element signature="e#17379#17393#0#Twig" expanded="true" />
-                <element signature="e#17892#17903#0#Twig" expanded="true" />
-                <element signature="e#18102#18115#0#Twig" expanded="true" />
-                <element signature="e#18611#18618#0#Twig" expanded="true" />
-                <element signature="e#20007#20014#0#Twig" expanded="true" />
-                <element signature="e#20216#20225#0#Twig" expanded="true" />
-                <element signature="e#20724#20731#0#Twig" expanded="true" />
-                <element signature="e#20926#20935#0#Twig" expanded="true" />
-                <element signature="e#21242#21251#0#Twig" expanded="true" />
-                <element signature="e#31409#31418#0#Twig" expanded="true" />
-                <element signature="e#31849#31858#0#Twig" expanded="true" />
+                <element signature="e#5108#5120#0#Twig" expanded="true" />
+                <element signature="e#5443#5450#0#Twig" expanded="true" />
+                <element signature="e#6059#6068#0#Twig" expanded="true" />
+                <element signature="e#6326#6336#0#Twig" expanded="true" />
+                <element signature="e#7360#7372#0#Twig" expanded="true" />
+                <element signature="e#7639#7646#0#Twig" expanded="true" />
+                <element signature="e#8318#8327#0#Twig" expanded="true" />
+                <element signature="e#8585#8595#0#Twig" expanded="true" />
+                <element signature="e#9538#9550#0#Twig" expanded="true" />
+                <element signature="e#9811#9818#0#Twig" expanded="true" />
+                <element signature="e#10427#10436#0#Twig" expanded="true" />
+                <element signature="e#10694#10704#0#Twig" expanded="true" />
+                <element signature="e#11755#11764#0#Twig" expanded="true" />
+                <element signature="e#12003#12013#0#Twig" expanded="true" />
+                <element signature="e#12569#12578#0#Twig" expanded="true" />
+                <element signature="e#12817#12827#0#Twig" expanded="true" />
+                <element signature="e#13393#13402#0#Twig" expanded="true" />
+                <element signature="e#13597#13607#0#Twig" expanded="true" />
+                <element signature="e#14122#14131#0#Twig" expanded="true" />
+                <element signature="e#14334#14344#0#Twig" expanded="true" />
+                <element signature="e#14858#14867#0#Twig" expanded="true" />
+                <element signature="e#15070#15080#0#Twig" expanded="true" />
+                <element signature="e#15740#15750#0#Twig" expanded="true" />
+                <element signature="e#15948#15960#0#Twig" expanded="true" />
+                <element signature="e#16467#16479#0#Twig" expanded="true" />
+                <element signature="e#16680#16694#0#Twig" expanded="true" />
+                <element signature="e#17370#17384#0#Twig" expanded="true" />
+                <element signature="e#17883#17894#0#Twig" expanded="true" />
+                <element signature="e#18093#18106#0#Twig" expanded="true" />
+                <element signature="e#18602#18609#0#Twig" expanded="true" />
+                <element signature="e#19998#20005#0#Twig" expanded="true" />
+                <element signature="e#20207#20216#0#Twig" expanded="true" />
+                <element signature="e#20715#20722#0#Twig" expanded="true" />
+                <element signature="e#20917#20926#0#Twig" expanded="true" />
+                <element signature="e#21233#21242#0#Twig" expanded="true" />
+                <element signature="e#31400#31409#0#Twig" expanded="true" />
+                <element signature="e#31840#31849#0#Twig" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="235">
+              <caret line="1071" column="11" lean-forward="true" selection-start-line="1071" selection-start-column="11" selection-end-line="1071" selection-end-column="11" />
+              <folding>
+                <element signature="e#70558#70575#0#Twig" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -193,7 +209,7 @@
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/ConfigurationController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
-              <caret line="60" column="56" lean-forward="true" selection-start-line="60" selection-start-column="56" selection-end-line="60" selection-end-column="56" />
+              <caret line="60" column="56" lean-forward="false" selection-start-line="60" selection-start-column="56" selection-end-line="60" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -203,7 +219,7 @@
         <entry file="file://$PROJECT_DIR$/src/AppBundle/DataFixtures/ORM/Fixtures.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="65">
-              <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+              <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
               <folding>
                 <element signature="e#129#159#0#PHP" expanded="true" />
               </folding>
@@ -215,7 +231,7 @@
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/ProduitController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
-              <caret line="27" column="40" lean-forward="true" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
+              <caret line="27" column="40" lean-forward="false" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
               <folding>
                 <marker date="1510863695039" expanded="true" signature="1544:1577" ph="SELECT p FRO... AppBundle" />
               </folding>
@@ -247,7 +263,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>getLigneFC</find>
       <find>list</find>
       <find>listecil**</find>
       <find>liste</find>
@@ -275,8 +290,9 @@
       <find>client</find>
       <find>NEW FEEDBACKS</find>
       <find>comma</find>
-      <find>commande</find>
       <find>fournisser</find>
+      <find>avatar</find>
+      <find>commande</find>
     </findStrings>
     <replaceStrings>
       <replace>fonts/</replace>
@@ -344,7 +360,6 @@
         <option value="$PROJECT_DIR$/app/Resources/views/Lots/list.html.twig.html" />
         <option value="$PROJECT_DIR$/app/Resources/views/Lots/list.html" />
         <option value="$PROJECT_DIR$/app/Resources/views/CommandeFournisseur/edit.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/Fournisseur.php" />
         <option value="$PROJECT_DIR$/app/config/parameters.yml.dist" />
         <option value="$PROJECT_DIR$/app/config/parameters.yml" />
@@ -352,12 +367,13 @@
         <option value="$PROJECT_DIR$/app/config/routing.yml" />
         <option value="$PROJECT_DIR$/app/AppKernel.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/ClientController.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Entity/Devis/Devis.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/ConfigurationController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/DataFixtures/ORM/Fixtures.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/ProduitController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/TaxeController.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/dashboard/dashboard1.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Entity/Devis/Devis.php" />
       </list>
     </option>
   </component>
@@ -969,14 +985,7 @@
       <workItem from="1508027836801" duration="33386000" />
       <workItem from="1508428768249" duration="175758000" />
       <workItem from="1509715830276" duration="72474000" />
-      <workItem from="1510244198390" duration="95583000" />
-    </task>
-    <task id="LOCAL-00059" summary="02/05/2017  V1.4 Role and permission added">
-      <created>1510247657508</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1510247657508</updated>
+      <workItem from="1510244198390" duration="98069000" />
     </task>
     <task id="LOCAL-00060" summary="02/05/2017  V1.4 Role and permission added">
       <created>1510249534990</created>
@@ -1314,11 +1323,18 @@
       <option name="project" value="LOCAL" />
       <updated>1510865540053</updated>
     </task>
-    <option name="localTasksCounter" value="108" />
+    <task id="LOCAL-00108" summary="02/05/2017  V1.4 Symfony 3.12">
+      <created>1510865939856</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1510865939856</updated>
+    </task>
+    <option name="localTasksCounter" value="109" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1494187000" />
+    <option name="totallyTimeSpent" value="1496673000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1370" height="735" extended-state="0" />
@@ -1728,14 +1744,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="13" column="32" lean-forward="true" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/FournisseurController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -1863,14 +1871,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Devis/Devis.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/ClientController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -1918,7 +1918,7 @@
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/ConfigurationController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="60" column="56" lean-forward="true" selection-start-line="60" selection-start-column="56" selection-end-line="60" selection-end-column="56" />
+          <caret line="60" column="56" lean-forward="false" selection-start-line="60" selection-start-column="56" selection-end-line="60" selection-end-column="56" />
           <folding />
         </state>
       </provider>
@@ -1926,7 +1926,7 @@
     <entry file="file://$PROJECT_DIR$/src/AppBundle/DataFixtures/ORM/Fixtures.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="65">
-          <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+          <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
           <folding>
             <element signature="e#129#159#0#PHP" expanded="true" />
           </folding>
@@ -1944,7 +1944,7 @@
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/ProduitController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="27" column="40" lean-forward="true" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
+          <caret line="27" column="40" lean-forward="false" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
           <folding>
             <marker date="1510863695039" expanded="true" signature="1544:1577" ph="SELECT p FRO... AppBundle" />
           </folding>
@@ -1963,8 +1963,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/dashboard/dashboard1.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="131" column="4" lean-forward="false" selection-start-line="131" selection-start-column="4" selection-end-line="316" selection-end-column="15" />
+        <state relative-caret-position="187">
+          <caret line="131" column="61" lean-forward="false" selection-start-line="131" selection-start-column="53" selection-end-line="131" selection-end-column="61" />
           <folding>
             <element signature="e#12#26#0#Twig" expanded="true" />
             <element signature="e#186#195#0#Twig" expanded="true" />
@@ -1977,43 +1977,61 @@
             <element signature="e#3373#3383#0#Twig" expanded="true" />
             <element signature="e#3938#3952#0#Twig" expanded="true" />
             <element signature="e#4154#4169#0#Twig" expanded="true" />
-            <element signature="e#5110#5122#0#Twig" expanded="true" />
-            <element signature="e#5445#5452#0#Twig" expanded="true" />
-            <element signature="e#6062#6071#0#Twig" expanded="true" />
-            <element signature="e#6329#6339#0#Twig" expanded="true" />
-            <element signature="e#7365#7377#0#Twig" expanded="true" />
-            <element signature="e#7644#7651#0#Twig" expanded="true" />
-            <element signature="e#8324#8333#0#Twig" expanded="true" />
-            <element signature="e#8591#8601#0#Twig" expanded="true" />
-            <element signature="e#9546#9558#0#Twig" expanded="true" />
-            <element signature="e#9819#9826#0#Twig" expanded="true" />
-            <element signature="e#10436#10445#0#Twig" expanded="true" />
-            <element signature="e#10703#10713#0#Twig" expanded="true" />
-            <element signature="e#11764#11773#0#Twig" expanded="true" />
-            <element signature="e#12012#12022#0#Twig" expanded="true" />
-            <element signature="e#12578#12587#0#Twig" expanded="true" />
-            <element signature="e#12826#12836#0#Twig" expanded="true" />
-            <element signature="e#13402#13411#0#Twig" expanded="true" />
-            <element signature="e#13606#13616#0#Twig" expanded="true" />
-            <element signature="e#14131#14140#0#Twig" expanded="true" />
-            <element signature="e#14343#14353#0#Twig" expanded="true" />
-            <element signature="e#14867#14876#0#Twig" expanded="true" />
-            <element signature="e#15079#15089#0#Twig" expanded="true" />
-            <element signature="e#15749#15759#0#Twig" expanded="true" />
-            <element signature="e#15957#15969#0#Twig" expanded="true" />
-            <element signature="e#16476#16488#0#Twig" expanded="true" />
-            <element signature="e#16689#16703#0#Twig" expanded="true" />
-            <element signature="e#17379#17393#0#Twig" expanded="true" />
-            <element signature="e#17892#17903#0#Twig" expanded="true" />
-            <element signature="e#18102#18115#0#Twig" expanded="true" />
-            <element signature="e#18611#18618#0#Twig" expanded="true" />
-            <element signature="e#20007#20014#0#Twig" expanded="true" />
-            <element signature="e#20216#20225#0#Twig" expanded="true" />
-            <element signature="e#20724#20731#0#Twig" expanded="true" />
-            <element signature="e#20926#20935#0#Twig" expanded="true" />
-            <element signature="e#21242#21251#0#Twig" expanded="true" />
-            <element signature="e#31409#31418#0#Twig" expanded="true" />
-            <element signature="e#31849#31858#0#Twig" expanded="true" />
+            <element signature="e#5108#5120#0#Twig" expanded="true" />
+            <element signature="e#5443#5450#0#Twig" expanded="true" />
+            <element signature="e#6059#6068#0#Twig" expanded="true" />
+            <element signature="e#6326#6336#0#Twig" expanded="true" />
+            <element signature="e#7360#7372#0#Twig" expanded="true" />
+            <element signature="e#7639#7646#0#Twig" expanded="true" />
+            <element signature="e#8318#8327#0#Twig" expanded="true" />
+            <element signature="e#8585#8595#0#Twig" expanded="true" />
+            <element signature="e#9538#9550#0#Twig" expanded="true" />
+            <element signature="e#9811#9818#0#Twig" expanded="true" />
+            <element signature="e#10427#10436#0#Twig" expanded="true" />
+            <element signature="e#10694#10704#0#Twig" expanded="true" />
+            <element signature="e#11755#11764#0#Twig" expanded="true" />
+            <element signature="e#12003#12013#0#Twig" expanded="true" />
+            <element signature="e#12569#12578#0#Twig" expanded="true" />
+            <element signature="e#12817#12827#0#Twig" expanded="true" />
+            <element signature="e#13393#13402#0#Twig" expanded="true" />
+            <element signature="e#13597#13607#0#Twig" expanded="true" />
+            <element signature="e#14122#14131#0#Twig" expanded="true" />
+            <element signature="e#14334#14344#0#Twig" expanded="true" />
+            <element signature="e#14858#14867#0#Twig" expanded="true" />
+            <element signature="e#15070#15080#0#Twig" expanded="true" />
+            <element signature="e#15740#15750#0#Twig" expanded="true" />
+            <element signature="e#15948#15960#0#Twig" expanded="true" />
+            <element signature="e#16467#16479#0#Twig" expanded="true" />
+            <element signature="e#16680#16694#0#Twig" expanded="true" />
+            <element signature="e#17370#17384#0#Twig" expanded="true" />
+            <element signature="e#17883#17894#0#Twig" expanded="true" />
+            <element signature="e#18093#18106#0#Twig" expanded="true" />
+            <element signature="e#18602#18609#0#Twig" expanded="true" />
+            <element signature="e#19998#20005#0#Twig" expanded="true" />
+            <element signature="e#20207#20216#0#Twig" expanded="true" />
+            <element signature="e#20715#20722#0#Twig" expanded="true" />
+            <element signature="e#20917#20926#0#Twig" expanded="true" />
+            <element signature="e#21233#21242#0#Twig" expanded="true" />
+            <element signature="e#31400#31409#0#Twig" expanded="true" />
+            <element signature="e#31840#31849#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Devis/Devis.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="27" column="1" lean-forward="false" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="1071" column="11" lean-forward="true" selection-start-line="1071" selection-start-column="11" selection-end-line="1071" selection-end-column="11" />
+          <folding>
+            <element signature="e#70558#70575#0#Twig" expanded="true" />
           </folding>
         </state>
       </provider>

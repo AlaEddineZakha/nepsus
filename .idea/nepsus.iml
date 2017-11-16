@@ -191,5 +191,6 @@
     <orderEntry type="library" name="additional-methods" level="application" />
     <orderEntry type="library" name="jquery.validate" level="application" />
     <orderEntry type="library" name="jquery.inputmask.bundle" level="application" />
+    <orderEntry type="library" name="modernizr" level="application" />
   </component>
 </module>
