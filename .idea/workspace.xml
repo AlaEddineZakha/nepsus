@@ -134,7 +134,7 @@
         <entry file="file://$PROJECT_DIR$/app/Resources/views/dashboard/dashboard1.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="243">
-              <caret line="131" column="4" lean-forward="false" selection-start-line="131" selection-start-column="4" selection-end-line="131" selection-end-column="4" />
+              <caret line="131" column="4" lean-forward="false" selection-start-line="131" selection-start-column="4" selection-end-line="316" selection-end-column="15" />
               <folding>
                 <element signature="e#12#26#0#Twig" expanded="true" />
                 <element signature="e#186#195#0#Twig" expanded="true" />
@@ -147,31 +147,43 @@
                 <element signature="e#3373#3383#0#Twig" expanded="true" />
                 <element signature="e#3938#3952#0#Twig" expanded="true" />
                 <element signature="e#4154#4169#0#Twig" expanded="true" />
-                <element signature="e#5118#5127#0#Twig" expanded="true" />
-                <element signature="e#5366#5376#0#Twig" expanded="true" />
-                <element signature="e#5932#5941#0#Twig" expanded="true" />
-                <element signature="e#6180#6190#0#Twig" expanded="true" />
-                <element signature="e#6756#6765#0#Twig" expanded="true" />
-                <element signature="e#6960#6970#0#Twig" expanded="true" />
-                <element signature="e#7485#7494#0#Twig" expanded="true" />
-                <element signature="e#7697#7707#0#Twig" expanded="true" />
-                <element signature="e#8221#8230#0#Twig" expanded="true" />
-                <element signature="e#8433#8443#0#Twig" expanded="true" />
-                <element signature="e#9103#9113#0#Twig" expanded="true" />
-                <element signature="e#9311#9323#0#Twig" expanded="true" />
-                <element signature="e#9830#9842#0#Twig" expanded="true" />
-                <element signature="e#10043#10057#0#Twig" expanded="true" />
-                <element signature="e#10733#10747#0#Twig" expanded="true" />
-                <element signature="e#11246#11257#0#Twig" expanded="true" />
-                <element signature="e#11456#11469#0#Twig" expanded="true" />
-                <element signature="e#11965#11972#0#Twig" expanded="true" />
-                <element signature="e#13361#13368#0#Twig" expanded="true" />
-                <element signature="e#13570#13579#0#Twig" expanded="true" />
-                <element signature="e#14078#14085#0#Twig" expanded="true" />
-                <element signature="e#14280#14289#0#Twig" expanded="true" />
-                <element signature="e#14596#14605#0#Twig" expanded="true" />
-                <element signature="e#24763#24772#0#Twig" expanded="true" />
-                <element signature="e#25203#25212#0#Twig" expanded="true" />
+                <element signature="e#5110#5122#0#Twig" expanded="true" />
+                <element signature="e#5445#5452#0#Twig" expanded="true" />
+                <element signature="e#6062#6071#0#Twig" expanded="true" />
+                <element signature="e#6329#6339#0#Twig" expanded="true" />
+                <element signature="e#7365#7377#0#Twig" expanded="true" />
+                <element signature="e#7644#7651#0#Twig" expanded="true" />
+                <element signature="e#8324#8333#0#Twig" expanded="true" />
+                <element signature="e#8591#8601#0#Twig" expanded="true" />
+                <element signature="e#9546#9558#0#Twig" expanded="true" />
+                <element signature="e#9819#9826#0#Twig" expanded="true" />
+                <element signature="e#10436#10445#0#Twig" expanded="true" />
+                <element signature="e#10703#10713#0#Twig" expanded="true" />
+                <element signature="e#11764#11773#0#Twig" expanded="true" />
+                <element signature="e#12012#12022#0#Twig" expanded="true" />
+                <element signature="e#12578#12587#0#Twig" expanded="true" />
+                <element signature="e#12826#12836#0#Twig" expanded="true" />
+                <element signature="e#13402#13411#0#Twig" expanded="true" />
+                <element signature="e#13606#13616#0#Twig" expanded="true" />
+                <element signature="e#14131#14140#0#Twig" expanded="true" />
+                <element signature="e#14343#14353#0#Twig" expanded="true" />
+                <element signature="e#14867#14876#0#Twig" expanded="true" />
+                <element signature="e#15079#15089#0#Twig" expanded="true" />
+                <element signature="e#15749#15759#0#Twig" expanded="true" />
+                <element signature="e#15957#15969#0#Twig" expanded="true" />
+                <element signature="e#16476#16488#0#Twig" expanded="true" />
+                <element signature="e#16689#16703#0#Twig" expanded="true" />
+                <element signature="e#17379#17393#0#Twig" expanded="true" />
+                <element signature="e#17892#17903#0#Twig" expanded="true" />
+                <element signature="e#18102#18115#0#Twig" expanded="true" />
+                <element signature="e#18611#18618#0#Twig" expanded="true" />
+                <element signature="e#20007#20014#0#Twig" expanded="true" />
+                <element signature="e#20216#20225#0#Twig" expanded="true" />
+                <element signature="e#20724#20731#0#Twig" expanded="true" />
+                <element signature="e#20926#20935#0#Twig" expanded="true" />
+                <element signature="e#21242#21251#0#Twig" expanded="true" />
+                <element signature="e#31409#31418#0#Twig" expanded="true" />
+                <element signature="e#31849#31858#0#Twig" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -957,14 +969,7 @@
       <workItem from="1508027836801" duration="33386000" />
       <workItem from="1508428768249" duration="175758000" />
       <workItem from="1509715830276" duration="72474000" />
-      <workItem from="1510244198390" duration="95183000" />
-    </task>
-    <task id="LOCAL-00058" summary="02/05/2017  V1.4 Role and permission added">
-      <created>1510247449605</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1510247449605</updated>
+      <workItem from="1510244198390" duration="95583000" />
     </task>
     <task id="LOCAL-00059" summary="02/05/2017  V1.4 Role and permission added">
       <created>1510247657508</created>
@@ -1302,11 +1307,18 @@
       <option name="project" value="LOCAL" />
       <updated>1510864061600</updated>
     </task>
-    <option name="localTasksCounter" value="107" />
+    <task id="LOCAL-00107" summary="02/05/2017  V1.4 Symfony 3.12">
+      <created>1510865540053</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1510865540053</updated>
+    </task>
+    <option name="localTasksCounter" value="108" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1493787000" />
+    <option name="totallyTimeSpent" value="1494187000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1370" height="735" extended-state="0" />
@@ -1952,7 +1964,7 @@
     <entry file="file://$PROJECT_DIR$/app/Resources/views/dashboard/dashboard1.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
-          <caret line="131" column="4" lean-forward="false" selection-start-line="131" selection-start-column="4" selection-end-line="131" selection-end-column="4" />
+          <caret line="131" column="4" lean-forward="false" selection-start-line="131" selection-start-column="4" selection-end-line="316" selection-end-column="15" />
           <folding>
             <element signature="e#12#26#0#Twig" expanded="true" />
             <element signature="e#186#195#0#Twig" expanded="true" />
@@ -1965,31 +1977,43 @@
             <element signature="e#3373#3383#0#Twig" expanded="true" />
             <element signature="e#3938#3952#0#Twig" expanded="true" />
             <element signature="e#4154#4169#0#Twig" expanded="true" />
-            <element signature="e#5118#5127#0#Twig" expanded="true" />
-            <element signature="e#5366#5376#0#Twig" expanded="true" />
-            <element signature="e#5932#5941#0#Twig" expanded="true" />
-            <element signature="e#6180#6190#0#Twig" expanded="true" />
-            <element signature="e#6756#6765#0#Twig" expanded="true" />
-            <element signature="e#6960#6970#0#Twig" expanded="true" />
-            <element signature="e#7485#7494#0#Twig" expanded="true" />
-            <element signature="e#7697#7707#0#Twig" expanded="true" />
-            <element signature="e#8221#8230#0#Twig" expanded="true" />
-            <element signature="e#8433#8443#0#Twig" expanded="true" />
-            <element signature="e#9103#9113#0#Twig" expanded="true" />
-            <element signature="e#9311#9323#0#Twig" expanded="true" />
-            <element signature="e#9830#9842#0#Twig" expanded="true" />
-            <element signature="e#10043#10057#0#Twig" expanded="true" />
-            <element signature="e#10733#10747#0#Twig" expanded="true" />
-            <element signature="e#11246#11257#0#Twig" expanded="true" />
-            <element signature="e#11456#11469#0#Twig" expanded="true" />
-            <element signature="e#11965#11972#0#Twig" expanded="true" />
-            <element signature="e#13361#13368#0#Twig" expanded="true" />
-            <element signature="e#13570#13579#0#Twig" expanded="true" />
-            <element signature="e#14078#14085#0#Twig" expanded="true" />
-            <element signature="e#14280#14289#0#Twig" expanded="true" />
-            <element signature="e#14596#14605#0#Twig" expanded="true" />
-            <element signature="e#24763#24772#0#Twig" expanded="true" />
-            <element signature="e#25203#25212#0#Twig" expanded="true" />
+            <element signature="e#5110#5122#0#Twig" expanded="true" />
+            <element signature="e#5445#5452#0#Twig" expanded="true" />
+            <element signature="e#6062#6071#0#Twig" expanded="true" />
+            <element signature="e#6329#6339#0#Twig" expanded="true" />
+            <element signature="e#7365#7377#0#Twig" expanded="true" />
+            <element signature="e#7644#7651#0#Twig" expanded="true" />
+            <element signature="e#8324#8333#0#Twig" expanded="true" />
+            <element signature="e#8591#8601#0#Twig" expanded="true" />
+            <element signature="e#9546#9558#0#Twig" expanded="true" />
+            <element signature="e#9819#9826#0#Twig" expanded="true" />
+            <element signature="e#10436#10445#0#Twig" expanded="true" />
+            <element signature="e#10703#10713#0#Twig" expanded="true" />
+            <element signature="e#11764#11773#0#Twig" expanded="true" />
+            <element signature="e#12012#12022#0#Twig" expanded="true" />
+            <element signature="e#12578#12587#0#Twig" expanded="true" />
+            <element signature="e#12826#12836#0#Twig" expanded="true" />
+            <element signature="e#13402#13411#0#Twig" expanded="true" />
+            <element signature="e#13606#13616#0#Twig" expanded="true" />
+            <element signature="e#14131#14140#0#Twig" expanded="true" />
+            <element signature="e#14343#14353#0#Twig" expanded="true" />
+            <element signature="e#14867#14876#0#Twig" expanded="true" />
+            <element signature="e#15079#15089#0#Twig" expanded="true" />
+            <element signature="e#15749#15759#0#Twig" expanded="true" />
+            <element signature="e#15957#15969#0#Twig" expanded="true" />
+            <element signature="e#16476#16488#0#Twig" expanded="true" />
+            <element signature="e#16689#16703#0#Twig" expanded="true" />
+            <element signature="e#17379#17393#0#Twig" expanded="true" />
+            <element signature="e#17892#17903#0#Twig" expanded="true" />
+            <element signature="e#18102#18115#0#Twig" expanded="true" />
+            <element signature="e#18611#18618#0#Twig" expanded="true" />
+            <element signature="e#20007#20014#0#Twig" expanded="true" />
+            <element signature="e#20216#20225#0#Twig" expanded="true" />
+            <element signature="e#20724#20731#0#Twig" expanded="true" />
+            <element signature="e#20926#20935#0#Twig" expanded="true" />
+            <element signature="e#21242#21251#0#Twig" expanded="true" />
+            <element signature="e#31409#31418#0#Twig" expanded="true" />
+            <element signature="e#31849#31858#0#Twig" expanded="true" />
           </folding>
         </state>
       </provider>
