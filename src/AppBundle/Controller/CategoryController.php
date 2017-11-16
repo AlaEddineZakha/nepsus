@@ -11,7 +11,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 class CategoryController extends Controller
 {
     /**
-     * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
+     * @Route("/categories")
      */
     public function showAllAction()
     {   $em = $this->getDoctrine()->getManager();
@@ -35,8 +35,7 @@ class CategoryController extends Controller
 
 
     /**
-     * @param Request $request
-     * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
+     * @Route("/categories/new", name="addcategorie")
      */
     public function newAction(Request $request)
     {
