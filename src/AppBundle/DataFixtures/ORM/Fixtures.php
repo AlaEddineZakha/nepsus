@@ -14,6 +14,7 @@ use AppBundle\Entity\Modules;
 use AppBundle\Entity\Permission;
 use AppBundle\Entity\Role;
 use AppBundle\Entity\RolePermission;
+use AppBundle\Entity\User;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\Persistence\ObjectManager;
 
@@ -83,6 +84,13 @@ class Fixtures extends Fixture
         $roleadmin->setDescription('Toutes les permission');
         $roleadmin->setCreated(new \DateTime());
         $manager->persist($roleadmin);
+
+        $demouser = new User();
+        $demouser->setPlainPassword('demo');
+        $demouser->setEnabled('true');
+        $demouser->setEmail("demouser@nepsus.com");
+        $demouser->setUsername('demo');
+        $manager->persist($demouser);
 
         $rolepermission= new RolePermission();
         $rolepermission->setPermission($permission1);
