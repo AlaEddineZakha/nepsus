@@ -26,7 +26,7 @@ class ProduitController extends Controller
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
             $produit = $form->getData();
-           // $idtaxe=$form->get('tva')->getData();
+            $idtaxe=$form->get('tva')->getData();
             $repository1 = $this->getDoctrine()->getRepository('AppBundle:Taxe');
             $taxe = $repository1->find(1);
 

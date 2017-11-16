@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="14e57119-6d11-439a-90fa-9334e3be0203" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/DataFixtures/ORM/Fixtures.php" afterPath="$PROJECT_DIR$/src/AppBundle/DataFixtures/ORM/Fixtures.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/ProduitController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/ProduitController.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -188,13 +188,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Fixtures.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Fixtures.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/DataFixtures/ORM/Fixtures.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="65">
               <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
               <folding>
                 <element signature="e#129#159#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProduitController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/ProduitController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="27" column="40" lean-forward="true" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
+              <folding>
+                <marker date="1510863695039" expanded="true" signature="1544:1577" ph="SELECT p FRO... AppBundle" />
               </folding>
             </state>
           </provider>
@@ -272,7 +284,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/AppBundle/Controller/APIController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/RoleController.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/clients/add.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/clients/list.html.twig" />
@@ -323,6 +334,7 @@
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/Devis/Devis.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/ConfigurationController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/DataFixtures/ORM/Fixtures.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Controller/ProduitController.php" />
       </list>
     </option>
   </component>
@@ -868,14 +880,7 @@
       <workItem from="1508027836801" duration="33386000" />
       <workItem from="1508428768249" duration="175758000" />
       <workItem from="1509715830276" duration="72474000" />
-      <workItem from="1510244198390" duration="92732000" />
-    </task>
-    <task id="LOCAL-00055" summary="02/05/2017  V1.4 Role and permission added">
-      <created>1510229863163</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1510229863163</updated>
+      <workItem from="1510244198390" duration="93349000" />
     </task>
     <task id="LOCAL-00056" summary="02/05/2017  V1.4 Role and permission added">
       <created>1510246628497</created>
@@ -1213,11 +1218,18 @@
       <option name="project" value="LOCAL" />
       <updated>1510860414497</updated>
     </task>
-    <option name="localTasksCounter" value="104" />
+    <task id="LOCAL-00104" summary="02/05/2017  V1.4 Symfony 3.12">
+      <created>1510860681504</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1510860681504</updated>
+    </task>
+    <option name="localTasksCounter" value="105" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1491336000" />
+    <option name="totallyTimeSpent" value="1491953000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1370" height="735" extended-state="0" />
@@ -1327,16 +1339,6 @@
             <marker date="1499454625171" expanded="true" signature="370:430" ph="SELECT p FRO... AppBundle" />
             <marker date="1499454625171" expanded="true" signature="662:722" ph="SELECT p.pri... AppBundle" />
             <marker date="1499454625171" expanded="true" signature="945:997" ph="SELECT p FRO... AppBundle" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/ProduitController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <marker date="1499196449539" expanded="true" signature="1546:1579" ph="SELECT p FRO... AppBundle" />
           </folding>
         </state>
       </provider>
@@ -1902,6 +1904,16 @@
           <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
           <folding>
             <element signature="e#129#159#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/ProduitController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="27" column="40" lean-forward="true" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
+          <folding>
+            <marker date="1510863695039" expanded="true" signature="1544:1577" ph="SELECT p FRO... AppBundle" />
           </folding>
         </state>
       </provider>
