@@ -129,6 +129,193 @@
         </ul>
     </li>
 
+    {% if app.request.attributes.get('_route') =='addcommandec' %}
+        <li class="nav-item active open">
+            <a href="javascript:;" class="nav-link nav-toggle">
+                <i class="icon-basket"></i>
+                <span class="title">Commandes</span>
+                <span class="arrow open"></span>
+
+            </a>
+            <ul class="sub-menu ">
+                <li class="nav-item active open">
+                    <a href="javascript:;" class="nav-link nav-toggle">
+
+                        <span class="title">Clients</span>
+                        <span class="arrow open"></span>
+
+                    </a>
+                    <ul class="sub-menu ">
+                        <li class="nav-item active">
+                            <a href="{{ path('addcommandec') }}" class="nav-link">
+                                <span class="title">Nouvelle commande</span>
+                                <span class="selected"></span>
+
+                            </a>
+                        </li>
+                        <li class="nav-item  ">
+                            <a href="{{ path('listbcc') }}" class="nav-link ">
+                                <span class="title">Liste des commandes</span>
+                            </a>
+                        </li>
+
+
+                    </ul>
+                </li>
+                <li class="nav-item  ">
+                    <a href="javascript:;" class="nav-link nav-toggle">
+
+                        <span class="title">Fournisseurs</span>
+                        <span class="arrow"></span>
+
+                    </a>
+                    <ul class="sub-menu ">
+                        <li class="nav-item  ">
+                            <a href="{{ path('addclient') }}" class="nav-link">
+                                <span class="title">Nouvau commande</span>
+
+                            </a>
+                        </li>
+                        <li class="nav-item  ">
+                            <a href="{{ path('listclient') }}" class="nav-link ">
+                                <span class="title">Liste des commandes</span>
+                            </a>
+                        </li>
+
+
+                    </ul>
+                </li>
+
+
+            </ul>
+
+        </li>
+
+    {% elseif app.request.attributes.get('_route') =='listbcc' %}
+        <li class="nav-item active open">
+            <a href="javascript:;" class="nav-link nav-toggle">
+                <i class="icon-basket"></i>
+                <span class="title">Commandes</span>
+                <span class="arrow open"></span>
+
+            </a>
+            <ul class="sub-menu ">
+                <li class="nav-item active open">
+                    <a href="javascript:;" class="nav-link nav-toggle">
+
+                        <span class="title">Clients</span>
+                        <span class="arrow open"></span>
+
+                    </a>
+                    <ul class="sub-menu ">
+                        <li class="nav-item ">
+                            <a href="{{ path('addcommandec') }}" class="nav-link">
+                                <span class="title">Nouvelle commande</span>
+
+
+                            </a>
+                        </li>
+                        <li class="nav-item active ">
+                            <a href="{{ path('listbcc') }}" class="nav-link ">
+                                <span class="title">Liste des commandes</span>
+                                <span class="selected"></span>
+                            </a>
+                        </li>
+
+
+                    </ul>
+                </li>
+                <li class="nav-item  ">
+                    <a href="javascript:;" class="nav-link nav-toggle">
+
+                        <span class="title">Fournisseurs</span>
+                        <span class="arrow"></span>
+
+                    </a>
+                    <ul class="sub-menu ">
+                        <li class="nav-item  ">
+                            <a href="{{ path('addclient') }}" class="nav-link">
+                                <span class="title">Nouvau commande</span>
+
+                            </a>
+                        </li>
+                        <li class="nav-item  ">
+                            <a href="{{ path('listclient') }}" class="nav-link ">
+                                <span class="title">Liste des commandes</span>
+                            </a>
+                        </li>
+
+
+                    </ul>
+                </li>
+
+
+            </ul>
+
+        </li>
+    {% else  %}
+        <li class="nav-item">
+            <a href="javascript:;" class="nav-link nav-toggle">
+                <i class="icon-basket"></i>
+                <span class="title">Commandes</span>
+                <span class="arrow "></span>
+
+            </a>
+            <ul class="sub-menu ">
+                <li class="nav-item  ">
+                    <a href="javascript:;" class="nav-link nav-toggle">
+
+                        <span class="title">Clients</span>
+                        <span class="arrow "></span>
+
+                    </a>
+                    <ul class="sub-menu ">
+                        <li class="nav-item ">
+                            <a href="{{ path('addcommandec') }}" class="nav-link">
+                                <span class="title">Nouvelle commande</span>
+
+
+                            </a>
+                        </li>
+                        <li class="nav-item  ">
+                            <a href="{{ path('listbcc') }}" class="nav-link ">
+                                <span class="title">Liste des commandes</span>
+                            </a>
+                        </li>
+
+
+                    </ul>
+                </li>
+                <li class="nav-item  ">
+                    <a href="javascript:;" class="nav-link nav-toggle">
+
+                        <span class="title">Fournisseurs</span>
+                        <span class="arrow"></span>
+
+                    </a>
+                    <ul class="sub-menu ">
+                        <li class="nav-item  ">
+                            <a href="{{ path('addclient') }}" class="nav-link">
+                                <span class="title">Nouvau commande</span>
+
+                            </a>
+                        </li>
+                        <li class="nav-item  ">
+                            <a href="{{ path('listclient') }}" class="nav-link ">
+                                <span class="title">Liste des commandes</span>
+                            </a>
+                        </li>
+
+
+                    </ul>
+                </li>
+
+
+            </ul>
+
+        </li>
+    {% endif %}
+
 
     <li class="heading">
         <h3 class="uppercase" style="font-weight: 600 ; color: white"> <i class="icon-layers"></i> Facturation</h3>

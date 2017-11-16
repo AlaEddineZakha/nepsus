@@ -50,7 +50,7 @@ class TaxeController extends Controller
             $em->persist($taxe);
             $em->flush();
 
-            return $this->redirectToRoute('listtaxes');
+            return $this->redirectToRoute('dashboard');
         }
 
 
