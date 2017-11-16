@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="14e57119-6d11-439a-90fa-9334e3be0203" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/DataFixtures/ORM/Fixtures.php" afterPath="$PROJECT_DIR$/src/AppBundle/DataFixtures/ORM/Fixtures.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Devis/Devis.php" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Devis/Devis.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -300,7 +300,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/AppBundle/Controller/UtilisateurController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/APIController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/RoleController.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/clients/add.html.twig" />
@@ -351,6 +350,7 @@
         <option value="$PROJECT_DIR$/app/Resources/views/dashboard/dashboard1.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/ClientController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/DataFixtures/ORM/Fixtures.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Entity/Devis/Devis.php" />
       </list>
     </option>
   </component>
@@ -896,14 +896,7 @@
       <workItem from="1508027836801" duration="33386000" />
       <workItem from="1508428768249" duration="175758000" />
       <workItem from="1509715830276" duration="72474000" />
-      <workItem from="1510244198390" duration="89935000" />
-    </task>
-    <task id="LOCAL-00051" summary="02/05/2017  V1.2">
-      <created>1509717742652</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1509717742652</updated>
+      <workItem from="1510244198390" duration="90565000" />
     </task>
     <task id="LOCAL-00052" summary="02/05/2017  V1.3">
       <created>1509894946190</created>
@@ -1241,11 +1234,18 @@
       <option name="project" value="LOCAL" />
       <updated>1510854483275</updated>
     </task>
-    <option name="localTasksCounter" value="100" />
+    <task id="LOCAL-00100" summary="02/05/2017  V1.4 Symfony 3.12">
+      <created>1510854847075</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1510854847075</updated>
+    </task>
+    <option name="localTasksCounter" value="101" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1488539000" />
+    <option name="totallyTimeSpent" value="1489169000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1370" height="735" extended-state="0" />
@@ -1309,14 +1309,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/Lot.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Repository/dzadazd.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1923,6 +1915,14 @@
             <element signature="e#16417#16449#0#PHP" expanded="true" />
             <marker date="1510848917285" expanded="true" signature="4213:4245" ph="SELECT p FRO... AppBundle" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Devis/Devis.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="26" column="18" lean-forward="true" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>

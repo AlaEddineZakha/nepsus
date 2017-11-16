@@ -24,6 +24,7 @@ class Devis
      * @ORM\Column(type="integer")
      */
     private $id;
+    private $name;
 
 
 
