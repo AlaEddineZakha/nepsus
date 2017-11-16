@@ -78,23 +78,6 @@ class Fixtures extends Fixture
 
         $rolepermission= new RolePermission();
         $rolepermission->setPermission($permission1);
-        $rolepermission->setRole($roleadmin);
-        $manager->persist($rolepermission);
-        $rolepermission= new RolePermission();
-        $rolepermission->setPermission($permission2);
-        $rolepermission->setRole($roleadmin);
-        $manager->persist($rolepermission);
-        $rolepermission= new RolePermission();
-        $rolepermission->setPermission($permission3);
-        $rolepermission->setRole($roleadmin);
-        $manager->persist($rolepermission);
-        $rolepermission= new RolePermission();
-        $rolepermission->setPermission($permission4);
-        $rolepermission->setRole($roleadmin);
-        $manager->persist($rolepermission);
-
-        $rolepermission= new RolePermission();
-        $rolepermission->setPermission($permission1);
         $rolepermission->setRole($role);
         $manager->persist($rolepermission);
 
