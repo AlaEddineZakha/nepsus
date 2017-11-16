@@ -216,7 +216,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Fixtures.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Fixtures.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/DataFixtures/ORM/Fixtures.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="82">
@@ -224,6 +224,16 @@
               <folding>
                 <element signature="e#129#158#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Devis.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Devis/Devis.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -896,14 +906,7 @@
       <workItem from="1508027836801" duration="33386000" />
       <workItem from="1508428768249" duration="175758000" />
       <workItem from="1509715830276" duration="72474000" />
-      <workItem from="1510244198390" duration="90565000" />
-    </task>
-    <task id="LOCAL-00052" summary="02/05/2017  V1.3">
-      <created>1509894946190</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1509894946190</updated>
+      <workItem from="1510244198390" duration="90730000" />
     </task>
     <task id="LOCAL-00053" summary="02/05/2017  V1.4 Role and permission added">
       <created>1510229208488</created>
@@ -1241,11 +1244,18 @@
       <option name="project" value="LOCAL" />
       <updated>1510854847075</updated>
     </task>
-    <option name="localTasksCounter" value="101" />
+    <task id="LOCAL-00101" summary="02/05/2017  V1.4 Symfony 3.12">
+      <created>1510855692018</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1510855692018</updated>
+    </task>
+    <option name="localTasksCounter" value="102" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1489169000" />
+    <option name="totallyTimeSpent" value="1489334000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1370" height="735" extended-state="0" />
@@ -1918,14 +1928,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Devis/Devis.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="26" column="18" lean-forward="true" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/DataFixtures/ORM/Fixtures.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="82">
@@ -1933,6 +1935,14 @@
           <folding>
             <element signature="e#129#158#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Devis/Devis.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
