@@ -15,11 +15,11 @@
 
 
 
-            var url = Routing.generate('deleteclient',{'id':$id});
+            var url = Routing.generate('deletetax',{'id':$id});
 
             swal({
                     title: "Vous etes sure?",
-                    text: "Ce client sera supprimé définitevement",
+                    text: "Ce taxe sera supprimé définitevement",
                     type: "warning",
                     showCancelButton: true,
                     confirmButtonClass: "btn-danger",
@@ -32,10 +32,10 @@
                 },
                 function (isConfirm) {
                     if (isConfirm) {
-                        swal("Deleted!", "Le client a été supprimé.", "success");
+                        swal("Deleted!", "Le taxe a été supprimé.", "success");
                         location.href=url;
                     } else {
-                        swal("Cancelled", "Le client n'a pas été supprimé :)", "error");
+                        swal("Cancelled", "Le taxe n'a pas été supprimé :)", "error");
                     }
                 });
 
@@ -51,24 +51,24 @@
                 <i class="fa fa-circle"></i>
             </li>
             <li>
-                <a href="#">Clients</a>
+                <a href="#">Taxes</a>
                 <i class="fa fa-circle"></i>
             </li>
             <li>
-                <span>Liste des clients</span>
+                <span>Liste des taxes</span>
             </li>
         </ul>
 
     </div>
     <!-- END PAGE BAR -->
     <!-- BEGIN PAGE TITLE-->
-    <h1 class="page-title"> Listes des clients
+    <h1 class="page-title"> Listes des taxes
 
     </h1>
     <!-- END PAGE TITLE-->
     <!-- END PAGE HEADER-->
     <div class="m-heading-1 border-green m-bordered">
-        <h3>Listes des clients</h3>
+        <h3>Listes des taxes</h3>
 
     </div>
     <div class="row">
@@ -86,42 +86,38 @@
                         <thead>
                         <tr>
                             <th>Id</th>
-                            <th>Raison</th>
-                            <th>Email</th>
+                            <th>Valeur</th>
+                            <th>Etat</th>
                             <th>Date d'ajout</th>
-                            <th>Telephone</th>
-                            <th>Matricule fiscal</th>
-                            <th>Capital</th>
                             <th>Actions</th>
                         </tr>
                         </thead>
                         <tfoot>
                         <tr>
                             <th>Id</th>
-                            <th>Raison</th>
-                            <th>Email</th>
+                            <th>Valeur</th>
+                            <th>Etat</th>
                             <th>Date d'ajout</th>
-                            <th>Telephone</th>
-                            <th>Matricule fiscal</th>
-                            <th>Capital</th>
                             <th>Actions</th>
                         </tr>
                         </tfoot>
                         <tbody>
 
-                        {% for client in clients %}
+                        {% for taxe in taxes %}
                             <tr>
-                                <td>{{ client.id }}</td>
-                                <td>{{ client.raison }}</td>
-                                <td>{{ client.email }}</td>
-                                <td>{{ client.created|date('Y-m-d') }}</td>
-                                <td>{{ client.telephone }}</td>
-                                <td>{{ client.matriculefiscale }}</td>
-                                <td>{{ client.capital }} TND</td>
+                                <td>#{{ taxe.id }}</td>
+                                <td>{{ taxe.montant }}</td>
+                                {% if taxe.active ==1 %}
+                                    <td> <span class="label label-sm label-success">Activé </span></td>
+                                {% elseif taxe.active ==0 %}
+
+                                    <td> <span class="label label-sm label-danger">Desactivé </span></td>
+                                {% endif %}
+                                <td>{{ taxe.created|date('Y-m-d') }}</td>
+
                                 <td>
-                                    <a href="javascript:;" class="btn btn-icon-only blue" ><i class="fa fa-search"></i> </a>
-                                    <a href="{{ path('editclient', {'id': client.id }) }}" class="btn btn-icon-only yellow" ><i class="fa fa-edit"></i> </a>
-                                    <a href="javascript:;" class="btn btn-icon-only red" onclick="myFunction({{ client.id }})"><i class="fa fa-times"></i> </a>
+                                    <a href="{{ path('edittaxe', {'id': taxe.id }) }}" class="btn btn-icon-only yellow" ><i class="fa fa-edit"></i> </a>
+                                    <a href="javascript:;" class="btn btn-icon-only red" onclick="myFunction({{ taxe.id }})"><i class="fa fa-times"></i> </a>
 
                                 </td>
 

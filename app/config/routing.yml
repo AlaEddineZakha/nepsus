@@ -62,13 +62,25 @@ listentrepots:
 addtaxe:
     path:      /taxes/new
     defaults:  { _controller: AppBundle:Taxe:new }
-
-
     options:
             expose: true
 
+listtaxes:
+    path:      /taxes
+    defaults:  { _controller: AppBundle:Taxe:showAll }
 
-
+edittaxe:
+    path:      /taxes/{id}/edit
+    defaults:  { _controller: AppBundle:Taxe:edit }
+    requirements:
+            id: \d+
+deletetaxe:
+    path:      /taxes/{id}/delete
+    defaults:  { _controller: AppBundle:Taxe:delete }
+    requirements:
+            id: \d+
+    options:
+            expose: true
 
 #--------------------- Fournisseurs -------------------#
 addfournisseur:

@@ -58,4 +58,20 @@ class TaxeController extends Controller
 
 
     }
+
+    /**
+     * @Route("/taxes" , name="listetaxes")
+     */
+    public function showAllAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $repository = $this->getDoctrine()->getRepository('AppBundle:Taxe');
+        $taxes = $repository->findAll();
+        return $this->render('Taxes/list.html.twig', [
+            'taxes' => $taxes
+
+        ]);
+
+
+    }
 }

@@ -14,6 +14,7 @@ use AppBundle\Entity\Modules;
 use AppBundle\Entity\Permission;
 use AppBundle\Entity\Role;
 use AppBundle\Entity\RolePermission;
+use AppBundle\Entity\Taxe;
 use AppBundle\Entity\User;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\Persistence\ObjectManager;
@@ -76,6 +77,12 @@ class Fixtures extends Fixture
         $categorie->setNom("Indéfinie");
         $categorie->setDepth(1);
         $manager->persist($categorie);
+
+        $taxe= new Taxe();
+        $taxe->setActive(1);
+        $taxe->setMontant(18);
+        $taxe->setCreated(new \DateTime());
+        $manager->persist($taxe);
 
 
 

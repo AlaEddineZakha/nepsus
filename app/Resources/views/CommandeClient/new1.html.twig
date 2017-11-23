@@ -141,7 +141,7 @@
                                                                     <div class="caption">
                                                                         <i class="fa fa-cogs"></i>Lignes de commande </div>
                                                                     <div class="actions">
-                                                                        <a href="javascript:;" class="btn btn-default btn-sm" onclick="addform();">
+                                                                        <a href="javascript:;" class="btn btn-success btn-sm" onclick="addform();">
                                                                             <i class="fa fa-plus-circle"></i> Ajouter ligne </a>
                                                                     </div>
                                                                 </div>
@@ -152,7 +152,7 @@
                                                                                 <tr>
                                                                                     <th> Produit </th>
                                                                                     <th> Quantité </th>
-                                                                                    <th> % de taxe </th>
+                                                                                    <th> TVA(%) </th>
                                                                                     <th> Prix </th>
                                                                                     <th> Total HT </th>
                                                                                     <th> Total TTC </th>
@@ -282,6 +282,10 @@
         var $k=0;
     }
 
+     if (typeof selectedproductid === 'undefined') {
+        var selectedproductid=0;
+    }
+
 
 
 
@@ -314,11 +318,9 @@
             '<td><input class="form-control" type="number" id="prixttc-ligne'+$id+'" name="prixttc-ligne'+$id+'" ></td>' +
            ' </tr>');
 
-
         $ligne.append($removeTagLink);
         $('#thead').append($ligne);
         $size++;
-        console.log("Size = "+$size);
          $k=$size;
         $('#size').attr('value',$size);
          $('#prixht-'+$id+'').attr('value',0);
@@ -326,24 +328,20 @@
 
 
         $('#liste-ligne'+$id+'').change(function () {
-
-            //$('#'#liste-ligne'+$id+'' option:selected").remove();
-
+/*var elems = document.getElementsByTagName('#liste-ligne'+$id+'');
+        var arr = jQuery.makeArray( elems );
+        arr.reverse();
+ console.log(elems);
+        $.each( arr, function( key, value ) {
+  console.log( key + ": " + value );
+});*/
             var $currentidtext=$(this).closest("tr").prop("id");
             var $currentid=parseInt($currentidtext.match(/\d/g));
             var $nextlistid= $currentid+1;
-
-
-             //console.log('Current id : '+$currentid);
-             //console.log('Next id : '+$nextlistid);
-
-            //$('#liste-ligne'+$nextlistid+'').find($op).hide();
-
             var $a=$('#'+this.id).val();
-            console.log($(this).find('id').val());
-            //console.log(this.id+' touché');
+
             var $b=$(this).closest("tr").prop("id");
-            //console.log($b);
+
 
 
 
@@ -354,16 +352,23 @@
                 data:$(this).serialize(),
                 success: function(data){
 
-                    var $prix=data['prixvente'];
+                       selectedproductid=(data['id']);
+
+                    var $prix=data['prixvente'].toFixed(3);
                     var $tva =data['tva']['montant'];
                      $('#tva-'+$b+'').attr('value',$tva);
                      $('#prixvt-'+$b+'').attr('value',$prix);
+                     $('#qt-'+$b+'').attr('value',1);
+                     $('#qt-'+$b+'').attr('min',1);
+                      var $q = $('#qt-'+$b+'').val();
+                       $('#prixttc-'+$b+'').attr('value',(($prix*$q)+( (($prix*$q)*12)/100 )).toFixed(3));
+                        $('#prixht-'+$b+'').attr('value',($prix*$q).toFixed(3));
 
                     $('#qt-'+$b+'').click(function () {
                         var $b=$(this).closest("tr").prop("id");
                         var $q = $('#qt-'+$b+'').val();
-                        $('#prixttc-'+$b+'').attr('value',($prix*$q)+( (($prix*$q)*12)/100 ));
-                        $('#prixht-'+$b+'').attr('value',$prix*$q);
+                      $('#prixttc-'+$b+'').attr('value',(($prix*$q)+( (($prix*$q)*12)/100 )).toFixed(3));
+                        $('#prixht-'+$b+'').attr('value',($prix*$q).toFixed(3));
 
                     })
 
@@ -387,7 +392,7 @@ $('#size').attr('value',$size);
 
 
  var  $oldid=parseInt($(this).closest("tr").prop("id").match(/\d/g));
-          console.log("ID deleted :"+$oldid);
+         // console.log("ID deleted :"+$oldid);
 
         $id--;
 
@@ -411,8 +416,8 @@ if ($size>0)
     var $lastrtid = parseInt($('#thead').find("tr").last().attr('id').match(/\d/g));
     }
       // $lastrtid++;
-       console.log("Type of last tr ID = "+typeof $lastrtid);
-       console.log("ID last tr :"+$lastrtid);
+      // console.log("Type of last tr ID = "+typeof $lastrtid);
+       //console.log("ID last tr :"+$lastrtid);
 
 
 
@@ -452,9 +457,10 @@ $("#myform").click(function() {
 
    for (var i=1; i<=$size; i++) {
        //console.log("i = "+i);
-       $totalht+=parseFloat(Number($('#prixht-ligne'+i+'').val()).toPrecision(5));
-       $totalttc+=parseFloat(Number($('#prixttc-ligne'+i+'').val()).toPrecision(5));
-
+       $totalht+=parseFloat(Number($('#prixht-ligne'+i+'').val()));
+       $totalttc+=parseFloat(Number($('#prixttc-ligne'+i+'').val()));
+      // console.log($totalht.toFixed(3));
+       //console.log($totalttc.toFixed(3));
 
 
 }
@@ -462,10 +468,10 @@ $("#myform").click(function() {
 
   // console.log("Type of total = "+typeof $totalht);
 
-$('#totalht').text(parseFloat($totalht.toPrecision(5)));
-$('#totalttc').text(parseFloat($totalttc.toPrecision(5)));
-$('#hiddentotalttc').attr("value",parseFloat($totalttc.toPrecision(5)));
-$('#hiddentotalht').attr("value",parseFloat($totalht.toPrecision(5)));
+$('#totalht').text($totalht.toFixed(3));
+$('#totalttc').text($totalttc.toFixed(3));
+$('#hiddentotalttc').attr("value",$totalttc.toFixed(3));
+$('#hiddentotalht').attr("value",$totalht.toFixed(3));
 $("#myform").validate({
                 rules: {
 
