@@ -72,7 +72,7 @@ class ClientController extends  Controller
             }
 
 
-            return $this->render('Testlayout/addlayout.html.twig',[
+            return $this->render('clients/add.html.twig',[
                 'user'=>$user
             ]);
 
@@ -447,7 +447,7 @@ class ClientController extends  Controller
                 $bc->setCreated(new \DateTime());
                 $bc->setDateecheance((new \DateTime('+30 day')));
                 $bc->setStatut($request->request->get('statut'));
-                $bc->addFacture($facture);
+                $bc->setFacture($facture);
 
 
                 $facture->setTotalttc($request->request->get('totalttc'));

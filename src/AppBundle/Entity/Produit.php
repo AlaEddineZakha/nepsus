@@ -122,6 +122,15 @@ class Produit
      */
     private $ligneff;
 
+    /**
+     * One Cart has One Customer.
+     *
+     * @var \Doctrine\Common\Collections\Collection|LigneBLC[]
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\LigneBLC", mappedBy="produit" ,cascade={"persist"})
+     * @ORM\JoinColumn(name="lignelc_id", referencedColumnName="id")
+     */
+    private $lignelc;
+
 
 
 
@@ -130,6 +139,7 @@ class Produit
         $this->lignefc = new ArrayCollection();
         $this->lignebcf = new ArrayCollection();
         $this->ligneff = new ArrayCollection();
+        $this->lignelc = new ArrayCollection();
 
     }
 
@@ -488,6 +498,27 @@ class Produit
         $this->ligneff = $ligneff;
     }
 
+    /**
+     * @return ArrayCollection|LigneBLC[]
+     */
+    public function getLigneLC()
+    {
+        return $this->lignelc;
+    }
+
+
+    /**
+     * @param mixed $lignelc
+     */
+    public function setLigneLC($lignelc)
+    {
+        $this->lignelc = $lignelc;
+    }
+
+
+
+
+
 
 
 
@@ -521,6 +552,29 @@ class Produit
     public function setPrixachat($prixachat)
     {
         $this->prixachat = $prixachat;
+    }
+
+
+    public function addLigneBLC(LigneBLC $produit)
+    {
+
+
+        if ($this->lignelc->contains($produit)) {
+            return;
+        }
+        $this->lignelc[] = $produit;
+        // needed to update the owning side of the relationship!
+        $produit->setProduit($this);
+    }
+
+    public function removeLigneBLC(LigneBLC $produit)
+    {
+        if (!$this->lignelc->contains($produit)) {
+            return;
+        }
+        $this->lignelc->removeElement($produit);
+        // needed to update the owning side of the relationship!
+        $produit->setProduit(null);
     }
 
 

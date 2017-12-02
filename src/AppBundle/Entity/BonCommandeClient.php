@@ -24,9 +24,8 @@ class BonCommandeClient
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      * @ORM\Column(type="integer")
-     */private $id ;
-
-
+     */
+    private $id ;
 
 
     /**
@@ -46,11 +45,17 @@ class BonCommandeClient
 
     /**
      * One Cart has One Customer.
-     * @var \Doctrine\Common\Collections\Collection|FactureClient[]
-     * @ORM\OneToMany(targetEntity="AppBundle\Entity\FactureClient", mappedBy="bc", cascade={"persist", "remove"},fetch="EAGER")
-     * @ORM\JoinColumn(name="facture_id", referencedColumnName="id" )
+     * @ORM\OneToOne(targetEntity="AppBundle\Entity\FactureClient", inversedBy="bc", cascade={"persist", "remove"},fetch="EAGER")
+     * @ORM\JoinColumn(name="facture_id", referencedColumnName="id")
      */
     private $facture;
+
+    /**
+     * One Cart has One Customer.
+     * @ORM\OneToOne(targetEntity="AppBundle\Entity\BonLivraisonClient", inversedBy="bc", cascade={"persist", "remove"},fetch="EAGER")
+     * @ORM\JoinColumn(name="livraison_id", referencedColumnName="id")
+     */
+    private $livraison;
 
 
     /**
@@ -75,13 +80,8 @@ class BonCommandeClient
      */private $dateecheance;
 
 
-
-
-
-
     public function __construct() {
         $this->ligne = new ArrayCollection();
-        $this->facture = new ArrayCollection();
     }
 
     /**
@@ -99,12 +99,6 @@ class BonCommandeClient
     {
         $this->id = $id;
     }
-
-
-
-
-
-
 
     /**
      * @return mixed
@@ -244,7 +238,7 @@ class BonCommandeClient
     }
 
     /**
-     * @return ArrayCollection|FactureClient[]
+     * @return mixed
      */
     public function getFacture()
     {
@@ -252,35 +246,30 @@ class BonCommandeClient
     }
 
     /**
-     * @param $facture
+     * @param mixed $facture
      */
     public function setFacture($facture)
     {
         $this->facture = $facture;
     }
 
-
-    public function addFacture(FactureClient $fac)
+    /**
+     * @return mixed
+     */
+    public function getLivraison()
     {
-
-
-        if ($this->facture->contains($fac)) {
-            return;
-        }
-        $this->facture[] = $fac;
-        // needed to update the owning side of the relationship!
-        $fac->setBc($this);
+        return $this->livraison;
     }
 
-    public function removeFacture(FactureClient $fac)
+    /**
+     * @param mixed $livraison
+     */
+    public function setLivraison($livraison)
     {
-        if (!$this->facture->contains($fac)) {
-            return;
-        }
-        $this->facture->removeElement($fac);
-        // needed to update the owning side of the relationship!
-        $fac->setBc(null);
+        $this->livraison = $livraison;
     }
+
+
 
 
 

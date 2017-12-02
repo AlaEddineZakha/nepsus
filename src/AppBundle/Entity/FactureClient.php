@@ -34,8 +34,10 @@ class FactureClient
      */
     private $paiement;
 
+
     /**
-     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\BonCommandeClient", inversedBy="facture" , fetch="EAGER")
+     * Un lot a une seulle commande
+     * @ORM\OneToOne(targetEntity="AppBundle\Entity\BonCommandeClient", mappedBy="facture" , fetch="EAGER")
      */
     private $bc;
     /**
@@ -167,6 +169,8 @@ class FactureClient
     {
         $this->bc = $bc;
     }
+
+
 
     /**
      * @return ArrayCollection|LigneFC[]
