@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="14e57119-6d11-439a-90fa-9334e3be0203" name="Default" comment="02/05/2017  V1.4 Symfony 3.12">
+    <list default="true" id="14e57119-6d11-439a-90fa-9334e3be0203" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -148,34 +148,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="dashboard1.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/dashboard/dashboard1.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="142" column="0" lean-forward="false" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-              <folding />
+            <state relative-caret-position="204">
+              <caret line="65" column="113" lean-forward="false" selection-start-line="65" selection-start-column="113" selection-end-line="65" selection-end-column="113" />
+              <folding>
+                <element signature="e#69166#69172#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BonLivraisonClient.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/BonLivraisonClient.php">
+      <file leaf-file-name="dashboard_2.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../MetronicMaterial/admin_1_material_design/dashboard_2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="34" column="87" lean-forward="false" selection-start-line="34" selection-start-column="87" selection-end-line="34" selection-end-column="87" />
-              <folding>
-                <element signature="e#6#87#0#PHP" expanded="false" />
-              </folding>
+            <state relative-caret-position="136">
+              <caret line="53" column="117" lean-forward="true" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="117" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -192,7 +182,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>capi</find>
       <find>capital</find>
       <find>{{ fournisseur.capital }}</find>
       <find>getLignebcf</find>
@@ -222,6 +211,7 @@
       <find>bc</find>
       <find>fact</find>
       <find>addFacture</find>
+      <find>icon-arrow-up</find>
     </findStrings>
     <replaceStrings>
       <replace>fonts/</replace>
@@ -1091,14 +1081,7 @@
       <workItem from="1509715830276" duration="72474000" />
       <workItem from="1510244198390" duration="123762000" />
       <workItem from="1511716799131" duration="10185000" />
-      <workItem from="1512239802806" duration="4338000" />
-    </task>
-    <task id="LOCAL-00066" summary="02/05/2017  V1.4 Role and permission added">
-      <created>1510412216202</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1510412216202</updated>
+      <workItem from="1512239802806" duration="7189000" />
     </task>
     <task id="LOCAL-00067" summary="02/05/2017  V1.4 Role and permission added">
       <created>1510415750413</created>
@@ -1436,16 +1419,24 @@
       <option name="project" value="LOCAL" />
       <updated>1512252446366</updated>
     </task>
-    <option name="localTasksCounter" value="115" />
+    <task id="LOCAL-00115" summary="02/05/2017  V1.4 Symfony 3.13&#10;Loader fixed">
+      <created>1512254544859</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1512254544859</updated>
+    </task>
+    <option name="localTasksCounter" value="116" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1536889000" />
+    <option name="totallyTimeSpent" value="1539740000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1370" height="735" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27769572" sideWeight="0.8681507" order="0" side_tool="false" content_ui="combo" x="546" y="47" width="274" height="634" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27769572" sideWeight="0.8681507" order="0" side_tool="false" content_ui="combo" x="546" y="47" width="274" height="634" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1184" sideWeight="0.6277696" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09822747" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1494,7 +1485,9 @@
     <MESSAGE value="02/05/2017  V1.4 Role and permission added" />
     <MESSAGE value="02/05/2017  V1.4 Fixture" />
     <MESSAGE value="02/05/2017  V1.4 Symfony 3.12" />
-    <option name="LAST_COMMIT_MESSAGE" value="02/05/2017  V1.4 Symfony 3.12" />
+    <MESSAGE value="02/05/2017  V1.4 Symfony 3.13&#10;Loader fixed" />
+    <MESSAGE value="02/05/2017  V1.4 Symfony 3.13&#10;Responsive fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="02/05/2017  V1.4 Symfony 3.13&#10;Responsive fixed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1503,7 +1496,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/Lots/list.html.twig.html" />
     <entry file="file://$PROJECT_DIR$/app/Resources/views/Lots/list.html" />
     <entry file="uml://DATABASE/9be4e9f6-8898-47e5-8cb0-37d770d95d26.SCHEMA:nepsus">
       <provider selected="true" editor-type-id="UmlEditorProvider">
@@ -1958,11 +1950,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../MetronicMaterial/admin_1_material_design/dashboard_2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="53" column="117" lean-forward="true" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="117" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="204">
+          <caret line="65" column="113" lean-forward="false" selection-start-line="65" selection-start-column="113" selection-end-line="65" selection-end-column="113" />
+          <folding>
+            <element signature="e#69166#69172#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
