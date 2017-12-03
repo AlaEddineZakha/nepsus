@@ -67,11 +67,19 @@ class Fixtures extends Fixture
 
 
 
-        $role=new Role();
-        $role->setNom('Magasinier');
-        $role->setDescription('Magasinier');
-        $role->setCreated(new \DateTime());
-        $manager->persist($role);
+        $rolemagasinier=new Role();
+        $rolemagasinier->setNom('Magasinier');
+        $rolemagasinier->setDescription('Magasinier');
+        $rolemagasinier->setCreated(new \DateTime());
+        $manager->persist($rolemagasinier);
+
+        $demouser = new User();
+        $demouser->setPlainPassword('demo');
+        $demouser->setEnabled('true');
+        $demouser->setEmail("demouser@nepsus.com");
+        $demouser->setUsername('demo');
+        $demouser->setRole($rolemagasinier);
+        $manager->persist($demouser);
 
         $categorie= new Category();
         $categorie->setNom("Indéfinie");
@@ -92,12 +100,7 @@ class Fixtures extends Fixture
         $roleadmin->setCreated(new \DateTime());
         $manager->persist($roleadmin);
 
-        $demouser = new User();
-        $demouser->setPlainPassword('demo');
-        $demouser->setEnabled('true');
-        $demouser->setEmail("demouser@nepsus.com");
-        $demouser->setUsername('demo');
-        $manager->persist($demouser);
+
 
         $rolepermission= new RolePermission();
         $rolepermission->setPermission($permission1);
@@ -126,24 +129,24 @@ class Fixtures extends Fixture
 
         $rolepermission= new RolePermission();
         $rolepermission->setPermission($permission1);
-        $rolepermission->setRole($role);
+        $rolepermission->setRole($rolemagasinier);
         $manager->persist($rolepermission);
 
 
 
         $rolepermission= new RolePermission();
         $rolepermission->setPermission($permission2);
-        $rolepermission->setRole($role);
+        $rolepermission->setRole($rolemagasinier);
         $manager->persist($rolepermission);
 
         $rolepermission= new RolePermission();
         $rolepermission->setPermission($permission3);
-        $rolepermission->setRole($role);
+        $rolepermission->setRole($rolemagasinier);
         $manager->persist($rolepermission);
 
         $rolepermission= new RolePermission();
         $rolepermission->setPermission($permission4);
-        $rolepermission->setRole($role);
+        $rolepermission->setRole($rolemagasinier);
         $manager->persist($rolepermission);
 
 
