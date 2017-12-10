@@ -107,7 +107,7 @@
 
     <li class="nav-item" id="menufournisseurs">
         <a href="javascript:" class="nav-link nav-toggle">
-            <i class="icon-user-following"></i>
+            <i class="fa fa-handshake-o" aria-hidden="true"></i>
             <span class="title">Fournisseurs</span>
             <span class="arrow"></span>
 
@@ -320,67 +320,62 @@
     <li class="heading">
         <h3 class="uppercase" style="font-weight: 600 ; color: white"> <i class="icon-layers"></i> Facturation</h3>
     </li>
-    <li class="nav-item" id="menucfactures">
-        <a href="javascript:" class="nav-link nav-toggle">
-            <i class="icon-docs"></i>
-            <span class="title">Factures</span>
-            <span class="arrow"></span>
+    {% if app.request.attributes.get('_route') =='listfacturesclients' %}
 
-        </a>
-        <ul class="sub-menu ">
-            <li class="nav-item  ">
-                <a href="javascript:" class="nav-link nav-toggle">
+        <li class="nav-item active open" id="menucfactures">
+            <a href="javascript:" class="nav-link nav-toggle">
+                <i class="icon-docs"></i>
+                <span class="title">Factures</span>
+                <span class="arrow open"></span>
 
-                    <span class="title">Clients</span>
-                    <span class="arrow"></span>
+            </a>
+            <ul class="sub-menu ">
 
-                </a>
-                <ul class="sub-menu ">
-                    <li class="nav-item  ">
-                        <a href="{{ path('addclient') }}" class="nav-link">
-                            <span class="title">Nouvelle Facture</span>
-
-                        </a>
-                    </li>
-                    <li class="nav-item  ">
-                        <a href="{{ path('listclient') }}" class="nav-link ">
-                            <span class="title">Liste des factures</span>
-                        </a>
-                    </li>
+                <li class="nav-item active ">
+                    <a href="{{ path('listfacturesclients') }}" class="nav-link ">
+                        <span class="title">Clients</span>
+                        <span class="selected"></span>
+                    </a>
+                </li>
+                <li class="nav-item  ">
+                    <a href="#" class="nav-link ">
+                        <span class="title">Fournisseurs</span>
+                    </a>
+                </li>
 
 
-                </ul>
-            </li>
-            <li class="nav-item  ">
-                <a href="javascript:" class="nav-link nav-toggle">
-
-                    <span class="title">Fournisseurs</span>
-                    <span class="arrow"></span>
-
-                </a>
-                <ul class="sub-menu ">
-                    <li class="nav-item  ">
-                        <a href="{{ path('addclient') }}" class="nav-link">
-                            <span class="title">Nouvelle facture</span>
-
-                        </a>
-                    </li>
-                    <li class="nav-item  ">
-                        <a href="{{ path('listclient') }}" class="nav-link ">
-                            <span class="title">Liste des factures</span>
-                        </a>
-                    </li>
+            </ul>
 
 
-                </ul>
-            </li>
+        </li>
+    {% else %}
+        <li class="nav-item" id="menucfactures">
+            <a href="javascript:" class="nav-link nav-toggle">
+                <i class="icon-docs"></i>
+                <span class="title">Factures</span>
+                <span class="arrow"></span>
+
+            </a>
+            <ul class="sub-menu ">
+
+                <li class="nav-item  ">
+                    <a href="{{ path('listfacturesclients') }}" class="nav-link ">
+                        <span class="title">Clients</span>
+                    </a>
+                </li>
+                <li class="nav-item  ">
+                    <a href="#" class="nav-link ">
+                        <span class="title">Fournisseurs</span>
+                    </a>
+                </li>
 
 
+            </ul>
 
-        </ul>
 
+        </li>
+    {% endif %}
 
-    </li>
     <li class="nav-item  " id="menudevis">
         <a href="javascript:" class="nav-link nav-toggle">
             <i class="icon-note"></i>
@@ -406,7 +401,7 @@
     </li>
     <li class="nav-item  " id="menutransactions">
         <a href="javascript:" class="nav-link nav-toggle">
-            <i class="icon-credit-card"></i>
+            <i class="fa fa-usd" aria-hidden="true"></i>
             <span class="title">Transactions</span>
             <span class="arrow"></span>
 
@@ -429,7 +424,7 @@
     </li>
     <li class="nav-item  " id="menudepenses">
         <a href="javascript:" class="nav-link nav-toggle">
-            <i class="icon-credit-card"></i>
+            <i class="icon-wallet" aria-hidden="true"></i>
             <span class="title">Dépenses</span>
             <span class="arrow"></span>
 
@@ -451,11 +446,11 @@
         </ul>
     </li>
     <li class="heading" >
-        <h3 class="uppercase" style="font-weight: 600 ; color: white;"><i class="icon-grid"></i>  Stock</h3>
+        <h3 class="uppercase" style="font-weight: 600 ; color: white;"><i class="fa fa-cubes" aria-hidden="true"></i>  Stock</h3>
     </li>
     <li class="nav-item" id="menuproduits">
         <a href="javascript:" class="nav-link nav-toggle">
-            <i class="icon-social-dropbox"></i>
+            <i class="icon-chemistry"></i>
             <span class="title">Produits</span>
             <span class="arrow"></span>
 
@@ -478,53 +473,89 @@
     </li>
 
 
+    {% if app.request.attributes.get('_route') =='addcategorie' %}
+        <li class="nav-item active open" id="menucategories">
+            <a href="javascript:" class="nav-link nav-toggle">
+                <i class="icon-tag"></i>
+                <span class="title">Categories</span>
+                <span class="arrow open"></span>
 
-    <li class="nav-item" id="menucategories">
-        <a href="javascript:" class="nav-link nav-toggle">
-            <i class="icon-tag"></i>
-            <span class="title">Categories</span>
-            <span class="arrow"></span>
+            </a>
+            <ul class="sub-menu ">
+                <li class="nav-item active ">
+                    <a href="{{ path('addcategorie') }}" class="nav-link">
+                        <span class="title">Nouvelle catégorie</span>
+                        <span class="selected"></span>
 
-        </a>
-        <ul class="sub-menu ">
-            <li class="nav-item  ">
-                <a href="{{ path('addcategorie') }}" class="nav-link">
-                    <span class="title">Nouvelle catégorie</span>
-
-                </a>
-            </li>
-            <li class="nav-item  ">
-                <a href="{{ path('listcategories') }}" class="nav-link ">
-                    <span class="title">Liste des catégories</span>
-                </a>
-            </li>
+                    </a>
+                </li>
+                <li class="nav-item  ">
+                    <a href="{{ path('listcategories') }}" class="nav-link ">
+                        <span class="title">Liste des catégories</span>
+                    </a>
+                </li>
 
 
-        </ul>
-    </li>
+            </ul>
+        </li>
+    {% elseif app.request.attributes.get('_route') =='listcategories' %}
+        <li class="nav-item active open" id="menucategories">
+            <a href="javascript:" class="nav-link nav-toggle">
+                <i class="icon-tag"></i>
+                <span class="title">Categories</span>
+                <span class="arrow open"></span>
+
+            </a>
+            <ul class="sub-menu ">
+                <li class="nav-item  ">
+                    <a href="{{ path('addcategorie') }}" class="nav-link">
+                        <span class="title">Nouvelle catégorie</span>
+
+
+                    </a>
+                </li>
+                <li class="nav-item active ">
+                    <a href="{{ path('listcategories') }}" class="nav-link ">
+                        <span class="title">Liste des catégories</span>
+                        <span class="selected"></span>
+                    </a>
+                </li>
+
+
+            </ul>
+        </li>
+    {% else %}
+        <li class="nav-item" id="menucategories">
+            <a href="javascript:" class="nav-link nav-toggle">
+                <i class="icon-tag"></i>
+                <span class="title">Categories</span>
+                <span class="arrow"></span>
+
+            </a>
+            <ul class="sub-menu ">
+                <li class="nav-item  ">
+                    <a href="{{ path('addcategorie') }}" class="nav-link">
+                        <span class="title">Nouvelle catégorie</span>
+
+                    </a>
+                </li>
+                <li class="nav-item  ">
+                    <a href="{{ path('listcategories') }}" class="nav-link ">
+                        <span class="title">Liste des catégories</span>
+                    </a>
+                </li>
+
+
+            </ul>
+        </li>
+    {% endif %}
+
 
     <li class="nav-item" id="menulots">
-        <a href="javascript:" class="nav-link nav-toggle">
-            <i class="icon-tag"></i>
+        <a href="javascript:" class="nav-link ">
+            <i class="icon-social-dropbox"></i>
             <span class="title">Lots</span>
-            <span class="arrow"></span>
-
         </a>
-        <ul class="sub-menu ">
-            <li class="nav-item  ">
-                <a href="#" class="nav-link">
-                    <span class="title">Nouveau lot</span>
-
-                </a>
-            </li>
-            <li class="nav-item  ">
-                <a href="{{ path('listcategories') }}" class="nav-link ">
-                    <span class="title">Liste des lots</span>
-                </a>
-            </li>
-
-
-        </ul>
     </li>
     <li class="nav-item" id="menuentrepots">
         <a href="javascript:" class="nav-link nav-toggle">
@@ -551,7 +582,7 @@
     </li>
     <li class="nav-item" id="menutaxes">
         <a href="javascript:" class="nav-link nav-toggle">
-            <i class="icon-home"></i>
+            <i class="fa fa-frown-o" aria-hidden="true"></i>
             <span class="title">Taxes</span>
             <span class="arrow"></span>
 
@@ -598,12 +629,12 @@
 
     <li class="heading">
 
-        <h3 class="uppercase" style="font-weight: 600 ; color: white;"> <i class="icon-settings"></i>  Sécurité</h3>
+        <h3 class="uppercase" style="font-weight: 600 ; color: white;"> <i class="icon-lock"></i>  Sécurité</h3>
     </li>
 
     <li class="nav-item" >
         <a href="javascript:" class="nav-link nav-toggle">
-            <i class="icon-home"></i>
+            <i class="icon-user"></i>
             <span class="title">Utilisateurs</span>
             <span class="arrow"></span>
 
@@ -624,29 +655,81 @@
 
         </ul>
     </li>
-    <li class="nav-item" >
-        <a href="javascript:" class="nav-link nav-toggle">
-            <i class="icon-home"></i>
-            <span class="title">Roles & permissions</span>
-            <span class="arrow"></span>
+    {% if app.request.attributes.get('_route') =='addrole' %}
+        <li class="nav-item active open" >
+            <a href="javascript:" class="nav-link nav-toggle">
+                <i class="icon-key"></i>
+                <span class="title">Roles & permissions</span>
+                <span class="arrow open"></span>
 
-        </a>
-        <ul class="sub-menu ">
-            <li class="nav-item  ">
-                <a href="{{ path('addrole') }}" class="nav-link">
-                    <span class="title">Nouveau role</span>
+            </a>
+            <ul class="sub-menu ">
+                <li class="nav-item active ">
+                    <a href="{{ path('addrole') }}" class="nav-link">
+                        <span class="title">Nouveau role</span>
+                        <span class="selected"></span>
+                    </a>
+                </li>
+                <li class="nav-item  ">
+                    <a href="{{ path('listroles') }}" class="nav-link ">
+                        <span class="title">Liste des roles</span>
+                    </a>
+                </li>
 
-                </a>
-            </li>
-            <li class="nav-item  ">
-                <a href="{{ path('listroles') }}" class="nav-link ">
-                    <span class="title">Liste des roles</span>
-                </a>
-            </li>
+
+            </ul>
+        </li>
+    {% elseif app.request.attributes.get('_route') =='listroles' %}
+        <li class="nav-item active open" >
+            <a href="javascript:" class="nav-link nav-toggle">
+                <i class="icon-key"></i>
+                <span class="title">Roles & permissions</span>
+                <span class="arrow open"></span>
+
+            </a>
+            <ul class="sub-menu ">
+                <li class="nav-item  ">
+                    <a href="{{ path('addrole') }}" class="nav-link">
+                        <span class="title">Nouveau role</span>
+
+                    </a>
+                </li>
+                <li class="nav-item active ">
+                    <a href="{{ path('listroles') }}" class="nav-link ">
+                        <span class="title">Liste des roles</span>
+                        <span class="selected"></span>
+                    </a>
+                </li>
 
 
-        </ul>
-    </li>
+            </ul>
+        </li>
+    {% else %}
+        <li class="nav-item" >
+            <a href="javascript:" class="nav-link nav-toggle">
+                <i class="icon-key"></i>
+                <span class="title">Roles & permissions</span>
+                <span class="arrow"></span>
+
+            </a>
+            <ul class="sub-menu ">
+                <li class="nav-item  ">
+                    <a href="{{ path('addrole') }}" class="nav-link">
+                        <span class="title">Nouveau role</span>
+
+                    </a>
+                </li>
+                <li class="nav-item  ">
+                    <a href="{{ path('listroles') }}" class="nav-link ">
+                        <span class="title">Liste des roles</span>
+                    </a>
+                </li>
+
+
+            </ul>
+        </li>
+    {% endif %}
+
 
 {% endblock %}
 {% block container %}
@@ -675,8 +758,8 @@
                 <div class="display">
                     <div class="number">
                         <h3 class="font-green-sharp">
-                            <span data-counter="counterup" data-value="7800">0</span>
-                            <small class="font-green-sharp">$</small>
+                            <span data-counter="counterup" data-value="7800">7800</span>
+                            <small class="font-green-sharp">Dt</small>
                         </h3>
                         <small>Bénéfice total</small>
                     </div>
@@ -687,12 +770,12 @@
                 <div class="progress-info">
                     <div class="progress">
                                             <span style="width: 76%;" class="progress-bar progress-bar-success green-sharp">
-                                                <span class="sr-only">76% progress</span>
+                                                <span class="sr-only">18% taxe</span>
                                             </span>
                     </div>
                     <div class="status">
-                        <div class="status-title"> progress </div>
-                        <div class="status-number"> 76% </div>
+                        <div class="status-title"> Taxe </div>
+                        <div class="status-number"> 18% </div>
                     </div>
                 </div>
             </div>
@@ -702,23 +785,23 @@
                 <div class="display">
                     <div class="number">
                         <h3 class="font-red-haze">
-                            <span data-counter="counterup" data-value="1349">0</span>
+                            <span data-counter="counterup" data-value="66">66</span>
                         </h3>
-                        <small>Test prod</small>
+                        <small>Produits</small>
                     </div>
                     <div class="icon">
-                        <i class="icon-like"></i>
+                        <i class="icon-chemistry"></i>
                     </div>
                 </div>
                 <div class="progress-info">
                     <div class="progress">
-                                            <span style="width: 85%;" class="progress-bar progress-bar-success red-haze">
-                                                <span class="sr-only">85% change</span>
+                                            <span style="width: 23%;" class="progress-bar progress-bar-success red-haze">
+                                                <span class="sr-only">23% hors stock</span>
                                             </span>
                     </div>
                     <div class="status">
-                        <div class="status-title"> change </div>
-                        <div class="status-number"> 85% </div>
+                        <div class="status-title"> Hors stock </div>
+                        <div class="status-number"> 23% </div>
                     </div>
                 </div>
             </div>
@@ -728,9 +811,9 @@
                 <div class="display">
                     <div class="number">
                         <h3 class="font-blue-sharp">
-                            <span data-counter="counterup" data-value="567"></span>
+                            <span data-counter="counterup" data-value="50"></span>
                         </h3>
-                        <small>Nouvelles commandes</small>
+                        <small>Commandes totales</small>
                     </div>
                     <div class="icon">
                         <i class="icon-basket"></i>
@@ -738,13 +821,13 @@
                 </div>
                 <div class="progress-info">
                     <div class="progress">
-                                            <span style="width: 45%;" class="progress-bar progress-bar-success blue-sharp">
-                                                <span class="sr-only">45% grow</span>
+                                            <span style="width: 20%;" class="progress-bar progress-bar-success blue-sharp">
+                                                <span class="sr-only">20% livrés</span>
                                             </span>
                     </div>
                     <div class="status">
-                        <div class="status-title"> grow </div>
-                        <div class="status-number"> 45% </div>
+                        <div class="status-title"> Livrés </div>
+                        <div class="status-number"> 20% </div>
                     </div>
                 </div>
             </div>
@@ -755,9 +838,9 @@
                     <div class="number">
                         <h3 class="font-purple-soft">
 
-                            <span data-counter="counterup" data-value=""></span>
+                            <span data-counter="counterup" data-value="15"></span>
                         </h3>
-                        <small>NEW USERS</small>
+                        <small>Clients</small>
                     </div>
                     <div class="icon">
                         <i class="icon-user"></i>
@@ -765,56 +848,303 @@
                 </div>
                 <div class="progress-info">
                     <div class="progress">
-                                            <span style="width: 57%;" class="progress-bar progress-bar-success purple-soft">
-                                                <span class="sr-only">56% change</span>
+                                            <span style="width: 60%;" class="progress-bar progress-bar-success purple-soft">
+                                                <span class="sr-only">60% actif</span>
                                             </span>
                     </div>
                     <div class="status">
-                        <div class="status-title"> change </div>
-                        <div class="status-number"> 57% </div>
+                        <div class="status-title"> Actif </div>
+                        <div class="status-number"> 60% </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+
+
+    <div class="row">
+        <div class="col-lg-6 col-xs-12 col-sm-12">
+            <div class="portlet light bordered">
+                <div class="portlet-title">
+                    <div class="caption">
+                        <i class="icon-share font-dark hide"></i>
+                        <span class="caption-subject font-dark bold uppercase">Activités récentes</span>
+                    </div>
+
+                </div>
+                <div class="portlet-body">
+                    <div class="scroller" style="height: 300px;" data-always-visible="1" data-rail-visible="0">
+                        <ul class="feeds">
+                            <li>
+                                <div class="col1">
+                                    <div class="cont">
+                                        <div class="cont-col1">
+                                            <div class="label label-sm label-info">
+                                                <i class="fa fa-check"></i>
+                                            </div>
+                                        </div>
+                                        <div class="cont-col2">
+                                            <div class="desc"> Vous avez 2 tâches en attente.
+                                                <span class="label label-sm label-warning "> Prenez action
+                                                                        <i class="fa fa-share"></i>
+                                                                    </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </li>
+
+                            <li>
+                                <div class="col1">
+                                    <div class="cont">
+                                        <div class="cont-col1">
+                                            <div class="label label-sm label-warning">
+                                                <i class="fa fa-life-ring"></i>
+                                            </div>
+                                        </div>
+                                        <div class="cont-col2">
+                                            <div class="desc"> Nouvelle réclamation
+                                                <span class="label label-sm label-warning"> Reference : #13 </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </li>
+                            <li>
+                                <div class="col1">
+                                    <div class="cont">
+                                        <div class="cont-col1">
+                                            <div class="label label-sm label-success">
+                                                <i class="fa fa-shopping-cart"></i>
+                                            </div>
+                                        </div>
+                                        <div class="cont-col2">
+                                            <div class="desc"> Nouvelle commande
+                                                <span class="label label-sm label-success"> Reference : #11 </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </li>
+
+                            <li>
+                                <div class="col1">
+                                    <div class="cont">
+                                        <div class="cont-col1">
+                                            <div class="label label-sm label-info">
+                                                <i class="fa fa-file-o"></i>
+                                            </div>
+                                        </div>
+                                        <div class="cont-col2">
+                                            <div class="desc"> Nouvelle facture genéré
+                                                <span class="label label-sm label-success"> Reference : #16 </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </li>
+                            <li>
+                                <div class="col1">
+                                    <div class="cont">
+                                        <div class="cont-col1">
+                                            <div class="label label-sm label-info">
+                                                <i class="fa fa-user"></i>
+                                            </div>
+                                        </div>
+                                        <div class="cont-col2">
+                                            <div class="desc"> Nouveau client ajouté
+                                                <span class="label label-sm label-success"> Reference : #23 </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </li>
+                            <li>
+                                <div class="col1">
+                                    <div class="cont">
+                                        <div class="cont-col1">
+                                            <div class="label label-sm label-danger">
+                                                <i class="fa fa-shopping-cart"></i>
+                                            </div>
+                                        </div>
+                                        <div class="cont-col2">
+                                            <div class="desc"> Commande annulé
+                                                <span class="label label-sm label-danger"> Reference : #9 </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </li>
+                            <li>
+                                <div class="col1">
+                                    <div class="cont">
+                                        <div class="cont-col1">
+                                            <div class="label label-sm label-warning">
+                                                <i class="fa fa-usd"></i>
+                                            </div>
+                                        </div>
+                                        <div class="cont-col2">
+                                            <div class="desc"> Nouvelle transaction
+                                                <span class="label label-sm label-warning"> Reference : #102 </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="scroller-footer">
+                        <div class="btn-arrow-link pull-right">
+                            <a href="javascript:;">Voir tous</a>
+                            <i class="icon-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-xs-12 col-sm-12">
+            <div class="portlet light tasks-widget bordered">
+                <div class="portlet-title">
+                    <div class="caption">
+                        <i class="icon-share font-dark hide"></i>
+                        <span class="caption-subject font-dark bold uppercase">Tâches</span>
+                        <span class="caption-helper"></span>
+                    </div>
+
+                </div>
+                <div class="portlet-body">
+                    <div class="task-content">
+                        <div class="scroller" style="height: 312px;" data-always-visible="1" data-rail-visible1="1">
+                            <!-- START TASK LIST -->
+                            <ul class="task-list">
+                                <li>
+
+                                    <div class="task-title">
+                                        <span class="task-title-sp"> Tache 1 </span>
+                                        <span class="label label-sm label-success">Terminé</span>
+
+                                    </div>
+
+                                </li>
+                                <li>
+
+                                    <div class="task-title">
+                                        <span class="task-title-sp"> Tache 2  </span>
+                                        <span class="label label-sm label-danger">Retardé</span>
+                                    </div>
+
+                                </li>
+                                <li>
+
+                                    <div class="task-title">
+                                        <span class="task-title-sp"> Tache 3 </span>
+                                        <span class="label label-sm label-success">Terminé</span>
+
+                                    </div>
+
+                                </li>
+                                <li>
+
+                                    <div class="task-title">
+                                        <span class="task-title-sp"> Tache 4 </span>
+                                        <span class="label label-sm label-warning">En cours</span>
+                                    </div>
+
+                                </li>
+                                <li>
+
+                                    <div class="task-title">
+                                        <span class="task-title-sp"> Tache 5 </span>
+                                        <span class="label label-sm label-info">Rappel</span>
+                                    </div>
+
+                                </li>
+                                <li>
+
+                                    <div class="task-title">
+                                        <span class="task-title-sp"> Tache 6 </span>
+                                        <span class="label label-sm label-danger">Retardé</span>
+                                    </div>
+
+                                </li>
+                                <li>
+
+                                    <div class="task-title">
+                                        <span class="task-title-sp"> Tache 7 </span>
+                                        <span class="label label-sm label-default">En attente</span>
+
+                                    </div>
+
+                                </li>
+                                <li>
+
+                                    <div class="task-title">
+                                        <span class="task-title-sp"> Tache 8 </span>
+                                        <span class="label label-sm label-success">Terminé</span>
+
+                                    </div>
+
+                                </li>
+
+                            </ul>
+                            <!-- END START TASK LIST -->
+                        </div>
+                    </div>
+                    <div class="task-footer">
+                        <div class="btn-arrow-link pull-right">
+                            <a href="javascript:;">Voir tous</a>
+                            <i class="icon-arrow-right"></i>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+
 {% endblock %}
 
 {% block javascripts %}
     {{ parent() }}
     {% if app.request.attributes.get('_route') =='dashboard' %}
-    <script src="{{ asset('Template/assets/global/plugins/moment.min.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('Template/assets/global/plugins/bootstrap-daterangepicker/daterangepicker.min.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('Template/assets/global/plugins/morris/morris.min.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('Template/assets/global/plugins/morris/raphael-min.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('Template/assets/global/plugins/counterup/jquery.waypoints.min.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('Template/assets/global/plugins/counterup/jquery.counterup.min.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('Template/assets/global/plugins/amcharts/amcharts/amcharts.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('Template/assets/global/plugins/amcharts/amcharts/serial.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('Template/assets/global/plugins/amcharts/amcharts/pie.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('Template/assets/global/plugins/amcharts/amcharts/radar.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('Template/assets/global/plugins/amcharts/amcharts/themes/light.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('Template/assets/global/plugins/amcharts/amcharts/themes/patterns.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('Template/assets/global/plugins/amcharts/amcharts/themes/chalk.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('Template/assets/global/plugins/amcharts/ammap/ammap.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('Template/assets/global/plugins/amcharts/ammap/maps/js/worldLow.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('Template/assets/global/plugins/amcharts/amstockcharts/amstock.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('Template/assets/global/plugins/fullcalendar/fullcalendar.min.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('Template/assets/global/plugins/horizontal-timeline/horizontal-timeline.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('Template/assets/global/plugins/flot/jquery.flot.min.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('Template/assets/global/plugins/flot/jquery.flot.resize.min.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('Template/assets/global/plugins/flot/jquery.flot.categories.min.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('Template/assets/global/plugins/jquery-easypiechart/jquery.easypiechart.min.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('Template/assets/global/plugins/jquery.sparkline.min.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('Template/assets/global/plugins/jqvmap/jqvmap/jquery.vmap.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('Template/assets/global/plugins/jqvmap/jqvmap/maps/jquery.vmap.russia.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('Template/assets/global/plugins/jqvmap/jqvmap/maps/jquery.vmap.world.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('Template/assets/global/plugins/jqvmap/jqvmap/maps/jquery.vmap.europe.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('Template/assets/global/plugins/jqvmap/jqvmap/maps/jquery.vmap.germany.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('Template/assets/global/plugins/jqvmap/jqvmap/maps/jquery.vmap.usa.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('Template/assets/global/plugins/jqvmap/jqvmap/data/jquery.vmap.sampledata.js') }}" type="text/javascript"></script>
-{% endif %}
-    <script src="{{ asset('Template/assets/pages/scripts/dashboard.min.js') }}" type="text/javascript"></script>
+
+        <script src="{{ asset('Template/assets/pages/scripts/dashboard.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('Template/assets/global/plugins/moment.min.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('Template/assets/global/plugins/bootstrap-daterangepicker/daterangepicker.min.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('Template/assets/global/plugins/morris/morris.min.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('Template/assets/global/plugins/morris/raphael-min.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('Template/assets/global/plugins/counterup/jquery.waypoints.min.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('Template/assets/global/plugins/counterup/jquery.counterup.min.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('Template/assets/global/plugins/amcharts/amcharts/amcharts.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('Template/assets/global/plugins/amcharts/amcharts/serial.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('Template/assets/global/plugins/amcharts/amcharts/pie.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('Template/assets/global/plugins/amcharts/amcharts/radar.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('Template/assets/global/plugins/amcharts/amcharts/themes/light.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('Template/assets/global/plugins/amcharts/amcharts/themes/patterns.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('Template/assets/global/plugins/amcharts/amcharts/themes/chalk.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('Template/assets/global/plugins/amcharts/ammap/ammap.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('Template/assets/global/plugins/amcharts/ammap/maps/js/worldLow.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('Template/assets/global/plugins/amcharts/amstockcharts/amstock.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('Template/assets/global/plugins/fullcalendar/fullcalendar.min.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('Template/assets/global/plugins/horizontal-timeline/horizontal-timeline.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('Template/assets/global/plugins/flot/jquery.flot.min.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('Template/assets/global/plugins/flot/jquery.flot.resize.min.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('Template/assets/global/plugins/flot/jquery.flot.categories.min.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('Template/assets/global/plugins/jquery-easypiechart/jquery.easypiechart.min.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('Template/assets/global/plugins/jquery.sparkline.min.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('Template/assets/global/plugins/jqvmap/jqvmap/jquery.vmap.js') }}" type="text/javascript"></script>
+
+    {% endif %}
+
 
 
     <script>
@@ -825,6 +1155,7 @@
 
 
         var $idrole= {{ user.role.id }};
+
         var isajouterclient=0;
         var islisteclient=0;
         var ismodifierclient=0;
@@ -845,7 +1176,7 @@
                 });
             });
 
-           var jqxhr= $.getJSON("{{ url('dashboard') }}api/roles/"+$idrole+'/permissions', function( data ) {
+            var jqxhr= $.getJSON("{{ url('dashboard') }}api/roles/"+$idrole+'/permissions', function( data ) {
 
                 $.each($(data), function(key, value) {
                     if (isajouterclient===0)

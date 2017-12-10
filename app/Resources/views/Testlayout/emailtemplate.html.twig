@@ -283,13 +283,9 @@
                                 <table cellpadding="0" cellspacing="0" width="600" class="w320">
                                     <tr>
                                         <td class="pull-left mobile-header-padding-left" style="vertical-align: middle;">
-                                            <a href=""><img width="86" height="14" src="http://92.222.225.76/Template/assets/layouts/layout/img/logo.png" alt="logo"></a>
+                                            <a href=""><img width="86" height="14" src="{{ asset('Template/assets/layouts/layout/img/logo_nepsus.png') }}" alt="logo"></a>
                                         </td>
-                                        <td class="pull-right mobile-header-padding-right" style="color: #4d4d4d;">
-                                            <a href=""><img width="44" height="47" src="http://s3.amazonaws.com/swu-filepicker/k8D8A7SLRuetZspHxsJk_social_08.gif" alt="twitter" /></a>
-                                            <a href=""><img width="38" height="47" src="http://s3.amazonaws.com/swu-filepicker/LMPMj7JSRoCWypAvzaN3_social_09.gif" alt="facebook" /></a>
-                                            <a href=""><img width="40" height="47" src="http://s3.amazonaws.com/swu-filepicker/hR33ye5FQXuDDarXCGIW_social_10.gif" alt="rss" /></a>
-                                        </td>
+
                                     </tr>
                                 </table>
                             </center>
@@ -314,7 +310,7 @@
                     </tr>
                     <tr>
                         <td class="free-text">
-                            Nous vous ferons savoir dès que vos articles sont expédiés. Pour modifier ou afficher votre commande, veuillez consulter votre compte en cliquant sur le bouton ci-dessous.
+                            Nous vous ferons savoir dès que vos articles sont expédiés. Pour vérifier l'état de  votre commande, veuillez consulter votre compte en cliquant sur le bouton ci-dessous.
                         </td>
                     </tr>
                     <tr>
@@ -322,10 +318,10 @@
                             <div><!--[if mso]>
                                 <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://" style="height:45px;v-text-anchor:middle;width:155px;" arcsize="15%" strokecolor="#ffffff" fillcolor="#ff6f6f">
                                     <w:anchorlock/>
-                                    <center style="color:#ffffff;font-family:Helvetica, Arial, sans-serif;font-size:14px;font-weight:regular;">My Account</center>
+                                    <center style="color:#ffffff;font-family:Helvetica, Arial, sans-serif;font-size:14px;font-weight:regular;">Mon compte</center>
                                 </v:roundrect>
                                 <![endif]--><a href="http://"
-                                               style="background-color:#ff6f6f;border-radius:5px;color:#ffffff;display:inline-block;font-family:'Cabin', Helvetica, Arial, sans-serif;font-size:14px;font-weight:regular;line-height:45px;text-align:center;text-decoration:none;width:155px;-webkit-text-size-adjust:none;mso-hide:all;">My Account</a></div>
+                                               style="background-color:#ff6f6f;border-radius:5px;color:#ffffff;display:inline-block;font-family:'Cabin', Helvetica, Arial, sans-serif;font-size:14px;font-weight:regular;line-height:45px;text-align:center;text-decoration:none;width:155px;-webkit-text-size-adjust:none;mso-hide:all;">Mon compte</a></div>
                         </td>
                     </tr>
                     <tr>
@@ -441,14 +437,14 @@
                                     <td class="item-col quantity" style="text-align:right; padding-right: 10px; border-top: 1px solid #cccccc;">
                                         <span class="total-space">TotalHT</span> <br />
                                         <span class="total-space">TotalTTC</span>  <br />
-                                        <span class="total-space">Fraix</span> <br />
+
                                         <span class="total-space" style="font-weight: bold; color: #4d4d4d">Total</span>
                                     </td>
                                     <td class="item-col price" style="text-align: left; border-top: 1px solid #cccccc;">
-                                        <span class="total-space">${{ facture.totalht }}</span> <br />
-                                        <span class="total-space">${{ facture.totalttc }}</span>  <br />
-                                        <span class="total-space">0.0</span>  <br />
-                                        <span class="total-space" style="font-weight:bold; color: #4d4d4d">${{ facture.totalttc }}</span>
+                                        <span class="total-space">{{ facture.totalht }} Dt</span> <br />
+                                        <span class="total-space">{{ facture.totalttc }} Dt</span>  <br />
+
+                                        <span class="total-space" style="font-weight:bold; color: #4d4d4d">{{ facture.totalttc }} Dt</span>
                                     </td>
                                 </tr>
                             </table>

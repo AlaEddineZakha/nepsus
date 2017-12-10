@@ -62,7 +62,7 @@
     </div>
     <!-- END PAGE BAR -->
     <!-- BEGIN PAGE TITLE-->
-    <h1 class="page-title"> Listes des clients
+    <h1 class="page-title">
 
     </h1>
     <!-- END PAGE TITLE-->
@@ -77,7 +77,7 @@
             <div class="portlet light bordered">
                 <div class="portlet-title">
                     <div class="caption font-dark">
-
+                       Ajouter client <a href="{{ path('addclient') }}" class="btn btn-icon-only blue"><i class="fa fa-plus"></i> </a>
                     </div>
                     <div class="tools"> </div>
                 </div>
@@ -91,7 +91,7 @@
                             <th>Date d'ajout</th>
                             <th>Telephone</th>
                             <th>Matricule fiscal</th>
-                            <th>Capital</th>
+
                             <th>Actions</th>
                         </tr>
                         </thead>
@@ -103,7 +103,7 @@
                             <th>Date d'ajout</th>
                             <th>Telephone</th>
                             <th>Matricule fiscal</th>
-                            <th>Capital</th>
+
                             <th>Actions</th>
                         </tr>
                         </tfoot>
@@ -117,7 +117,7 @@
                                 <td>{{ client.created|date('Y-m-d') }}</td>
                                 <td>{{ client.telephone }}</td>
                                 <td>{{ client.matriculefiscale }}</td>
-                                <td>{{ client.capital }} TND</td>
+
                                 <td>
                                     <a href="{{ path('editclient', {'id': client.id }) }}" class="btn btn-icon-only yellow" id="buttonmodifierclient" ><i class="fa fa-edit"></i> </a>
                                     <a href="javascript:;" class="btn btn-icon-only red" onclick="myFunction({{ client.id }})" id="buttonsupprimerclient"><i class="fa fa-times"></i> </a>

@@ -34,7 +34,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 class FactureClientController extends Controller
 {
     /**
-     * @Route("/facturesclients")
+     * @Route("/facturesclients" , name="listfacturesclients")
      */
     public function showAllAction(Request $request)
     {

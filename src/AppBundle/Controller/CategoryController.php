@@ -11,7 +11,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 class CategoryController extends Controller
 {
     /**
-     * @Route("/categories")
+     * @Route("/categories" ,name="listcategories")
      */
     public function showAllAction()
     {   $em = $this->getDoctrine()->getManager();

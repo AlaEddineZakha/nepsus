@@ -5,6 +5,7 @@ namespace AppBundle\Controller;
 use AppBundle\Entity\Category;
 use AppBundle\Entity\Produit;
 use AppBundle\Entity\Taxe;
+use AppBundle\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -44,12 +45,14 @@ class TestController extends Controller
 
     public function notfoundAction(Request $request)
     {
-
+        $em = $this->getDoctrine()->getManager();
+        $user=$em->getRepository(User::class)->find($this->getUser()->getId());
           $name = $request->attributes->get('path');
 
 
-        return $this->render('pagenotfound.html.twig', [
+        return $this->render('404notfound.html.twig', [
             'name' => $name,
+            'user'=>$user
         ]);
 
 
@@ -61,8 +64,11 @@ class TestController extends Controller
     public function notallowedAction(Request $request)
     {
 
-
-        return $this->render('pagenotallowed.html.twig');
+        $em = $this->getDoctrine()->getManager();
+        $user=$em->getRepository(User::class)->find($this->getUser()->getId());
+        return $this->render('pagenotallowed.html.twig', [
+            'user'=>$user
+        ]);
 
     }
 
