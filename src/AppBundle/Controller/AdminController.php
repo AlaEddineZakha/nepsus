@@ -10,6 +10,7 @@ namespace AppBundle\Controller;
 
 
 use AppBundle\Entity\Modules;
+use AppBundle\Entity\Produit;
 use AppBundle\Entity\User;
 use AppBundle\Form\ModuleFormType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -33,7 +34,7 @@ class AdminController extends  Controller
 
             $auth_checker = $this->get('security.authorization_checker');
             $isRoleAdmin = $auth_checker->isGranted('ROLE_SUPER_ADMIN');
-            $result = $em->getRepository('AppBundle:Client')->count();
+            $result = $em->getRepository('AppBundle:Client')->countall();
 
         return $this->render('dashboard/dashboard1.html.twig', [
             'nbclient' => $result,

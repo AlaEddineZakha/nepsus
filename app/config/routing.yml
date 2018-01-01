@@ -251,11 +251,12 @@ loadingconfig:
     defaults:  { _controller: AppBundle:Configuration:loading }
 
 configurationgenerale:
-    path:      /configuration/{id}/generale
+    path:      /configuration/generale
     defaults:  { _controller: AppBundle:Configuration:edit }
-    requirements:
-                id: \d+
 
+alreadyconfigured:
+    path:     /alreadyconfigured
+    defaults: { _controller: AppBundle:Test:alreadyconfigured }
 pagenotallowed:
     path:     /pagenotallowed
     defaults: { _controller: AppBundle:Test:notallowed }

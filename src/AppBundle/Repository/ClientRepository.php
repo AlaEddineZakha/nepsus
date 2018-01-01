@@ -10,7 +10,7 @@ namespace AppBundle\Repository;
  */
 class ClientRepository extends \Doctrine\ORM\EntityRepository
 {
-    public function count()
+    public function countall()
     {
         return $this->getEntityManager()
             ->createQuery(

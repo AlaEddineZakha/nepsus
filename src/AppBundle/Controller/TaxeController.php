@@ -50,11 +50,58 @@ class TaxeController extends Controller
             $em->persist($taxe);
             $em->flush();
 
-            return $this->redirectToRoute('dashboard');
+            return $this->redirectToRoute('listtaxes');
         }
 
 
         return $this->render(':Taxes:add.html.twig');
+
+
+    }
+
+    /**
+     * @Route("/taxes/{id}/edit",name="edittaxe")
+     *
+     */
+    public function editAction(Request $request,$id)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $taxe =$em->getRepository('AppBundle:Taxe')->find($id);
+
+        if ($request->isMethod('POST')) {
+
+
+
+            $taxe->setCreated(new \DateTime());
+            if (empty($request->request->get('active')))
+            {
+                $taxe->setActive('0');
+            }
+            else
+            {
+                $taxe->setActive('1');
+
+            }
+
+
+            $taxe->setMontant($request->request->get('taux'));
+
+
+
+
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($taxe);
+            $em->flush();
+
+            return $this->redirectToRoute('listtaxes');
+        }
+
+
+        return $this->render(':Taxes:edit.html.twig', [
+            'taxe' => $taxe
+
+        ]);
 
 
     }
@@ -72,6 +119,22 @@ class TaxeController extends Controller
 
         ]);
 
+
+    }
+
+    /**
+     * @Route("/taxes/{id}/delete", name="deletetaxe")
+     */
+    public function deleteAction($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $taxe = $em->getRepository('AppBundle:Taxe')->find($id);
+
+        $em->remove($taxe);
+
+
+        $em->flush();
+        return $this->redirectToRoute('listtaxes');
 
     }
 }

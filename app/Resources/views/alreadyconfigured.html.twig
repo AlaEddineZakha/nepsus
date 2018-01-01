@@ -1,0 +1,59 @@
+{% extends 'dashboard/dashboard1.html.twig' %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('Template/assets/pages/css/error.min.css') }}" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+
+{% block container %}
+    <!-- BEGIN PAGE HEADER-->
+    <!-- BEGIN THEME PANEL -->
+
+    <!-- END THEME PANEL -->
+    <!-- BEGIN PAGE BAR -->
+    <div class="page-bar">
+        <ul class="page-breadcrumb">
+            <li>
+                <a href="{{ path('dashboard') }}">Accueil</a>
+                <i class="fa fa-circle"></i>
+            </li>
+            <li>
+                <span>Systeme</span>
+            </li>
+        </ul>
+
+    </div>
+    <!-- END PAGE BAR -->
+    <!-- BEGIN PAGE TITLE-->
+    <h1 class="page-title">
+
+    </h1>
+    <div class="m-heading-1 border-red m-bordered">
+        <h3>Accés non autorisé</h3>
+
+    </div>
+    <!-- END PAGE TITLE-->
+    <!-- END PAGE HEADER-->
+    <div class="row">
+        <div class="col-md-12 page-500">
+            <div class=" number font-red"> 500 </div>
+            <div class=" details">
+                <h3>La page que vous demandez n'est pas autorisé .
+                </h3>
+                <p> Vous devez rénitialiser votre application pour pouvoir effectuer une nouvelle configuration.
+                    <br/> </p>
+                <p>
+                    <a href="{{ path('dashboard') }}" class="btn red btn-outline"> Accueil </a>
+                    <br> </p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+
+
+    {{ parent() }}
+
+
+{% endblock %}

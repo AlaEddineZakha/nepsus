@@ -49,6 +49,34 @@ class APIController extends Controller
     }
 
     /**
+     * @Route("/api/taxes/{id}",name="gettaxebyid")
+     * @Method("GET")
+     */
+    public function FindTaxeByIddAction($id)
+    {
+        $repository = $this->getDoctrine()->getRepository('AppBundle:Taxe');
+        $products = $repository->find($id);
+
+        $normalizer = new ObjectNormalizer();
+        $normalizer->setCircularReferenceHandler(function ($object) {
+            return $object->getId();
+        });
+        $normalizer->setIgnoredAttributes(array('produits','created'));
+
+
+
+        $encoder = new JsonEncode();
+
+        $serializer = new Serializer(array($normalizer), array($encoder));
+
+        $jsonContent = $serializer->serialize($products, 'json');
+
+
+        return new Response($jsonContent);
+
+    }
+
+    /**
      * @Route("/api/taxes",name="getalltaxes")
      * @Method("GET")
      */

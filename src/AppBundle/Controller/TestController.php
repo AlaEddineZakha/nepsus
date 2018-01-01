@@ -72,6 +72,17 @@ class TestController extends Controller
 
     }
 
+    public function alreadyconfiguredAction(Request $request)
+    {
+
+        $em = $this->getDoctrine()->getManager();
+        $user=$em->getRepository(User::class)->find($this->getUser()->getId());
+        return $this->render('alreadyconfigured.html.twig', [
+            'user'=>$user
+        ]);
+
+    }
+
     /**
      *@Route("/fill10kproducts", name="testproduct")
      */

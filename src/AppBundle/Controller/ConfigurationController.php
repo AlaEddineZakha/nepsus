@@ -28,6 +28,12 @@ class ConfigurationController extends Controller
 {
     public function indexAction(Request $request)
     {
+        $em = $this->getDoctrine()->getManager();
+        $isdone= $em->getRepository(Configuration::class)->find(1);
+        if ($isdone)
+        {
+            return $this->redirectToRoute('alreadyconfigured');
+        }
 
         if ($request->isMethod('POST')) {
             $em = $this->getDoctrine()->getManager();
@@ -78,7 +84,7 @@ class ConfigurationController extends Controller
             $admin->setEmail($request->request->get('email'));
             $admin->setUsername($request->request->get('username'));
             $em->persist($admin);
-
+            $config->setId(1);
             $config->setInit(1);
             $config->setMatriculefiscale($request->request->get('mf'));
             $config->setRaison($request->request->get('raison'));
@@ -113,15 +119,19 @@ class ConfigurationController extends Controller
         return $this->render(':Configuration:loading.html.twig');
     }
 
-    public function editAction(Request $request ,$id)
+
+    /**
+     * @Route("/configuration/generale" ,name="configurationgenerale")
+     */
+    public function editAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
-        $config = $em->getRepository(Configuration::class)->find($id);
+        $config = $em->getRepository(Configuration::class)->find(1);
         $modulecategories=$em->getRepository(Modules::class)->findOneBy(array('nom' => 'Categories'));
         $logo=$config->getLogo();
 
 
-            $image = base64_encode(stream_get_contents($logo));
+           // $image = base64_encode(stream_get_contents($logo));
 
         if ($request->isMethod('POST')) {
 
@@ -152,7 +162,7 @@ class ConfigurationController extends Controller
             return $this->redirectToRoute('dashboard');
         }
 
-        return $this->render(':Configuration:configurationgenerale.html.twig', [
+        return $this->render(':Configuration:ConfigurationEntreprise.html.twig', [
             'config' => $config
 
         ]);
