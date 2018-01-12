@@ -86,9 +86,7 @@ var FormWizard = function () {
                     telephone: {
                         required: true
                     },
-                    fax: {
-                        required: true
-                    },
+
 
                     addresse: {
                         required: true

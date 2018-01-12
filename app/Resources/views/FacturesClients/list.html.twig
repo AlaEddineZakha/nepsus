@@ -117,7 +117,7 @@
                             <tr>
                                 <td>{{ facture.id }}</td>
                                 <td>{{ facture.bc.id }}</td>
-                                <td>{{ facture.bc.client.id }}</td>
+                                <td><a href="{{ path('editclient', {'id':  facture.bc.client.id  }) }}" target="_blank">{{ facture.bc.client.id }}</a></td>
 
                                 <td>{{ facture.created|date('Y-m-d') }}</td>
                                 <td>{{ facture.dateecheance|date('Y-m-d') }}</td>
@@ -125,13 +125,19 @@
                                 <td>{{ facture.totalttc }}</td>
                                 {% if facture.statut =='Payée' %}
                                     <td> <span class="label label-sm label-success">{{ facture.statut }} </span></td>
-                                {% else %}
-
-                                <td> <span class="label label-sm label-warning">{{ facture.statut }} </span></td>
                                 {% endif %}
+                                {% if facture.statut =='Impayée' %}
+                                    <td> <span class="label label-sm label-danger">{{ facture.statut }} </span></td>
+                                {% endif %}
+                                {% if facture.statut =='Annulé' %}
+                                    <td> <span class="label label-sm label-default">{{ facture.statut }} </span></td>
+                                {% endif %}
+
+
+
                                 <td>
-                                    <a href="{{ path('viewfactureclient', {'id': facture.id }) }}" class="btn btn-icon-only blue" ><i class="fa fa-search"></i> </a>
-                                    <a href="" class="btn btn-icon-only yellow" ><i class="fa fa-edit"></i> </a>
+                                    <a href="{{ path('viewfactureclient', {'id': facture.id }) }}" class="btn btn-icon-only blue" ><i class="fa fa-eye"></i> </a>
+                                    <a href="{{ path('envoyerfacture', {'id': facture.id }) }}" class="btn btn-icon-only green" ><i class="fa fa-send"></i> </a>
                                     <a href="javascript:;" class="btn btn-icon-only red" onclick="myFunction({{ facture.id }})"><i class="fa fa-times"></i> </a>
 
                                 </td>

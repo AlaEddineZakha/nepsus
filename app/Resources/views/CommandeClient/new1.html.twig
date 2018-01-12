@@ -11,6 +11,12 @@
     <link href="{{ asset('Template/assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('Template/assets/global/plugins/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css') }}" rel="stylesheet" type="text/css" />
 
+<style>
+select.error {
+    border-color: red;
+    background-color: #FFCCCC;
+}
+</style>
 {% endblock %}
 
 {% block container%}
@@ -66,7 +72,7 @@
 
                         <div class="form-body">
 
-                            <div class="row">
+                                      <div class="row">
                                 <div class="col-md-12">
                                     <div class="col-md-6">
                                           <div class="form-group">
@@ -112,14 +118,52 @@
 
                                 </div>
                             </div>
+                             <div class="row">
+                                <div class="col-md-12">
+                                    <div class="col-md-6">
+                                          <div class="form-group">
+                                            <label class="control-label col-md-2" style="text-align: justify">Devise
+                                                <span class="required" style="font-size: large"> * </span>
+                                            </label>
+                                            <div class="col-md-6">
+                                                <select class="form-control select2me" id="devise" name="devise" data-live-search="true">
+                                                    <option value="">Select...</option>
+
+                                              {% for d in devise %}
+                                               <option value="{{ d.id }}">{{ d.libele }}</option>
+                                                 {% endfor %}
+
+                                                </select>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                  <div class="col-md-6">
+                                          <div class="form-group">
+                                            <label class="control-label col-md-2" style="text-align: justify">Devise
+                                                <span class="required" style="font-size: large"> * </span>
+                                            </label>
+                                            <div class="col-md-6">
+                                                <select class="form-control select2me" id="methode" name="methode" data-live-search="true">
+                                                    <option value="">Select...</option>
+
+                                              {% for m in methodespaiement %}
+                                               <option value="{{ m.id }}">{{ m.libele }}</option>
+                                                 {% endfor %}
+
+                                                </select>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
 
 
+                                </div>
+                            </div>
 
-
-
-
-
-<div class="row">
+                                       <div class="row">
                                                         <div class="col-md-12 col-sm-12">
                                                             <div class="portlet grey-cascade box">
                                                                 <div class="portlet-title">
@@ -154,11 +198,7 @@
                                                         </div>
                                                     </div>
 
-
-
-
-                    <!-- END FORM-->
-                          <div class="row">
+                                        <div class="row">
 
                                                         <div class="col-md-4">
                                                             <div class="well">
@@ -313,6 +353,7 @@
 
 
         $('#liste-ligne'+$id+'').change(function () {
+            checkSelects();
 /*var elems = document.getElementsByTagName('#liste-ligne'+$id+'');
         var arr = jQuery.makeArray( elems );
         arr.reverse();
@@ -490,6 +531,28 @@ $("#myform").validate({
             });
 
 });
+
+function checkSelects()
+{
+        var $elements = $('select');
+
+        $elements
+            .removeClass('error')
+            .each(function () {
+                var selectedValue = this.value;
+
+                $elements
+                    .not(this)
+                    .filter(function() {
+                       // console.log([this.value, selectedValue]);
+                        return this.value == selectedValue;
+                    })
+                    .addClass('error');
+
+            });
+}
+
+
 
 </script>
 

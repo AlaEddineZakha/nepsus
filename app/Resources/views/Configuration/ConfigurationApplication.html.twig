@@ -1,0 +1,646 @@
+{% extends 'dashboard/dashboard1.html.twig' %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('Template/assets/global/plugins/datatables/datatables.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('Template/assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('Template/assets/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('Template/assets/global/plugins/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('Template/assets/global/plugins/fancybox/source/jquery.fancybox.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('Template/assets/global/plugins/select2/css/select2.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('Template/assets/global/plugins/select2/css/select2-bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('Template/assets/global/css/components-md.min.css') }}" rel="stylesheet" id="style_components" type="text/css" />
+    <link href="https://jqueryvalidation.org/files/demo/css/screen.css" rel="stylesheet" type="text/css" />
+
+<style>
+    .mt-checkbox>span{
+        border:1px solid #797575;
+    }
+</style>
+{% endblock %}
+
+{% block container%}
+
+    <!-- BEGIN PAGE HEADER-->
+    <!-- BEGIN THEME PANEL -->
+
+    <!-- END THEME PANEL -->
+    <!-- BEGIN PAGE BAR -->
+    <div class="page-bar">
+        <ul class="page-breadcrumb">
+            <li>
+                <a href="http://localhost/nepsus/nepsus/web/app_dev.php/">Accueil</a>
+                <i class="fa fa-circle"></i>
+            </li>
+            <li>
+                <span>Configuration</span>
+                <i class="fa fa-circle"></i>
+            </li>
+            <li>
+                <span>Application</span>
+
+            </li>
+        </ul>
+
+    </div>
+    <!-- END PAGE BAR -->
+    <!-- BEGIN PAGE TITLE-->
+    <h1 class="page-title"> Configuration d'application
+        <small></small>
+    </h1>
+    <!-- END PAGE TITLE-->
+    <!-- END PAGE HEADER-->
+    <div class="row">
+        <div class="col-md-12">
+            <form class="form-horizontal form-row-seperated" action="{{ path('configurationgenerale')}}" method="post" id="signupForm">
+                <div class="portlet">
+                    <div class="portlet-title">
+                        <div class="caption">
+                            <i class="fa fa-user-plus"></i> </div>
+                        <div class="actions btn-set">
+
+                            <button class="btn btn-success">
+                                <i class="fa fa-check"></i> Enregistrer</button>
+
+
+                        </div>
+                    </div>
+                    <div class="portlet-body">
+
+                        <div class="tabbable-line">
+                            <ul class="nav nav-tabs nav-tabs-lg">
+                                <li class="active">
+                                    <a href="#tab_0" data-toggle="tab"> Modules </a>
+                                </li>
+                                <li>
+                                    <a href="#tab_1" data-toggle="tab"> Tableau de bord
+
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#tab_2" data-toggle="tab"> Système
+
+                                    </a>
+                                </li>
+
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="tab_0">
+                                    <div class="row">
+                                        <h3 class="block" style="font-size: 20px ; text-align: center ;padding-bottom: 25px; ">Stock</h3>
+                                        <div class="col-md-10">
+                                            <div class="col-md-3 ">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-9 "> Entrepots
+
+
+                                                    </label>
+                                                    <div class="col-md-3">
+                                                        <input type="checkbox" class="make-switch" checked data-on-color="success" data-off-color="warning" data-on-text="Oui" data-off-text="Non" name="module_entrepots" >
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-9">Produits
+
+
+                                                    </label>
+                                                    <div class="col-md-3">
+                                                        <input type="checkbox" name="module_produits" class="make-switch" checked data-on-color="success" data-off-color="warning" data-on-text="Oui" data-off-text="Non"  disabled>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-9">Catégories
+
+
+                                                    </label>
+                                                    <div class="col-md-3">
+                                                        <input type="checkbox" name="module_categories" class="make-switch" checked data-on-color="success" data-off-color="warning" data-on-text="Oui" data-off-text="Non" >
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-9">Lots
+
+
+                                                    </label>
+                                                    <div class="col-md-3">
+                                                        <input type="checkbox" name="module_lots" class="make-switch" checked data-on-color="success" data-off-color="warning" data-on-text="Oui" data-off-text="Non" >
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <h3 class="block" style="font-size: 20px ; text-align: center ;padding-bottom: 25px; ">Facturation</h3>
+                                        <div class="col-md-10">
+                                            <div class="col-md-3 ">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-9 ">Factures
+
+
+                                                    </label>
+                                                    <div class="col-md-3">
+                                                        <input type="checkbox" name="module_factures" class="make-switch" checked data-on-color="success" data-off-color="warning" data-on-text="Oui" data-off-text="Non"  disabled>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-9">Devis
+
+
+                                                    </label>
+                                                    <div class="col-md-3">
+                                                        <input type="checkbox" name="module_devis" class="make-switch" checked data-on-color="success" data-off-color="warning" data-on-text="Oui" data-off-text="Non" >
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-9">Dépenses
+
+
+                                                    </label>
+                                                    <div class="col-md-3">
+                                                        <input type="checkbox" name="module_depenses" class="make-switch" checked data-on-color="success" data-off-color="warning" data-on-text="Oui" data-off-text="Non">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-9">Transactions
+
+
+                                                    </label>
+                                                    <div class="col-md-3">
+                                                        <input type="checkbox" name="module_transactions" class="make-switch" checked data-on-color="success" data-off-color="warning" data-on-text="Oui" data-off-text="Non">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <h3 class="block" style="font-size: 20px ; text-align: center">Relations</h3>
+                                        <div class="col-md-10">
+                                            <div class="col-md-3 ">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-9 ">Clients
+
+
+                                                    </label>
+                                                    <div class="col-md-3">
+                                                        <input type="checkbox" name="module_clients" class="make-switch" checked data-on-color="success" data-off-color="warning" data-on-text="Oui" data-off-text="Non" disabled>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-9">Fournisseurs
+
+
+                                                    </label>
+                                                    <div class="col-md-3">
+                                                        <input type="checkbox" name="module_fournisseurs" class="make-switch" checked data-on-color="success" data-off-color="warning" data-on-text="Oui" data-off-text="Non" disabled>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <h3 class="block" style="font-size: 20px ; text-align: center ;padding-bottom: 25px; ">Sécurité</h3>
+                                        <div class="col-md-10">
+                                            <div class="col-md-3 ">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-9 ">Roles
+
+
+                                                    </label>
+                                                    <div class="col-md-3">
+                                                        <input type="checkbox" name="module_roles" class="make-switch" checked data-on-color="success" data-off-color="warning" data-on-text="Oui" data-off-text="Non" >
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-9">Permissions
+
+
+                                                    </label>
+                                                    <div class="col-md-3">
+                                                        <input type="checkbox" name="module_permissions" class="make-switch" checked data-on-color="success" data-off-color="warning" data-on-text="Oui" data-off-text="Non" >
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-9">Utilisateurs
+
+
+                                                    </label>
+                                                    <div class="col-md-3">
+                                                        <input type="checkbox" name="module_utlisateurs" class="make-switch" checked data-on-color="success" data-off-color="warning" data-on-text="Oui" data-off-text="Non">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-9">Profils
+
+
+                                                    </label>
+                                                    <div class="col-md-3">
+                                                        <input type="checkbox" name="module_profils" class="make-switch" checked data-on-color="success" data-off-color="warning" data-on-text="Oui" data-off-text="Non" >
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <hr>
+
+                                </div>
+                                <div class="tab-pane " id="tab_1">
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                            <div class="dashboard-stat2 ">
+                                                <div class="display">
+                                                    <div class="number">
+                                                        <h3 class="font-green-sharp">
+                                                            <span data-counter="counterup" data-value="X">X</span>
+                                                            <small class="font-green-sharp">Dt</small>
+                                                        </h3>
+                                                        <small>Bénéfice total</small>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <i class="icon-pie-chart"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="progress-info">
+                                                    <div class="progress">
+                                            <span style="width: 76%;" class="progress-bar progress-bar-success green-sharp">
+                                                <span class="sr-only">X% taxe</span>
+                                            </span>
+                                                    </div>
+                                                    <div class="status">
+                                                        <div class="status-title"> Taxe </div>
+                                                        <div class="status-number"> X% </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <label class="mt-checkbox">
+                                                <input type="checkbox" id="inlineCheckbox1" value="option1"> Indicateur bénéfice
+                                                <span></span>
+                                            </label>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                            <div class="dashboard-stat2 ">
+                                                <div class="display">
+                                                    <div class="number">
+                                                        <h3 class="font-red-haze">
+                                                            <span data-counter="counterup" data-value="X">X</span>
+                                                        </h3>
+                                                        <small>Produits</small>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <i class="icon-chemistry"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="progress-info">
+                                                    <div class="progress">
+                                            <span style="width: 23%;" class="progress-bar progress-bar-success red-haze">
+                                                <span class="sr-only">X% hors stock</span>
+                                            </span>
+                                                    </div>
+                                                    <div class="status">
+                                                        <div class="status-title"> Hors stock </div>
+                                                        <div class="status-number"> X% </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <label class="mt-checkbox">
+                                                <input type="checkbox" id="inlineCheckbox1" value="option1"> Indicateur produits
+                                                <span></span>
+                                            </label>
+                                        </div>
+                                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                            <div class="dashboard-stat2 ">
+                                                <div class="display">
+                                                    <div class="number">
+                                                        <h3 class="font-blue-sharp">
+                                                            <span data-counter="counterup" data-value="X">X</span>
+                                                        </h3>
+                                                        <small>Commandes totales</small>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <i class="icon-basket"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="progress-info">
+                                                    <div class="progress">
+                                            <span style="width: 20%;" class="progress-bar progress-bar-success blue-sharp">
+                                                <span class="sr-only">X% livrés</span>
+                                            </span>
+                                                    </div>
+                                                    <div class="status">
+                                                        <div class="status-title"> Livrés </div>
+                                                        <div class="status-number"> X% </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <label class="mt-checkbox">
+                                                <input type="checkbox" id="inlineCheckbox1" value="option1"> Indicateur commandes totale
+                                                <span></span>
+                                            </label>
+                                        </div>
+                                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                            <div class="dashboard-stat2 ">
+                                                <div class="display">
+                                                    <div class="number">
+                                                        <h3 class="font-purple-soft">
+
+                                                            <span data-counter="counterup" data-value="X">X</span>
+                                                        </h3>
+                                                        <small>Clients</small>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <i class="icon-user"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="progress-info">
+                                                    <div class="progress">
+                                            <span style="width: 60%;" class="progress-bar progress-bar-success purple-soft">
+                                                <span class="sr-only">X% actif</span>
+                                            </span>
+                                                    </div>
+                                                    <div class="status">
+                                                        <div class="status-title"> Actif </div>
+                                                        <div class="status-number"> X% </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <label class="mt-checkbox">
+                                                <input type="checkbox" id="inlineCheckbox1" value="option1"> Indicateur clients
+                                                <span></span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                            <div class="dashboard-stat2 ">
+                                                <div class="display">
+                                                    <div class="number">
+                                                        <h3 class="font-green-sharp">
+                                                            <span data-counter="counterup" data-value="X">X</span>
+                                                            <small class="font-green-sharp"> Dt</small>
+                                                        </h3>
+                                                        <small>Commande en attente</small>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <i class="icon-pie-chart"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="progress-info">
+                                                    <div class="progress">
+                                            <span style="width: 76%;" class="progress-bar progress-bar-success green-sharp">
+                                                <span class="sr-only">X% taxe</span>
+                                            </span>
+                                                    </div>
+                                                    <div class="status">
+                                                        <div class="status-title"> Taxe </div>
+                                                        <div class="status-number"> X% </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <label class="mt-checkbox" >
+                                                <input type="checkbox" id="inlineCheckbox1" value="option1" > Indicateur commande en attente
+                                                <span></span>
+                                            </label>
+                                        </div>
+                                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                            <div class="dashboard-stat2 ">
+                                                <div class="display">
+                                                    <div class="number">
+                                                        <h3 class="font-red-haze">
+                                                            <span data-counter="counterup" data-value="X">X</span>
+                                                        </h3>
+                                                        <small>Entrepots</small>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <i class="icon-chemistry"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="progress-info">
+                                                    <div class="progress">
+                                            <span style="width: 23%;" class="progress-bar progress-bar-success red-haze">
+                                                <span class="sr-only">X% hors stock</span>
+                                            </span>
+                                                    </div>
+                                                    <div class="status">
+                                                        <div class="status-title"> Hors stock </div>
+                                                        <div class="status-number"> X% </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <label class="mt-checkbox">
+                                                <input type="checkbox" id="inlineCheckbox1" value="option1"> Indicateur entrepots
+                                                <span></span>
+                                            </label>
+                                        </div>
+                                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                            <div class="dashboard-stat2 ">
+                                                <div class="display">
+                                                    <div class="number">
+                                                        <h3 class="font-blue-sharp">
+                                                            <span data-counter="counterup" data-value="X">X</span>
+                                                        </h3>
+                                                        <small>Factures non payées</small>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <i class="icon-basket"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="progress-info">
+                                                    <div class="progress">
+                                            <span style="width: 20%;" class="progress-bar progress-bar-success blue-sharp">
+                                                <span class="sr-only">X% livrés</span>
+                                            </span>
+                                                    </div>
+                                                    <div class="status">
+                                                        <div class="status-title"> Livrés </div>
+                                                        <div class="status-number"> X% </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <label class="mt-checkbox">
+                                                <input type="checkbox" id="inlineCheckbox1" value="option1"> Indicateur factures
+                                                <span></span>
+                                            </label>
+                                        </div>
+                                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                            <div class="dashboard-stat2 ">
+                                                <div class="display">
+                                                    <div class="number">
+                                                        <h3 class="font-purple-soft">
+
+                                                            <span data-counter="counterup" data-value="X">X</span>
+                                                        </h3>
+                                                        <small>Devis en attente</small>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <i class="icon-user"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="progress-info">
+                                                    <div class="progress">
+                                            <span style="width: 60%;" class="progress-bar progress-bar-success purple-soft">
+                                                <span class="sr-only">X% actif</span>
+                                            </span>
+                                                    </div>
+                                                    <div class="status">
+                                                        <div class="status-title"> Actif </div>
+                                                        <div class="status-number"> X% </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <label class="mt-checkbox">
+                                                <input type="checkbox" id="inlineCheckbox1" value="option1"> Indicateur devis
+                                                <span></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix"></div>
+
+
+                                    <div class="row">
+                                        <div class="col-lg-6 col-xs-12 col-sm-12">
+                                            <div class="portlet light bordered">
+                                                <div class="portlet-title">
+                                                    <div class="caption">
+                                                        <i class="icon-share font-dark hide"></i>
+                                                        <span class="caption-subject font-dark bold uppercase">Activités récentes</span>
+                                                        <span class="caption-helper">Liste des activités du système</span>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                            <label class="mt-checkbox" >
+                                                <input type="checkbox" id="inlineCheckbox1" value="option1" > Liste des activités
+                                                <span></span>
+                                            </label>
+                                        </div>
+                                        <div class="col-lg-6 col-xs-12 col-sm-12">
+                                            <div class="portlet light tasks-widget bordered">
+                                                <div class="portlet-title">
+                                                    <div class="caption">
+                                                        <i class="icon-share font-dark hide"></i>
+                                                        <span class="caption-subject font-dark bold uppercase">Tâches</span>
+                                                        <span class="caption-helper">Liste des tâches des utilisateurs</span>
+                                                    </div>
+
+                                                </div>
+
+
+                                            </div>
+                                            <label class="mt-checkbox" >
+                                                <input type="checkbox" id="inlineCheckbox1" value="option1" > Liste des tâches
+                                                <span></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane" id="tab_2">
+                                    <h3 class="block">Sauvegarde</h3>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">Nom d'utilisateur
+
+                                            <span class="required"> * </span>
+                                        </label>
+                                        <div class="col-md-4">
+                                            <input type="text" class="form-control" name="username" />
+                                            <span class="help-block"> Indiquez votre nom d'utilisateur </span>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <h3 class="block">Rénitialisation</h3>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">Nom d'utilisateur
+
+                                            <span class="required"> * </span>
+                                        </label>
+                                        <div class="col-md-4">
+                                            <input type="text" class="form-control" name="username" />
+                                            <span class="help-block"> Indiquez votre nom d'utilisateur </span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('Template/assets/global/plugins/jquery-validation/js/jquery.validate.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('Template/assets/pages/scripts/form-validation.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('Template/assets/global/plugins/select2/js/select2.full.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('Template/assets/global/plugins/jquery-validation/js/additional-methods.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('Template/assets/global/scripts/datatable.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('Template/assets/global/plugins/datatables/datatables.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('Template/assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('Template/assets/pages/scripts/table-datatables-buttons.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('Template/assets/pages/scripts/ecommerce-products-edit.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('Template/assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('Template/assets/global/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('Template/assets/global/plugins/bootstrap-maxlength/bootstrap-maxlength.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('Template/assets/global/plugins/fancybox/source/jquery.fancybox.pack.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('Template/assets/global/plugins/plupload/js/plupload.full.min.js') }}" type="text/javascript"></script>
+    <script src="https://rawgit.com/RobinHerbots/jquery.inputmask/3.x/dist/jquery.inputmask.bundle.js" type="text/javascript"></script>
+    <script src="{{ asset('Template/assets/pages/scripts/ecommerce-orders-view.min.js') }}" type="text/javascript"></script>
+
+
+
+    <script>
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+{% endblock %}

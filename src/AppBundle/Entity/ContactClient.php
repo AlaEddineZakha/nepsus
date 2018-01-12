@@ -48,6 +48,16 @@ class ContactClient
      */private $email;
 
     /**
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Client", inversedBy="contacts")
+     * @ORM\JoinColumn(nullable=false , name="client_id", referencedColumnName="id")
+     */
+    private $client;
+
+    /**
+     * @ORM\Column(type="datetime")
+     */private $created;
+
+    /**
      * @return mixed
      */
     public function getTelephone()
@@ -111,18 +121,6 @@ class ContactClient
         $this->email = $email;
     }
 
-
-    /**
-     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Client", inversedBy="contacts")
-     * @ORM\JoinColumn(nullable=false , name="client_id", referencedColumnName="id")
-     */
-    private $client;
-
-
-
-    /**
-     * @ORM\Column(type="datetime")
-     */private $created;
 
     /**
      * @return mixed

@@ -29,6 +29,7 @@ class AdminController extends  Controller
 
         $em = $this->getDoctrine()->getManager();
         $user=$em->getRepository(User::class)->find($this->getUser()->getId());
+        dump($user);
         $idrole=$user->getRole();
 
 

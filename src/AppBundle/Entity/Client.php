@@ -8,6 +8,7 @@
 
 namespace AppBundle\Entity;
 
+use AppBundle\Entity\Paiement\Transaction;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM ;
 use Symfony\Component\Validator\Constraints as Assert;
@@ -120,11 +121,24 @@ class Client
      */
     private $contacts;
 
+    /**
+     * One Client has Many Contacts.
+     * @ORM\OneToMany(
+     *     targetEntity="AppBundle\Entity\Paiement\Transaction",
+     *     mappedBy="client" ,
+     *     cascade={"persist"},
+     *     fetch="EXTRA_LAZY",
+     *     orphanRemoval=true
+     * )
+     */
+    private $transactions;
+
 
     public function __construct() {
         $this->listecommandes = new ArrayCollection();
         $this->historiques = new ArrayCollection();
         $this->contacts = new ArrayCollection();
+        $this->transactions = new ArrayCollection();
     }
 
 
@@ -399,6 +413,43 @@ class Client
     {
         return $this->contacts;
     }
+
+
+    public function addTransaction(Transaction $transaction)
+    {
+
+
+        if ($this->transactions->contains($transaction)) {
+            return;
+        }
+        $this->transactions[] = $transaction;
+        // needed to update the owning side of the relationship!
+        $transaction->setClient($this);
+    }
+
+    public function removeTransaction(Transaction $transaction)
+    {
+        if (!$this->transactions->contains($transaction)) {
+            return;
+        }
+        $this->transactions->removeElement($transaction);
+        // needed to update the owning side of the relationship!
+        $transaction->setClient(null);
+    }
+
+
+    /**
+     * @return ArrayCollection|Transaction[]
+     */
+    public function getTransactions()
+    {
+        return $this->transactions;
+    }
+
+
+
+
+
 
     /**
      * @return mixed

@@ -10,6 +10,8 @@ namespace AppBundle\Entity;
 use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
+use Doctrine\Common\Collections\ArrayCollection;
+
 
 /**
  * @ORM\Entity
@@ -43,6 +45,18 @@ class User extends BaseUser
     protected $name;
 
     /**
+     * One User has Many tasks.
+     * @ORM\OneToMany(
+     *     targetEntity="AppBundle\Entity\Tache",
+     *     mappedBy="user" ,
+     *     cascade={"persist"},
+     *     fetch="EXTRA_LAZY",
+     *     orphanRemoval=true
+     * )
+     */
+    private $taches;
+
+    /**
      * @return mixed
      */
     public function getName()
@@ -64,6 +78,7 @@ class User extends BaseUser
     public function __construct()
     {
         parent::__construct();
+        $this->taches = new ArrayCollection();
     }
 
     /**
@@ -80,6 +95,37 @@ class User extends BaseUser
     public function setRole($role)
     {
         $this->role = $role;
+    }
+
+    public function addTransaction(Tache $tache)
+    {
+
+
+        if ($this->taches->contains($tache)) {
+            return;
+        }
+        $this->taches[] = $tache;
+        // needed to update the owning side of the relationship!
+        $tache->setUser($this);
+    }
+
+    public function removeTransaction(Tache $tache)
+    {
+        if (!$this->taches->contains($tache)) {
+            return;
+        }
+        $this->taches->removeElement($tache);
+        // needed to update the owning side of the relationship!
+        $tache->setUser(null);
+    }
+
+
+    /**
+     * @return ArrayCollection|Tache[]
+     */
+    public function getTransactions()
+    {
+        return $this->taches;
     }
 
 

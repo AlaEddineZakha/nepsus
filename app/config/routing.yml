@@ -229,6 +229,11 @@ annulerfacture:
     defaults:  { _controller: AppBundle:FactureClient:annuler }
     requirements:
             id: \d+
+envoyerfacture:
+    path:      factures/{id}/sendmail
+    defaults:  { _controller: AppBundle:FactureClient:send }
+    requirements:
+            id: \d+
 
 activateuser:
     path:      /activate
@@ -238,7 +243,7 @@ promoteuser:
     defaults:  { _controller: AppBundle:Reset:promoteUser }
 
 
-#--------------------- Fournisseurs -------------------#
+#--------------------- Configuration -------------------#
 
 initconfig:
     path:      /config
@@ -253,6 +258,10 @@ loadingconfig:
 configurationgenerale:
     path:      /configuration/generale
     defaults:  { _controller: AppBundle:Configuration:edit }
+
+configurationapplication:
+    path:      /configuration/application
+    defaults:  { _controller: AppBundle:Configuration:applicationconfig }
 
 alreadyconfigured:
     path:     /alreadyconfigured

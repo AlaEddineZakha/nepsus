@@ -66,6 +66,38 @@ class FactureClientController extends Controller
         // ... do something, like pass the $product object into a template
     }
 
+    /**
+     * @Route("factures/{id}/sendmail", name="envoyerfacture")
+     */
+    public function sendAction($id,Request $request)
+    {
+
+        $em = $this->getDoctrine()->getManager();
+
+        $facturesend=$em->getRepository(FactureClient::class)->find($id);
+        $cmd=$em->getRepository(BonCommandeClient::class)->findOneBy(array('facture' => $facturesend->getId()));;
+        $client=$cmd->getClient();
+        $clientname=$client->getRaison();
+        $snappy = $this->get('knp_snappy.pdf');
+
+        $html = $this->renderView(':FacturesClients:viewraw.html.twig', array(
+            'facture'=>$facturesend
+        ));
+
+        $filename = $clientname.'_Facture '.$facturesend->getId();
+        $attachment = new \Swift_Attachment($snappy->getOutputFromHtml($html), $filename.'.pdf', 'application/pdf');
+
+        $message = (new \Swift_Message(" Nepsus : Facture #" . $facturesend->getId() . " PDF  "))
+            ->setFrom('achref.tlija@gmail.com')
+            ->setTo($client->getEmail())
+            ->attach($attachment)
+            ->setBody('Facture format PDF');
+
+        $this->get('mailer')->send($message);
+
+        return $this->redirectToRoute('dashboard');
+    }
+
 
 
     public function payerAction($id,Request $request)

@@ -54,6 +54,7 @@ class RoleController extends Controller
      */
     public function editAction(Request $request,$id)
     {
+
         $em = $this->getDoctrine()->getManager();
 
         $role =$em->getRepository('AppBundle:Role')->find($id);
@@ -168,8 +169,11 @@ class RoleController extends Controller
 
             $role->setNom($request->request->get('libele'));
             $role->setDescription($request->request->get('description'));
+            $userswithrole=$em->getRepository(User::class)->findOneBy(array('role' => $role));
+            $em->persist($userswithrole);
             $em->persist($role);
             $em->flush();
+
 
 
             return $this->redirectToRoute('listroles');

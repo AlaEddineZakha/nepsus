@@ -3,6 +3,7 @@
 namespace AppBundle\Controller;
 
 use AppBundle\Entity\Category;
+use AppBundle\Entity\FactureClient;
 use AppBundle\Entity\Produit;
 use AppBundle\Entity\Taxe;
 use AppBundle\Entity\User;
@@ -10,6 +11,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Knp\Bundle\SnappyBundle\Snappy\Response\PdfResponse;
 
 class TestController extends Controller
 {
@@ -86,49 +88,33 @@ class TestController extends Controller
     /**
      *@Route("/fill10kproducts", name="testproduct")
      */
-    public function fillproducttAction(Request $request)
+    public function fillproducttAction()
     {
+        $em = $this->getDoctrine()->getManager();
+        $facture=$em->getRepository(FactureClient::class)->find(9);
+        $snappy = $this->get('knp_snappy.pdf');
 
-        $em = $this->get('doctrine')->getManager();
-        $c= new Category();
-        $c->setNom('TestCategory');
-        $t= new Taxe();
-        $t->setMontant(25);
-        $t->setCreated((new \DateTime('+30 day')));
-        $t->setActive(1);
-        $c->setNom('TestCategory');
-        $em->persist($c);
-        $em->persist($t);
-        for ($i=1;$i <=300;$i++) {
+        $html = $this->renderView(':FacturesClients:viewraw.html.twig', array(
+            'facture'=>$facture
+        ));
 
-            $p = new Produit();
-            $p->setEtat('En vente');
-            $p->setCreated((new \DateTime('+30 day')));
-            $p->setLibele('Produit test '.$i);
-            $p->setDescription('test');
-            $p->setCodedouane('A55f858a52');
-            $p->setCategory($c);
-            $p->setOrigine('France');
-            $p->setType('Manifacturé');
-            $p->setPrixvente(11);
-            $p->setPrixachat(12);
-            $p->setLimitestock(5);
-            $p->setTva($t);
+        $filename = 'myFirstSnappyPDF';
 
-            $em->persist($p);
-
-        }
-
-        $em->flush();
-
-
-
-        return $this->render(':dashboard:dashboard1.html.twig');
-
-
-
-
+        return new Response(
+            $snappy->getOutputFromHtml($html),
+            200,
+            array(
+                'Content-Type'          => 'application/pdf',
+                'Content-Disposition'   => 'inline; filename="'.$filename.'.pdf"'
+            )
+        );
     }
+
+
+
+
+
+
 
 
 }

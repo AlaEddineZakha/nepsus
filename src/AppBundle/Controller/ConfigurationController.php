@@ -34,89 +34,99 @@ class ConfigurationController extends Controller
         {
             return $this->redirectToRoute('alreadyconfigured');
         }
+        else {
 
-        if ($request->isMethod('POST')) {
-            $em = $this->getDoctrine()->getManager();
-            $config = new Configuration();
-            $admin = new User();
-            $modules = $em->getRepository(Modules::class)->findAll();
-            foreach ($modules as $module) {
-                // $advert est une instance de Advert
-                if ($module->getNom() == 'Entrepots') {
-                    if (empty($request->request->get('module_entrepots'))) {
-                        $module->setActive(0);
-                        $em->persist($module);
-                    } else {
-                        $module->setActive(1);
-                        $em->persist($module);
+            if ($request->isMethod('POST')) {
+                $em = $this->getDoctrine()->getManager();
+                $config = new Configuration();
+                $admin = new User();
+                $modules = $em->getRepository(Modules::class)->findAll();
+                foreach ($modules as $module) {
+                    // $advert est une instance de Advert
+                    if ($module->getNom() == 'Entrepots') {
+                        if (empty($request->request->get('module_entrepots'))) {
+                            $module->setActive(0);
+                            $em->persist($module);
+                        } else {
+                            $module->setActive(1);
+                            $em->persist($module);
 
+                        }
+                    }
+
+                    if ($module->getNom() == 'Fournisseurs') {
+                        if (empty($request->request->get('module_fournisseurs'))) {
+                            $module->setActive(0);
+                            $em->persist($module);
+                        } else {
+                            $module->setActive(1);
+                            $em->persist($module);
+
+                        }
+                    }
+
+                    if ($module->getNom() == 'Categories') {
+                        if (empty($request->request->get('module_categories'))) {
+                            $module->setActive(0);
+                            $em->persist($module);
+                        } else {
+                            $module->setActive(1);
+                            $em->persist($module);
+
+                        }
                     }
                 }
 
-                if ($module->getNom() == 'Fournisseurs') {
-                    if (empty($request->request->get('module_fournisseurs'))) {
-                        $module->setActive(0);
-                        $em->persist($module);
-                    } else {
-                        $module->setActive(1);
-                        $em->persist($module);
+                $admin->setPlainPassword($request->request->get('password'));
+                $admin->setEnabled('true');
+                $admin->setSuperAdmin('true');
+                $admin->setRoles(array('ROLE_SUPER_ADMIN'));
+                $admin->setRole($em->getRepository(Role::class)->findOneBy(array('nom' => 'admin')));
+                $admin->setEmail($request->request->get('email'));
+                $admin->setUsername($request->request->get('username'));
+                $em->persist($admin);
+                $config->setId(1);
+                $config->setInit(1);
+                $config->setMatriculefiscale($request->request->get('mf'));
+                $config->setRaison($request->request->get('raison'));
+                $config->setAdresse($request->request->get('addresse'));
+                $config->setVille($request->request->get('ville'));
+                $config->setPays($request->request->get('pays'));
+                $config->setTelephone($request->request->get('telephone'));
+                $config->setSiteweb($request->request->get('siteweb'));
+                $config->setRegistredecommerce($request->request->get('registre'));
+                $config->setCreated(new \DateTime());
+                $config->setFax($request->request->get('fax'));
+                $config->setFormejuridique($request->request->get('formejuridique'));
+                $config->setCodedouane($request->request->get('codedouane'));
+                $config->setIban($request->request->get('iban'));
+                $config->setRib($request->request->get('rib'));
+                $config->setBic($request->request->get('bic'));
+                $config->setAbreviation($request->request->get('abreviation'));
+                $config->setAdministrateur($admin);
 
-                    }
-                }
 
-                if ($module->getNom() == 'Categories') {
-                    if (empty($request->request->get('module_categories'))) {
-                        $module->setActive(0);
-                        $em->persist($module);
-                    } else {
-                        $module->setActive(1);
-                        $em->persist($module);
+                $em->persist($config);
+                $em->flush();
 
-                    }
-                }
+                return $this->redirectToRoute('loadingconfig');
             }
 
-            $admin->setPlainPassword($request->request->get('password'));
-            $admin->setEnabled('true');
-            $admin->setSuperAdmin('true');
-            $admin->setRoles(array('ROLE_SUPER_ADMIN'));
-            $admin->setRole($em->getRepository(Role::class)->findOneBy(array('nom' => 'admin')));
-            $admin->setEmail($request->request->get('email'));
-            $admin->setUsername($request->request->get('username'));
-            $em->persist($admin);
-            $config->setId(1);
-            $config->setInit(1);
-            $config->setMatriculefiscale($request->request->get('mf'));
-            $config->setRaison($request->request->get('raison'));
-            $config->setAdresse($request->request->get('addresse'));
-            $config->setVille($request->request->get('ville'));
-            $config->setPays($request->request->get('pays'));
-            $config->setTelephone($request->request->get('telephone'));
-            $config->setSiteweb($request->request->get('siteweb'));
-            $config->setRegistredecommerce($request->request->get('registre'));
-            $config->setCreated(new \DateTime());
-            $config->setFax($request->request->get('fax'));
-            $config->setFormejuridique($request->request->get('formejuridique'));
-            $config->setCodedouane($request->request->get('codedouane'));
-            $config->setIban($request->request->get('iban'));
-            $config->setRib($request->request->get('rib'));
-            $config->setBic($request->request->get('bic'));
-            $config->setAbreviation($request->request->get('abreviation'));
-            $config->setAdministrateur($admin);
-
-
-            $em->persist($config);
-            $em->flush();
-
-            return $this->redirectToRoute('loadingconfig');
+            return $this->render(':Configuration:configuration.html.twig');
         }
-
-        return $this->render(':Configuration:configuration.html.twig');
     }
 
     public function loadingAction()
     {
         return $this->render(':Configuration:loading.html.twig');
+    }
+
+    /**
+     * @Route("/configuration/application" ,name="configurationapplication")
+     */
+    public function applicationconfigAction()
+    {
+        return $this->render(':Configuration:ConfigurationApplication.html.twig');
     }
 
 
@@ -126,9 +136,10 @@ class ConfigurationController extends Controller
     public function editAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
+        $user = $em->getRepository(User::class)->find($this->getUser()->getId());
         $config = $em->getRepository(Configuration::class)->find(1);
         $modulecategories=$em->getRepository(Modules::class)->findOneBy(array('nom' => 'Categories'));
-        $logo=$config->getLogo();
+       // $logo=$config->getLogo();
 
 
            // $image = base64_encode(stream_get_contents($logo));
@@ -163,7 +174,8 @@ class ConfigurationController extends Controller
         }
 
         return $this->render(':Configuration:ConfigurationEntreprise.html.twig', [
-            'config' => $config
+            'config' => $config,
+            'user' => $user,
 
         ]);
     }

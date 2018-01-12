@@ -40,7 +40,7 @@ class Transaction
      */
     private $facturefournisseur;
     /**
-     * @ORM\Column(type="date")
+     * @ORM\Column(type="date" ,nullable=true)
      */
     private $datepaiement;
     /**
@@ -62,13 +62,20 @@ class Transaction
      */
     private $montant;
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="string",nullable=true)
      */
     private $note ;
     /**
      * @ORM\Column(type="string")
      */
     private $etat;
+
+    /**
+     * Many Features have One Product.
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Client", inversedBy="transactions" , fetch="EAGER")
+     * @ORM\JoinColumn(name="client_id", referencedColumnName="id")
+     */
+    private $client;
 
 
     /**
@@ -215,6 +222,15 @@ class Transaction
     public function setFacturefournisseur($facturefournisseur)
     {
         $this->facturefournisseur = $facturefournisseur;
+    }
+
+    public function getClient()
+    {
+        return $this->client;
+    }
+    public function setClient($client)
+    {
+        $this->client = $client;
     }
 
 

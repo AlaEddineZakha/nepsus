@@ -9,12 +9,16 @@
 namespace AppBundle\Controller;
 
 
+use AppBundle\Entity\Devis\Devis;
 use AppBundle\Entity\FactureClient;
 use AppBundle\Entity\HistoriqueClient;
 use AppBundle\Entity\LigneFC;
 use AppBundle\Entity\LigneBCC;
 use AppBundle\Entity\BonCommandeClient;
 use AppBundle\Entity\Client;
+use AppBundle\Entity\Paiement\Devise;
+use AppBundle\Entity\Paiement\MethodeTransaction;
+use AppBundle\Entity\Paiement\Transaction;
 use AppBundle\Entity\Permission;
 use AppBundle\Entity\RolePermission;
 use AppBundle\Entity\User;
@@ -308,41 +312,58 @@ class ClientController extends  Controller
     public function editAction($id, Request $request)
     {
         $em = $this->getDoctrine()->getManager();
-
         $client = $em->getRepository('AppBundle:Client')->find($id);
-        if ($request->isMethod('POST')) {
-
-            $client->setCapital($request->request->get('cap'));
-            $client->setMatriculefiscale($request->request->get('mf'));
-            $client->setRaison($request->request->get('raison'));
-            $client->setEmail($request->request->get('email'));
-            $client->setAdresse($request->request->get('adresse'));
-            $client->setRegion($request->request->get('region'));
-            $client->setVille($request->request->get('ville'));
-            $client->setPays($request->request->get('pays'));
-            $client->setTelephone($request->request->get('tel1'));
-            $client->setMobile($request->request->get('tel2'));
-            $client->setSiteweb($request->request->get('site'));
-            $client->setRegistre($request->request->get('registre'));
-            $client->setCreated(new \DateTime());
-            $client->setFax($request->request->get('fax'));
-            $client->setFormejuridique($request->request->get('formejuridique'));
+        $user = $em->getRepository(User::class)->find($this->getUser()->getId());
+        $idroleuser = $user->getRole();
+        $permissions = $em->getRepository(Permission::class)->findOneBy(array('libele' => 'modifierclient'));
+        $idpermission = $permissions->getId();
+        $commandesclients = $em->getRepository(BonCommandeClient::class)->findBy(array('client' => $client));
+        $transactions = $em->getRepository(Transaction::class)->findBy(array('client' => $client));
+        $currentrolepermission = $em->getRepository('AppBundle:RolePermission')->findBy(array('role' => $idroleuser, 'permission' => $idpermission));
+        if ($currentrolepermission) {
 
 
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($client);
-            $em->flush();
+            if ($request->isMethod('POST')) {
 
-            return $this->redirectToRoute('listclient');
+                $client->setCapital($request->request->get('cap'));
+                $client->setMatriculefiscale($request->request->get('mf'));
+                $client->setRaison($request->request->get('raison'));
+                $client->setEmail($request->request->get('email'));
+                $client->setAdresse($request->request->get('adresse'));
+                $client->setRegion($request->request->get('region'));
+                $client->setVille($request->request->get('ville'));
+                $client->setPays($request->request->get('pays'));
+                $client->setTelephone($request->request->get('tel1'));
+                $client->setMobile($request->request->get('tel2'));
+                $client->setSiteweb($request->request->get('site'));
+                $client->setRegistre($request->request->get('registre'));
+                $client->setCreated(new \DateTime());
+                $client->setFax($request->request->get('fax'));
+                $client->setFormejuridique($request->request->get('formejuridique'));
+
+
+                $em = $this->getDoctrine()->getManager();
+                $em->persist($client);
+                $em->flush();
+
+                return $this->redirectToRoute('listclient');
+            }
+
+            return $this->render('clients/edit.html.twig', [
+                'client' => $client,
+                'user' => $user,
+                'commandesclients'=>$commandesclients,
+                'transactions'=>$transactions,
+
+            ]);
+
+
+            // ... do something, like pass the $product object into a template
         }
-
-        return $this->render('clients/edit.html.twig', [
-            'client' => $client
-
-        ]);
-
-
-        // ... do something, like pass the $product object into a template
+        else
+        {
+            return $this->redirectToRoute('pagenotallowed');
+        }
     }
 
     /**
@@ -367,12 +388,14 @@ class ClientController extends  Controller
      */
     public function addCommandeAction(Request $request)
     {
+        $em = $this->getDoctrine()->getManager();
         $repository = $this->getDoctrine()->getRepository('AppBundle:Client');
         $client = $repository->findAll();
         $repository2 = $this->getDoctrine()->getRepository('AppBundle:Produit');
         $produit = $repository2->getAll();
-        $repository = $this->getDoctrine()->getRepository('AppBundle:Paiement\Devise');
-        $devise = $repository->findAll();
+
+        $methodespaiement=$em->getRepository(MethodeTransaction::class)->findAll();
+        $devises=$em->getRepository(Devise::class)->findAll();
         try {
 
             if ($request->isMethod('POST')) {
@@ -387,6 +410,7 @@ class ClientController extends  Controller
                 $bc = new BonCommandeClient();
                 $facture = new FactureClient();
                 $historique = new HistoriqueClient();
+
 
                 $repository = $this->getDoctrine()->getRepository('AppBundle:Client');
 
@@ -468,14 +492,35 @@ class ClientController extends  Controller
                 $em->persist($facture);
                 $em->persist($client);
                 $em->persist($historique);
+                $transaction = new Transaction();
+                $transaction->setMontant($request->request->get('totalttc'));
+                $transaction->setEtat($facture->getStatut());
+                $devise=$em->getRepository(Devise::class)->find($request->request->get('devise'));
+                $methode=$em->getRepository(MethodeTransaction::class)->find($request->request->get('methode'));
+                $transaction->setDevise($devise);
+                $transaction->setMethodetransaction($methode);
+                $transaction->setFacture($facture);
+                $transaction->setClient($client);
+                $em->persist($transaction);
+                $client->addTransaction($transaction);
+                 $em->persist($client);
 
                 $em->flush();
+                $em = $this->getDoctrine()->getManager();
+                $facturesend=$em->getRepository(FactureClient::class)->find($facture->getId());
+                $snappy = $this->get('knp_snappy.pdf');
 
+                $html = $this->renderView(':FacturesClients:viewraw.html.twig', array(
+                    'facture'=>$facturesend
+                ));
+
+                $filename = $client->getRaison().'_Facture '.$facture->getId();
+                $attachment = new \Swift_Attachment($snappy->getOutputFromHtml($html), $filename.'.pdf', 'application/pdf');
 
                 $message = (new \Swift_Message(" Nepsus : nouvelle notification de commande #" . $bc->getId() . " a été créé  "))
                     ->setFrom('achref.tlija@gmail.com')
                     ->setTo($client->getEmail())
-                    ->attach(\Swift_Attachment::fromPath('https://madeby.google.com/static/images/google_g_logo.svg'))
+                    ->attach($attachment)
                     ->setBody($this->renderView(
 
                         ':Testlayout:emailtemplate.html.twig', [
@@ -505,7 +550,8 @@ class ClientController extends  Controller
         return $this->render(':CommandeClient:new1.html.twig', [
             'client' => $client,
             'produit' => $produit,
-            'devise' => $devise
+            'devise' => $devises,
+            'methodespaiement' => $methodespaiement
 
         ]);
 

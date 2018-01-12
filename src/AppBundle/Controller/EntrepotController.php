@@ -30,6 +30,8 @@ class EntrepotController extends Controller
             $entrepot->setType($request->request->get('type'));
             $entrepot->setCapacite($request->request->get('capacite'));
             $entrepot->setLocation($request->request->get('location'));
+            $entrepot->setEspacerestant(0);
+            $entrepot->setEspacerempli(0);
             $entrepot->setCreated(new \DateTime());
 
 
