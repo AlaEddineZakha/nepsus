@@ -9,6 +9,7 @@
 namespace AppBundle\Controller;
 
 
+use AppBundle\Entity\Configuration;
 use AppBundle\Entity\Devis\Devis;
 use AppBundle\Entity\FactureClient;
 use AppBundle\Entity\HistoriqueClient;
@@ -51,7 +52,7 @@ class ClientController extends  Controller
         if ($currentrolepermission) {
             if ($request->isMethod('POST')) {
                 $client = new Client();
-                $client->setCapital($request->request->get('cap'));
+
                 $client->setMatriculefiscale($request->request->get('mf'));
                 $client->setRaison($request->request->get('raison'));
                 $client->setEmail($request->request->get('email'));
@@ -325,7 +326,7 @@ class ClientController extends  Controller
 
             if ($request->isMethod('POST')) {
 
-                $client->setCapital($request->request->get('cap'));
+
                 $client->setMatriculefiscale($request->request->get('mf'));
                 $client->setRaison($request->request->get('raison'));
                 $client->setEmail($request->request->get('email'));
@@ -460,7 +461,7 @@ class ClientController extends  Controller
 
 
                 }
-
+                $config = $em->getRepository(Configuration::class)->find(1);
                 $bc->setClient($client);
                 $commandeclientliste->add($bc);
                 $client->setListecommandes($commandeclientliste);
@@ -477,7 +478,20 @@ class ClientController extends  Controller
                 $facture->setTotalttc($request->request->get('totalttc'));
                 $facture->setTotalht($request->request->get('totalht'));
                 $facture->setCreated(new \DateTime());
-                $facture->setDateecheance((new \DateTime('+30 day')));
+                if ($config->getEchancefacture()==1)
+                {
+                    $facture->setDateecheance((new \DateTime('+30 day')));
+                }
+
+                if ($config->getEchancefacture()==2)
+                {
+                    $facture->setDateecheance((new \DateTime('+60 day')));
+                }
+                if ($config->getEchancefacture()==3)
+                {
+                    $facture->setDateecheance((new \DateTime('+90 day')));
+                }
+
                 $facture->setStatut('Impayée');
                 $facture->setBc($bc);
 
@@ -506,30 +520,36 @@ class ClientController extends  Controller
                  $em->persist($client);
 
                 $em->flush();
-                $em = $this->getDoctrine()->getManager();
-                $facturesend=$em->getRepository(FactureClient::class)->find($facture->getId());
-                $snappy = $this->get('knp_snappy.pdf');
 
-                $html = $this->renderView(':FacturesClients:viewraw.html.twig', array(
-                    'facture'=>$facturesend
-                ));
+                if ($config->getNotificationcommande()==1)
+                {
+                    $em = $this->getDoctrine()->getManager();
+                    $facturesend=$em->getRepository(FactureClient::class)->find($facture->getId());
+                    $snappy = $this->get('knp_snappy.pdf');
 
-                $filename = $client->getRaison().'_Facture '.$facture->getId();
-                $attachment = new \Swift_Attachment($snappy->getOutputFromHtml($html), $filename.'.pdf', 'application/pdf');
+                    $html = $this->renderView(':FacturesClients:viewraw.html.twig', array(
+                        'facture'=>$facturesend
+                    ));
 
-                $message = (new \Swift_Message(" Nepsus : nouvelle notification de commande #" . $bc->getId() . " a été créé  "))
-                    ->setFrom('achref.tlija@gmail.com')
-                    ->setTo($client->getEmail())
-                    ->attach($attachment)
-                    ->setBody($this->renderView(
+                    $filename = $client->getRaison().'_Facture '.$facture->getId();
 
-                        ':Testlayout:emailtemplate.html.twig', [
-                            'facture' => $facture]
-                    ),
-                        'text/html'
-                    );
+                    $attachment = new \Swift_Attachment($snappy->getOutputFromHtml($html), $filename.'.pdf', 'application/pdf');
 
-                $this->get('mailer')->send($message);
+                    $message = (new \Swift_Message(" Nepsus : nouvelle notification de commande #" . $bc->getId() . " a été créé  "))
+                        ->setFrom('achref.tlija@gmail.com')
+                        ->setTo($client->getEmail())
+                        ->attach($attachment)
+                        ->setBody($this->renderView(
+
+                            ':Testlayout:emailtemplate.html.twig', [
+                                'facture' => $facture]
+                        ),
+                            'text/html'
+                        );
+
+                    $this->get('mailer')->send($message);
+                }
+
 
 
                 return $this->redirectToRoute('listfacturesclients');

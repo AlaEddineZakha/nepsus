@@ -47,7 +47,7 @@ class ProduitController extends Controller
     }
 
     /**
-     * @Route("/produits")
+     * @Route("/produits" , name="listproduits")
      */
     public function showAllAction(Request $request)
     {

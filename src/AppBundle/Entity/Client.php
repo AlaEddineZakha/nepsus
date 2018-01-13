@@ -28,9 +28,7 @@ class Client
      * @ORM\Column(type="integer")
      */private $id ;
 
-    /**
-     * @ORM\Column(type="float")
-     */private $capital;
+
 
     /**
      * @ORM\Column(type="string")
@@ -150,21 +148,7 @@ class Client
         return $this->id;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getCapital()
-    {
-        return $this->capital;
-    }
 
-    /**
-     * @param mixed $capital
-     */
-    public function setCapital($capital)
-    {
-        $this->capital = $capital;
-    }
 
 
 

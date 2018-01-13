@@ -26,6 +26,10 @@ use Doctrine\Common\Collections\ArrayCollection;
 
 class ConfigurationController extends Controller
 {
+
+    /**
+     * @Route("/config",name="initconfig")
+     */
     public function indexAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
@@ -124,9 +128,45 @@ class ConfigurationController extends Controller
     /**
      * @Route("/configuration/application" ,name="configurationapplication")
      */
-    public function applicationconfigAction()
+    public function applicationconfigAction(Request $request)
     {
-        return $this->render(':Configuration:ConfigurationApplication.html.twig');
+        $em = $this->getDoctrine()->getManager();
+        $user = $em->getRepository(User::class)->find($this->getUser()->getId());
+        $config = $em->getRepository(Configuration::class)->find(1);
+        $modulecategories=$em->getRepository(Modules::class)->findOneBy(array('nom' => 'Categories'));
+
+
+
+        if ($request->isMethod('POST')) {
+
+
+
+            $config->setNotificationcommande($request->request->get('notification'));
+            $config->setFootercapitale($request->request->get('affichercapitale'));
+            $config->setEchancefacture($request->request->get('echeance'));
+            $config->setSeuilalerte($request->request->get('seuil'));
+
+            $config->setIndicateurActivites($request->request->get('ind_activites'));
+            $config->setIndicateurBenefice($request->request->get('ind_benefice'));
+            $config->setIndicateurClients($request->request->get('ind_clients'));
+            $config->setIndicateurCmdattente($request->request->get('ind_cmdattente'));
+            $config->setIndicateurCmdtotals($request->request->get('ind_cmdtoatals'));
+            $config->setIndicateurEntrepots($request->request->get('ind_entrepots'));
+            $config->setIndicateurFactures($request->request->get('ind_factures'));
+            $config->setIndicateurProduits($request->request->get('ind_produits'));
+            $config->setIndicateurUsers($request->request->get('ind_user'));
+            $config->setIndicateurTaches($request->request->get('ind_taches'));
+            $em->persist($config);
+            $em->flush();
+
+            return $this->redirectToRoute('dashboard');
+        }
+
+        return $this->render(':Configuration:ConfigurationApplication.html.twig', [
+            'config' => $config,
+            'user' => $user,
+
+        ]);
     }
 
 
@@ -139,10 +179,8 @@ class ConfigurationController extends Controller
         $user = $em->getRepository(User::class)->find($this->getUser()->getId());
         $config = $em->getRepository(Configuration::class)->find(1);
         $modulecategories=$em->getRepository(Modules::class)->findOneBy(array('nom' => 'Categories'));
-       // $logo=$config->getLogo();
 
 
-           // $image = base64_encode(stream_get_contents($logo));
 
         if ($request->isMethod('POST')) {
 

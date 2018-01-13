@@ -51,7 +51,7 @@
     <!-- END PAGE HEADER-->
     <div class="row">
         <div class="col-md-12">
-            <form class="form-horizontal form-row-seperated" action="{{ path('configurationgenerale')}}" method="post" id="signupForm">
+            <form class="form-horizontal form-row-seperated" action="{{ path('configurationapplication')}}" method="post" id="signupForm">
                 <div class="portlet">
                     <div class="portlet-title">
                         <div class="caption">
@@ -87,191 +87,55 @@
                             <div class="tab-content">
                                 <div class="tab-pane active" id="tab_0">
                                     <div class="row">
-                                        <h3 class="block" style="font-size: 20px ; text-align: center ;padding-bottom: 25px; ">Stock</h3>
-                                        <div class="col-md-10">
-                                            <div class="col-md-3 ">
-                                                <div class="form-group">
-                                                    <label class="control-label col-md-9 "> Entrepots
-
-
-                                                    </label>
-                                                    <div class="col-md-3">
-                                                        <input type="checkbox" class="make-switch" checked data-on-color="success" data-off-color="warning" data-on-text="Oui" data-off-text="Non" name="module_entrepots" >
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <div class="form-group">
-                                                    <label class="control-label col-md-9">Produits
-
-
-                                                    </label>
-                                                    <div class="col-md-3">
-                                                        <input type="checkbox" name="module_produits" class="make-switch" checked data-on-color="success" data-off-color="warning" data-on-text="Oui" data-off-text="Non"  disabled>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <div class="form-group">
-                                                    <label class="control-label col-md-9">Catégories
-
-
-                                                    </label>
-                                                    <div class="col-md-3">
-                                                        <input type="checkbox" name="module_categories" class="make-switch" checked data-on-color="success" data-off-color="warning" data-on-text="Oui" data-off-text="Non" >
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-3">
-                                                <div class="form-group">
-                                                    <label class="control-label col-md-9">Lots
-
-
-                                                    </label>
-                                                    <div class="col-md-3">
-                                                        <input type="checkbox" name="module_lots" class="make-switch" checked data-on-color="success" data-off-color="warning" data-on-text="Oui" data-off-text="Non" >
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
+                                        <h3 class="block" style="font-size: 20px ; text-align: center ;padding-bottom: 25px; ">Commande</h3>
+                                        <label class="mt-checkbox">
+                                            <input type="checkbox" id="notification" name="notification" > Envoyer notification de commande au client
+                                            <span></span>
+                                        </label>
                                     </div>
                                     <hr>
                                     <div class="row">
                                         <h3 class="block" style="font-size: 20px ; text-align: center ;padding-bottom: 25px; ">Facturation</h3>
-                                        <div class="col-md-10">
-                                            <div class="col-md-3 ">
+                                        <div class="col-md-12">
+                                            <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label class="control-label col-md-9 ">Factures
-
+                                                    <label class="control-label col-md-4" for="echeance" style="text-align: start" >Echeance ( Mois)
 
                                                     </label>
-                                                    <div class="col-md-3">
-                                                        <input type="checkbox" name="module_factures" class="make-switch" checked data-on-color="success" data-off-color="warning" data-on-text="Oui" data-off-text="Non"  disabled>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <div class="form-group">
-                                                    <label class="control-label col-md-9">Devis
-
-
-                                                    </label>
-                                                    <div class="col-md-3">
-                                                        <input type="checkbox" name="module_devis" class="make-switch" checked data-on-color="success" data-off-color="warning" data-on-text="Oui" data-off-text="Non" >
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <div class="form-group">
-                                                    <label class="control-label col-md-9">Dépenses
-
-
-                                                    </label>
-                                                    <div class="col-md-3">
-                                                        <input type="checkbox" name="module_depenses" class="make-switch" checked data-on-color="success" data-off-color="warning" data-on-text="Oui" data-off-text="Non">
+                                                    <div class="col-md-8">
+                                                        <input type="number"  value="{{ config.echancefacture }}"  name="echeance" id="echeance" data-required="1" class="form-control"  />
                                                     </div>
                                                 </div>
                                             </div>
 
-                                            <div class="col-md-3">
+                                            <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label class="control-label col-md-9">Transactions
-
-
+                                                    <label class="mt-checkbox">
+                                                        <input type="checkbox" id="affichercapitale" name="affichercapitale" value="option" > Afficher capitale dans le footer
+                                                        <span></span>
                                                     </label>
-                                                    <div class="col-md-3">
-                                                        <input type="checkbox" name="module_transactions" class="make-switch" checked data-on-color="success" data-off-color="warning" data-on-text="Oui" data-off-text="Non">
-                                                    </div>
                                                 </div>
                                             </div>
 
                                         </div>
+
                                     </div>
                                     <hr>
                                     <div class="row">
-                                        <h3 class="block" style="font-size: 20px ; text-align: center">Relations</h3>
-                                        <div class="col-md-10">
-                                            <div class="col-md-3 ">
-                                                <div class="form-group">
-                                                    <label class="control-label col-md-9 ">Clients
+                                        <h3 class="block" style="font-size: 20px ; text-align: center">Stock</h3>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="control-label col-md-4" for="seuil" style="text-align: start">Seuil alerte
 
-
-                                                    </label>
-                                                    <div class="col-md-3">
-                                                        <input type="checkbox" name="module_clients" class="make-switch" checked data-on-color="success" data-off-color="warning" data-on-text="Oui" data-off-text="Non" disabled>
-                                                    </div>
+                                                </label>
+                                                <div class="col-md-8">
+                                                    <input type="number" value="{{ config.seuilalerte }}" name="seuil" min="1" max="3" id="seuil" data-required="1" class="form-control" />
                                                 </div>
                                             </div>
-                                            <div class="col-md-3">
-                                                <div class="form-group">
-                                                    <label class="control-label col-md-9">Fournisseurs
-
-
-                                                    </label>
-                                                    <div class="col-md-3">
-                                                        <input type="checkbox" name="module_fournisseurs" class="make-switch" checked data-on-color="success" data-off-color="warning" data-on-text="Oui" data-off-text="Non" disabled>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
                                         </div>
                                     </div>
                                     <hr>
-                                    <div class="row">
-                                        <h3 class="block" style="font-size: 20px ; text-align: center ;padding-bottom: 25px; ">Sécurité</h3>
-                                        <div class="col-md-10">
-                                            <div class="col-md-3 ">
-                                                <div class="form-group">
-                                                    <label class="control-label col-md-9 ">Roles
 
-
-                                                    </label>
-                                                    <div class="col-md-3">
-                                                        <input type="checkbox" name="module_roles" class="make-switch" checked data-on-color="success" data-off-color="warning" data-on-text="Oui" data-off-text="Non" >
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <div class="form-group">
-                                                    <label class="control-label col-md-9">Permissions
-
-
-                                                    </label>
-                                                    <div class="col-md-3">
-                                                        <input type="checkbox" name="module_permissions" class="make-switch" checked data-on-color="success" data-off-color="warning" data-on-text="Oui" data-off-text="Non" >
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <div class="form-group">
-                                                    <label class="control-label col-md-9">Utilisateurs
-
-
-                                                    </label>
-                                                    <div class="col-md-3">
-                                                        <input type="checkbox" name="module_utlisateurs" class="make-switch" checked data-on-color="success" data-off-color="warning" data-on-text="Oui" data-off-text="Non">
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-3">
-                                                <div class="form-group">
-                                                    <label class="control-label col-md-9">Profils
-
-
-                                                    </label>
-                                                    <div class="col-md-3">
-                                                        <input type="checkbox" name="module_profils" class="make-switch" checked data-on-color="success" data-off-color="warning" data-on-text="Oui" data-off-text="Non" >
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <hr>
 
                                 </div>
                                 <div class="tab-pane " id="tab_1">
@@ -303,7 +167,7 @@
                                                 </div>
                                             </div>
                                             <label class="mt-checkbox">
-                                                <input type="checkbox" id="inlineCheckbox1" value="option1"> Indicateur bénéfice
+                                                <input type="checkbox" id="ind_benefice" name="ind_benefice" > Indicateur bénéfice
                                                 <span></span>
                                             </label>
                                         </div>
@@ -334,7 +198,7 @@
                                                 </div>
                                             </div>
                                             <label class="mt-checkbox">
-                                                <input type="checkbox" id="inlineCheckbox1" value="option1"> Indicateur produits
+                                                <input type="checkbox" id="ind_produits" name="ind_produits" > Indicateur produits
                                                 <span></span>
                                             </label>
                                         </div>
@@ -364,7 +228,7 @@
                                                 </div>
                                             </div>
                                             <label class="mt-checkbox">
-                                                <input type="checkbox" id="inlineCheckbox1" value="option1"> Indicateur commandes totale
+                                                <input type="checkbox" id="ind_cmdtoatals" name="ind_cmdtoatals" > Indicateur commandes totale
                                                 <span></span>
                                             </label>
                                         </div>
@@ -395,7 +259,7 @@
                                                 </div>
                                             </div>
                                             <label class="mt-checkbox">
-                                                <input type="checkbox" id="inlineCheckbox1" value="option1"> Indicateur clients
+                                                <input type="checkbox" id="ind_clients" name="ind_clients"> Indicateur clients
                                                 <span></span>
                                             </label>
                                         </div>
@@ -408,7 +272,7 @@
                                                     <div class="number">
                                                         <h3 class="font-green-sharp">
                                                             <span data-counter="counterup" data-value="X">X</span>
-                                                            <small class="font-green-sharp"> Dt</small>
+                                                            <small class="font-green-sharp"> </small>
                                                         </h3>
                                                         <small>Commande en attente</small>
                                                     </div>
@@ -423,14 +287,14 @@
                                             </span>
                                                     </div>
                                                     <div class="status">
-                                                        <div class="status-title"> Taxe </div>
+                                                        <div class="status-title"> Pourcentage  </div>
                                                         <div class="status-number"> X% </div>
                                                     </div>
                                                 </div>
                                             </div>
 
                                             <label class="mt-checkbox" >
-                                                <input type="checkbox" id="inlineCheckbox1" value="option1" > Indicateur commande en attente
+                                                <input type="checkbox" id="ind_cmdattente" name="ind_cmdattente" > Indicateur commande en attente
                                                 <span></span>
                                             </label>
                                         </div>
@@ -454,13 +318,13 @@
                                             </span>
                                                     </div>
                                                     <div class="status">
-                                                        <div class="status-title"> Hors stock </div>
+                                                        <div class="status-title"> Espace occupé </div>
                                                         <div class="status-number"> X% </div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <label class="mt-checkbox">
-                                                <input type="checkbox" id="inlineCheckbox1" value="option1"> Indicateur entrepots
+                                                <input type="checkbox" id="ind_entrepots" name="ind_entrepots" > Indicateur entrepots
                                                 <span></span>
                                             </label>
                                         </div>
@@ -471,7 +335,7 @@
                                                         <h3 class="font-blue-sharp">
                                                             <span data-counter="counterup" data-value="X">X</span>
                                                         </h3>
-                                                        <small>Factures non payées</small>
+                                                        <small>Factures</small>
                                                     </div>
                                                     <div class="icon">
                                                         <i class="icon-basket"></i>
@@ -480,17 +344,17 @@
                                                 <div class="progress-info">
                                                     <div class="progress">
                                             <span style="width: 20%;" class="progress-bar progress-bar-success blue-sharp">
-                                                <span class="sr-only">X% livrés</span>
+                                                <span class="sr-only">X% non payées</span>
                                             </span>
                                                     </div>
                                                     <div class="status">
-                                                        <div class="status-title"> Livrés </div>
+                                                        <div class="status-title"> Non payées </div>
                                                         <div class="status-number"> X% </div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <label class="mt-checkbox">
-                                                <input type="checkbox" id="inlineCheckbox1" value="option1"> Indicateur factures
+                                                <input type="checkbox" id="ind_factures" name="ind_factures" > Indicateur factures
                                                 <span></span>
                                             </label>
                                         </div>
@@ -502,7 +366,7 @@
 
                                                             <span data-counter="counterup" data-value="X">X</span>
                                                         </h3>
-                                                        <small>Devis en attente</small>
+                                                        <small>Utilisateurs</small>
                                                     </div>
                                                     <div class="icon">
                                                         <i class="icon-user"></i>
@@ -521,7 +385,7 @@
                                                 </div>
                                             </div>
                                             <label class="mt-checkbox">
-                                                <input type="checkbox" id="inlineCheckbox1" value="option1"> Indicateur devis
+                                                <input type="checkbox" id="ind_user" name="ind_user" > Indicateur Utilisateurs
                                                 <span></span>
                                             </label>
                                         </div>
@@ -543,7 +407,7 @@
 
                                             </div>
                                             <label class="mt-checkbox" >
-                                                <input type="checkbox" id="inlineCheckbox1" value="option1" > Liste des activités
+                                                <input type="checkbox" id="ind_activites" name="ind_activites"> Liste des activités
                                                 <span></span>
                                             </label>
                                         </div>
@@ -561,7 +425,7 @@
 
                                             </div>
                                             <label class="mt-checkbox" >
-                                                <input type="checkbox" id="inlineCheckbox1" value="option1" > Liste des tâches
+                                                <input type="checkbox" id="ind_taches" name="ind_taches" > Liste des tâches
                                                 <span></span>
                                             </label>
                                         </div>
@@ -569,27 +433,14 @@
                                 </div>
 
                                 <div class="tab-pane" id="tab_2">
-                                    <h3 class="block">Sauvegarde</h3>
-                                    <div class="form-group">
-                                        <label class="control-label col-md-3">Nom d'utilisateur
-
-                                            <span class="required"> * </span>
-                                        </label>
-                                        <div class="col-md-4">
-                                            <input type="text" class="form-control" name="username" />
-                                            <span class="help-block"> Indiquez votre nom d'utilisateur </span>
-                                        </div>
-                                    </div>
-                                    <hr>
                                     <h3 class="block">Rénitialisation</h3>
                                     <div class="form-group">
-                                        <label class="control-label col-md-3">Nom d'utilisateur
+                                        <label class="control-label col-md-3">
 
-                                            <span class="required"> * </span>
                                         </label>
                                         <div class="col-md-4">
-                                            <input type="text" class="form-control" name="username" />
-                                            <span class="help-block"> Indiquez votre nom d'utilisateur </span>
+                                            <button  class="btn red">Rénitialiser</button>
+                                            <span class="help-block"> La rénitialisation de l'application supprime tous les donneés </span>
                                         </div>
                                     </div>
 
@@ -631,6 +482,256 @@
 
     <script>
 
+
+        $(document).ready(function () {
+
+
+            var footer='{{ config.footercapitale}}';
+
+            if (footer ==='1'){
+
+                $('#affichercapitale').prop('checked', true);
+            }
+            else {
+                $('#affichercapitale').prop('checked', false);
+            }
+
+            var notif='{{ config.notificationcommande}}';
+
+            if (notif ==='1'){
+
+                $('#notification').prop('checked', true);
+            }
+            else {
+                $('#notification').prop('checked', false);
+            }
+
+            var ckbox = $('#notification');
+
+            $('input').on('click',function () {
+                if (ckbox.is(':checked')) {
+                    $('#notification').attr('value',1);
+                } else {
+                    $('#notification').attr('value',0);
+                }
+            });
+
+
+            var ckbox2 = $('#affichercapitale');
+
+            $('input').on('click',function () {
+                if (ckbox2.is(':checked')) {
+                    $('#affichercapitale').attr('value',1);
+                } else {
+                    $('#affichercapitale').attr('value',0);
+                }
+            });
+        });
+
+
+        var benefice='{{ config.indicateurBenefice}}';
+
+        if (benefice ==='1'){
+
+            $('#ind_benefice').prop('checked', true);
+        }
+        else {
+            $('#ind_benefice').prop('checked', false);
+        }
+
+        var ckboxbenefice = $('#ind_benefice');
+
+        $('input').on('click',function () {
+            if (ckboxbenefice.is(':checked')) {
+                $('#ind_benefice').attr('value',1);
+            } else {
+                $('#ind_benefice').attr('value',0);
+            }
+        });
+
+        var produits='{{ config.indicateurProduits}}';
+
+        if (produits ==='1'){
+
+            $('#ind_produits').prop('checked', true);
+        }
+        else {
+            $('#ind_produits').prop('checked', false);
+        }
+
+        var ckboxproduits = $('#ind_produits');
+
+        $('input').on('click',function () {
+            if (ckboxproduits.is(':checked')) {
+                $('#ind_produits').attr('value',1);
+            } else {
+                $('#ind_produits').attr('value',0);
+            }
+        });
+
+
+
+
+        var cmdtotals='{{ config.indicateurCmdtotals}}';
+
+        if (cmdtotals ==='1'){
+
+            $('#ind_cmdtoatals').prop('checked', true);
+        }
+        else {
+            $('#ind_cmdtoatals').prop('checked', false);
+        }
+
+        var ckboxcmdtotals = $('#ind_cmdtoatals');
+
+        $('input').on('click',function () {
+            if (ckboxcmdtotals.is(':checked')) {
+                $('#ind_cmdtoatals').attr('value',1);
+            } else {
+                $('#ind_cmdtoatals').attr('value',0);
+            }
+        });
+
+        var clients='{{ config.indicateurClients}}';
+
+        if (clients ==='1'){
+
+            $('#ind_clients').prop('checked', true);
+        }
+        else {
+            $('#ind_clients').prop('checked', false);
+        }
+
+        var ckboxclients = $('#ind_clients');
+
+        $('input').on('click',function () {
+            if (ckboxclients.is(':checked')) {
+                $('#ind_clients').attr('value',1);
+            } else {
+                $('#ind_clients').attr('value',0);
+            }
+        });
+
+
+        var cmdattente='{{ config.indicateurCmdattente}}';
+
+        if (cmdattente ==='1'){
+
+            $('#ind_cmdattente').prop('checked', true);
+        }
+        else {
+            $('#ind_cmdattente').prop('checked', false);
+        }
+
+        var ckboxcmdattentes = $('#ind_cmdattente');
+
+        $('input').on('click',function () {
+            if (ckboxcmdattentes.is(':checked')) {
+                $('#ind_cmdattente').attr('value',1);
+            } else {
+                $('#ind_cmdattente').attr('value',0);
+            }
+        });
+
+        var entrepots='{{ config.indicateurEntrepots}}';
+
+        if (entrepots ==='1'){
+
+            $('#ind_entrepots').prop('checked', true);
+        }
+        else {
+            $('#ind_entrepots').prop('checked', false);
+        }
+
+        var ckboxentrepots = $('#ind_entrepots');
+
+        $('input').on('click',function () {
+            if (ckboxentrepots.is(':checked')) {
+                $('#ind_entrepots').attr('value',1);
+            } else {
+                $('#ind_entrepots').attr('value',0);
+            }
+        });
+
+        var factures='{{ config.indicateurFactures}}';
+
+        if (factures ==='1'){
+
+            $('#ind_factures').prop('checked', true);
+        }
+        else {
+            $('#ind_factures').prop('checked', false);
+        }
+
+        var ckboxfactures = $('#ind_factures');
+
+        $('input').on('click',function () {
+            if (ckboxfactures.is(':checked')) {
+                $('#ind_factures').attr('value',1);
+            } else {
+                $('#ind_factures').attr('value',0);
+            }
+        });
+
+        var users='{{ config.indicateurUsers}}';
+
+        if (users ==='1'){
+
+            $('#ind_user').prop('checked', true);
+        }
+        else {
+            $('#ind_user').prop('checked', false);
+        }
+
+        var ckboxusers = $('#ind_user');
+
+        $('input').on('click',function () {
+            if (ckboxusers.is(':checked')) {
+                $('#ind_user').attr('value',1);
+            } else {
+                $('#ind_user').attr('value',0);
+            }
+        });
+
+        var activites='{{ config.indicateurActivites}}';
+
+        if (activites ==='1'){
+
+            $('#ind_activites').prop('checked', true);
+        }
+        else {
+            $('#ind_activites').prop('checked', false);
+        }
+
+        var ckboxactivites = $('#ind_activites');
+
+        $('input').on('click',function () {
+            if (ckboxactivites.is(':checked')) {
+                $('#ind_activites').attr('value',1);
+            } else {
+                $('#ind_activites').attr('value',0);
+            }
+        });
+
+        var taches='{{ config.indicateurTaches}}';
+
+        if (taches ==='1'){
+
+            $('#ind_taches').prop('checked', true);
+        }
+        else {
+            $('#ind_taches').prop('checked', false);
+        }
+
+        var ckboxtaches = $('#ind_taches');
+
+        $('input').on('click',function () {
+            if (ckboxtaches.is(':checked')) {
+                $('#ind_taches').attr('value',1);
+            } else {
+                $('#ind_taches').attr('value',0);
+            }
+        });
 
 
 

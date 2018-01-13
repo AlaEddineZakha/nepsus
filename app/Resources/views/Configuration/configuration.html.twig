@@ -511,27 +511,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
 
 
-                                                <div class="form-group">
-                                                    <label class="control-label col-md-3">Logo</label>
-                                                    <div class="col-md-9">
-                                                        <div class="fileinput fileinput-new" data-provides="fileinput">
-                                                            <div class="fileinput-new thumbnail" style="width: 200px; height: 150px;" >
-                                                                <img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&amp;text=no+image" alt="" /> </div>
-                                                            <div id="imgsrc" class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;" > </div>
-                                                            <div>
-                                                                <span class="btn default btn-file">
-                                                                    <span class="fileinput-new"> Sélectionner une image </span>
-                                                                    <span class="fileinput-exists"> Changer </span>
 
-                                                                    <input type="file" name="logo" id="logo"> </span>
-                                                                <a href="javascript:;" class="btn red fileinput-exists" data-dismiss="fileinput"> Retirer</a>
-
-                                                            </div>
-                                                        </div>
-                                                        <div class="clearfix margin-top-10">
-                                                            <span class="label label-danger">NOTE!</span> L'aperçu d'image ne fonctionne que dans IE10 +, FF3.6 +, Safari6.0 +, Chrome6.0 + et Opera11.1 +. Dans les anciens navigateurs, le nom de fichier est affiché à la place. </div>
-                                                    </div>
-                                                </div>
                                                 <div class="form-group">
                                                     <label class="control-label col-md-3">Forme juridique
                                                         <span class="required"> * </span>
@@ -622,7 +602,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
                                                                 </label>
                                                                 <div class="col-md-3">
-                                                                    <input type="checkbox" class="make-switch" checked data-on-color="success" data-off-color="warning" data-on-text="Oui" data-off-text="Non" name="module_entrepots" >
+                                                                    <input type="checkbox" class="make-switch" checked data-on-color="success" data-off-color="warning" data-on-text="Oui" data-off-text="Non" name="module_entrepots" disabled>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -644,7 +624,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
                                                                 </label>
                                                                 <div class="col-md-3">
-                                                                    <input type="checkbox" name="module_categories" class="make-switch" checked data-on-color="success" data-off-color="warning" data-on-text="Oui" data-off-text="Non" >
+                                                                    <input type="checkbox" name="module_categories" class="make-switch" checked data-on-color="success" data-off-color="warning" data-on-text="Oui" data-off-text="Non" disabled>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -737,7 +717,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
                                                                 </label>
                                                                 <div class="col-md-3">
-                                                                    <input type="checkbox" name="module_fournisseurs" class="make-switch" checked data-on-color="success" data-off-color="warning" data-on-text="Oui" data-off-text="Non" disabled>
+                                                                    <input type="checkbox" name="module_fournisseurs" class="make-switch" checked data-on-color="success" data-off-color="warning" data-on-text="Oui" data-off-text="Non" >
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -971,33 +951,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
 
 <!-- END THEME LAYOUT SCRIPTS -->
-<script>
-function testimg(){
 
-
-var $k=$('#imgsrc').text();
-var $test=0;
-for(var i=0;i<$k.length;i++)
-{
-    if ($k.charAt(i)==='.')
-    {
-        $test++;
-
-    }
-}
-
-    $( '#continuer' ).click(function() {
-        if ($test === 2) {
-            $test=0;
-            var validator = $( "#submit_form" ).validate();
-            validator.showErrors({
-                "logo": "Veuillez charger un fichier de type image"
-            });
-        }
-    });
-}
-
-</script>
 <script>
     $( document ).ready(function() {
         $( '#soumettre' ).hide();
@@ -1020,18 +974,6 @@ for(var i=0;i<$k.length;i++)
 <!-- BEGIN COPYRIGHT -->
 <div class="copyright"> 2017 &copy;Nepsus </div>
 
-
-<!-- BEGIN PAGE LEVEL PLUGINS -->
-
-<!-- END PAGE LEVEL PLUGINS -->
-<!-- BEGIN THEME GLOBAL SCRIPTS -->
-
-<!-- END THEME GLOBAL SCRIPTS -->
-<!-- BEGIN PAGE LEVEL SCRIPTS -->
-
-<!-- END PAGE LEVEL SCRIPTS -->
-<!-- BEGIN THEME LAYOUT SCRIPTS -->
-<!-- END THEME LAYOUT SCRIPTS -->
 </body>
 
 </html>

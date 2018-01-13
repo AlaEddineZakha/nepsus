@@ -100,10 +100,8 @@ var FormWizard = function () {
                     pays: {
                         required: true
                     },
-                    //payment
-                    logo: {
-                        accept:"image/*"
-                    },
+
+
                     site: {
                         url:true
                     },
@@ -131,11 +129,7 @@ var FormWizard = function () {
 
                 },
 
-                messages: { // custom messages for radio buttons and checkboxes
-                    logo:{
-                        accept:"Veuillez charger un fichier de type image"
-                    }
-                },
+
 
                 errorPlacement: function (error, element) { // render error placement for each input type
                     if (element.attr("name") == "gender") { // for uniform radio buttons, insert the after the given container

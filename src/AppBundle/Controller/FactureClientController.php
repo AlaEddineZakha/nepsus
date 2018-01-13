@@ -99,7 +99,9 @@ class FactureClientController extends Controller
     }
 
 
-
+    /**
+     * @Route("factures/{id}/payer", name="payerfacture")
+     */
     public function payerAction($id,Request $request)
     {
         $em = $this->getDoctrine()->getManager();
@@ -130,6 +132,9 @@ class FactureClientController extends Controller
         // ... do something, like pass the $product object into a template
     }
 
+    /**
+     * @Route("factures/{id}/impayer", name="impayerfacture")
+     */
     public function impayerAction($id,Request $request)
     {
         $em = $this->getDoctrine()->getManager();
@@ -160,6 +165,9 @@ class FactureClientController extends Controller
         // ... do something, like pass the $product object into a template
     }
 
+    /**
+     * @Route("factures/{id}/annuler", name="annulerfacture")
+     */
     public function annulerAction($id,Request $request)
     {
         $em = $this->getDoctrine()->getManager();

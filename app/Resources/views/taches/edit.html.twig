@@ -23,15 +23,15 @@
     <div class="page-bar">
         <ul class="page-breadcrumb">
             <li>
-                <a href="http://localhost/nepsus/nepsus/web/app_dev.php/">Accueil</a>
+                <a href="/">Accueil</a>
                 <i class="fa fa-circle"></i>
             </li>
             <li>
-                <span>Gestion des clients</span>
+                <span>Gestion des entrepots</span>
                 <i class="fa fa-circle"></i>
             </li>
             <li>
-                <span>Modifier client</span>
+                <span>Modifier entrepot</span>
 
             </li>
         </ul>
@@ -39,26 +39,22 @@
     </div>
     <!-- END PAGE BAR -->
     <!-- BEGIN PAGE TITLE-->
-    <h1 class="page-title">
-
+    <h1 class="page-title"> Modifier entrepot
+        <small></small>
     </h1>
-    <div class="m-heading-1 border-green m-bordered">
-        <h3>Modifier client</h3>
-
-    </div>
     <!-- END PAGE TITLE-->
     <!-- END PAGE HEADER-->
     <div class="row">
         <div class="col-md-12">
-            <form class="form-horizontal form-row-seperated" action="{{ path('editclient' , {'id': client.id } ) }}" method="post" id="signupForm">
+            <form class="form-horizontal form-row-seperated" action="{{ path('editentrepot' , {'id': entrepot.id } ) }}" method="post" id="signupForm">
                 <div class="portlet">
                     <div class="portlet-title">
                         <div class="caption">
-                            <i class="fa fa-user-plus"></i>{{ client.raison }} </div>
+                            <i class="fa fa-user-plus"></i>{{ entrepot.nom }} </div>
                         <div class="actions btn-set">
 
                             <button class="btn btn-success">
-                                <i class="fa fa-check"></i> Enregistrer</button>
+                                <i class="fa fa-check"></i> Save</button>
 
 
                         </div>
@@ -68,26 +64,22 @@
                         <div class="tabbable-line">
                             <ul class="nav nav-tabs nav-tabs-lg">
                                 <li class="active">
-                                    <a href="#tab_0" data-toggle="tab"> Résumé </a>
+                                    <a href="#tab_0" data-toggle="tab"> Apercu </a>
                                 </li>
                                 <li>
-                                    <a href="#tab_1" data-toggle="tab"> Profil
+                                    <a href="#tab_1" data-toggle="tab"> Produits
 
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#tab_2" data-toggle="tab"> Contacts
+                                    <a href="#tab_2" data-toggle="tab"> Entrés
 
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#tab_3" data-toggle="tab"> Factures </a>
+                                    <a href="#tab_3" data-toggle="tab"> Sorites </a>
                                 </li>
-                                <li>
-                                    <a href="#tab_4" data-toggle="tab"> Transactions
-                                        <span class="badge badge-danger"> 2 </span>
-                                    </a>
-                                </li>
+
                                 <li>
                                     <a href="#tab_5" data-toggle="tab"> Historique </a>
                                 </li>
@@ -96,66 +88,38 @@
                                 <div class="tab-pane active" id="tab_0">
                                     <div class="row">
                                         <div class="col-md-6 col-sm-12">
-                                            <div class="portlet blue-dark box">
+                                            <div class="portlet yellow-crusta box">
                                                 <div class="portlet-title">
                                                     <div class="caption">
-                                                        <i class="fa fa-usd" aria-hidden="true"></i> Factures </div>
+                                                        <i class="fa fa-cogs"></i>Factures </div>
 
                                                 </div>
-                                                {% set notpayed = 0 %}
-                                                {% set payed = 0 %}
-                                                {% set cancelled = 0 %}
-                                                {% set all = 0 %}
-                                                {% for commande in commandesclients %}
-                                                    {% set all = all + commande.facture.totalttc %}
-                                                    {% if commande.facture.statut =='Impayée' %}
-
-                                                        {% set notpayed = notpayed + commande.facture.totalttc %}
-                                                {% endif %}
-                                                    {% if commande.facture.statut =='Payée' %}
-
-                                                        {% set payed = payed + commande.facture.totalttc %}
-                                                    {% endif %}
-                                                    {% if commande.facture.statut =='Annulé' %}
-
-                                                        {% set cancelled = cancelled + commande.facture.totalttc %}
-                                                    {% endif %}
-
-
-                                              {% endfor %}
                                                 <div class="portlet-body">
                                                     <div class="row static-info">
-                                                        <div class="col-md-5 name"> Total : {{ all }} Dt </div>
+                                                        <div class="col-md-5 name"> Payés : </div>
                                                         <div class="col-md-7 value">
 
                                                         </div>
                                                     </div>
                                                     <div class="row static-info">
-                                                        <div class="col-md-5 name"> Payés : {{ payed }} Dt </div>
-                                                        <div class="col-md-7 value">
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="row static-info">
-                                                        <div class="col-md-5 name"> Non payés: {{ notpayed }} Dt </div>
+                                                        <div class="col-md-5 name"> Non payés: </div>
                                                         <div class="col-md-7 value"></div>
                                                     </div>
                                                     <div class="row static-info">
-                                                        <div class="col-md-5 name"> Annulé: {{ cancelled }} Dt </div>
+                                                        <div class="col-md-5 name"> Annulé: </div>
                                                         <div class="col-md-7 value">
 
                                                         </div>
                                                     </div>
-
 
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-md-6 col-sm-12">
-                                            <div class="portlet blue-dark box">
+                                            <div class="portlet blue-hoki box">
                                                 <div class="portlet-title">
                                                     <div class="caption">
-                                                        <i class="fa fa-address-card" aria-hidden="true"></i> Informations du client </div>
+                                                        <i class="fa fa-cogs"></i>Informations du client </div>
 
                                                 </div>
                                                 <div class="portlet-body">
@@ -181,10 +145,10 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6 col-sm-12">
-                                            <div class="portlet blue-dark box">
+                                            <div class="portlet green-meadow box">
                                                 <div class="portlet-title">
                                                     <div class="caption">
-                                                        <i class="fa fa-envelope" aria-hidden="true"></i> Adresse de facturation </div>
+                                                        <i class="fa fa-cogs"></i> Adresse de facturation </div>
 
                                                 </div>
                                                 <div class="portlet-body">
@@ -200,10 +164,10 @@
                                             </div>
                                         </div>
                                         <div class="col-md-6 col-sm-12">
-                                            <div class="portlet blue-dark box">
+                                            <div class="portlet red-sunglo box">
                                                 <div class="portlet-title">
                                                     <div class="caption">
-                                                        <i class="fa fa-truck" aria-hidden="true"></i>Adresse de livraison </div>
+                                                        <i class="fa fa-cogs"></i>Adresse de livraison </div>
 
                                                 </div>
                                                 <div class="portlet-body">
@@ -234,7 +198,16 @@
                                                     </div>
                                                 </div>
                                             </div>
-
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-4"  style="text-align: start">Capital
+                                                        <span class="required" style="font-size: large"> * </span>
+                                                    </label>
+                                                    <div class="col-md-8">
+                                                        <input type="text" name="cap" id="cap"  class="form-control" value="{{ client.capital }}" />
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -670,24 +643,6 @@
                                 </div>
 
                                 <div class="tab-pane" id="tab_2">
-                                    <div class="col-md-12">
-                                        <!-- BEGIN EXAMPLE TABLE PORTLET-->
-                                        <div class="portlet light bordered">
-                                            <div class="portlet-title">
-                                                <div class="caption font-dark">
-                                                    <a href="javascript:;" class="btn btn-success btn-sm" onclick="addcontactform();">
-                                                        <i class="fa fa-plus-circle"></i> Nouveau contact </a>
-                                                </div>
-                                                <div class="tools">
-
-                                                </div>
-                                            </div>
-                                            <div class="portlet-body" id="contactdiv">
-
-                                            </div>
-                                        </div>
-
-                                    </div>
 
                                 </div>
 
@@ -728,35 +683,27 @@
                                                     <tbody>
 
 
-                                                    {% for commande in commandesclients %}
+                                                    {% for e in client.listecommandes %}
 
-
+                                                        {% for a in e.facture %}
 
                                                             <tr>
-                                                                <td>{{ commande.facture.id }}</td>
-                                                                <td>{{ commande.facture.created|date('Y-m-d') }}</td>
-                                                                <td>{{ commande.facture.dateecheance|date('Y-m-d') }}</td>
-                                                                <td>{{ commande.facture.totalht }} TND</td>
-                                                                <td>{{ commande.facture.totalttc }} TND</td>
-                                                                {% if commande.facture.statut =='Payée' %}
-                                                                    <td> <span class="label label-sm label-success">{{ commande.facture.statut }} </span></td>
-                                                                {% endif %}
-                                                                {% if commande.facture.statut =='Impayée' %}
-                                                                    <td> <span class="label label-sm label-danger">{{ commande.facture.statut }} </span></td>
-                                                                {% endif %}
-                                                                {% if commande.facture.statut =='Annulé' %}
-                                                                    <td> <span class="label label-sm label-default">{{ commande.facture.statut }} </span></td>
-                                                                {% endif %}
+                                                                <td>{{ a.id }}</td>
+                                                                <td>{{ a.created|date('Y-m-d') }}</td>
+                                                                <td>{{ a.dateecheance|date('Y-m-d') }}</td>
+                                                                <td>{{ a.totalht }} TND</td>
+                                                                <td>{{ a.totalttc }} TND</td>
+                                                                <td> <span class="label label-sm label-warning">{{ a.statut }} </span></td>
                                                                 <td>
                                                                     <a href="javascript:;" class="btn btn-icon-only blue" ><i class="fa fa-search"></i> </a>
-                                                                    <a href="{{ path('viewfactureclient', {'id': commande.facture.id }) }}" class="btn btn-icon-only yellow" ><i class="fa fa-edit"></i> </a>
-                                                                    <a href="javascript:;" class="btn btn-icon-only red" onclick="myFunction({{ commande.facture.id }})"><i class="fa fa-times"></i> </a>
+                                                                    <a href="{{ path('viewfactureclient', {'id': a.id }) }}" class="btn btn-icon-only yellow" ><i class="fa fa-edit"></i> </a>
+                                                                    <a href="javascript:;" class="btn btn-icon-only red" onclick="myFunction({{ a.id }})"><i class="fa fa-times"></i> </a>
 
                                                                 </td>
 
                                                             </tr>
                                                         {% endfor %}
-
+                                                    {% endfor %}
 
                                                     </tbody>
                                                 </table>
@@ -766,78 +713,7 @@
                                     </div>
                                 </div>
                                 <div class="tab-pane" id="tab_4">
-                                    <div class="col-md-12">
-                                        <!-- BEGIN EXAMPLE TABLE PORTLET-->
-                                        <div class="portlet light bordered">
-                                            <div class="portlet-title">
-                                                <div class="caption font-dark">
 
-                                                </div>
-                                                <div class="tools"> </div>
-                                            </div>
-                                            <div class="portlet-body">
-                                                <table class="table table-striped table-bordered table-hover" id="sample_2">
-                                                    <thead>
-                                                    <tr>
-                                                        <th>Id</th>
-                                                        <th>Ajout</th>
-                                                        <th>Motant</th>
-                                                        <th>Methode</th>
-                                                        <th>Devise</th>
-                                                        <th>Statut</th>
-                                                        <th>Actions</th>
-                                                    </tr>
-                                                    </thead>
-                                                    <tfoot>
-                                                    <tr>
-                                                        <th>Id</th>
-                                                        <th>Ajout</th>
-                                                        <th>Motant</th>
-                                                        <th>Methode</th>
-                                                        <th>Devise</th>
-                                                        <th>Statut</th>
-                                                        <th>Actions</th>
-                                                    </tr>
-                                                    </tfoot>
-                                                    <tbody>
-
-
-                                                    {% for t in transactions %}
-
-
-
-                                                        <tr>
-                                                            <td>{{ t.id }}</td>
-                                                            <td>{{ t.datepaiement|date('Y-m-d') }}</td>
-                                                            <td>{{ t.montant }}</td>
-                                                            <td>{{ t.methodetransaction.libele }} </td>
-                                                            <td>{{ t.devise.libele}} </td>
-                                                            {% if t.etat =='Payée' %}
-                                                                <td> <span class="label label-sm label-success">{{ t.etat }} </span></td>
-                                                            {% endif %}
-                                                            {% if t.etat =='Impayée' %}
-                                                                <td> <span class="label label-sm label-danger">{{ t.etat }} </span></td>
-                                                            {% endif %}
-                                                            {% if t.etat =='Annulé' %}
-                                                                <td> <span class="label label-sm label-default">{{ t.etat }} </span></td>
-                                                            {% endif %}
-                                                            <td>
-                                                                <a href="javascript:;" class="btn btn-icon-only blue" ><i class="fa fa-search"></i> </a>
-                                                                <a href="{{ path('viewfactureclient', {'id':t.id }) }}" class="btn btn-icon-only yellow" ><i class="fa fa-edit"></i> </a>
-                                                                <a href="javascript:;" class="btn btn-icon-only red" onclick="myFunction({{ t.id }})"><i class="fa fa-times"></i> </a>
-
-                                                            </td>
-
-                                                        </tr>
-                                                    {% endfor %}
-
-
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-
-                                    </div>
                                 </div>
                                 <div class="tab-pane" id="tab_5">
                                     <div class="col-md-12">
@@ -850,7 +726,7 @@
                                                 <div class="tools"> </div>
                                             </div>
                                             <div class="portlet-body">
-                                                <table class="table table-striped table-bordered table-hover" id="sample_3">
+                                                <table class="table table-striped table-bordered table-hover" id="sample_1">
                                                     <thead>
                                                     <tr>
                                                         <th>Id</th>
@@ -916,148 +792,8 @@
 
 
     <script>
-        if (typeof $id === 'undefined') {
-            var $id=0;
-        }
 
 
-
-
-        if (typeof $idliste === 'undefined') {
-            var $idliste=0;
-        }
-
-        if (typeof $size === 'undefined') {
-            var $size=0;
-        }
-
-        if (typeof $k === 'undefined') {
-            var $k=0;
-        }
-
-
-//# Formulaire contact
-function addcontactform() {
-    $id++;
-    var $removeTagLink = $('<td><a href="javascript:;" class="btn btn-icon-only red" id="deleteform"><i class="fa fa-times"></i> </a></td>');
-    var $ligne = $('<hr>'+
-        '<br>'+
-        '<div>'+
-        '<div class="row">'+
-        '<div class="col-md-12">'+
-        '<div class="col-md-4">'+
-        '<div class="form-group">'+
-        '<div class="input-group">'+
-        '<span class="input-group-addon">'+
-        '<i class="fa fa-user"></i>'+
-        '</span>'+
-        '<input type="text" class="form-control" placeholder="Nom"></div>'+
-        '</div>'+
-        '</div>'+
-        '<div class="col-md-4">'+
-        '<div class="form-group">'+
-        '<div class="input-group">'+
-        '<span class="input-group-addon">'+
-        '<i class="fa fa-phone"></i>'+
-        '</span>'+
-        '<input type="text" class="form-control" placeholder="Telephone"></div>'+
-        '</div>'+
-        '</div>'+
-        '<div class="col-md-4">'+
-        '<div class="form-group">'+
-        '<div class="input-group">'+
-        '<span class="input-group-addon">'+
-        '<i class="fa fa-mobile-phone"></i>'+
-        '</span>'+
-        '<input type="text" class="form-control" placeholder="Mobile"></div>'+
-        '</div>'+
-        '</div>'+
-        '</div>'+
-        '</div>'+
-        '<div class="row">'+
-        '<div class="col-md-12">'+
-        '<div class="col-md-4">'+
-        '<div class="form-group">'+
-        '<div class="input-group">'+
-        '<span class="input-group-addon">'+
-        '<i class="fa fa-phone"></i>'+
-        '</span>'+
-        '<input type="text" class="form-control" placeholder="Fax"></div>'+
-        '</div>'+
-        '</div>'+
-        '<div class="col-md-4">'+
-        '<div class="form-group">'+
-        '<div class="input-group">'+
-        '<span class="input-group-addon">'+
-        '<i class="fa fa-envelope"></i>'+
-        '</span>'+
-        '<input type="text" class="form-control" placeholder="Email Address"></div>'+
-        '</div>'+
-        '</div>'+
-        '</div>'+
-        '</div>'+
-        '<br>'+
-    '</div>');
-    $ligne.append($removeTagLink);
-    $('#contactdiv').append($ligne);
-    $size++;
-    $k = $size;
-
-}
-
-$('#contactdiv').on('click', '#deleteform', function(e) {
-
-    e.preventDefault();
-
-    $size--;
-    $('#size').attr('value',$size);
-
-    console.log("Size = "+$size);
-    var $ko=$k;
-
-
-    var  $oldid=parseInt($(this).closest("div").prop("id").match(/\d/g));
-
-
-    $id--;
-
-
-    var $thisid=$(this).closest("div").prop("id");
-
-    $(this).closest("div").remove();
-
-    if ($size>0)
-    {
-        var $lastrtid = parseInt($('#contactdiv').find("div").last().attr('id').match(/\d/g));
-    }
-
-
-
-
-    for (var i=$size; i>0; i--) {
-        if ($lastrtid===$oldid)
-        {
-            $lastrtid--;
-        }
-
-
-
-        $('#nom-ligne'+$lastrtid+'').attr('id','nom-ligne'+i+'');
-        $('#tel-ligne'+$lastrtid+'').attr('id','tel-ligne'+i+'');
-        $('#mobile-ligne'+$lastrtid+'').attr('id','mobile-ligne'+i+'');
-        $('#fax-ligne'+$lastrtid+'').attr('id','fax-ligne'+i+'');
-        $('#email-ligne'+$lastrtid+'').attr('id','email-ligne'+i+'');
-
-
-
-        $lastrtid--;
-    }
-
-
-
-
-
-});
         $('#cap').inputmask("numeric", {
             radixPoint: ",",
             groupSeparator: ",",
@@ -1200,6 +936,8 @@ $('#contactdiv').on('click', '#deleteform', function(e) {
 
 
     </script>
+
+
 
 
 

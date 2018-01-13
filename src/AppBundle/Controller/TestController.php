@@ -44,7 +44,9 @@ class TestController extends Controller
 
     }
 
-
+    /**
+     *@Route("/{path}", name="pageNotFound")
+     */
     public function notfoundAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
@@ -62,7 +64,9 @@ class TestController extends Controller
 
     }
 
-
+    /**
+     *@Route("/pagenotallowed", name="pagenotallowed")
+     */
     public function notallowedAction(Request $request)
     {
 
@@ -74,6 +78,9 @@ class TestController extends Controller
 
     }
 
+    /**
+     *@Route("/alreadyconfigured", name="alreadyconfigured")
+     */
     public function alreadyconfiguredAction(Request $request)
     {
 

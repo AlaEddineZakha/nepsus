@@ -34,7 +34,7 @@ class LotController extends Controller
 
         if ($request->isMethod('POST')) {
             $entrepot=$em->getRepository(Entrepot::class)->find($request->request->get('entrepot'));
-            dump($entrepot);
+
             $lot->setEntrepot($entrepot);
             //$entrepot->setEspacerestant($entrepot->setEspacerestant-$qtproduit);
             $em->persist($lot);

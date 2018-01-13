@@ -40,13 +40,30 @@ class Configuration
     private $ville;
 
     /**
+     * @ORM\Column(type="integer" , nullable=true)
+     */
+    private $echancefacture;
+    /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
+    private $seuilalerte;
+
+
+    /**
+     * @ORM\Column(type="boolean", nullable=true)
+     */
+    private $notificationcommande;
+
+    /**
+     * @ORM\Column(type="boolean", nullable=true)
+     */
+    private $footercapitale;
+
+    /**
      * @ORM\Column(type="string")
      */
     private $siteweb;
-    /**
-     * @ORM\Column(type="blob", nullable=true)
-     */
-    private $logo;
+
     /**
      * @ORM\Column(type="string")
      */
@@ -110,6 +127,57 @@ class Configuration
     private $lastmodified;
 
     /**
+     * @ORM\Column(type="boolean", nullable=true)
+     */
+    private $indicateur_benefice;
+
+    /**
+     * @ORM\Column(type="boolean", nullable=true)
+     */
+    private $indicateur_produits;
+
+    /**
+     * @ORM\Column(type="boolean", nullable=true)
+     */
+    private $indicateur_cmdtotals;
+
+    /**
+     * @ORM\Column(type="boolean", nullable=true)
+     */
+    private $indicateur_clients;
+
+    /**
+     * @ORM\Column(type="boolean", nullable=true)
+     */
+    private $indicateur_cmdattente;
+
+    /**
+     * @ORM\Column(type="boolean", nullable=true)
+     */
+    private $indicateur_entrepots;
+
+    /**
+     * @ORM\Column(type="boolean", nullable=true)
+     */
+    private $indicateur_factures;
+
+    /**
+     * @ORM\Column(type="boolean", nullable=true)
+     */
+    private $indicateur_users;
+
+    /**
+     * @ORM\Column(type="boolean", nullable=true)
+     */
+    private $indicateur_activites;
+
+    /**
+     * @ORM\Column(type="boolean", nullable=true)
+     */
+    private $indicateur_taches;
+
+
+    /**
      * @return mixed
      */
     public function getId()
@@ -141,21 +209,7 @@ class Configuration
         $this->raison = $raison;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getLogo()
-    {
-        return $this->logo;
-    }
 
-    /**
-     * @param mixed $logo
-     */
-    public function setLogo($logo)
-    {
-        $this->logo = $logo;
-    }
 
     /**
      * @return mixed
@@ -443,6 +497,230 @@ class Configuration
     public function setInit($init)
     {
         $this->init = $init;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getEchancefacture()
+    {
+        return $this->echancefacture;
+    }
+
+    /**
+     * @param mixed $echancefacture
+     */
+    public function setEchancefacture($echancefacture)
+    {
+        $this->echancefacture = $echancefacture;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSeuilalerte()
+    {
+        return $this->seuilalerte;
+    }
+
+    /**
+     * @param mixed $seuilalerte
+     */
+    public function setSeuilalerte($seuilalerte)
+    {
+        $this->seuilalerte = $seuilalerte;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getNotificationcommande()
+    {
+        return $this->notificationcommande;
+    }
+
+    /**
+     * @param mixed $notificationcommande
+     */
+    public function setNotificationcommande($notificationcommande)
+    {
+        $this->notificationcommande = $notificationcommande;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getFootercapitale()
+    {
+        return $this->footercapitale;
+    }
+
+    /**
+     * @param mixed $footercapitale
+     */
+    public function setFootercapitale($footercapitale)
+    {
+        $this->footercapitale = $footercapitale;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getIndicateurBenefice()
+    {
+        return $this->indicateur_benefice;
+    }
+
+    /**
+     * @param mixed $indicateur_benefice
+     */
+    public function setIndicateurBenefice($indicateur_benefice)
+    {
+        $this->indicateur_benefice = $indicateur_benefice;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getIndicateurProduits()
+    {
+        return $this->indicateur_produits;
+    }
+
+    /**
+     * @param mixed $indicateur_produits
+     */
+    public function setIndicateurProduits($indicateur_produits)
+    {
+        $this->indicateur_produits = $indicateur_produits;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getIndicateurCmdtotals()
+    {
+        return $this->indicateur_cmdtotals;
+    }
+
+    /**
+     * @param mixed $indicateur_cmdtotals
+     */
+    public function setIndicateurCmdtotals($indicateur_cmdtotals)
+    {
+        $this->indicateur_cmdtotals = $indicateur_cmdtotals;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getIndicateurClients()
+    {
+        return $this->indicateur_clients;
+    }
+
+    /**
+     * @param mixed $indicateur_clients
+     */
+    public function setIndicateurClients($indicateur_clients)
+    {
+        $this->indicateur_clients = $indicateur_clients;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getIndicateurCmdattente()
+    {
+        return $this->indicateur_cmdattente;
+    }
+
+    /**
+     * @param mixed $indicateur_cmdattente
+     */
+    public function setIndicateurCmdattente($indicateur_cmdattente)
+    {
+        $this->indicateur_cmdattente = $indicateur_cmdattente;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getIndicateurEntrepots()
+    {
+        return $this->indicateur_entrepots;
+    }
+
+    /**
+     * @param mixed $indicateur_entrepots
+     */
+    public function setIndicateurEntrepots($indicateur_entrepots)
+    {
+        $this->indicateur_entrepots = $indicateur_entrepots;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getIndicateurFactures()
+    {
+        return $this->indicateur_factures;
+    }
+
+    /**
+     * @param mixed $indicateur_factures
+     */
+    public function setIndicateurFactures($indicateur_factures)
+    {
+        $this->indicateur_factures = $indicateur_factures;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getIndicateurUsers()
+    {
+        return $this->indicateur_users;
+    }
+
+    /**
+     * @param mixed $indicateur_users
+     */
+    public function setIndicateurUsers($indicateur_users)
+    {
+        $this->indicateur_users = $indicateur_users;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getIndicateurActivites()
+    {
+        return $this->indicateur_activites;
+    }
+
+    /**
+     * @param mixed $indicateur_activites
+     */
+    public function setIndicateurActivites($indicateur_activites)
+    {
+        $this->indicateur_activites = $indicateur_activites;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getIndicateurTaches()
+    {
+        return $this->indicateur_taches;
+    }
+
+    /**
+     * @param mixed $indicateur_taches
+     */
+    public function setIndicateurTaches($indicateur_taches)
+    {
+        $this->indicateur_taches = $indicateur_taches;
     }
 
 

@@ -162,7 +162,7 @@
 
                     </ul>
                 </li>
-                <li class="nav-item  ">
+                <li class="nav-item  " id="commandefournisseur">
                     <a href="javascript:" class="nav-link nav-toggle">
 
                         <span class="title">Fournisseurs</span>
@@ -171,13 +171,13 @@
                     </a>
                     <ul class="sub-menu ">
                         <li class="nav-item  ">
-                            <a href="{{ path('addclient') }}" class="nav-link">
+                            <a href="{{ path('addcommandef') }}" class="nav-link">
                                 <span class="title">Nouvau commande</span>
 
                             </a>
                         </li>
                         <li class="nav-item  ">
-                            <a href="{{ path('listclient') }}" class="nav-link ">
+                            <a href="{{ path('listbcf') }}" class="nav-link ">
                                 <span class="title">Liste des commandes</span>
                             </a>
                         </li>
@@ -225,7 +225,7 @@
 
                     </ul>
                 </li>
-                <li class="nav-item  ">
+                <li class="nav-item  " id="commandefournisseur">
                     <a href="javascript:" class="nav-link nav-toggle">
 
                         <span class="title">Fournisseurs</span>
@@ -234,13 +234,13 @@
                     </a>
                     <ul class="sub-menu ">
                         <li class="nav-item  ">
-                            <a href="{{ path('addclient') }}" class="nav-link">
+                            <a href="{{ path('addcommandef') }}" class="nav-link">
                                 <span class="title">Nouvau commande</span>
 
                             </a>
                         </li>
                         <li class="nav-item  ">
-                            <a href="{{ path('listclient') }}" class="nav-link ">
+                            <a href="{{ path('listbcf') }}" class="nav-link ">
                                 <span class="title">Liste des commandes</span>
                             </a>
                         </li>
@@ -286,7 +286,7 @@
 
                     </ul>
                 </li>
-                <li class="nav-item  ">
+                <li class="nav-item  " id="commandefournisseur">
                     <a href="javascript:" class="nav-link nav-toggle">
 
                         <span class="title">Fournisseurs</span>
@@ -295,13 +295,13 @@
                     </a>
                     <ul class="sub-menu ">
                         <li class="nav-item  ">
-                            <a href="{{ path('addclient') }}" class="nav-link">
+                            <a href="{{ path('addcommandef') }}" class="nav-link">
                                 <span class="title">Nouvau commande</span>
 
                             </a>
                         </li>
                         <li class="nav-item  ">
-                            <a href="{{ path('listclient') }}" class="nav-link ">
+                            <a href="{{ path('listbcf') }}" class="nav-link ">
                                 <span class="title">Liste des commandes</span>
                             </a>
                         </li>
@@ -337,7 +337,7 @@
                         <span class="selected"></span>
                     </a>
                 </li>
-                <li class="nav-item  ">
+                <li class="nav-item  " id="facturesfournisseurs">
                     <a href="#" class="nav-link ">
                         <span class="title">Fournisseurs</span>
                     </a>
@@ -363,7 +363,7 @@
                         <span class="title">Clients</span>
                     </a>
                 </li>
-                <li class="nav-item  ">
+                <li class="nav-item  " id="commandefournisseur">
                     <a href="#" class="nav-link ">
                         <span class="title">Fournisseurs</span>
                     </a>
@@ -385,13 +385,13 @@
         </a>
         <ul class="sub-menu ">
             <li class="nav-item  ">
-                <a href="{{ path('addclient') }}" class="nav-link">
+                <a href="#" class="nav-link">
                     <span class="title">Nouvau devis</span>
 
                 </a>
             </li>
             <li class="nav-item  ">
-                <a href="{{ path('listclient') }}" class="nav-link ">
+                <a href="#" class="nav-link ">
                     <span class="title">Liste des devis</span>
                 </a>
             </li>
@@ -753,6 +753,7 @@
     <!-- END PAGE TITLE-->
     <!-- END PAGE HEADER-->
     <div class="row">
+{%  if config.indicateurBenefice == true %}
         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
             <div class="dashboard-stat2 ">
                 <div class="display">
@@ -780,6 +781,8 @@
                 </div>
             </div>
         </div>
+        {% endif %}
+        {%  if config.indicateurProduits == true %}
         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
             <div class="dashboard-stat2 ">
                 <div class="display">
@@ -806,6 +809,8 @@
                 </div>
             </div>
         </div>
+        {% endif %}
+        {%  if config.indicateurCmdtotals == true %}
         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
             <div class="dashboard-stat2 ">
                 <div class="display">
@@ -832,13 +837,15 @@
                 </div>
             </div>
         </div>
+        {% endif %}
+        {%  if config.indicateurClients == true %}
         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
             <div class="dashboard-stat2 ">
                 <div class="display">
                     <div class="number">
                         <h3 class="font-purple-soft">
 
-                            <span data-counter="counterup" data-value="15"></span>
+                            <span data-counter="counterup" data-value="2">2</span>
                         </h3>
                         <small>Clients</small>
                     </div>
@@ -859,15 +866,17 @@
                 </div>
             </div>
         </div>
+        {% endif %}
     </div>
     <div class="row">
+        {%  if config.indicateurCmdattente == true %}
         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
             <div class="dashboard-stat2 ">
                 <div class="display">
                     <div class="number">
                         <h3 class="font-green-sharp">
-                            <span data-counter="counterup" data-value="7800">7800</span>
-                            <small class="font-green-sharp">Dt</small>
+                            <span data-counter="counterup" data-value="21">21</span>
+                            <small class="font-green-sharp"></small>
                         </h3>
                         <small>Commande en attente</small>
                     </div>
@@ -882,18 +891,20 @@
                                             </span>
                     </div>
                     <div class="status">
-                        <div class="status-title"> Taxe </div>
+                        <div class="status-title"> Pourcentage </div>
                         <div class="status-number"> 18% </div>
                     </div>
                 </div>
             </div>
         </div>
+        {% endif %}
+        {%  if config.indicateurEntrepots == true %}
         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
             <div class="dashboard-stat2 ">
                 <div class="display">
                     <div class="number">
                         <h3 class="font-red-haze">
-                            <span data-counter="counterup" data-value="66">66</span>
+                            <span data-counter="counterup" data-value="3">3</span>
                         </h3>
                         <small>Entrepots</small>
                     </div>
@@ -908,12 +919,14 @@
                                             </span>
                     </div>
                     <div class="status">
-                        <div class="status-title"> Hors stock </div>
+                        <div class="status-title"> Espace occupé </div>
                         <div class="status-number"> 23% </div>
                     </div>
                 </div>
             </div>
         </div>
+        {% endif %}
+        {%  if config.indicateurFactures == true %}
         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
             <div class="dashboard-stat2 ">
                 <div class="display">
@@ -921,7 +934,7 @@
                         <h3 class="font-blue-sharp">
                             <span data-counter="counterup" data-value="50"></span>
                         </h3>
-                        <small>Factures non payées</small>
+                        <small>Factures </small>
                     </div>
                     <div class="icon">
                         <i class="icon-basket"></i>
@@ -934,21 +947,23 @@
                                             </span>
                     </div>
                     <div class="status">
-                        <div class="status-title"> Livrés </div>
+                        <div class="status-title"> non payées </div>
                         <div class="status-number"> 20% </div>
                     </div>
                 </div>
             </div>
         </div>
+        {% endif %}
+        {%  if config.indicateurUsers == true %}
         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
             <div class="dashboard-stat2 ">
                 <div class="display">
                     <div class="number">
                         <h3 class="font-purple-soft">
 
-                            <span data-counter="counterup" data-value="15"></span>
+                            <span data-counter="counterup" data-value="8">8</span>
                         </h3>
-                        <small>Devis en attente</small>
+                        <small>Utilisateurs</small>
                     </div>
                     <div class="icon">
                         <i class="icon-user"></i>
@@ -967,11 +982,14 @@
                 </div>
             </div>
         </div>
+        {% endif %}
+
     </div>
     <div class="clearfix"></div>
 
 
     <div class="row">
+        {%  if config.indicateurActivites == true %}
         <div class="col-lg-6 col-xs-12 col-sm-12">
             <div class="portlet light bordered">
                 <div class="portlet-title">
@@ -1119,6 +1137,8 @@
                 </div>
             </div>
         </div>
+        {% endif %}
+        {%  if config.indicateurTaches == true %}
         <div class="col-lg-6 col-xs-12 col-sm-12">
             <div class="portlet light tasks-widget bordered">
                 <div class="portlet-title">
@@ -1216,6 +1236,7 @@
                 </div>
             </div>
         </div>
+        {% endif %}
     </div>
 
 
@@ -1256,7 +1277,22 @@
 
 
     <script>
+        $.getJSON( "{{ url('dashboard') }}api/modules", function( data ) {
+            $.each($(data), function(key, value) {
 
+
+                if (value['nom']==='Fournisseurs')
+                {
+                    if (value['active']===false)
+                    {
+                        $('#menufournisseurs').hide();
+                        $('#facturesfournisseurs').hide();
+                        $('#commandefournisseur').hide();
+
+                    }
+                }
+            });
+        });
         {% if is_granted('ROLE_SUPER_ADMIN') %}
 
         {% else %}
@@ -1271,18 +1307,8 @@
 
 
         $( document ).ready(function() {
-            $.getJSON( "{{ url('dashboard') }}api/modules", function( data ) {
-                $.each($(data), function(key, value) {
 
-                    if (value['nom']==='Categories')
-                    {
-                        if (value['active']===false)
-                        {
-                            $('#menucategories').hide();
-                        }
-                    }
-                });
-            });
+
 
             var jqxhr= $.getJSON("{{ url('dashboard') }}api/roles/"+$idrole+'/permissions', function( data ) {
 
